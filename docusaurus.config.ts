@@ -7,10 +7,6 @@ const config: Config = {
   tagline: 'See your inbox in a new light',
   favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
-
   url: 'https://docs.mailprism.ai',
   baseUrl: '/',
 
