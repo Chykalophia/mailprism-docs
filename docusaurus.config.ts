@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'MailPrism',
   tagline: 'See your inbox in a new light',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   url: 'https://docs.mailprism.ai',
   baseUrl: '/',
@@ -14,12 +14,28 @@ const config: Config = {
   projectName: 'mailprism-docs',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {rel: 'apple-touch-icon', href: '/img/apple-touch-icon.png'},
+    },
+    {
+      tagName: 'meta',
+      attributes: {name: 'theme-color', content: '#667eea'},
+    },
+  ],
 
   presets: [
     [
@@ -30,10 +46,15 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/Chykalophia/mailprism-docs/tree/main/',
           showLastUpdateTime: true,
+          breadcrumbs: true,
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+            require.resolve('@fontsource-variable/inter/index.css'),
+            require.resolve('@fontsource/jetbrains-mono/index.css'),
+            './src/css/custom.css',
+          ],
         },
         sitemap: {
           changefreq: 'weekly',
@@ -65,19 +86,30 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: false,
+      },
+    },
     navbar: {
       title: 'MailPrism',
+      hideOnScroll: false,
       logo: {
-        alt: 'MailPrism Logo',
+        alt: 'MailPrism',
         src: 'img/logo.svg',
-        srcDark: 'img/logo-dark.svg',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'docs',
           position: 'left',
-          label: 'Documentation',
+          label: 'Docs',
+        },
+        {
+          href: 'https://mailprism.ai',
+          label: 'Website',
+          position: 'right',
         },
         {
           href: 'https://app.mailprism.ai',
@@ -85,72 +117,51 @@ const config: Config = {
           position: 'right',
           className: 'navbar-app-link',
         },
-        {
-          href: 'https://github.com/Chykalophia/MailPrism',
-          label: 'GitHub',
-          position: 'right',
-        },
       ],
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: 'MailPrism',
+        src: 'img/logo.svg',
+        href: 'https://mailprism.ai',
+        height: 40,
+      },
       links: [
         {
           title: 'Documentation',
           items: [
-            {
-              label: 'Getting Started',
-              to: '/getting-started/quick-start',
-            },
-            {
-              label: 'Features',
-              to: '/features/email-rules',
-            },
-            {
-              label: 'FAQ',
-              to: '/faq',
-            },
+            {label: 'Getting Started', to: '/getting-started/quick-start'},
+            {label: 'Rules & Automation', to: '/rules/overview'},
+            {label: 'AI Features', to: '/ai/overview'},
+            {label: 'FAQ', to: '/help/faq'},
           ],
         },
         {
           title: 'Product',
           items: [
-            {
-              label: 'Pricing',
-              href: 'https://mailprism.ai/pricing',
-            },
-            {
-              label: 'Open App',
-              href: 'https://app.mailprism.ai',
-            },
-            {
-              label: 'Roadmap',
-              href: 'https://app.mailprism.ai/settings/roadmap',
-            },
+            {label: 'Website', href: 'https://mailprism.ai'},
+            {label: 'Open App', href: 'https://app.mailprism.ai'},
+            {label: 'Pricing', href: 'https://mailprism.ai/pricing'},
           ],
         },
         {
           title: 'Legal',
           items: [
-            {
-              label: 'Privacy Policy',
-              href: 'https://mailprism.ai/privacy',
-            },
-            {
-              label: 'Terms of Service',
-              href: 'https://mailprism.ai/terms',
-            },
+            {label: 'Privacy Policy', href: 'https://mailprism.ai/privacy'},
+            {label: 'Terms of Service', href: 'https://mailprism.ai/terms'},
           ],
         },
       ],
-      copyright: `Copyright ${new Date().getFullYear()} MailPrism. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} MailPrism by Chykalophia. See your inbox in a new light.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.oneLight,
+      darkTheme: prismThemes.oneDark,
+      additionalLanguages: ['bash', 'json', 'regex'],
     },
     metadata: [
-      {name: 'keywords', content: 'mailprism, email automation, gmail, ai email, inbox management, email rules'},
+      {name: 'keywords', content: 'mailprism, email automation, gmail, ai email, inbox management, email rules, response tracking'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {property: 'og:type', content: 'website'},
     ],

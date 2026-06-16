@@ -1,119 +1,137 @@
 ---
 sidebar_position: 2
 title: Connecting Gmail
-description: How to connect your Gmail account to MailPrism
+description: How MailPrism connects to Gmail, exactly what access it asks for, multiple accounts, reconnecting, label sync, and disconnecting.
 ---
 
-# Connecting Your Gmail Account
+# Connecting Gmail
 
-MailPrism works directly with your Gmail inbox through Google's secure OAuth system. This guide explains how to connect your account and what permissions are needed.
+MailPrism works directly with your Gmail through Google's secure **OAuth** sign-in.
+You approve the connection in Google's own window — MailPrism never sees or stores
+your Google password.
 
-## How to Connect
+## How to connect
 
-### First-Time Setup
+1. Sign in to **[app.mailprism.ai](https://app.mailprism.ai)**.
+2. Click **Connect Gmail** (on the onboarding screen, or **Settings → Gmail →
+   Connect Account**).
+3. Choose the Google account you want to automate.
+4. Review the access MailPrism requests, then click **Allow**.
 
-1. Sign in to [app.mailprism.ai](https://app.mailprism.ai)
-2. Click **Connect Gmail** on your dashboard
-3. Choose your Google account from the popup
-4. Review the permissions requested
-5. Click **Allow** to authorize MailPrism
+You'll be returned to MailPrism with the account connected.
 
-### Adding Additional Accounts
-
-You can connect multiple Gmail accounts to MailPrism:
-
-1. Go to **Settings** → **Integrations**
-2. Click **Add Gmail Account**
-3. Follow the same authorization flow
-4. Each account can have its own set of rules
-
-:::info Multiple Accounts
-Managing multiple accounts is available on Starter tier and above. Free accounts are limited to one Gmail connection.
+:::info Google Workspace accounts
+MailPrism works with personal Gmail and Google Workspace accounts. For a Workspace
+account, your administrator may need to approve MailPrism for your organization
+before you can connect.
 :::
 
-## Permissions Explained
+## What access MailPrism asks for
 
-When you connect Gmail, Google shows you the permissions MailPrism is requesting. Here's what each one means and why we need it:
+To run your rules, MailPrism requests a specific set of Google permissions. Here's
+exactly what each one is for:
 
-### Read Your Emails
+| Access | What it's used for |
+|--------|--------------------|
+| **Read and modify mail** | Read senders, subjects, and content to match your rule conditions and power AI analysis; apply and remove labels, archive, star, and mark read/unread when a rule matches. |
+| **Manage labels** | Create and manage the labels your rules apply and the labels MailPrism uses for tracking. |
+| **Send mail** | Used only by the email **forwarding** feature, and only when a rule you built forwards a message. |
+| **Email & profile** | Identify which Google account you connected and show your display name in account settings. |
 
-**What it allows:** MailPrism can read the content of your emails.
+MailPrism only uses this access to do the work your rules describe. Nothing is sent,
+labeled, or moved unless a rule you created says so.
 
-**Why we need it:** To apply your rules, we need to check email content, sender information, and other details to determine which rules should trigger.
-
-### Modify Your Emails
-
-**What it allows:** MailPrism can add labels, archive, move, or delete emails.
-
-**Why we need it:** When a rule triggers, we need to perform the action you specified—like archiving a newsletter or applying a label.
-
-### Send Emails on Your Behalf
-
-**What it allows:** MailPrism can send emails from your account.
-
-**Why we need it:** If you create rules that auto-reply or forward emails, MailPrism needs permission to send those messages.
-
-### Manage Labels
-
-**What it allows:** MailPrism can create and manage Gmail labels.
-
-**Why we need it:** Many automation rules involve applying labels to organize your inbox. We may need to create new labels if they don't exist.
-
-## Security & Privacy
-
-### Your Data is Safe
-
-- **Encrypted in transit:** All communication uses HTTPS/TLS encryption
-- **Encrypted at rest:** Your OAuth tokens are encrypted in our database
-- **No third-party sharing:** We never share your email data with anyone
-- **Minimal access:** We only access what's needed to run your rules
-
-### Revoking Access
-
-You can disconnect MailPrism at any time:
-
-**From MailPrism:**
-1. Go to **Settings** → **Integrations**
-2. Find your Gmail account
-3. Click **Disconnect**
-
-**From Google:**
-1. Go to [myaccount.google.com/permissions](https://myaccount.google.com/permissions)
-2. Find MailPrism in the list
-3. Click **Remove Access**
-
-:::warning
-Disconnecting will stop all automation rules for that Gmail account. Your rules will be preserved but won't run until you reconnect.
+:::note Calendar (optional, separate)
+Some features can request **read-only Calendar** access. That's a separate
+permission you grant only if you opt into those features — it isn't part of the
+standard Gmail connection.
 :::
 
-## Troubleshooting
+## Connecting more than one account
 
-### Connection Failed
+You can connect multiple Gmail accounts and automate them together.
 
-If the Gmail connection fails:
+- Add another from **Settings → Gmail → Connect Account**.
+- Settings shows **how many accounts you've used** and your plan's limit. If you've
+  hit the limit, you'll see an option to upgrade. (Limits live on the live billing
+  page — see **[Billing](../account/billing.md)**.)
+- One account is your **Primary**. To change it, open **Settings → Gmail** and click
+  **Set Primary** on another account.
 
-1. **Check popup blockers** — Make sure your browser isn't blocking the Google login popup
-2. **Try incognito mode** — Sometimes browser extensions interfere with OAuth
-3. **Clear cookies** — Clear cookies for google.com and mailprism.ai, then try again
-4. **Check Google Workspace settings** — If using a work account, your admin may need to allow MailPrism
+When you build a rule, you can scope it to a specific connected account or apply it
+across all of them.
 
-### Token Expired
+:::caution One mailbox, one workspace
+Each Gmail mailbox can be active in only one MailPrism workspace at a time. If an
+account is already connected elsewhere, disconnect it there first.
+:::
 
-Gmail tokens occasionally expire. If this happens:
+## Per-account sync
 
-1. Go to **Settings** → **Integrations**
-2. Click **Reconnect** next to your Gmail account
-3. Complete the authorization flow again
+Each connected account has its own **Sync** toggle under **Settings → Gmail → Sync
+Settings**. Turn sync off to pause automatic processing for that account without
+disconnecting it; turn it back on (**Reactivate**) when you're ready.
 
-### Permissions Denied
+## Labels
 
-If you accidentally denied a permission:
+MailPrism keeps a synced copy of your Gmail labels so your rules and label picker
+stay current.
 
-1. Go to [myaccount.google.com/permissions](https://myaccount.google.com/permissions)
-2. Remove MailPrism's access completely
-3. Return to MailPrism and connect again
-4. This time, accept all permissions
+- **Sync Labels** — on a connected account, click **Sync Labels** to pull the
+  latest labels from Gmail.
+- **Create Label** — create a new Gmail label straight from MailPrism. Use `/` to
+  nest, for example `Clients/Acme` creates an *Acme* sub-label under *Clients*.
 
----
+→ More on using labels in rules: **[Conditions reference](../rules/conditions.md)** ·
+**[Actions reference](../rules/actions.md)**
 
-**Still having trouble?** Check our [FAQ](/faq) or contact support through the app.
+## Reconnecting & reauthorizing
+
+Sometimes Google access expires or is revoked — for example, after a password change
+or a long period of inactivity. When that happens, the account shows a
+**Disconnected** badge in **Settings → Gmail**.
+
+To restore it, click **Reconnect** on that account and approve access again. You
+must sign in with the **same Google account** — selecting a different one is
+rejected so rules stay tied to the right mailbox. Your rules are kept and resume
+once the connection is restored.
+
+## Disconnecting
+
+You can revoke MailPrism's access whenever you like.
+
+**From MailPrism:** go to **Settings → Gmail** and click **Disconnect** on the
+account. You'll be asked to confirm.
+
+**From Google:** open
+**[myaccount.google.com/permissions](https://myaccount.google.com/permissions)**,
+find MailPrism, and choose **Remove access**.
+
+:::warning Disconnecting stops automation
+While an account is disconnected, its rules won't run. Your rules are kept — they
+resume once you reconnect.
+:::
+
+## Security & privacy
+
+- Your connection uses **Google OAuth** — no password sharing.
+- Your Gmail access tokens are **stored encrypted**.
+- AI features are **opt-in**. Email content is only sent for AI analysis after you
+  give consent. See **[AI privacy & consent](../ai/privacy-and-consent.md)**.
+- You can **export your data or delete your account** at any time from
+  **[Account & Security](../account/account-security.md)**.
+
+More detail lives in **[Privacy & Security](../help/privacy-security.md)**.
+
+## If the connection fails
+
+A few quick fixes if connecting doesn't work the first time:
+
+- **Allow pop-ups / redirects** for `app.mailprism.ai` so Google's sign-in window
+  can open.
+- **Try a private/incognito window** — browser extensions sometimes block OAuth.
+- **For Workspace accounts**, confirm your admin has authorized MailPrism. If Google
+  shows "access denied," ask your administrator to approve MailPrism for your
+  organization.
+
+Step-by-step help is in **[Troubleshooting](../help/troubleshooting.md)**.

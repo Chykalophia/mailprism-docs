@@ -1,0 +1,224 @@
+.home {
+  margin: -1rem 0 1rem;
+}
+
+/* Neutralize the inherited Docusaurus `.markdown` heading rules (top borders,
+   large margins) that would otherwise leak into this landing component.
+   `.home .x` (0,2,0) beats `.markdown h2/h3` (0,1,1). */
+.home .title,
+.home .sectionTitle,
+.home .featureLabel,
+.home .ctaTitle {
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+}
+/* Kill the global h2 gradient-tick (.markdown h2::before) on the landing page */
+.home .sectionTitle::before,
+.home .ctaTitle::before {
+  display: none;
+  content: none;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 1.25rem 0 2rem;
+}
+
+.heroCopy {
+  max-width: 46rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.9rem;
+}
+
+.home .title {
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+  margin: 0 0 1rem;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--ifm-color-content-secondary);
+  max-width: 38rem;
+  margin: 0 0 1.75rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.metaNote {
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+/* ---------- Sections ---------- */
+.section {
+  margin: 2.75rem 0;
+}
+
+.home .sectionTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ifm-color-content-secondary);
+  margin: 0 0 1.25rem;
+}
+
+/* ---------- Start-here cards ---------- */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.45rem;
+  border-radius: var(--mp-radius-lg);
+  border: 1px solid var(--ifm-table-border-color);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--mp-shadow);
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform var(--mp-dur) var(--mp-ease), box-shadow var(--mp-dur) var(--mp-ease),
+    border-color var(--mp-dur) var(--mp-ease);
+}
+.card::after {
+  content: '';
+  position: absolute;
+  top: -45%;
+  right: -35%;
+  width: 65%;
+  height: 90%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 26%, transparent), transparent 70%);
+  opacity: 0.35;
+  transition: opacity var(--mp-dur) var(--mp-ease);
+  pointer-events: none;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mp-shadow-md);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--ifm-table-border-color));
+}
+.card:hover::after {
+  opacity: 0.6;
+}
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cardIcon {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: var(--mp-radius);
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.cardIcon svg { width: 1.4rem; height: 1.4rem; }
+
+.cardTitle { font-weight: 700; font-size: 1.1rem; color: var(--ifm-heading-color); }
+.cardBody { color: var(--ifm-color-content-secondary); font-size: 0.95rem; line-height: 1.55; flex: 1; }
+.cardArrow { font-weight: 600; color: var(--ifm-color-primary); font-size: 0.92rem; }
+
+/* ---------- Feature grid ---------- */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.5rem 2rem;
+}
+
+.feature {
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.featureHead {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.featureDot {
+  position: absolute;
+  left: 0;
+  top: 0.46rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+}
+.home .featureLabel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ifm-heading-color);
+}
+.featureBody { margin: 0; color: var(--ifm-color-content-secondary); font-size: 0.95rem; line-height: 1.6; }
+
+/* ---------- Closing CTA ---------- */
+.cta {
+  margin: 3rem 0 1rem;
+  padding: 2.5rem;
+  border-radius: var(--mp-radius-xl);
+  text-align: center;
+  color: #fff;
+  background:
+    radial-gradient(600px 240px at 80% -20%, rgba(255, 255, 255, 0.22), transparent 60%),
+    var(--mp-gradient);
+  box-shadow: var(--mp-shadow-lg);
+}
+.home .ctaTitle { color: #fff; font-size: 1.8rem; margin: 0 0 0.6rem; letter-spacing: -0.02em; }
+.ctaBody { color: rgba(255, 255, 255, 0.92); max-width: 34rem; margin: 0 auto 1.6rem; font-size: 1.05rem; }
+.cta .actions { justify-content: center; }
+.cta :global(.button--primary) {
+  background: #ffffff;
+  color: var(--mp-violet-600);
+  border: none;
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.45);
+}
+.cta :global(.button--primary:hover) {
+  background: #ffffff;
+  color: #5a3d82;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5);
+}
+.cta :global(.button--secondary) {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+.cta :global(.button--secondary:hover) {
+  background: rgba(255, 255, 255, 0.26);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .home .title { font-size: clamp(1.9rem, 7vw, 2.4rem); }
+}
