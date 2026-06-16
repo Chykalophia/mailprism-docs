@@ -1,0 +1,319 @@
+docs/ai/privacy-and-consent.md
+  s_2d3fc1adaa878d::t_cd432bfabafa0f 45
+  s_2d3fc1adaa878d::t_89822257ac71b4 1-44,46-81
+docs/inbox/email-actions.md
+  s_2d3fc1adaa878d::t_ba420d8ed211d9 86
+  s_2d3fc1adaa878d::t_003dd1ddec0719 98
+  s_2d3fc1adaa878d::t_3dcc89421d523e 68
+  s_2d3fc1adaa878d::t_ce1ea18712c5b9 76
+  s_2d3fc1adaa878d::t_b49d08acfec3b2 1-67,69-75,77-85,87-97,99-128
+docs/inbox/labels.md
+  s_2d3fc1adaa878d::t_8c9b1d9ad017a3 1-45,47-75
+  s_2d3fc1adaa878d::t_a2bc20d2a010d2 46
+docs/account/workspaces-and-teams.md
+  s_2d3fc1adaa878d::t_b9cc8157ba43fb 1-188
+docs/tracking/labels-and-sync.md
+  s_2d3fc1adaa878d::t_4dc5e8adfe5786 102
+  s_2d3fc1adaa878d::t_42a52d1dbf21ae 1-101,103
+README.md
+  s_2d3fc1adaa878d::t_88f1dbdc3f4e58 1,3-4,6,8,11-12,15,20-21,24,27-32,35-40
+docusaurus.config.ts
+  s_2d3fc1adaa878d::t_5dec304c4afb94 17-22
+  s_2d3fc1adaa878d::t_f3fc2ffbb1920d 8,29-39,49,53-57,89-94,97,99,107,110-111,115-116,118,124-129,134-137,143-145,151-152,156,159-161,164
+docs/account/notifications.md
+  s_2d3fc1adaa878d::t_f76bdcfccc8312 1-96,98
+  s_2d3fc1adaa878d::t_4853161e99c20b 97
+docs/help/privacy-security.md
+  s_2d3fc1adaa878d::t_6986ea9b03f917 92
+  s_2d3fc1adaa878d::t_c0f5e85be47d81 1-3,5-8,12-15,17-20,22,41-42,45,47,52,56,58,60,69,84,100-104
+  s_2d3fc1adaa878d::t_126d449e5141bf 4,9-11,16,21,23-40,43-44,46,48-51,53-55,57,59,61-68,70-83,85-91,93-99,105
+docs/getting-started/onboarding.md
+  s_2d3fc1adaa878d::t_74f2aecfc55e17 102
+  s_2d3fc1adaa878d::t_28157252ca0a4a 1-92,94-101
+  s_2d3fc1adaa878d::t_e1dcb53bf12e92 93
+DESIGN.md
+  s_2d3fc1adaa878d::t_e5f64e54abc1ba 1-152
+docs/ai/overview.md
+  s_2d3fc1adaa878d::t_efdc15ed20f8ab 1-3,5-10,13-15,18-19,21,36-39,41,43-45,76-83
+  s_2d3fc1adaa878d::t_2e164c800f18ce 4,11-12,16,20,22-29,31-35,40,42,46-57,59-62,70-75
+  s_2d3fc1adaa878d::t_c2bcbcb4cfd998 30
+  s_2d3fc1adaa878d::t_251fd328f05ae5 17
+  s_2d3fc1adaa878d::t_efec35a54e966e 58
+  s_2d3fc1adaa878d::t_f66c9caa5718af 63-69
+  s_2d3fc1adaa878d::t_0525470bc476be 84
+src/theme/DocCard/index.js
+  s_2d3fc1adaa878d::t_fc485cf2759f54 1-103
+DOCS-PLAN.md
+  s_2d3fc1adaa878d::t_449a11fe7b3348 1-182
+docs/inbox/keyboard-shortcuts.md
+  s_2d3fc1adaa878d::t_35f38d68c86e8b 1-71
+docs/ai/byok.md
+  s_2d3fc1adaa878d::t_855c9e3e04210d 1-79
+docs/integrations/overview.md
+  s_2d3fc1adaa878d::t_0ec7855e6f6c7d 1-71
+docs/help/glossary.md
+  s_2d3fc1adaa878d::t_32f192431958cb 59-64
+  s_2d3fc1adaa878d::t_2ff1bcc14de93a 1-58,65-106
+docs/rules/conditions.md
+  s_2d3fc1adaa878d::t_cdbf59d417e80b 83
+  s_2d3fc1adaa878d::t_79a9398c0e6fef 1-3,5-8,69,71,76,78,82,84,86,88,90,99,101,104,111,113,117,119,179,181-183,251,253,255,258,266-267,272-273,276,292,294
+  s_2d3fc1adaa878d::t_8e354f802216ef 4,9-68,70,72-75,77,79-81,85,87,89,91-98,100,102-103,105-110,112,114-116,118,121-178,180,184,186-250,252,254,256-257,259-265,268-271,274-275,277-291,293,295-297
+  s_2d3fc1adaa878d::t_108fc621b9c09a 120
+  s_2d3fc1adaa878d::t_3559e21576af28 185
+docs/rules/best-practices.md
+  s_2d3fc1adaa878d::t_6adca290f82e9c 2
+  s_2d3fc1adaa878d::t_99b7198b6b323f 52-53,58-65,67-68
+  s_2d3fc1adaa878d::t_eb4daaf3b1bf11 91
+  s_2d3fc1adaa878d::t_a198023fefd921 76
+  s_2d3fc1adaa878d::t_9d89d749c9a404 1,3-17,30-51,54-57,66,69-75,77-90,92
+  s_2d3fc1adaa878d::t_7f95e7b5668949 18-29
+docs/tracking/nudges-and-reminders.md
+  s_2d3fc1adaa878d::t_1904d841900682 1-144
+docs/integrations/calendar.md
+  s_2d3fc1adaa878d::t_d56359a43c2a79 1-77
+docs/getting-started/first-rule.md
+  s_2d3fc1adaa878d::t_314965af443c92 56-58
+  s_2d3fc1adaa878d::t_25d32531c45f4f 4,9-10,12,14,16,18-19,21-23,26,28-29,31,33,35,37-38,40,42,44,46-47,49,51,53,55,60,62-63,65-66,68,70-75,77-78
+docs/rules/testing.md
+  s_2d3fc1adaa878d::t_9ba6e4853b6b92 41
+  s_2d3fc1adaa878d::t_350a3000992520 96
+  s_2d3fc1adaa878d::t_2b6de122086eac 1-40,42-95
+docs/help/troubleshooting.md
+  s_2d3fc1adaa878d::t_e8cc1417064069 4,15,17,20-21,23-62,65-66,70-80,82-83,87-88,95-96,101-112,118-120,126-127
+  s_2d3fc1adaa878d::t_4b2ca44c0833ed 1-3,5-14,16,18-19,22,63-64,67-69,81,84-86,89-94,97-100,113-117,121-125,128-132
+docs/rules/suggestions.md
+  s_2d3fc1adaa878d::t_4858bf9996fbfc 1-93
+docs/help/faq.md
+  s_2d3fc1adaa878d::t_0ee60419885b2b 1-3,5-8,12-14,21,23,25,29-32,35,37,41-45,51,57,62,64,69-70,74-77,84,87-91,93-95,100,102,106,113-114,117-119,121,124,126,130-132,135-136,162,164,167-169,172-174,178-180,183-187
+  s_2d3fc1adaa878d::t_1f30a40a189ed4 4,9-11,15-20,22,24,26-28,33-34,36,38-40,46-50,52-56,58-61,63,65-68,71-73,78-83,85-86,92,96-99,101,103-105,107-112,115-116,120,122-123,125,127-129,133-134,137-161,163,165-166,170-171,175-177,181-182
+docs/ai/preferences-tuning.md
+  s_2d3fc1adaa878d::t_6d0067d163d59f 15
+  s_2d3fc1adaa878d::t_10e4d1b1ee0a4d 67
+  s_2d3fc1adaa878d::t_3b2d870f0915d9 1-14,16-66,68-79
+docs/tracking/profiles.md
+  s_2d3fc1adaa878d::t_a7a29ce8deb274 3-4,7,9-11,13-14,16-19,22,24,26,28-30,32,34-35,37-42,44-46,48-50,53,55-56,58-61,63-75,81
+  s_2d3fc1adaa878d::t_cc1a5b09638ef4 1-2,5-6,8,12,15,20-21,23,25,27,31,33,36,43,47,51-52,54,57,62,76-79,82-83
+  s_2d3fc1adaa878d::t_d4bc65913920be 80,84
+docs/ai/classification.md
+  s_2d3fc1adaa878d::t_d8249a9169f8d6 16
+  s_2d3fc1adaa878d::t_9091f523f991a0 1-15,17-100,102-139
+  s_2d3fc1adaa878d::t_ce343c871ced2b 101
+docs/tracking/modes.md
+  s_2d3fc1adaa878d::t_269eff342175a0 1-90
+docs/ai/writing-profiles.md
+  s_2d3fc1adaa878d::t_10bdd00fc447a4 1-88
+docs/inbox/unsubscribe.md
+  s_2d3fc1adaa878d::t_e5348b7a8b1356 1-98
+docs/rules/building-with-ai.md
+  s_2d3fc1adaa878d::t_5aedc5ce35ee25 1-3,5-9,20-21,23-24,26-27,29-33,36-41,44-48,50,52-61,63,66-72,76-79
+  s_2d3fc1adaa878d::t_c4e2b7f35237ec 10-18,22,25,28,34-35,42-43,49,51
+  s_2d3fc1adaa878d::t_ca2b972c0efadb 4
+  s_2d3fc1adaa878d::t_e0fd80c2f25de6 19
+  s_2d3fc1adaa878d::t_142cd4ce2b27a3 62,64-65,73-75
+docs/ai/pattern-learning.md
+  s_2d3fc1adaa878d::t_92263924045bb0 1-68,70-72
+  s_2d3fc1adaa878d::t_c67c3aeb4148ca 69
+docs/analytics/per-rule-analytics.md
+  s_2d3fc1adaa878d::t_6ba8c41cf4c16f 1-96
+docs/account/account-security.md
+  s_2d3fc1adaa878d::t_72994edb050911 4,9,11-15,17-75,77-79,81-112,114-116,118,120-122,124-138,140-142,145-146,148-150,152,154-155,157,159-162,164,166,168-172,174-175,177-178,180-181,185-188
+  s_2d3fc1adaa878d::t_50aa71711d575f 1-3,5-8,10,16,76,80,113,117,119,123,139,143-144,151,153,156,158,163,165,167,173,176,179,182-184
+  s_2d3fc1adaa878d::t_c3ba05ebdb27e5 147
+docs/rules/import-export.md
+  s_2d3fc1adaa878d::t_59d90e633f7241 48-56
+  s_2d3fc1adaa878d::t_71888ae1b16ede 1-2,5-6,8-9,11-47,57-59
+  s_2d3fc1adaa878d::t_8a0f7fa3b4b5ea 3-4,7,10
+docs/contacts/categories-and-relationships.md
+  s_2d3fc1adaa878d::t_d5e74a5951d4a6 1-138
+src/components/Home/index.tsx
+  s_2d3fc1adaa878d::t_28c8d7c193df84 1-52,54-131,139-155,158-159,161-182
+  s_2d3fc1adaa878d::t_47dd64a18a7eba 53
+  s_2d3fc1adaa878d::t_bcd4e52f8c187c 132-138
+  s_2d3fc1adaa878d::t_0d83363f0ecac2 156-157,160
+src/css/custom.css
+  s_2d3fc1adaa878d::t_b0b8d35e5c7d03 273,276-282
+  s_2d3fc1adaa878d::t_009abba6556a14 363-364
+  s_2d3fc1adaa878d::t_038c8277e7730b 170-176,179-191,194
+  s_2d3fc1adaa878d::t_108c38997498be 228-230,232-236
+  s_2d3fc1adaa878d::t_5619e6dc4f38d5 394,397-398,401-402
+  s_2d3fc1adaa878d::t_3bd434a9a97b82 504,506-507,509-521,523-525,528-533
+  s_2d3fc1adaa878d::t_4514e515e2b8b3 265-268
+  s_2d3fc1adaa878d::t_b2441cf61259fc 140-142
+  s_2d3fc1adaa878d::t_a3cecc23bcb3ab 149-154
+  s_2d3fc1adaa878d::t_7cdd44b2fa7904 459,461,464-467,469-477
+  s_2d3fc1adaa878d::t_0a8b4b38a5d518 177-178
+  s_2d3fc1adaa878d::t_ff6ce2e215b735 590,592-595,597-598,600
+  s_2d3fc1adaa878d::t_60bbf87a8c5486 270-272,274-275
+  s_2d3fc1adaa878d::t_daff927c593fdd 220-222
+  s_2d3fc1adaa878d::t_a927e45e520f39 252-264,269,283
+  s_2d3fc1adaa878d::t_7daf3ddb93ee8a 97,99-101
+  s_2d3fc1adaa878d::t_e55245f723b6be 155
+  s_2d3fc1adaa878d::t_aff23f091a6add 112-116
+  s_2d3fc1adaa878d::t_52d27dafb09b73 286-294
+  s_2d3fc1adaa878d::t_ec1fbc90612a3d 2-11,14-16,18-96,98,102-111,117-139,143-148,156-167,192-193,195-198,200-208,210-215,218-219,223-224,226-227,237-240,242-243,245-251,295-348,352,354-358,360-362,366-367,369,371-378,381,383,386-387,389-392,395-396,399,403-404,407-409,411-421,423-426,428,430-432,434-440,443-445,449,451-454,456,458,460,462,480-498,500-501,503,505,536-574,578-583,586-589,591,599,601-610,612-617,619-645,647-648,650-651,655-657
+docs/contacts/overview.md
+  s_2d3fc1adaa878d::t_14ac95029452fb 1-163
+docs/account/gmail-connection.md
+  s_2d3fc1adaa878d::t_0215972a91e553 4,9-10,12-100,102-104,106,108-162,164-171,173-178,182-185,188,190,192-195
+  s_2d3fc1adaa878d::t_c00e3f8dffea62 1-3,5-8,11,101,105,107,163,172,179-181,186-187,189,191
+docs/tracking/exemptions.md
+  s_2d3fc1adaa878d::t_2219e52697929b 94
+  s_2d3fc1adaa878d::t_5a5656b961d282 1-93
+docs/getting-started/quick-start.md
+  s_2d3fc1adaa878d::t_df2a43d7de3764 4,7,9-10,12-15,17,19,21,23-24,26,28-29,31,33,35,37-38,40,42-45,47,49,51,65-66,70-83
+  s_2d3fc1adaa878d::t_fe153c5b6b02d6 53-54,56-60,62-63,67-68
+docs/account/preferences.md
+  s_2d3fc1adaa878d::t_8a2d7dd2de2350 2,4,9-64,66-67,69,71-74,76,78-83,85-114,116,118-119,121-126,128,130-133,135,137-150,152,154-162,164-172
+  s_2d3fc1adaa878d::t_e11598e6f9abdd 1,3,5-8,65,68,70,75,77,84,115,117,120,127,129,134,136,151,153,163
+src/components/Home/styles.module.css
+  s_2d3fc1adaa878d::t_fa4a1f98f9a818 92-93,97,107-118,122-125
+  s_2d3fc1adaa878d::t_5a6792311d7d28 1-4,23-24,30-41,46,48-74,77,79-80,82-91,94-96,98-106,119-121,126,131-151,153-155,161,165-166,170-172,179-193,195-196,209,212-213,219-222,224
+  s_2d3fc1adaa878d::t_d7e2cc41dcdb62 25-29
+  s_2d3fc1adaa878d::t_9f6c1e2b65d24b 43-45,47
+  s_2d3fc1adaa878d::t_34e62f5668f609 197-204,206-208,210-211,214-218
+  s_2d3fc1adaa878d::t_1ab801acbd6b44 205
+  s_2d3fc1adaa878d::t_db30d799846bbb 127-130
+  s_2d3fc1adaa878d::t_c7d0ec43ebbfb9 223
+  s_2d3fc1adaa878d::t_aa32a2b0a5f233 16-21
+  s_2d3fc1adaa878d::t_fa71922c3afcc4 5-15,22,42,75-76,78,81,152,156-160,162-164,167-169,173-178,194
+docs/ai/summaries.md
+  s_2d3fc1adaa878d::t_8ba6817ed84f9c 4,9-11,13-19,21
+  s_2d3fc1adaa878d::t_802d57500e68e2 23
+  s_2d3fc1adaa878d::t_ec89d6391d9e2c 50
+  s_2d3fc1adaa878d::t_1ff5b5657ae7c5 1-3,5-8,12,20,22,24-49,51-55,57-59
+  s_2d3fc1adaa878d::t_b1f1bae3e9ac56 56
+docs/inbox/composing.md
+  s_2d3fc1adaa878d::t_9b228e819dee9a 1-28,31-58,60-81,83-96
+  s_2d3fc1adaa878d::t_91cf7faf52f53b 59
+  s_2d3fc1adaa878d::t_a863aa954c4c8d 29-30
+  s_2d3fc1adaa878d::t_0e7a5bb0740e77 82
+docs/ai/custom-categories.md
+  s_2d3fc1adaa878d::t_070152f862b8fc 1-135
+docs/inbox/reading-email.md
+  s_2d3fc1adaa878d::t_74d4a1d0a3a65e 24
+  s_2d3fc1adaa878d::t_ed2b6489ac0fc2 1-23,25-105
+docs/inbox/bulk-actions.md
+  s_2d3fc1adaa878d::t_3fbafe6444c82c 1-65
+docs/rules/scheduling-recurrence.md
+  s_2d3fc1adaa878d::t_193147eb5b5e85 87
+  s_2d3fc1adaa878d::t_8f37eaa49283cf 1-31,33-86,88-97,101-111
+  s_2d3fc1adaa878d::t_f3961d50b20857 98,100
+  s_2d3fc1adaa878d::t_b2429bf68fce0e 99
+  s_2d3fc1adaa878d::t_66d3f8dac905cd 112-113
+  s_2d3fc1adaa878d::t_5a81d3d84ba56c 32
+docs/inbox/search-and-filters.md
+  s_2d3fc1adaa878d::t_1b231afb9834eb 1-80
+docs/getting-started/dashboard.md
+  s_2d3fc1adaa878d::t_f1e83b148efeb8 10-11,15,21,24-27,32-33,38,42-43,53,55-59,61-64,66,70,78,86
+  s_2d3fc1adaa878d::t_9bc701ce81dba7 4
+  s_2d3fc1adaa878d::t_8754cbffa6e443 30
+  s_2d3fc1adaa878d::t_4cab9c9ec53cd7 34-37
+  s_2d3fc1adaa878d::t_97671e13f966cd 60
+  s_2d3fc1adaa878d::t_98fa7433d48a81 1-3,5-9,12-14,16-20,22-23,28-29,31,39-41,44-52,54,72-77,79-85,87
+  s_2d3fc1adaa878d::t_d10b56833f5ea2 65,67-69,71
+sidebars.ts
+  s_2d3fc1adaa878d::t_c6812723d82649 82-83,86-88,95
+  s_2d3fc1adaa878d::t_7898d75a7841a0 5,9,13-14,21,50,53-56,59-61,64,69-80,96-98,100-101,103,106-107,115-116,160-165,167-171,173,177-185,188-189
+  s_2d3fc1adaa878d::t_78f366e5556fb6 22,27,30-32,35-45,62-63,65-66,68,99,102,104-105,108-114,123,125-152,155-157,166,172,174-176,186-187,190-194
+  s_2d3fc1adaa878d::t_88408015e01752 84-85,89-94
+  s_2d3fc1adaa878d::t_87c5c5f88b4e4f 117-122,124,153-154,158-159
+  s_2d3fc1adaa878d::t_22ed74b26f08ef 67
+static/img/logo.svg
+  s_2d3fc1adaa878d::t_8c01c5b944d7ed 2,4-7,11-12
+  s_2d3fc1adaa878d::t_486444d88d51db 1,3,8-10
+docs/rules/actions.md
+  s_2d3fc1adaa878d::t_1c2dca8c76fe3a 15-17,19-20,25-27,29,35-37,49-55,63-74,79-80,82,86,88,91,94-128,150-151,153-154
+  s_2d3fc1adaa878d::t_40de81c537f6f2 92-93
+  s_2d3fc1adaa878d::t_daab9d66d474db 62
+  s_2d3fc1adaa878d::t_9dcafde12ecb60 1-3,5-12,21-24,28,30-34,38-48,58-61,76-78,81,83-85,87,89-90,149,152
+  s_2d3fc1adaa878d::t_a2d28c55ae4284 129-148
+  s_2d3fc1adaa878d::t_203c138838367b 4,13-14,18
+  s_2d3fc1adaa878d::t_caefc85447d87c 75
+  s_2d3fc1adaa878d::t_64a2b760c3b19e 56-57
+docs/ai/insights.md
+  s_2d3fc1adaa878d::t_e41100a53fbf82 1-11,19-20,22-58,61-62
+  s_2d3fc1adaa878d::t_91012cc3bb95b7 59-60
+  s_2d3fc1adaa878d::t_df3f12f25ee317 12-18
+  s_2d3fc1adaa878d::t_67b8108cd3e2f5 21
+docs/tracking/overview.md
+  s_2d3fc1adaa878d::t_1d9aaa22de9145 1-100
+docs/tracking/auto-responders.md
+  s_2d3fc1adaa878d::t_d32f459d44249a 1-101
+docs/index.mdx
+  s_2d3fc1adaa878d::t_b1ff3ec955c927 1-5,7-13
+  s_2d3fc1adaa878d::t_6c972184dec918 6
+docs/ai/usage-and-cost.md
+  s_2d3fc1adaa878d::t_d817456db9ecd2 1-59
+docs/productivity/templates.md
+  s_2d3fc1adaa878d::t_77e2308da3ab13 54
+  s_2d3fc1adaa878d::t_97d29cd3164544 1-53,55-140
+docs/analytics/rule-logs-and-undo.md
+  s_2d3fc1adaa878d::t_f00c47079881ed 1-121
+docs/analytics.md
+  s_2d3fc1adaa878d::t_1ce6b38d2f632e 1-11,17,29-30,32-34,38-41,43,45,49-51,53,64-65,70-71,87,89,93,95,99,101-106
+  s_2d3fc1adaa878d::t_bd45fd1d6bd06e 84
+  s_2d3fc1adaa878d::t_a0ae3f18be0c69 12-16,18-28,31,35-37,42,44,46-48,52,54-63,66-69,72-83,85-86,88,90-92,94,96-98,100
+docs/account/billing.md
+  s_2d3fc1adaa878d::t_065947c7b3c4a5 2,4,9,12-14,17-37,40,43,45-46,48-50,52-54,56,58,60,62-64,66-67,69-70,72-87,89-110,113-132,135-141,143-145,147-150,152,155-165,167-170
+  s_2d3fc1adaa878d::t_53243bb800c9ba 1,3,5-8,10-11,15-16,38-39,41-42,44,47,51,55,57,59,61,65,68,71,88,111-112,133-134,142,146,151,153-154,166
+docs/integrations/ai-providers.md
+  s_2d3fc1adaa878d::t_f78a6f7c7a01db 1-45
+package.json
+  s_2d3fc1adaa878d::t_107de6789f280d 21-22
+docs/rules/overview.md
+  s_2d3fc1adaa878d::t_8629cfd8f42363 142-143
+  s_2d3fc1adaa878d::t_5976c9824ca69a 1-3,5-12,15-17,21-23,38-40,42,46,48,50,61,67,69,74,120,128-132,135,151-155,157
+  s_2d3fc1adaa878d::t_a9932ad94d9afd 4,13-14,18-20,24-37,41,43-45,47,49,51-60,62-66,68,70-73,75-119,121-127,133-134,136-141,144-150,156
+src/theme/DocCard/styles.module.css
+  s_2d3fc1adaa878d::t_544d1737ef41d4 1-5,8-13,47-50,52-54,65-72,76-94
+  s_2d3fc1adaa878d::t_1d48bbb1846d14 6-7,14-46,51,55-64,73-75
+docs/inbox/overview.md
+  s_2d3fc1adaa878d::t_4a3d366af98d9b 50
+  s_2d3fc1adaa878d::t_746cd667b2dfe5 3-4,7,9-11,13,15,17-18,20-21,23-24,26,28,30-39,41-49,51-68,70-71,73,75-78,80-97,99-102
+  s_2d3fc1adaa878d::t_a50d80ba0dfff5 103-104
+  s_2d3fc1adaa878d::t_6f7ab6c01c0cbd 1-2,5-6,8,12,14,16,19,22,25,27,29,40,69,72,74,79,98
+docs/inbox/toolbar.md
+  s_2d3fc1adaa878d::t_98c548556a26d0 1-68
+static/img/favicon.svg
+  s_2d3fc1adaa878d::t_786309f652dd04 9-11
+  s_2d3fc1adaa878d::t_df16d682716f88 1-8,12
+docs/getting-started/connecting-gmail.md
+  s_2d3fc1adaa878d::t_54708a96c2624e 4,16-17,21,29,31-32,34-39,41-42,44-48,50,52,54-59,61-62,64-67,69,71-73,75,77-78,80-83,85-86,88,90-92,94-97,103-104,111,115,117-119,121-122,124,130-131,133-135
+  s_2d3fc1adaa878d::t_5dcebf9e0d18d3 120
+  s_2d3fc1adaa878d::t_8fa9f03dd4e542 7,9-11,13,15,18-19,23-26,99,101,106-108,110,112,126,128,132,137
+docs/rules/library.md
+  s_2d3fc1adaa878d::t_50545ed9368a97 2,4,9-10,13-68,70-72,74-75,79,88,99-100
+  s_2d3fc1adaa878d::t_d1be31352984c6 1,3,5-8,11-12,69,73,76-78,80-87,89-98
+docs/productivity/signatures.md
+  s_2d3fc1adaa878d::t_c9893ec366e2b4 1-57
+docs/account/privacy-and-data.md
+  s_2d3fc1adaa878d::t_a3a1a02543df6e 1-151
+docs/inbox/quick-actions.md
+  s_2d3fc1adaa878d::t_e53775c8db09ec 1-82
+docs/rules/multi-account.md
+  s_2d3fc1adaa878d::t_690e8e9aae61e1 1-62
+docs/ai/smart-rules.md
+  s_2d3fc1adaa878d::t_9bc4002892e0d4 1,3-14,16,30-72,76,80-84
+  s_2d3fc1adaa878d::t_59a28238399cda 21
+  s_2d3fc1adaa878d::t_fc7f222a10c284 2,17-20,22-29
+  s_2d3fc1adaa878d::t_1adc8161d33e15 73-75,77-79,85-86
+  s_2d3fc1adaa878d::t_66783aca73fa92 15
+docs/account/appearance.md
+  s_2d3fc1adaa878d::t_61e126a13aa044 1-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.7",
+  "base_commit_sha": "ac45e1015394b22f9400b54a884a3bd9c0268477",
+  "prompts": {},
+  "sessions": {
+    "s_2d3fc1adaa878d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "141b3feb-0de0-4fcd-a2db-83274f733645",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Peter Krzyzek <peter@chykalophia.com>"
+    }
+  }
+}
