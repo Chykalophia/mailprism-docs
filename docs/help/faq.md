@@ -1,0 +1,187 @@
+---
+sidebar_position: 1
+title: FAQ
+description: Quick answers to the most common questions about MailPrism — getting started, Gmail access, AI, tracking, billing, and more.
+---
+
+# Frequently Asked Questions
+
+Short answers to the things people ask most. Each one links to a fuller page if you
+want the detail.
+
+## Getting started
+
+### What is MailPrism?
+
+MailPrism is email automation for Gmail. You build **rules** — "when an email matches
+this, do that" — and MailPrism runs them for you on a schedule you choose. It also
+**tracks the conversations you're waiting on** so replies don't slip, and (if you opt
+in) uses **AI** to read each email's category, urgency, and sentiment so your rules can
+be smarter than keyword filters.
+
+See **[How rules work](../rules/overview.md)** and the **[AI overview](../ai/overview.md)**.
+
+### How do I get started?
+
+Sign up, connect Gmail, and create your first rule — about five minutes start to
+finish. Follow the **[Quick Start](../getting-started/quick-start.md)**, then the
+**[onboarding walkthrough](../getting-started/onboarding.md)**.
+
+### Does it work with Google Workspace?
+
+Yes — personal Gmail and Google Workspace both work. For Workspace, your admin may need
+to approve MailPrism for your organization. See
+**[Connecting Gmail](../getting-started/connecting-gmail.md)**.
+
+### Is there a free plan?
+
+Plan names and what each includes live on the live pricing page and your in-app
+**Billing** screen. See **[Billing & Plans](../account/billing.md)** — we don't list
+prices here because they can change.
+
+## Gmail & permissions
+
+### Why does MailPrism need access to my email?
+
+To run your rules, it needs to read mail (to check conditions and, if enabled, run AI
+analysis) and organize it (apply labels, archive, star, mark read). It can **send mail
+only through the forwarding feature**, and only when a rule you built forwards a
+message. Every permission and its purpose is listed in
+**[What access MailPrism asks for](../getting-started/connecting-gmail.md#what-access-mailprism-asks-for)**.
+
+### Does MailPrism request "send" access?
+
+Yes — the connection includes Gmail **send** permission, used only by the **forwarding**
+action. Nothing is ever sent unless a rule you created forwards a message.
+
+### Is my data safe?
+
+Your connection uses **Google OAuth** (no password sharing), your access tokens are
+stored **encrypted**, and **AI analysis is opt-in**. You can export your learning data
+or delete your account anytime. See **[Privacy & Security](./privacy-security.md)**.
+
+### Can I connect more than one account?
+
+Yes. Connect several Gmail accounts and automate them together; one is your **Primary**.
+Each rule can target a specific account or apply to all of them. See
+**[Connecting more than one account](../getting-started/connecting-gmail.md#connecting-more-than-one-account)**.
+
+### How do I disconnect Gmail?
+
+**Settings → Gmail → Disconnect**, or remove access from your
+**[Google account permissions](https://myaccount.google.com/permissions)**. See
+**[Disconnecting](../getting-started/connecting-gmail.md#disconnecting)**.
+
+## Rules & automation
+
+### How quickly do rules run?
+
+You choose. Processing frequency is **configurable** in **Settings → Scheduling**:
+
+- **Real-time** — process new mail as it arrives.
+- **Hourly** — once per hour.
+- **Daily** — once per day.
+
+MailPrism also receives Gmail push notifications, so real-time mode reacts promptly. See
+**[Processing frequency](../rules/overview.md#processing-frequency)**.
+
+### What if several rules match the same email?
+
+Rules run in **priority order** (highest first). Turn on **Stop processing** for a rule
+to prevent lower-priority rules from also running on that email. See
+**[The order rules run in](../rules/overview.md#the-order-rules-run-in)**.
+
+### Why didn't my rule run?
+
+The usual reasons: the rule is **disabled**, the **conditions don't match**, **AI is
+off** for an AI condition, you're inside **quiet hours**, or you've hit a **plan limit**.
+The fastest way to debug is the built-in **Test** tool and the **Rule Logs**. See
+**[Troubleshooting → A rule isn't firing](./troubleshooting.md#a-rule-isnt-firing)**.
+
+### Can I test a rule before trusting it?
+
+Yes. The **Test** card runs your rule against recent emails (or one specific email) and
+shows what matched and what didn't — without taking any action. See
+**[Testing rules](../rules/testing.md)**.
+
+### Can I undo an action a rule took?
+
+Usually, yes. The **Rule Logs** include an **Undo** button within a grace period.
+Irreversible actions (like permanently trashing a message) can't be undone. See
+**[Troubleshooting → Undo limits](./troubleshooting.md#i-cant-undo-an-action)**.
+
+### Can I back up my rules?
+
+Yes — **export your rules to JSON** and re-import them later. See
+**[Import & export rules](../rules/import-export.md)**.
+
+## AI
+
+### Is AI required?
+
+No. AI is **opt-in** — MailPrism doesn't analyze your mail with AI until you turn it on
+in **Settings → Privacy**. Without it, your rules use the non-AI conditions.
+
+### What can the AI detect?
+
+Category, urgency, sentiment, and yes/no signals like *needs response*, *is automated*,
+and **cold outreach** — each usable as a rule condition. See
+**[AI classification](../ai/classification.md)**.
+
+### Can I use my own AI keys?
+
+Yes — **BYOK** (Bring Your Own Key) lets you connect your own **OpenAI** or
+**Anthropic** key on eligible plans. See **[BYOK](../ai/byok.md)**.
+
+### What does AI analysis cost me?
+
+You can track AI operations, tokens, and cost — and how much runs on your own key — in
+**[AI usage & cost](../ai/usage-and-cost.md)**.
+
+## Response tracking & follow-ups
+
+### What is response tracking?
+
+MailPrism tracks the **state of each conversation** — for example *needs action*,
+*awaiting reply*, *resolved*, or *snoozed* — so you can see what's waiting on you and
+what's waiting on them. This is **reply-state** tracking based on who sent the last
+message; MailPrism does **not** use open or pixel tracking. See
+**[Response tracking](../tracking/overview.md)**.
+
+### What are nudges?
+
+Two follow-up helpers:
+
+- **Nudge Them** — sends polite follow-up emails to someone who hasn't replied.
+- **Remind Me** — reminds *you* about an email that needs attention.
+
+Both are configurable and use a `@Nudge` Gmail label. See
+**[Nudges & reminders](../tracking/nudges-and-reminders.md)**.
+
+## Accounts, teams & billing
+
+### Can I work with a team?
+
+Yes — workspaces support members, roles, and invitations. See
+**[Workspaces & teams](../account/workspaces-and-teams.md)**.
+
+### Can I change plans anytime?
+
+Yes — upgrade or downgrade from **Settings → Billing**. See
+**[Billing & Plans](../account/billing.md)**.
+
+### How do I update my card or get an invoice?
+
+Open the **Stripe customer portal** via **Manage Subscription** on the Billing page;
+your invoices are there too. See
+**[Manage your subscription](../account/billing.md#manage-your-subscription-stripe)**.
+
+### I have a lifetime code — where do I enter it?
+
+On the Billing page, in the lifetime-code field. See
+**[Redeem a lifetime code](../account/billing.md#redeem-a-lifetime-code)**.
+
+## Still stuck?
+
+Use the **Help** button in the app to reach support, or read
+**[Troubleshooting](./troubleshooting.md)**.

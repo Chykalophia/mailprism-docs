@@ -1,41 +1,40 @@
-# Website
+# MailPrism Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+The user documentation for **[MailPrism](https://mailprism.ai)** — AI-powered email
+automation for Gmail. Published at **[docs.mailprism.ai](https://docs.mailprism.ai)**.
 
-## Installation
+Built with [Docusaurus](https://docusaurus.io/).
 
-```bash
-yarn
-```
-
-## Local Development
+## Develop
 
 ```bash
-yarn start
+npm install
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Starts a local dev server at `http://localhost:3000` with live reload.
 
 ## Build
 
 ```bash
-yarn build
+npm run build      # outputs static site to ./build
+npm run serve      # preview the production build locally
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Project layout
 
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
+```
+docs/            # the documentation content (Markdown / MDX)
+src/css/         # design system — tokens, glass nav, readability (custom.css)
+src/components/  # custom React components (Home landing)
+static/img/      # brand assets — logo, favicon, social card
+sidebars.ts      # left-nav structure
+DESIGN.md        # the design system / style guide
 ```
 
-Not using SSH:
+## Design system
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Tokens mirror the MailPrism product (`app/globals.css`) so the docs feel like a
+natural extension of the app. The full style guide — color, type, spacing,
+glassmorphism, and the accessibility/readability rules these docs are written
+against — lives in [`DESIGN.md`](./DESIGN.md).
