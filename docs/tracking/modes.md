@@ -8,7 +8,7 @@ description: Basic mode (zero-config, automatic) vs Advanced mode (custom labels
 
 Response tracking runs in one of two modes. **Basic** is automatic and needs no setup;
 **Advanced** trades that simplicity for full control. You choose under
-**Settings → Response Tracking → Tracking Mode**, and you can switch any time.
+**Settings → Tracking Labels → Tracking Mode**, and you can switch any time.
 
 The two modes are **mutually exclusive** — turning one on turns the other off.
 

@@ -31,8 +31,8 @@ When you connect a key:
 Your key is **encrypted at rest** and never logged.
 
 :::note Plan requirement
-Bringing your own key is available on higher plans. If your plan doesn't include it,
-the OpenAI and Anthropic integrations show an **Upgrade** prompt. See
+Available on the **Business** plan. On other plans, the OpenAI and Anthropic
+integrations show an **Upgrade** prompt. See
 **[Billing & Plans](../account/billing.md)**.
 :::
 

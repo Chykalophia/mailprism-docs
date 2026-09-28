@@ -21,8 +21,8 @@ These are the only providers you can bring a key for today. Other providers are 
 yet available for BYOK.
 
 :::note Tier requirement
-BYOK is available on higher plans. If your plan doesn't include it, the OpenAI and
-Anthropic integrations show an **Upgrade** prompt. See **[Billing & Plans](../account/billing.md)**
+Available on the **Business** plan. On other plans, the OpenAI and Anthropic
+integrations show an **Upgrade** prompt. See **[Billing & Plans](../account/billing.md)**
 for what your plan includes.
 :::
 

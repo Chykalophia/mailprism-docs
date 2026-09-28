@@ -59,8 +59,8 @@ you can reorder and show or hide on the **[Toolbar](./toolbar.md)**.
 
 | Shortcut | Action |
 |----------|--------|
-| `Cmd+K` / `Ctrl+K` | Jump to the inbox search box |
-| `/` | Focus search |
+| `Cmd+K` / `Ctrl+K` | Open the **command palette** — type to find an action, page, or setting (e.g. *archive*, *go to rules*, *API keys*) |
+| `/` | Focus the inbox search box |
 
 ## Make them yours
 
