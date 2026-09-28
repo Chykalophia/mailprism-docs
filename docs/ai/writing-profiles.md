@@ -88,8 +88,8 @@ seen before.
 
 :::info What gets stored
 To learn from your sent mail, MailPrism **stores the sent emails it analyzes** for that
-profile, along with the patterns it learned. They stay until you press **Forget what
-was learned**.
+profile, along with the patterns it learned. They stay until you press **Forget** (under
+**Forget what was learned**).
 :::
 
 ### Forget what was learned

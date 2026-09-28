@@ -159,8 +159,8 @@ preview of exactly what will be sent:
 | **Custom…** | Opens **Advanced cleaning**: remove signatures, remove quoted text (or keep 1–3 prior replies), and clean the subject line. |
 
 **Custom…** also has AI options — clean tricky threads, add a summary, or pull out
-action items. They need the **AI cleanup** add-on (or, on a paid plan, your own
-Anthropic key); otherwise they're shown locked. Like any action, a forward can also have a **delay**.
+action items. They need the **AI email cleanup** add-on (or, on the Business plan, your
+own Anthropic key); otherwise they're shown locked. Like any action, a forward can also have a **delay**.
 
 ---
 

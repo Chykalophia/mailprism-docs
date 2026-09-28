@@ -13,8 +13,9 @@ off, nothing is sent for AI analysis.
 
 :::note AI and your plan
 Consent is one half; your plan is the other. AI analysis is included on paid plans
-(Starter and up). The Free plan runs rule-based automation. Bring-your-own-key (BYOK)
-requires the Business plan.
+(Starter and up). The Free plan runs rule-based automation, though it can still use
+the **[AI rule drafter](../rules/building-with-ai.md)** — 10 AI drafts a day.
+Bring-your-own-key (BYOK) requires the Business plan.
 :::
 
 ## How consent works

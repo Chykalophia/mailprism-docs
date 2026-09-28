@@ -52,8 +52,8 @@ The last step shows a checklist — *Gmail connected* and *First rule created* �
 you can see what's done. Click **Activate & Go to Dashboard** to turn automation on.
 
 From here, your rules run as new mail arrives. Timing controls such as quiet hours
-live in **Settings → Rule Defaults & Safety → Scheduling**. You can test any rule manually from the **Rules**
-page, and review or undo what rules did from the **Rule Logs**.
+live in **Settings → Rule Defaults & Safety → Scheduling**. You can test any rule manually from its **Edit**
+page (open it from **Rules**), and review or undo what rules did from the **Rule Logs**.
 
 → See **[How rules work](../rules/overview.md)** for the full processing and timing
 model.

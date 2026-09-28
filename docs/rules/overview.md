@@ -101,8 +101,8 @@ Scheduling**. It has three options: **Real-time**, **Hourly**, and **Daily**.
 
 :::caution What this setting changes today
 **Processing frequency** only paces MailPrism's **scheduled background runs**. Mail that
-arrives through a Gmail push notification is processed as it arrives, whichever option
-you pick. So choosing **Hourly** or **Daily** does **not** hold new mail back until the
+arrives through a Gmail push notification is processed as it arrives (unless
+**[quiet hours](#quiet-hours)** are active), whichever option you pick. So choosing **Hourly** or **Daily** does **not** hold new mail back until the
 next hour or day.
 :::
 
