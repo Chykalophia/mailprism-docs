@@ -11,7 +11,7 @@ without reaching for the mouse. Shortcuts run on the email pages and are tied to
 **[Quick Actions](./quick-actions.md)** — so you can change any of them, or turn them
 all off.
 
-One shortcut is different: **Cmd+K** (Mac) / **Ctrl+K** (Windows) opens the command
+One shortcut is different: **Cmd+K** (Mac) / **Ctrl+K** (Windows / Linux) opens the command
 palette from anywhere in the app. It isn't a Quick Action, and the Quick Actions switch
 doesn't turn it off.
 
