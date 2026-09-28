@@ -44,7 +44,9 @@ outreach**. See **[Classification](../ai/classification.md)**.
 **Confidence** — How sure the AI is about a signal, from `0.0` to `1.0`. You can
 require a minimum in rules.
 
-**Consent** — AI is opt-in; nothing is analyzed until you turn it on. See
+**Consent** — You agree to AI processing when you sign up, and can turn it off anytime
+in **Settings → Privacy → AI Data Processing**; while it's off, nothing is sent for AI
+analysis. See
 **[AI privacy & consent](../ai/privacy-and-consent.md)**.
 
 **BYOK** — "Bring your own key": use your own OpenAI or Anthropic API key. See

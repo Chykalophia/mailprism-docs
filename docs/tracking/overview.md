@@ -70,10 +70,11 @@ A conversation can start being tracked in several ways:
 How automatic this is depends on your **tracking mode** — see
 **[Tracking modes](./modes.md)**.
 
-:::note AI is opt-in
+:::note When AI is used
 The AI parts of tracking — reading a thread to judge its state, or filtering out
-newsletters and notifications — only run when you've turned **AI features** on. With AI
-off, tracking still works using your rules, manual actions, and email direction.
+newsletters and notifications — only run while AI is on and your plan includes it. To
+judge a thread, MailPrism sends each message's sender, recipients, date, and text, plus
+your own address. With AI off, tracking still works using your rules, manual actions, and email direction.
 :::
 
 ## Resolving and auto-resolution

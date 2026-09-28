@@ -16,9 +16,10 @@ be available in your account yet. This page describes how it works as it becomes
 available.
 :::
 
-:::info AI is opt-in
-Insights only appear once AI features are turned on. Until then, MailPrism doesn't
-analyze your email and no insights are generated. See **[AI privacy & consent](./privacy-and-consent.md)**.
+:::info Needs AI on
+Insights only appear while AI is on and your plan includes AI analysis (Starter and
+up). If you turn AI off, MailPrism stops analyzing your email and no new insights are
+generated. See **[AI privacy & consent](./privacy-and-consent.md)**.
 :::
 
 ## What it shows

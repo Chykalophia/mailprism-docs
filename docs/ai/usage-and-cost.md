@@ -56,4 +56,4 @@ nothing.
 
 - **[Analytics](../analytics.md)** — the full analytics dashboard.
 - **[Bring your own key (BYOK)](./byok.md)** — run AI on your own account.
-- **[AI privacy & consent](./privacy-and-consent.md)** — AI is opt-in.
+- **[AI privacy & consent](./privacy-and-consent.md)** — how consent works and how to turn AI off.

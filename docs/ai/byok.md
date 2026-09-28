@@ -75,5 +75,5 @@ shows what share of operations used your own keys versus the platform. See
 
 ## Related
 
-- **[AI privacy & consent](./privacy-and-consent.md)** — AI is opt-in; turn it on first.
+- **[AI privacy & consent](./privacy-and-consent.md)** — how consent works; AI must be on for BYOK to be used.
 - **[AI usage & cost](./usage-and-cost.md)** — track tokens, cost, and BYOK share.

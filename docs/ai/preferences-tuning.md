@@ -10,8 +10,9 @@ MailPrism's AI works out of the box, but you can shape how cautious or hands-off
 The controls live in two places in **Settings**: **Rule Defaults** (how AI acts on your
 mail) and **Privacy & Activity** (what AI is allowed to learn and process).
 
-:::info AI is opt-in
-None of this applies until you turn AI on. See
+:::info Needs AI on
+None of this applies while AI is turned off (**Settings → Privacy → AI Data
+Processing**) or on the Free plan, which doesn't include AI analysis. See
 **[AI privacy & consent](./privacy-and-consent.md)** for how consent works.
 :::
 

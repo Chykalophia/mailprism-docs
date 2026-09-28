@@ -56,9 +56,9 @@ Whether you use the quick setup popup or a saved template, a flow has these sett
 | **Template** | A custom message to send instead of an AI-written one |
 | **Include thread** | Whether to quote the original conversation in the follow-up |
 
-:::info AI is opt-in
-The **Use AI** toggle only appears for **Nudge Them** flows, and AI features must be
-turned on for your account. With AI off, follow-ups use your template instead.
+:::info When AI is used
+The **Use AI** toggle only appears for **Nudge Them** flows, and AI must be on for your
+account (it is unless you've turned it off in **Settings → Privacy**). With AI off, follow-ups use your template instead.
 **Remind Me** flows don't use AI by default — a simple reminder doesn't need it.
 :::
 

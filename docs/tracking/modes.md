@@ -32,8 +32,8 @@ on, MailPrism skips newsletters, notifications, and promotional mail that don't 
 response, so your **Needs Action** list stays meaningful instead of filling up with
 noise.
 
-:::note AI filtering is opt-in
-This toggle only does anything when **AI features** are turned on. With AI off, Basic
+:::note AI filtering needs AI on
+This toggle only does anything while AI is on and your plan includes it. With AI off, Basic
 mode still tracks threads by direction — it just won't filter out the noise.
 :::
 

@@ -15,8 +15,8 @@ want the detail.
 
 MailPrism is email automation for Gmail. You build **rules** — "when an email matches
 this, do that" — and MailPrism runs them for you on a schedule you choose. It also
-**tracks the conversations you're waiting on** so replies don't slip, and (if you opt
-in) uses **AI** to read each email's category, urgency, and sentiment so your rules can
+**tracks the conversations you're waiting on** so replies don't slip, and on paid plans
+uses **AI** to read each email's category, urgency, and sentiment so your rules can
 be smarter than keyword filters.
 
 See **[How rules work](../rules/overview.md)** and the **[AI overview](../ai/overview.md)**.
@@ -44,20 +44,24 @@ prices here because they can change.
 ### Why does MailPrism need access to my email?
 
 To run your rules, it needs to read mail (to check conditions and, if enabled, run AI
-analysis) and organize it (apply labels, archive, star, mark read). It can **send mail
-only through the forwarding feature**, and only when a rule you built forwards a
-message. Every permission and its purpose is listed in
+analysis) and organize it (apply labels, archive, star, mark read). MailPrism only acts
+on your mail through things you do in the app, rules you create, and features you turn
+on. Reply tracking is on by default and applies MailPrism's tracking labels — you can
+change or turn it off in **Settings → Tracking Labels**. Every permission and its purpose is listed in
 **[What access MailPrism asks for](../getting-started/connecting-gmail.md#what-access-mailprism-asks-for)**.
 
 ### Does MailPrism request "send" access?
 
-Yes — the connection includes Gmail **send** permission, used only by the **forwarding**
-action. Nothing is ever sent unless a rule you created forwards a message.
+Yes. **Send mail** is used when you send or reply from MailPrism, and when a feature you
+turned on sends on your behalf — forwarding, auto-replies, auto-responders, nudges, and
+unsubscribe requests sent by email. MailPrism never sends email you didn't write or set
+up.
 
 ### Is my data safe?
 
 Your connection uses **Google OAuth** (no password sharing), your access tokens are
-stored **encrypted**, and **AI analysis is opt-in**. You can export your learning data
+stored **encrypted**, and you can turn AI analysis off anytime. AI providers don't train
+on your data. You can export your learning data
 or delete your account anytime. See **[Privacy & Security](./privacy-security.md)**.
 
 ### Can I connect more than one account?
@@ -68,7 +72,7 @@ Each rule can target a specific account or apply to all of them. See
 
 ### How do I disconnect Gmail?
 
-**Settings → Gmail → Disconnect**, or remove access from your
+**Settings → Gmail Accounts → Disconnect**, or remove access from your
 **[Google account permissions](https://myaccount.google.com/permissions)**. See
 **[Disconnecting](../getting-started/connecting-gmail.md#disconnecting)**.
 
@@ -117,10 +121,26 @@ Yes — **export your rules to JSON** and re-import them later. See
 
 ## AI
 
-### Is AI required?
+### Is AI on by default?
 
-No. AI is **opt-in** — MailPrism doesn't analyze your mail with AI until you turn it on
-in **Settings → Privacy**. Without it, your rules use the non-AI conditions.
+Yes. When you sign up, you agree to let MailPrism use AI providers (Google Gemini as the
+primary provider, with OpenAI and Anthropic as fallbacks) to analyze your email. You can
+turn AI off at any time in **Settings → Privacy → AI Data Processing**. While it's off,
+nothing is sent for AI analysis, and your rules use the non-AI conditions. See
+**[AI privacy & consent](../ai/privacy-and-consent.md)**.
+
+### What's sent to the AI providers?
+
+The email's subject, sender, recipients (To/Cc), and body text. For reply tracking, the
+thread's participants and your own address are sent too. Providers don't use it to train
+their models. See
+**[What's sent vs. what's stored](../ai/privacy-and-consent.md#whats-sent-for-analysis-vs-what-stored)**.
+
+### Which plans include AI?
+
+AI analysis is included on paid plans (Starter and up). The Free plan runs rule-based
+automation. Bring-your-own-key (BYOK) requires the Business plan. Free plans can still
+use the **[AI rule drafter](../rules/building-with-ai.md)** — 10 AI drafts a day.
 
 ### What can the AI detect?
 
@@ -131,7 +151,7 @@ and **cold outreach** — each usable as a rule condition. See
 ### Can I use my own AI keys?
 
 Yes — **BYOK** (Bring Your Own Key) lets you connect your own **OpenAI** or
-**Anthropic** key on eligible plans. See **[BYOK](../ai/byok.md)**.
+**Anthropic** key on the **Business** plan. See **[BYOK](../ai/byok.md)**.
 
 ### What does AI analysis cost me?
 
