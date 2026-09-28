@@ -95,8 +95,7 @@ default**, and adjustable by a workspace owner or admin.
 Once that window passes, the execution can no longer be undone.
 
 :::note Where to change it
-The grace period lives in your workspace safety settings, alongside other automation
-limits. See **[Preferences](../account/preferences.md)** for workspace-level controls.
+Change it in **Settings → Rule Defaults & Safety → Undo Settings** (24, 48 or 72 hours).
 :::
 
 ### What can't be undone
@@ -105,7 +104,7 @@ Undo can't reverse everything:
 
 | Limitation | Why |
 |------------|-----|
-| **Irreversible actions** (e.g. moving to **Trash**) | There's no safe way to put these back, so they're flagged as not undo-able. |
+| **Irreversible actions** — moving to **Trash**, **sending** a reply or email, **forwarding** | A sent or forwarded message can't be recalled, and trash is flagged as not undo-able. |
 | **Already undone** | An execution can only be undone once. |
 | **Past the grace period** | The undo window has closed (see above). |
 | **The email no longer exists** | If the message was permanently deleted, there's nothing to restore. |

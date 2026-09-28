@@ -64,9 +64,10 @@ Google uses that label for every app it hasn't finished reviewing.
 A rule is a simple **"when this email arrives, do that"** instruction. You can
 build one from scratch or start from the **Rule Library** of ready-made templates.
 
-The fastest first rule:
+**Create Rule** opens on the AI drafter: describe what you want (*"label newsletters and
+archive them"*), review the draft, then create it. To build it yourself instead:
 
-1. Open **Rules → New Rule**.
+1. Open **Rules → Create Rule** and choose **Rule builder**.
 2. Add a condition — for example, **From** *contains* `newsletter`.
 3. Add an action — for example, **Apply label** `Newsletters`, then **Archive**.
 4. Save and enable it.
@@ -77,17 +78,15 @@ That's it — onboarding is complete and your automation is live.
 
 ## What happens next
 
-When a new email matches a rule, the rule's actions run automatically. **You choose
-how often that happens** — under **Settings → Scheduling** you can set processing to:
+When a new email matches a rule, the rule's actions run automatically. MailPrism
+listens for Gmail's own notifications about new mail, so rules usually run within
+moments of an email arriving.
 
-| Frequency | What it does |
-|-----------|--------------|
-| **Real-time** | Process emails as soon as they arrive *(as often as your plan allows)* |
-| **Hourly** | Process new mail once per hour |
-| **Daily** | Process new mail once per day |
-
-MailPrism also listens for Gmail's own notifications about new mail, so real-time
-processing reacts quickly rather than waiting on a fixed clock.
+Timing controls live in **Settings → Rule Defaults & Safety → Scheduling**: **quiet hours**
+pause rule processing during the window, and batch size, cooldown, and rate limits
+keep big runs in check. (The **Processing frequency** option there currently only
+paces MailPrism's scheduled background runs — see
+**[How often rules run](../rules/overview.md#how-often-rules-run)**.)
 
 You can watch everything it does in **Analytics** and the **Rule Logs**, and you can
 pause or change any rule at any time.

@@ -32,7 +32,7 @@ ones listed in **[Classification signals](./classification.md)** and the
 
 It works exactly like any rule — you just pick an AI field as the condition:
 
-1. **Rules → New Rule.**
+1. **Rules → Create Rule**, then choose **Rule builder**.
 2. Add a condition and choose an AI field — **Category**, **Urgency**, **Sentiment**,
    **Is spam**, **Is automated**, or **Is cold outreach**.
 3. Add your actions.

@@ -1,25 +1,30 @@
 ---
 sidebar_position: 4
 title: Building Rules with AI
-description: The AI Rule Drafter — describe an automation in plain language and have it turned into a rule. Still rolling out; the New Rule screen is the manual builder for now.
+description: The AI Rule Drafter — describe an automation in plain language, review the draft, and create the rule. It's where Create Rule opens.
 ---
 
 # Building Rules with AI
 
 Not sure how to translate "archive every newsletter from TechCrunch" into conditions
-and actions? The **AI Rule Drafter** is designed to do it for you: you describe what
-you want in plain language, and it builds a complete rule — conditions, actions, and
-all — that you can review before saving.
+and actions? The **AI Rule Drafter** does it for you: you describe what you
+want in plain language, and it builds a complete rule — conditions, actions, and all —
+that you review before it's created.
 
-:::caution Not yet available in the app
-The AI Rule Drafter is still rolling out. The **New Rule** screen in the app today is
-the manual builder — you set conditions and actions yourself — and there is no
-"describe it in plain language" option on it yet. This page describes how the drafter
-is intended to work; you can build the same rules now with the
-**[manual builder](./overview.md)**.
+**Create Rule** opens on the AI drafter. Describe what you want, review the draft, then
+create it — or switch to **Rule builder** to set conditions yourself. Free plans get 10
+AI drafts a day.
+
+:::info Plans and AI
+Drafting works on every plan. The Free plan's daily count resets at midnight UTC; paid
+plans have no daily cap. The drafter uses AI, so it needs AI turned
+on in **Settings → Privacy → AI Data Processing**.
 :::
 
-## How it's intended to work
+## How it works
+
+Go to **Rules → Create Rule**. The page opens with the drafter; the toggle at the top
+switches between **Describe it** (the drafter) and **Rule builder**.
 
 The drafter is a short conversation. You type what you want; it replies with a
 **rule draft** you can read, refine, and turn into a rule.
@@ -31,28 +36,30 @@ The drafter is a short conversation. You type what you want; it replies with a
 3. **Refine if needed.** If it's not quite right, just say so — *"only from
    gmail.com addresses"* or *"label it Finance instead."* The drafter keeps the
    conversation context and updates the draft.
-4. **Save the rule.** When the draft looks right, it's saved as a normal rule and
-   starts running on new email.
+4. **Create it.** Click **Create This Rule** to save it as a normal rule that starts
+   running on new email — or **Edit Details** to open the draft in the rule builder and
+   check every field first. If a draft is missing conditions or actions, only **Edit
+   Details** is available.
 
 ## Refining a draft
 
 The drafter remembers the conversation, so you can shape the rule in steps instead of
 getting it perfect on the first try.
 
-| You say | What it's meant to do |
+| You say | What it does |
 |---------|-----------------------|
 | *"Also archive it"* | Adds an **archive** action to the existing draft. |
 | *"Only during work hours"* | Adds a **business hours** condition. |
 | *"Use the Finance label, not Receipts"* | Changes the label in the action. |
 | *"Match any of these, not all"* | Switches the condition logic to **OR**. |
 
-## What it's meant to build
+## What it can build
 
 The drafter is built on the same building blocks as the manual builder, so anything
 you can express as conditions and actions is fair game:
 
 - **Filing** — label and archive newsletters, receipts, or notifications.
-- **Routing** — forward certain mail to a teammate, a Slack-style address, or a tool.
+- **Routing** — forward certain mail to a teammate or another verified address.
 - **Prioritizing** — star or mark important email from specific people.
 - **Follow-ups** — draft a polite nudge after a few quiet days.
 
@@ -61,7 +68,7 @@ For the full set of fields and actions it can draw on, see the
 
 ## Once a rule exists
 
-However a rule is created — by hand or, in future, by the drafter — it's a normal
+However a rule is created — by the drafter or in the rule builder — it's a normal
 rule. You can:
 
 - **[Test it](./testing.md)** against your recent email to confirm it matches what
@@ -71,8 +78,8 @@ rule. You can:
 - Edit, disable, or delete it any time from the **Rules** list.
 
 :::caution Always review before relying on a rule
-An AI-drafted rule comes from your words — it doesn't read your mind. When the drafter
-ships, check the conditions and actions (and run a quick test) before you rely on it,
+An AI-drafted rule comes from your words — it doesn't read your mind. Check the
+conditions and actions (and run a quick test) before you rely on it,
 especially for rules that archive, forward, or delete mail.
 :::
 

@@ -97,19 +97,19 @@ Each rule can target a specific account or apply to all of them. See
 
 ### How quickly do rules run?
 
-You choose. Processing frequency is **configurable** in **Settings → Scheduling**:
+Usually within moments. MailPrism receives Gmail push notifications and processes new
+mail as it arrives.
 
-- **Real-time** — process new mail as it arrives.
-- **Hourly** — once per hour.
-- **Daily** — once per day.
-
-MailPrism also receives Gmail push notifications, so real-time mode reacts promptly. See
-**[Processing frequency](../rules/overview.md#processing-frequency)**.
+**Settings → Rule Defaults & Safety → Scheduling** has a **Processing frequency** option (Real-time, Hourly,
+Daily), but today it only paces MailPrism's scheduled background runs — it doesn't hold
+back mail that arrives through a push notification. **Quiet hours** pause rule
+processing during the window. See
+**[How often rules run](../rules/overview.md#how-often-rules-run)**.
 
 ### What if several rules match the same email?
 
-Rules run in **priority order** (highest first). Turn on **Stop processing** for a rule
-to prevent lower-priority rules from also running on that email. See
+Rules run in **priority order** — the **lowest priority number runs first**. Turn on
+**Stop processing** for a rule to prevent later rules from also running on that email. See
 **[The order rules run in](../rules/overview.md#the-order-rules-run-in)**.
 
 ### Why didn't my rule run?
@@ -127,8 +127,9 @@ shows what matched and what didn't — without taking any action. See
 
 ### Can I undo an action a rule took?
 
-Usually, yes. The **Rule Logs** include an **Undo** button within a grace period.
-Irreversible actions (like permanently trashing a message) can't be undone. See
+Often, yes. The **Rule Logs** include an **Undo** button within a grace period (24, 48,
+or 72 hours). Most label, archive, and read/unread changes can be undone. Moving to
+Trash, sending, and forwarding can't be undone. See
 **[Troubleshooting → Undo limits](./troubleshooting.md#i-cant-undo-an-action)**.
 
 ### Can I back up my rules?

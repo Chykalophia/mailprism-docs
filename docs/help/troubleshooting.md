@@ -26,7 +26,7 @@ Google access tokens can expire, or you (or an admin) may revoke access from you
 Google account. When that happens, MailPrism can't read or organize your mail until you
 reconnect.
 
-- Open **Settings → Gmail** and use **Reconnect** on the affected account.
+- Open **Settings → Gmail Accounts** and use **Reconnect** on the affected account.
 - You'll go through Google's consent screen again — approve the same permissions.
 
 See **[Reconnecting & reauthorizing](../getting-started/connecting-gmail.md#reconnecting--reauthorizing)**.
@@ -72,11 +72,13 @@ taking any action. See **[Testing rules](../rules/testing.md)**. Then check, in 
    **[Combining conditions](../rules/conditions.md#combining-conditions)**.
 4. **Using AI conditions?** Confirm **AI features are on** in **Settings → Privacy** —
    AI conditions never match while AI is off. See **[AI overview](../ai/overview.md)**.
-5. **Processing frequency.** On **hourly** or **daily** mode, rules run on that
-   schedule, not instantly. See
-   **[Processing frequency](../rules/overview.md#processing-frequency)**.
-6. **Quiet hours.** Rules pause during your quiet-hours window; queued emails run once
-   it ends. See **[Quiet hours](../rules/overview.md#quiet-hours)**.
+5. **Quiet hours.** Quiet hours pause rule processing during the window, and mail that
+   arrives then isn't run later. Check the window in **Settings → Rule Defaults & Safety → Scheduling**.
+   See **[Quiet hours](../rules/overview.md#quiet-hours)**.
+6. **Scheduled runs.** If a push notification was missed, the email waits for
+   MailPrism's next scheduled background run, which **Processing frequency**,
+   cooldown, and rate limits can slow. See
+   **[How often rules run](../rules/overview.md#how-often-rules-run)**.
 7. **Priority / Stop processing.** A higher-priority rule with **Stop processing** on
    may be handling the email first. See
    **[The order rules run in](../rules/overview.md#the-order-rules-run-in)**.
@@ -104,10 +106,10 @@ See **[Best practices](../rules/best-practices.md)**.
 The **Rule Logs** include an **Undo** button, but it has limits:
 
 - **Grace period.** Undo is only available for a configurable window after the action
-  ran (a workspace setting, **Settings → Safety**). After that, the option expires.
+  ran (a workspace setting, **Settings → Rule Defaults & Safety → Undo Settings**). After that, the option expires.
 - **Already undone.** An action can only be undone once.
-- **Irreversible actions.** Some actions — like permanently trashing a message — can't
-  be reversed and won't offer Undo.
+- **Irreversible actions.** Moving to Trash, sending, and forwarding can't be reversed
+  and won't offer Undo. Most label, archive, and read/unread changes can.
 
 If Undo isn't offered, check the action type and how long ago it ran.
 
@@ -128,5 +130,5 @@ relationship) for reliability. You can also correct the AI over time; see
 
 ## Still stuck?
 
-Reach support with the **Help** button inside the app — include the rule name and an
-example email if it's about a specific automation, so we can help faster.
+Email **[hello@mailprism.ai](mailto:hello@mailprism.ai)** — include the rule name and
+an example email if it's about a specific automation, so we can help faster.

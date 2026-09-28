@@ -101,7 +101,8 @@ See **[Account & security](../account/account-security.md#passkeys)**.
 **Lifetime code** — A one-time code that unlocks permanent access. See
 **[Billing](../account/billing.md#redeem-a-lifetime-code)**.
 
-**Quiet hours** — A window where rules pause; mail is queued until it ends. See
+**Quiet hours** — A window where rule processing pauses; mail that arrives then isn't
+queued for later. See
 **[Preferences](../account/preferences.md#scheduling)**.
 
 **Undo** — Reverse a rule's changes within a grace period, from the
