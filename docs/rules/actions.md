@@ -126,9 +126,10 @@ quiet — and a draft is one you approve, rather than auto-send.
 
 ## Forward options
 
-The **Forward Email** action forwards a matching email to one of your **verified
-forwarding addresses**. In the rule builder you pick the destination from a dropdown of
-addresses you've already set up.
+The **Forward Email** action forwards a matching email to a destination you've already
+set up. In the rule builder you pick it from a dropdown that lists your **verified
+forwarding addresses** and, if one has been set up for your account, your **ClickUp**
+destination.
 
 ### Choosing a destination
 

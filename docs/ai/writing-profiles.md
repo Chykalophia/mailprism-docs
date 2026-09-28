@@ -79,7 +79,7 @@ The card sits on **Settings → Writing Profiles** and works on your **default p
 
 | Button | What it does |
 |--------|--------------|
-| **Analyse my writing** | Reads your recent sent mail and learns your patterns — greetings, sign-offs, tone, formality, and typical length. It never sends anything. |
+| **Analyse my writing** | Reads your recent sent mail and learns your patterns — greetings, sign-offs, tone, formality, and typical length. It doesn't send any email to anyone — but, like all AI analysis, the content of those sent emails is sent to our AI provider to be analyzed. |
 | **Analyse new emails** | Runs again, skipping emails it has already analyzed. |
 | **Re-analyse recent mail** | Reads your 50 most recent sent emails again, even ones it has seen. |
 
