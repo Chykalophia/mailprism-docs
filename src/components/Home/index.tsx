@@ -117,8 +117,8 @@ export default function Home(): ReactNode {
             </Link>
           </div>
           <p className={styles.metaNote}>
-            New here? Start with{' '}
-            <Link to="/getting-started/connecting-gmail">connecting Gmail</Link> — no credit card needed.
+            MailPrism is in invite-only beta. New here? Start with the{' '}
+            <Link to="/getting-started/quick-start">Quick Start</Link>.
           </p>
         </div>
       </section>

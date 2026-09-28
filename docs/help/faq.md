@@ -21,6 +21,23 @@ be smarter than keyword filters.
 
 See **[How rules work](../rules/overview.md)** and the **[AI overview](../ai/overview.md)**.
 
+### How do I get access?
+
+MailPrism is in an **invite-only closed beta**. If you have an invite, open the invite
+link — it takes you to sign-up with your code filled in. If not, join the waitlist at
+**[app.mailprism.ai/beta](https://app.mailprism.ai/beta)**.
+
+Each code works once and is tied to the email you sign up with. If you sign up with
+Google, enter the address of the Google account you'll choose. See
+**[Quick Start](../getting-started/quick-start.md)**.
+
+### Google says MailPrism is "unverified" — is that OK?
+
+Yes, during the beta. Google's verification of MailPrism is still in progress, so Google
+may show an "unverified app" screen when you connect Gmail. Click **Advanced**, then
+**Go to MailPrism (unsafe)**, to continue — Google uses that label for every app it
+hasn't finished reviewing.
+
 ### How do I get started?
 
 Sign up, connect Gmail, and create your first rule — about five minutes start to
@@ -201,7 +218,15 @@ your invoices are there too. See
 On the Billing page, in the lifetime-code field. See
 **[Redeem a lifetime code](../account/billing.md#redeem-a-lifetime-code)**.
 
-## Still stuck?
+## Feedback & support
 
-Use the **Help** button in the app to reach support, or read
-**[Troubleshooting](./troubleshooting.md)**.
+### How do I give feedback or report a bug?
+
+Email **[hello@mailprism.ai](mailto:hello@mailprism.ai)**. For a bug, include what you
+did, what you expected, what happened instead, and a screenshot if you can. During the
+beta, email is the most reliable way to reach the team.
+
+### Still stuck?
+
+Read **[Troubleshooting](./troubleshooting.md)**, or email
+**[hello@mailprism.ai](mailto:hello@mailprism.ai)**.
