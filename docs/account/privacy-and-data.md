@@ -106,11 +106,8 @@ pattern learning. As you organize emails in Gmail, those actions appear here.
 
 ## Advanced settings
 
-The **Advanced Settings** card fine-tunes learning behavior.
+The **Advanced Settings** card sets how long learning data is kept.
 
-- **Minimum Confidence** — only suggest patterns at or above this confidence level:
-  50%, 65%, **75% (default)**, 85%, or 95%. Higher means fewer but more reliable
-  suggestions.
 - **Data Retention** — how long learning data is kept before automatic cleanup:
   30, 60, **90 days (default)**, 180 days, or 1 year.
 

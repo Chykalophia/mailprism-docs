@@ -8,7 +8,7 @@ description: Basic mode (zero-config, automatic) vs Advanced mode (custom labels
 
 Response tracking runs in one of two modes. **Basic** is automatic and needs no setup;
 **Advanced** trades that simplicity for full control. You choose under
-**Settings → Response Tracking → Tracking Mode**, and you can switch any time.
+**Settings → Tracking Labels → Tracking Mode**, and you can switch any time.
 
 The two modes are **mutually exclusive** — turning one on turns the other off.
 
@@ -32,8 +32,8 @@ on, MailPrism skips newsletters, notifications, and promotional mail that don't 
 response, so your **Needs Action** list stays meaningful instead of filling up with
 noise.
 
-:::note AI filtering is opt-in
-This toggle only does anything when **AI features** are turned on. With AI off, Basic
+:::note AI filtering needs AI on
+This toggle only does anything while AI is on and your plan includes it. With AI off, Basic
 mode still tracks threads by direction — it just won't filter out the noise.
 :::
 

@@ -89,7 +89,7 @@ const features: {label: string; body: string; color: string}[] = [
   },
   {
     label: 'Yours, privately',
-    body: 'Gmail-native via Google OAuth. You opt in to AI, can bring your own keys, and can export or delete anytime.',
+    body: 'Gmail-native via Google OAuth. Turn AI off anytime, bring your own keys on Business, and export or delete anytime.',
     color: 'var(--mp-spectrum-orange)',
   },
 ];
@@ -117,8 +117,8 @@ export default function Home(): ReactNode {
             </Link>
           </div>
           <p className={styles.metaNote}>
-            New here? Start with{' '}
-            <Link to="/getting-started/connecting-gmail">connecting Gmail</Link> — no credit card needed.
+            MailPrism is in invite-only beta. New here? Start with the{' '}
+            <Link to="/getting-started/quick-start">Quick Start</Link>.
           </p>
         </div>
       </section>

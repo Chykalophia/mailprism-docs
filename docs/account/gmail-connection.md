@@ -7,7 +7,7 @@ description: Manage connected Gmail accounts — set primary, per-account sync, 
 # Managing Your Gmail Connection
 
 Your Gmail connection is what makes everything else possible. Once you've
-connected an account, you manage it under **Settings → Gmail**.
+connected an account, you manage it under **Settings → Gmail Accounts**.
 
 :::tip New here?
 For first-time setup — the OAuth flow, what each permission means, and adding
@@ -17,7 +17,7 @@ This page covers the *ongoing* side: managing accounts you've already connected.
 
 ## Connected accounts
 
-**Settings → Gmail** lists every account you've connected. Each row shows the
+**Settings → Gmail Accounts** lists every account you've connected. Each row shows the
 account, its status badge, and when it last synced.
 
 | Badge | Meaning |
@@ -96,7 +96,7 @@ uses. MailPrism requests these Google permissions at connection time:
 |--------|---------------|
 | **Read and modify mail** | Read senders, subjects, and content to match rules and power AI analysis; apply/remove labels, archive, star, and mark read/unread when a rule matches. |
 | **Manage labels** | Create and manage the labels your rules apply and the labels MailPrism uses for tracking. |
-| **Send mail** | Used only by the **forwarding** feature, when a rule you built forwards a message. |
+| **Send mail** | Used when you send or reply from MailPrism, and when a feature you turned on sends on your behalf — forwarding, auto-replies, auto-responders, nudges, and unsubscribe requests sent by email. MailPrism never sends email you didn't write or set up. |
 | **Email & profile** | Identify which Google account you connected and show your name in settings. |
 
 Calendar access is **separate and optional** — you grant it only if you opt into
@@ -124,7 +124,7 @@ use it.
 
 ## Per-account activity, rules & exemptions
 
-Open an account's **detail page** (click its row in **Settings → Gmail**) for a
+Open an account's **detail page** (click its row in **Settings → Gmail Accounts**) for a
 full picture of that mailbox:
 
 - **Rules** — every custom and system rule that applies to this account, with a
@@ -139,7 +139,7 @@ full picture of that mailbox:
 
 ## Email processing
 
-The **Email Processing** card (at the bottom of **Settings → Gmail**) controls
+The **Email Processing** card (at the bottom of **Settings → Gmail Accounts**) controls
 *how* incoming mail is handled across your accounts:
 
 - **Processing Delay** — wait a short time before processing, so Gmail can apply

@@ -126,27 +126,41 @@ quiet — and a draft is one you approve, rather than auto-send.
 
 ## Forward options
 
-The **Forward Email** action forwards a matching email to one of your **verified
-forwarding addresses**. In the rule builder you pick the destination from a dropdown of
-addresses you've already set up.
+The **Forward Email** action forwards a matching email to a destination you've already
+set up. In the rule builder you pick it from a dropdown that lists your **verified
+forwarding addresses** and, if one has been set up for your account, your **ClickUp**
+destination.
 
 ### Choosing a destination
 
 | You set up… | …in |
 |-------------|-----|
 | **Email addresses** | Your forwarding-address settings (each must be verified before it appears in the dropdown) |
-| **Integration destinations** | A connected **ClickUp**, **Slack**, or **Google Groups** destination, configured in your integration settings, also appears in the same dropdown |
+| **ClickUp channels** | A ClickUp destination set up for your account also appears in the same dropdown — see **[ClickUp](../integrations/overview.md#clickup)** (limited availability) |
 
-So the destination — whether an email address or a ClickUp / Slack / Google Groups
-target — is configured **once** in settings, then selected on the Forward action.
+So the destination is configured **once** in settings, then selected on the Forward
+action.
 
-:::note Advanced forward cleanup is engine-level, not yet in the builder
-MailPrism's forwarding engine can do more than send — it can strip signatures and quoted
-history, filter attachments, clean up the subject, and add AI summaries. **These options
-aren't exposed in the rule builder yet**, so there's no in-app configurator for them
-today. The Forward action in the builder lets you choose a verified destination and
-(like any action) add a **delay**.
+:::note Slack isn't available yet
+There's no Slack destination today — Slack is
+**[coming soon](../integrations/overview.md#coming-soon)**.
 :::
+
+### Cleaning up what's forwarded
+
+Once you pick a destination, the Forward action shows cleaning presets and a live
+preview of exactly what will be sent:
+
+| Preset | What's forwarded |
+|--------|------------------|
+| **Just the new message** (recommended) | The latest reply only — signatures and quoted history removed. |
+| **Trim signatures only** | The quoted thread stays for context; the signature goes. |
+| **Full email (no cleaning)** | The message exactly as received. |
+| **Custom…** | Opens **Advanced cleaning**: remove signatures, remove quoted text (or keep 1–3 prior replies), and clean the subject line. |
+
+**Custom…** also has AI options — clean tricky threads, add a summary, or pull out
+action items. They need the **AI email cleanup** add-on (or, on the Business plan, your
+own Anthropic key); otherwise they're shown locked. Like any action, a forward can also have a **delay**.
 
 ---
 

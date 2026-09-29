@@ -13,7 +13,9 @@ We'll make a classic: *automatically label and archive newsletters.*
 
 ## Step 1 — Open the rule builder
 
-Go to **Rules**, then click **New Rule**. You'll see two areas:
+Go to **Rules → Create Rule**, then choose **Rule builder**. (Create Rule opens on the
+**[AI drafter](../rules/building-with-ai.md)** — handy later, but this walkthrough builds
+the rule by hand.) You'll see two areas:
 
 - **Conditions** — *when* should this rule run?
 - **Actions** — *what* should happen when it does?

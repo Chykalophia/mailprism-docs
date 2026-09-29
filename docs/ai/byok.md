@@ -21,8 +21,8 @@ These are the only providers you can bring a key for today. Other providers are 
 yet available for BYOK.
 
 :::note Tier requirement
-BYOK is available on higher plans. If your plan doesn't include it, the OpenAI and
-Anthropic integrations show an **Upgrade** prompt. See **[Billing & Plans](../account/billing.md)**
+Available on the **Business** plan. On other plans, the OpenAI and Anthropic
+integrations show an **Upgrade** prompt. See **[Billing & Plans](../account/billing.md)**
 for what your plan includes.
 :::
 
@@ -75,5 +75,5 @@ shows what share of operations used your own keys versus the platform. See
 
 ## Related
 
-- **[AI privacy & consent](./privacy-and-consent.md)** — AI is opt-in; turn it on first.
+- **[AI privacy & consent](./privacy-and-consent.md)** — how consent works; AI must be on for BYOK to be used.
 - **[AI usage & cost](./usage-and-cost.md)** — track tokens, cost, and BYOK share.

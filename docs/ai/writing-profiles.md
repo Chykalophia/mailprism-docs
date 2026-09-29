@@ -70,6 +70,41 @@ badge.
 From the profile list you can **Preview**, **Set Default**, **Edit**, or **Delete** any
 profile. Editing opens the same form with the current values filled in.
 
+## Learn from your sent mail {#learn-from-your-sent-mail}
+
+Tone and instructions describe how you *want* to sound. **Learn from your sent mail**
+lets MailPrism read how you *actually* write, so AI drafts sound more like you.
+
+The card sits on **Settings → Writing Profiles** and works on your **default profile**.
+
+| Button | What it does |
+|--------|--------------|
+| **Analyse my writing** | Reads your recent sent mail and learns your patterns — greetings, sign-offs, tone, formality, and typical length. It doesn't send any email to anyone — but, like all AI analysis, the content of those sent emails is sent to our AI provider to be analyzed. |
+| **Analyse new emails** | Runs again, skipping emails it has already analyzed. |
+| **Re-analyse recent mail** | Reads your 50 most recent sent emails again, even ones it has seen. |
+
+Analysis uses AI, so it needs AI turned on, and it uses AI credits for each email it hasn't
+seen before.
+
+:::info What gets stored
+To learn from your sent mail, MailPrism **stores the sent emails it analyzes** for that
+profile, along with the patterns it learned. They stay until you press **Forget** (under
+**Forget what was learned**).
+:::
+
+### Forget what was learned
+
+Press **Forget**, then confirm with **Forget it all**.
+
+| Forget **deletes** | Forget **keeps** |
+|--------------------|------------------|
+| The stored copies of your sent emails analyzed for this profile | The profile itself |
+| The greetings, sign-offs, and other patterns learned from them | The tone, length, formality, and custom instructions you set by hand |
+| The auto-detected tone, formality, and length | Everything your *other* profiles have learned |
+
+After you forget, AI drafts go back to using the tone you picked. You can analyse again
+at any time.
+
 ## A starting set worth keeping
 
 There are no fixed presets — you build the profiles that fit how *you* write. A common,

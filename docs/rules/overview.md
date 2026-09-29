@@ -89,30 +89,37 @@ full.
 
 MailPrism reacts to your mail in two ways, working together:
 
-- **Gmail push notifications** — Gmail tells MailPrism the moment something
-  changes, so processing can start without waiting for a fixed polling interval.
-- **A processing frequency you choose** — under **Settings → Scheduling** you set
-  how often rules process new mail.
+- **Gmail push notifications** — Gmail tells MailPrism the moment new mail arrives,
+  and MailPrism processes it right away.
+- **Scheduled background runs** — MailPrism also checks for mail on a schedule, to
+  catch anything a notification missed.
 
 ### Processing frequency
 
-The **Processing frequency** setting (Settings → Scheduling) has three options:
+The **Processing frequency** setting is in **Settings → Rule Defaults & Safety →
+Scheduling**. It has three options: **Real-time**, **Hourly**, and **Daily**.
 
-| Option | What it means |
-|--------|---------------|
-| <span class="mp-pill mp-pill--green">Real-time</span> | Process emails as they arrive (as often as your plan allows). |
-| <span class="mp-pill mp-pill--blue">Hourly</span> | Process new emails once per hour. |
-| <span class="mp-pill mp-pill--blue">Daily</span> | Process new emails once per day. |
+:::caution What this setting changes today
+**Processing frequency** only paces MailPrism's **scheduled background runs**. Mail that
+arrives through a Gmail push notification is processed as it arrives (unless
+**[quiet hours](#quiet-hours)** are active), whichever option you pick. So choosing **Hourly** or **Daily** does **not** hold new mail back until the
+next hour or day.
+:::
 
-The same Scheduling page also lets you tune **batch size** (how many emails a
-single run handles), a **cooldown** between runs, and a **per-hour rate limit**.
+The same Scheduling section also lets you tune **batch size** (how many emails a
+single scheduled run handles), a **cooldown** between runs, and a **per-hour rate
+limit**.
 
 ### Quiet hours
 
-If you turn on **Quiet hours** (Settings → Scheduling), rules pause during the
-window you set. Emails that arrive during quiet hours are **queued and processed
-when the window ends** — nothing is skipped, just delayed. Quiet hours use the
-timezone from your **Date & Time** settings.
+If you turn on **Quiet hours** (**Settings → Rule Defaults & Safety → Scheduling**),
+quiet hours pause rule processing during the window. Quiet hours use the timezone from
+your **Date & Time** settings.
+
+:::caution Quiet hours skip, they don't queue
+Mail that arrives during quiet hours isn't saved up and run when the window ends. Don't
+rely on quiet hours to delay an action until morning.
+:::
 
 :::note Plan limits
 How much MailPrism can process each month depends on your plan. See your current
@@ -128,26 +135,27 @@ inbox.
 
 ## Managing your rules
 
-On the **Rules** page you can:
+The **Rules** page has four tabs:
 
-- **Filter** by status — **All**, **Active**, **Paused**, or **Errors** — and
-  **search** by name or description.
-- **Enable or disable** a rule with its toggle, without deleting it.
-- **View**, **edit**, or **delete** a rule from its card.
-- **Export** all your rules to a JSON file from the **More** menu (for backup or
+| Tab | What's in it |
+|-----|--------------|
+| **Active** | The rules you created. **Enable or disable** a rule with its toggle, or **edit** or **delete** it. |
+| **Built-in** | MailPrism's built-in filters, grouped by purpose. Turn each one on or off. Tracking and the auto-responder link out to their own settings pages. |
+| **Muted** | Senders you've muted, with a **Mute a sender** option. Unmuting gives you a few seconds to undo. |
+| **All · History** | Every rule, including built-in ones, with filters for **source** and **phase**. Open a rule's **history** to see its past runs and versions. |
+
+Also on the page:
+
+- **Create Rule** — opens the **[AI drafter](./building-with-ai.md)**, with a switch to
+  the **Rule builder**.
+- **Browse Templates** — the **[Rule library](./library.md)**.
+- **More → Export Rules** — download all your rules as a JSON file (for backup or
   moving between accounts).
-- See each rule's **execution count** and **last activity** at a glance.
-- Open **Execution History** to see every run, and **undo** recent rule actions.
+
+Built-in rules can be turned off, but not deleted.
 
 → See **[Analytics & logs](../analytics.md)** for the audit trail and the undo
 grace period.
-
-### Core rules
-
-Some rules ship as system defaults and carry a <span class="mp-pill mp-pill--blue">Core
-Rule</span> badge — for example the rules that keep response tracking working.
-You can **turn a core rule off**, but you **can't delete it**. Everything is
-logged in your Execution History either way.
 
 ## What's next
 

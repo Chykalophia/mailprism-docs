@@ -44,7 +44,9 @@ outreach**. See **[Classification](../ai/classification.md)**.
 **Confidence** — How sure the AI is about a signal, from `0.0` to `1.0`. You can
 require a minimum in rules.
 
-**Consent** — AI is opt-in; nothing is analyzed until you turn it on. See
+**Consent** — You agree to AI processing when you sign up, and can turn it off anytime
+in **Settings → Privacy → AI Data Processing**; while it's off, nothing is sent for AI
+analysis. See
 **[AI privacy & consent](../ai/privacy-and-consent.md)**.
 
 **BYOK** — "Bring your own key": use your own OpenAI or Anthropic API key. See
@@ -99,7 +101,8 @@ See **[Account & security](../account/account-security.md#passkeys)**.
 **Lifetime code** — A one-time code that unlocks permanent access. See
 **[Billing](../account/billing.md#redeem-a-lifetime-code)**.
 
-**Quiet hours** — A window where rules pause; mail is queued until it ends. See
+**Quiet hours** — A window where rule processing pauses; mail that arrives then isn't
+queued for later. See
 **[Preferences](../account/preferences.md#scheduling)**.
 
 **Undo** — Reverse a rule's changes within a grace period, from the

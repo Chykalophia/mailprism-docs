@@ -62,11 +62,14 @@ The dashboard is one stop. Here's the rest of the map:
 | **Analytics** | What your automations have done, over time. See **[Analytics](../analytics.md)**. |
 | **Settings** | Connect accounts, tune AI, set scheduling, and more. See **[Connecting Gmail](./connecting-gmail.md)** and **[Preferences](../account/preferences.md)**. |
 
-### Search shortcut
+### Command palette
 
-On the email pages, press **Cmd + K** (Mac) or **Ctrl + K** (Windows / Linux) to
-jump straight to the **inbox search box** so you can start filtering mail without
-reaching for the mouse.
+Anywhere in the app, press **Cmd + K** (Mac) or **Ctrl + K** (Windows / Linux) to open
+the **command palette**. Type what you're after — *archive*, *go to rules*, *API keys*
+— and pick it from the list, without reaching for the mouse.
+
+To search your mail instead, press **/** on the email pages to jump to the inbox
+search box.
 
 → Full shortcut list: **[Keyboard shortcuts](../inbox/keyboard-shortcuts.md)**
 

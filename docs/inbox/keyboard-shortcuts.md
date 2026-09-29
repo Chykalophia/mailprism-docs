@@ -11,6 +11,10 @@ without reaching for the mouse. Shortcuts run on the email pages and are tied to
 **[Quick Actions](./quick-actions.md)** — so you can change any of them, or turn them
 all off.
 
+One shortcut is different: **Cmd+K** (Mac) / **Ctrl+K** (Windows / Linux) opens the command
+palette from anywhere in the app. It isn't a Quick Action, and the Quick Actions switch
+doesn't turn it off.
+
 ## How shortcuts work
 
 - Shortcuts fire while you're reading or browsing mail — **not** while you're typing
@@ -59,8 +63,8 @@ you can reorder and show or hide on the **[Toolbar](./toolbar.md)**.
 
 | Shortcut | Action |
 |----------|--------|
-| `Cmd+K` / `Ctrl+K` | Jump to the inbox search box |
-| `/` | Focus search |
+| `Cmd+K` / `Ctrl+K` | Open the **command palette** — type to find an action, page, or setting (e.g. *archive*, *go to rules*, *API keys*) |
+| `/` | Focus the inbox search box |
 
 ## Make them yours
 

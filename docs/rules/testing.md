@@ -12,10 +12,11 @@ all without waiting for the next email to arrive.
 
 ## Test against recent emails
 
-When you create or edit a rule, the **Test Rule** card lets you run it against your
-most recent messages without changing anything.
+The **Test Rule** card is on an existing rule's **Edit** page. It lets you run the rule
+against your most recent messages without changing anything.
 
-1. Open a rule for editing (or build a new one).
+1. Save the rule first, then open it and choose **Edit**. (The new-rule screen doesn't
+   have the Test Rule card.)
 2. In the **Test Rule** card, choose **Test Against Last 10 Emails**.
 3. MailPrism evaluates the rule against those messages and shows a summary.
 

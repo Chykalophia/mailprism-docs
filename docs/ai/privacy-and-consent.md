@@ -6,8 +6,17 @@ description: How AI consent works, what turning it on or off changes, and what's
 
 # AI Privacy & Consent
 
-MailPrism's AI features are **opt-in**. Nothing about your email is sent for AI
-analysis until you turn AI processing on — and you can turn it back off at any time.
+When you sign up, you agree to let MailPrism use AI providers (Google Gemini as the
+primary provider, with OpenAI and Anthropic as fallbacks) to analyze your email. You
+can turn AI off at any time in **Settings → Privacy → AI Data Processing**. While it's
+off, nothing is sent for AI analysis.
+
+:::note AI and your plan
+Consent is one half; your plan is the other. AI analysis is included on paid plans
+(Starter and up). The Free plan runs rule-based automation, though it can still use
+the **[AI rule drafter](../rules/building-with-ai.md)** — 10 AI drafts a day.
+Bring-your-own-key (BYOK) requires the Business plan.
+:::
 
 ## How consent works
 
@@ -27,13 +36,15 @@ there's no way for AI to run without it.
 
 ## Where to turn it on or off
 
-There are two places consent appears:
+Consent starts **on**: the sign-up form asks you to agree to AI processing, and you
+can't create an account without ticking that box. After that, there are two places
+consent appears:
 
-1. **Settings → Privacy & Activity** — the **AI Data Processing** card has a toggle
+1. **Settings → Privacy** (the page is titled *Privacy & Activity*) — the **AI Data Processing** card has a toggle
    labeled *AI Data Processing Consent*. A badge shows whether it's
    <span class="mp-pill mp-pill--green">Active</span> or
    <span class="mp-pill mp-pill--amber">Disabled</span>, and the date you consented.
-2. **The dashboard banner** — if AI is off, the dashboard shows an *Enable
+2. **The dashboard banner** — if you've turned AI off, the dashboard shows an *Enable
    AI-powered features* prompt with **Enable AI Features** and **No Thanks** buttons.
 
 To turn AI on, flip the toggle on (or click **Enable AI Features** on the banner).
@@ -48,8 +59,25 @@ It helps to separate the two:
 
 | | What happens |
 |--|--------------|
-| **Sent for analysis** | When an email is analyzed, its content (sender, subject, body) is sent to an AI provider to produce signals like category, urgency, and sentiment. |
-| **Stored in your account** | The **results** of the analysis — the signals — are stored so your rules can use them and you can see them later. Your mailbox itself stays in Gmail. |
+| **Sent for analysis** | The email's **subject**, **sender**, **recipients (To and Cc)**, and **body text**. For reply tracking, MailPrism also sends the **thread** — each message's sender, recipients, date, and text — plus **your own email address**, so the AI can tell which messages are yours. |
+| **Stored in your account** | See the list below. |
+
+### What MailPrism stores
+
+| What | How long |
+|------|----------|
+| **A cache of recent messages** | To display your inbox, MailPrism keeps an **encrypted (AES-256) copy** of the messages it processes. Message bodies are deleted after **7 days** without being opened, and fetched again from Gmail when you open the message. Details such as sender, subject, date, and labels are kept until you delete your account. |
+| **AI results** | The signals and summaries AI produces are kept with your rule and action history, so rules can use them and you can see why something happened. |
+| **Sent mail you asked MailPrism to learn from** | If you use **[Learn from your sent mail](./writing-profiles.md#learn-from-your-sent-mail)**, the sent emails it analyzes are stored for that writing profile until you press **Forget what was learned**. |
+
+Your mailbox itself stays in Gmail.
+
+:::info AI providers don't train on your data
+MailPrism uses the providers' paid API services. Under those terms, your email is
+**not used to train their models**. Providers may keep requests for a limited time to
+detect abuse — the **[Privacy Policy](https://app.mailprism.ai/privacy)** lists each
+provider's retention period.
+:::
 
 A few details worth knowing:
 

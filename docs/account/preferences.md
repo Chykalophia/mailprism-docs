@@ -63,35 +63,36 @@ sent or received.
 
 ## Scheduling
 
-Under **Settings → Scheduling**, control *when* and *how* your rules run. Changes
+Under **Settings → Rule Defaults & Safety → Scheduling**, control *when* and *how* your rules run. Changes
 take effect immediately after saving.
 
 ### Quiet hours
 
-Turn on **Enable Quiet Hours** to pause rule execution during a set window (for
-example, overnight). Pick a **Start time** and **End time**. Emails that arrive
-during quiet hours are queued and processed once the window ends. The window uses
-your timezone from [Date & Time](#date--time).
+Turn on **Enable Quiet Hours** to pause rule processing during a set window (for
+example, overnight). Pick a **Start time** and **End time**. Mail that arrives during
+quiet hours isn't queued for later, so don't rely on quiet hours to delay an action
+until morning. The window uses your timezone from [Date & Time](#date--time).
 
 ### Processing settings
 
 | Setting | What it controls |
 |---------|------------------|
-| **Processing frequency** | How often rules run: **Real-time**, **Hourly**, or **Daily** |
-| **Batch size** | Maximum emails processed per run (the rest process next time) |
+| **Processing frequency** | **Real-time**, **Hourly**, or **Daily** — paces MailPrism's scheduled background runs |
+| **Batch size** | Maximum emails processed per scheduled run (the rest process next time) |
 | **Cooldown** | Minimum minutes between processing runs |
 | **Max executions per hour** | A rate limit to prevent runaway processing |
 
-:::note Real-time depends on your plan
-"Real-time" means rules run as often as your tier allows. See
-**[How rules work](../rules/overview.md)** for the execution model.
+:::note Push notifications aren't held back
+Mail that arrives through a Gmail push notification is processed as it arrives, whatever
+**Processing frequency** says. See
+**[How often rules run](../rules/overview.md#how-often-rules-run)**.
 :::
 
 ---
 
 ## Safety
 
-Under **Settings → Safety**, set the guardrails around automation. We recommend
+Under **Settings → Rule Defaults & Safety**, set the guardrails around automation. We recommend
 keeping confirmations and bulk approval on, especially while you're building new
 rules.
 
@@ -127,10 +128,10 @@ from sender domains that don't resolve — or, optionally, have no reachable web
 
 ### Undo grace period
 
-- **Undo grace period** — how long automated actions can be reversed: **24**, **48**,
-  or **72 hours**. During this window you can undo a rule's changes from your logs.
-  Archive and label actions can always be undone; deletes can't be reversed after
-  the period expires.
+- **Undo grace period** (in **Undo Settings**) — how long automated actions can be
+  reversed: **24**, **48**, or **72 hours**. During this window you can undo most
+  label, archive, and read/unread changes from your logs. Moving to Trash, sending,
+  and forwarding can't be undone.
 
 → Reverse a rule's changes: **[Rule Logs & Undo](../analytics/rule-logs-and-undo.md)**
 

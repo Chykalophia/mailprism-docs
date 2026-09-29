@@ -15,7 +15,7 @@ to the exact settings.
 - MailPrism connects through **Google OAuth** — you approve access in Google's own
   window, and MailPrism **never sees or stores your Google password**.
 - Your Gmail **access tokens are stored encrypted**.
-- You can revoke access anytime from **Settings → Gmail** or from your
+- You can revoke access anytime from **Settings → Gmail Accounts** or from your
   **[Google account permissions](https://myaccount.google.com/permissions)**.
 
 ### What MailPrism can and can't do
@@ -26,29 +26,45 @@ The connection requests a specific, minimal set of permissions:
 |--------|---------------|
 | **Read & modify mail** | Read senders, subjects, and content to match conditions and (if enabled) run AI; apply labels, archive, star, mark read. |
 | **Manage labels** | Create and manage the labels your rules and tracking use. |
-| **Send mail** | Used **only** by the **forwarding** action, and only when a rule you built forwards a message. |
+| **Send mail** | Used when you send or reply from MailPrism, and when a feature you turned on sends on your behalf — forwarding, auto-replies, auto-responders, nudges, and unsubscribe requests sent by email. MailPrism never sends email you didn't write or set up. |
 | **Email & profile** | Identify the connected Google account and show your display name. |
 
 Calendar access (read-only) is **separate and optional** — you grant it only if you opt
 into Calendar features. Full detail:
 **[What access MailPrism asks for](../getting-started/connecting-gmail.md#what-access-mailprism-asks-for)**.
 
-:::note Nothing happens without a rule
-MailPrism only uses this access to do the work your rules describe. Nothing is sent,
-labeled, or moved unless a rule you created says so.
+:::note What MailPrism does on its own
+MailPrism only acts on your mail through things you do in the app, rules you create,
+and features you turn on. Reply tracking is on by default and applies MailPrism's
+tracking labels — you can change or turn it off in **Settings → Tracking Labels**.
 :::
 
-## AI is opt-in
+## AI consent
 
-MailPrism does **not** analyze your email with AI until **you turn it on** in
-**Settings → Privacy**.
+When you sign up, you agree to let MailPrism use AI providers (Google Gemini as the
+primary provider, with OpenAI and Anthropic as fallbacks) to analyze your email. You
+can turn AI off at any time in **Settings → Privacy → AI Data Processing**. While it's
+off, nothing is sent for AI analysis.
 
-When AI is enabled:
+When AI is on (and your plan includes it — Starter and up):
 
-- An email's content is sent to an AI provider (**OpenAI** or **Anthropic**) to produce
-  the signals — category, urgency, sentiment, and so on.
-- The **results** are stored in your account so rules can use them.
+- The email's **subject, sender, recipients (To/Cc), and body text** are sent to an AI
+  provider to produce the signals — category, urgency, sentiment, and so on. For reply
+  tracking, the thread's participants and your own address are sent too.
+- Providers **don't use your data to train their models**.
+- The **results** are kept with your rule and action history so rules can use them.
 - Turning AI off stops new analysis; your non-AI rules keep working.
+
+## What MailPrism stores
+
+- **A cache of recent messages** — an **encrypted (AES-256) copy** of the messages
+  MailPrism processes, so it can show your inbox. Message bodies are deleted after
+  **7 days** without being opened; details such as sender, subject, date, and labels
+  are kept until you delete your account.
+- **AI results** — kept with your rule and action history.
+- **Sent mail you asked it to learn from** — if you use **Learn from your sent mail**,
+  the analyzed sent emails are stored until you press **Forget what was learned**. See
+  **[Writing profiles](../ai/writing-profiles.md#learn-from-your-sent-mail)**.
 
 Prefer your own provider account? **[BYOK](../ai/byok.md)** lets you bring your own
 OpenAI or Anthropic key. For exactly what's sent versus stored, see
@@ -102,4 +118,5 @@ copy.
 
 For specifics about data processing and your rights, see MailPrism's
 **[Privacy Policy](https://mailprism.ai/privacy)** and
-**[Terms of Service](https://mailprism.ai/terms)**, or reach out via the in-app **Help**.
+**[Terms of Service](https://mailprism.ai/terms)**, or email
+**[hello@mailprism.ai](mailto:hello@mailprism.ai)**.

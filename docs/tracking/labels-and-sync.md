@@ -11,7 +11,7 @@ tracking is visible in Gmail too — not locked inside MailPrism. You choose whi
 MailPrism treats as tracking labels, how each one behaves, and whether changes sync both
 ways.
 
-You'll find these settings under **Settings → Response Tracking**.
+You'll find these settings under **Settings → Tracking Labels**.
 
 ## Two modes: Basic and Advanced
 
