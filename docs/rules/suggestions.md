@@ -63,7 +63,7 @@ Each card gives you enough to decide at a glance:
 Unlike a template from the **[Rule Library](./library.md)** (which is created
 *disabled* so you can review it first), an **accepted suggestion's rule is enabled
 immediately**. If you'd rather check it before it acts, open it in **Rules** and turn
-it off until you've reviewed — or run a quick **[test](./conditions.md)** first.
+it off until you've reviewed — or run a quick **[test](./testing.md)** first.
 :::
 
 ### Accept several at once

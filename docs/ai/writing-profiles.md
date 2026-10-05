@@ -105,6 +105,17 @@ Press **Forget**, then confirm with **Forget it all**.
 After you forget, AI drafts go back to using the tone you picked. You can analyse again
 at any time.
 
+### Forget the mailbox-wide analysis
+
+Separately, MailPrism may have analysed a **sample of your sent mail** (not tied to any
+one profile) to **suggest** writing profiles. When stored results exist, the same card
+shows **Forget mailbox analysis**.
+
+- It deletes only that mailbox-wide analysis and the suggestions it produced.
+- Your writing profiles **keep** what they've learned — use each profile's own
+  **Forget** for that.
+- If an analysis is still running, nothing is deleted; try again once it finishes.
+
 ## A starting set worth keeping
 
 There are no fixed presets — you build the profiles that fit how *you* write. A common,

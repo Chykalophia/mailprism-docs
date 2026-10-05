@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Reading an Email
-description: The reading view — header and metadata, body rendering, quoted-text collapse, attachments, image blocking, and the AI analysis panel.
+description: The reading view — header and metadata, body rendering, attachments, image blocking, the AI analysis panel, and the full Email Details page.
 ---
 
 # Reading an Email
@@ -16,29 +16,23 @@ The top of the reading view shows the message's key details:
 | Field | What it shows |
 |-------|---------------|
 | **Sender** | The sender's name, with their email address alongside it |
-| **Subject** | The subject line (or *(no subject)*) |
+| **Subject** | The subject line |
 | **To** | Who the message was addressed to |
-| **Cc** | Copied recipients, when present |
 | **Date & time** | When the message arrived |
-| **Labels** | Labels on the message — hover a label to remove it |
+| **Labels** | Labels on the message, shown as pills |
 | **Tracking label** | The conversation's [response-tracking](../tracking/overview.md) state, if tracked |
 
-There's also a subtle **Rule history** link that jumps to the logs filtered to this
-exact email, so you can see which rules ran on it.
+:::tip Removing a label
+To take a label off, use the toolbar's **Remove Label**, or hover the colored label
+dots on the email's row in the list — a popover shows the full label pills, each with
+a remove (×) button. See **[Labels](./labels.md)**.
+:::
 
 ## The message body
 
 MailPrism renders the full message with its formatting intact. HTML email is cleaned
-(sanitized) before display, so links and styling come through safely.
-
-While the full body loads, you may briefly see a **preview** badge over a short
-snippet — the complete message replaces it a moment later.
-
-### Quoted text is collapsed
-
-Long reply chains are kept tidy. The new part of the message shows by default, and the
-quoted history below it is hidden behind a **Show quoted text** toggle. Click it to
-expand the older content, and **Hide quoted text** to fold it away again.
+(sanitized) before display, so links and styling come through safely. The whole
+message is shown, including any quoted reply history.
 
 ## Attachments
 
@@ -64,8 +58,8 @@ all images or only tracking pixels — under **Settings → Privacy**.
 
 ## The AI analysis panel
 
-When AI features are on and MailPrism has analyzed a message, a collapsible panel
-titled **"How was this email classified?"** appears below the body. Open it to see why
+When AI rules have run on a message, a collapsible panel titled **"How was this email
+classified?"** appears below the body. Open it to see why
 MailPrism handled the email the way it did.
 
 It has two parts:
@@ -98,6 +92,24 @@ black box.
 The thumbs up / down on the AI panel feeds back into how MailPrism classifies your
 mail over time. A quick rating when something looks wrong pays off later.
 :::
+
+## The Email Details page
+
+For a deeper look at one email, choose **Email Details** from the toolbar (add it under
+**[Toolbar](./toolbar.md)** if you don't see it). It opens a full page with tabs:
+
+| Tab | What's in it |
+|-----|--------------|
+| **Overview** | The AI classification (or a button to analyze the email), the message, its details, Gmail labels and categories, and an activity log for the email |
+| **Sender Analytics** | How this sender emails you |
+| **Domain Insights** | What MailPrism knows about the sender's domain |
+| **Rules Actions** | Which rules ran on this email and what they did |
+| **Test Rules** | Check which of your rules would match this email |
+
+**Thread Details** works the same way for the whole conversation.
+
+To see the rule logs for an email from anywhere, open **Rule Logs** — see
+**[Rule Logs & Undo](../analytics/rule-logs-and-undo.md)**.
 
 ## Next steps
 

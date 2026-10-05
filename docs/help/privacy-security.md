@@ -42,7 +42,7 @@ tracking labels — you can change or turn it off in **Settings → Tracking Lab
 ## AI consent
 
 When you sign up, you agree to let MailPrism use AI providers (Google Gemini as the
-primary provider, with OpenAI and Anthropic as fallbacks) to analyze your email. You
+primary provider, with OpenAI as the fallback) to analyze your email. You
 can turn AI off at any time in **Settings → Privacy → AI Data Processing**. While it's
 off, nothing is sent for AI analysis.
 
@@ -98,10 +98,12 @@ Full walkthrough: **[Account & Security](../account/account-security.md)**.
 
 ## Your data, your controls
 
-- **Export your data** — download a copy of your learning data anytime (GDPR). See
+- **Export your data** — download a copy of all your account data as JSON anytime
+  (GDPR). See
   **[Export your data](../account/privacy-and-data.md#export-your-data)**.
-- **Clear learning data** — permanently delete detected patterns, activity logs, and
-  corrections. See
+- **Clear learning data** — permanently delete what MailPrism has learned (patterns,
+  suggestions, learned writing-profile data). Your activity log and sender corrections
+  are kept. See
   **[Clear learning data](../account/privacy-and-data.md#clear-learning-data)**.
 - **Delete your account** — remove your account and its data, with a typed
   confirmation to prevent accidents. See

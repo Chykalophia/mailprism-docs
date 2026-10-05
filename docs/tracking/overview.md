@@ -34,7 +34,7 @@ You can match on a thread's state in your automations — see
 
 ## The Replies view
 
-Open **Mail → Replies** to work through everything that's being tracked. It's a
+Open **Replies** in the sidebar to work through everything that's being tracked. It's a
 split view — the list of tracked threads on the left, the selected conversation on
 the right — just like your inbox.
 
@@ -45,12 +45,17 @@ A row of tabs across the top filters the list by state, each with a **live count
 <span class="mp-pill mp-pill--amber">Awaiting Reply</span>
 <span class="mp-pill mp-pill--blue">Pending</span>
 <span class="mp-pill mp-pill--green">Resolved</span>
+<span class="mp-pill mp-pill--violet">Untracked</span>
+
+**Untracked** lists emails MailPrism chose **not** to auto-track, so nothing
+disappears silently. For each one you can **Track & trust sender** (track it, and
+always track future email from that sender) or **Dismiss** it.
 
 The **Needs Action** count is the one that follows you around — it's the badge you'll
 see elsewhere in the app, because it's the work that's genuinely waiting on you.
 
-From a tracked thread you can do everything you'd do in the inbox — reply, archive,
-label, snooze — plus **Resolve** it once the conversation is done. If you've connected
+From a tracked thread you can do the same things you'd do in the inbox — reply, archive,
+label, nudge — plus **Resolve** it once the conversation is done. If you've connected
 more than one Gmail account, the account filter and search work here too.
 
 → More on the split view and per-email actions: **[Inbox overview](../inbox/overview.md)**

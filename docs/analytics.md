@@ -47,6 +47,11 @@ A clear split of what happened across every time a rule was evaluated:
 Each is shown as a count, a percentage of the total, and a bar — plus the **total
 executions** for the period.
 
+:::note Why the two may not add up to 100%
+Executions that were **skipped** or **failed** count toward the total but are neither
+matched nor not matched, so the two percentages can total less than 100%.
+:::
+
 ## Top performing rules
 
 A table of your busiest rules, sorted by how often they ran:
@@ -65,7 +70,7 @@ Click the arrow on any row to open that rule's own
 
 A breakdown of *which actions* your rules took most — labels applied, archived,
 forwarded, AI drafts created, auto-replies sent, tracking labels, marked read,
-starred, webhooks, nudges, and so on. Each shows a count and a bar, so you can see
+starred, nudges, and so on. Each shows a count and a bar, so you can see
 where the automation is actually happening.
 
 ## AI usage

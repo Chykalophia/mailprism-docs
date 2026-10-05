@@ -91,35 +91,35 @@ actually know this person?"
 | Relationship | Label in app | Meaning |
 |--------------|--------------|---------|
 | `unknown` | <span class="mp-pill mp-pill--gray">Unknown</span> | No interaction history yet |
-| `cold` | <span class="mp-pill mp-pill--amber">Cold</span> | You've received from them but never emailed them |
-| `warm` | <span class="mp-pill mp-pill--blue">Warm</span> | Some back-and-forth history |
-| `established` | <span class="mp-pill mp-pill--green">Established</span> | A regular contact with a real history |
+| `cold` | <span class="mp-pill mp-pill--amber">Cold</span> | Very little history — one interaction |
+| `warm` | <span class="mp-pill mp-pill--blue">Warm</span> | Some history — 2 to 5 interactions |
+| `established` | <span class="mp-pill mp-pill--green">Established</span> | A regular contact — 6 or more interactions |
 
 ### How it's calculated
 
-MailPrism recomputes the relationship every time it records an interaction, using your
-sent and received counts:
+MailPrism recomputes the relationship every time it records an interaction, using the
+**total number of interactions** (emails sent plus received) with that contact:
 
-- **Unknown** — no interactions recorded at all.
-- **Cold** — you've **never sent** them an email, even if they've emailed you. This is
-  the signal cold-outreach detection leans on.
-- **Established** — you've sent at least one email **and** there are **6 or more total
-  interactions** spanning **more than 30 days** of history.
-- **Warm** — everything in between: you've emailed them and have at least one
-  interaction, but haven't yet crossed the established threshold.
+| Total interactions | Relationship |
+|--------------------|--------------|
+| **6 or more** | **Established** |
+| **2–5** | **Warm** |
+| **1** | **Cold** |
 
-:::note Why "never sent = cold" matters
-A stranger who lands one email in your inbox is, by definition, someone you've never
-written to — so they read as **cold**. That's exactly the pattern unsolicited sales and
-outreach follow, which is why relationship type is so useful for filtering.
+**Unknown** means no interactions have been recorded yet.
+
+:::note Why a low count matters
+A stranger who lands one email in your inbox has almost no history with you — so they
+read as **cold**. That's exactly the pattern unsolicited sales and outreach follow,
+which is why relationship type is so useful for filtering.
 :::
 
 ## How this feeds cold-outreach detection and rules
 
 These three properties work together:
 
-1. **Cold-outreach detection.** A `cold` relationship — a sender you've never emailed —
-   is a strong hint the message is unsolicited. Combined with AI's
+1. **Cold-outreach detection.** A `cold` relationship — a sender with almost no history
+   with you — is a strong hint the message is unsolicited. Combined with AI's
    [cold-outreach signal](../ai/classification.md), it helps MailPrism separate genuine
    first-contact from sales spam. An `allowlist` status overrides this: trusted senders
    are **never** flagged as cold.

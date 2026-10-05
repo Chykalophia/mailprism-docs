@@ -37,7 +37,8 @@ Every email has a **Nudge** split-button:
   - **Configure Nudge… / Configure Reminder…** — open a quick setup popup to tweak
     the timing and tone *before* starting.
   - **AI Instant Nudge** — send one AI-written follow-up immediately, with no
-    scheduled sequence (when available).
+    scheduled sequence. You confirm first; if AI can't write it, a standard template
+    is sent instead.
 
 Once a nudge is running, the button changes to show its state, and the menu offers
 **Pause**, **Resume**, **View Schedule**, **Edit Settings…**, and **Cancel**.
@@ -50,16 +51,14 @@ Whether you use the quick setup popup or a saved template, a flow has these sett
 |---------|------------------|
 | **Delays** | How long to wait before each follow-up (e.g. day 2, then 4, then 7) |
 | **Delay unit** | The unit for those delays: **minutes**, **hours**, **days**, or **weeks** |
-| **Tone** | The voice of AI-written messages: **Professional**, **Friendly**, **Casual**, **Formal**, or **Urgent** |
-| **Use AI** | Whether follow-ups are AI-generated (personalized to the thread) or use a fixed template |
-| **Max follow-ups** | The most messages this flow will ever send (1–5) — so you're never pushy |
-| **Template** | A custom message to send instead of an AI-written one |
-| **Include thread** | Whether to quote the original conversation in the follow-up |
+| **Tone** | Which built-in follow-up message is sent: **Professional**, **Friendly**, **Casual**, **Formal**, or **Urgent** |
+| **Max follow-ups** | The most messages this flow will ever send — **1–5** in the quick setup popup, up to **10** in a saved flow template (depending on your plan) — so you're never pushy |
 
-:::info When AI is used
-The **Use AI** toggle only appears for **Nudge Them** flows, and AI must be on for your
-account (it is unless you've turned it off in **Settings → Privacy**). With AI off, follow-ups use your template instead.
-**Remind Me** flows don't use AI by default — a simple reminder doesn't need it.
+:::info Follow-ups use built-in templates
+Scheduled follow-ups are sent from MailPrism's built-in messages for the tone you
+pick. AI-written scheduled follow-ups are **coming soon** — the quick setup popup's
+**AI-generated messages** switch doesn't change what's sent yet. Only **AI Instant
+Nudge** writes its message with AI.
 :::
 
 ### Reading the schedule
@@ -75,7 +74,7 @@ A flow ends as soon as **any** of its completion triggers fires:
 
 | Trigger | The flow completes when… |
 |---------|--------------------------|
-| **Recipient replies** | The other person responds (on by default) |
+| **Recipient replies** | The other person responds (always on) |
 | **Max reached** | The last allowed follow-up has been sent (on by default) |
 | **I archive** | You archive the email |
 | **Tracking label removed** | A specific tracking label is taken off the email |
@@ -84,8 +83,8 @@ After it ends, MailPrism records **why** it stopped — reply received, max reac
 cancelled, or label removed — so you can tell at a glance whether your follow-up
 landed.
 
-:::tip Pause on reply keeps you polite
-The most important trigger, **Recipient replies**, is on by default. The moment they
+:::tip Stop on reply keeps you polite
+The most important trigger, **Recipient replies**, is always on. The moment they
 write back, the chasing stops — no awkward "did you get my last email?" after they've
 already answered.
 :::
@@ -102,7 +101,7 @@ A running nudge moves through these states:
 | <span class="mp-pill mp-pill--gray">Cancelled</span> | Stopped early by you or the system |
 
 You can see every active nudge — its progress bar, how long it's been waiting, and
-when the next message goes out — under **Settings → Nudges**.
+when the next message goes out — under **Settings → Nudge Flows**.
 
 ## The @Nudge label
 
@@ -114,7 +113,7 @@ spot which threads are currently being followed up — even from the Gmail app.
 ## Saved flow templates
 
 If you reuse the same timing again and again, save it as a **flow template** under
-**Settings → Nudges → Flow Templates**. A template stores a name, a flow type
+**Settings → Nudge Flows → Flow Templates**. A template stores a name, a flow type
 (Nudge Them or Remind Me), its full configuration, and its completion triggers.
 
 - Mark one template per type as your **default**, so the plain **Nudge** button uses it.
@@ -122,19 +121,14 @@ If you reuse the same timing again and again, save it as a **flow template** und
 
 ## Global settings
 
-Under **Settings → Nudges → Global Settings** you control how nudges behave across the
+Under **Settings → Nudge Flows → Global Settings** you control how nudges behave across the
 whole account:
 
 | Setting | What it does |
 |---------|--------------|
 | **Enable nudge flows** | Master switch for automatic follow-ups |
-| **Pause on reply** | Stop sending nudges as soon as the recipient replies |
-| **Smart timing** | Let AI pick the best time of day to send each nudge |
-
-:::note Smart timing needs AI
-The **Smart timing** option uses AI to choose send times, so it requires AI features to
-be turned on for your account.
-:::
+| **Stop on reply** | Shown as **Always on** — nudges always stop as soon as the recipient replies. You can't turn it off. |
+| **AI-written follow-ups** | Shown as **Coming soon**. Follow-ups are sent from built-in message templates today. |
 
 ## Related
 

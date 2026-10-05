@@ -118,12 +118,12 @@ resume once you reconnect.
 - Your connection uses **Google OAuth** — no password sharing.
 - Your Gmail access tokens are **stored encrypted**.
 - When you sign up, you agree to let MailPrism use AI providers (Google Gemini as the
-  primary provider, with OpenAI and Anthropic as fallbacks) to analyze your email. You
+  primary provider, with OpenAI as the fallback) to analyze your email. You
   can turn AI off at any time in **Settings → Privacy → AI Data Processing**. While
   it's off, nothing is sent for AI analysis. See
   **[AI privacy & consent](../ai/privacy-and-consent.md)**.
-- You can **export your learning data** (patterns, corrections, and activity MailPrism
-  has learned from) in **Settings → Privacy → Data Management** — see
+- You can **export all your account data** (settings, rules, activity, and learning
+  data, as JSON) in **Settings → Privacy → Data Management** — see
   **[Export your data](../account/privacy-and-data.md#export-your-data)**. You can
   **delete your account** from **[Account & Security](../account/account-security.md)**.
 

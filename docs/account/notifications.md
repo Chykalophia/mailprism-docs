@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: Notifications
-description: Control in-app alerts, email digests, the weekly report, and per-category notification preferences.
+description: Control in-app alerts, the daily email digest, and per-category notification preferences.
 ---
 
 # Notifications
@@ -29,21 +29,21 @@ Choose a frequency:
 |--------|--------------|
 | **No digest emails** | No summary emails. (Immediate per-category alerts are still available — see below.) |
 | **Daily digest** | A summary every day at your chosen time. |
-| **Weekly digest** | A summary every Monday at your chosen time. *(Recommended.)* |
+
+:::note Weekly digests are paused
+The weekly digest and the weekly activity report are temporarily unavailable, so
+they don't appear on the page. If you chose **Weekly** before, your choice is kept
+(none of the options shows as selected) and applies again once weekly digests return.
+:::
 
 ### Delivery time & timezone
 
-When the digest is set to Daily or Weekly, a **Delivery time** dropdown appears.
-Pick the hour you'd like it to arrive. The time is interpreted in **your
-timezone**, which is shown beneath the dropdown.
+When the digest is set to Daily, a **Delivery time** dropdown appears. The times are
+shown in **your local time zone**, which is named beneath the dropdown.
 
----
-
-## Weekly activity report
-
-The **Weekly activity report** toggle sends a summary of your automation each
-week — rules executed, emails processed, and AI usage. It's a quick way to see
-what MailPrism did on your behalf.
+Digests go out on the hour in UTC. If your time zone is offset by a half hour (for
+example, India), the dropdown shows the **actual** half-hour times the digest will
+arrive.
 
 ---
 
@@ -82,8 +82,7 @@ in the app without filling your inbox.
 
 ## Good to know
 
-- Notifications respect your device's **Do Not Disturb** settings.
-- Email digests and reports are sent to your **primary email address**.
+- Email digests are sent to your **primary email address**.
 - A digest of **No digest emails** still allows immediate per-category email
   alerts — the two settings are independent.
 

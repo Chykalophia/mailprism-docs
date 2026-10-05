@@ -73,7 +73,7 @@ taking any action. See **[Testing rules](../rules/testing.md)**. Then check, in 
 4. **Using AI conditions?** Confirm **AI features are on** in **Settings → Privacy** —
    AI conditions never match while AI is off. See **[AI overview](../ai/overview.md)**.
 5. **Quiet hours.** Quiet hours pause rule processing during the window, and mail that
-   arrives then isn't run later. Check the window in **Settings → Rule Defaults & Safety → Scheduling**.
+   arrives then isn't run later. Check the window in **Settings → Rule Defaults & Safety → Quiet Hours**.
    See **[Quiet hours](../rules/overview.md#quiet-hours)**.
 6. **Scheduled runs.** If a push notification was missed, the email waits for
    MailPrism's next scheduled background run, which **Processing frequency**,
@@ -126,7 +126,7 @@ If Undo isn't offered, check the action type and how long ago it ran.
 AI is strong but not perfect — sarcasm and unusual phrasing can trip it up. For
 important rules, **combine an AI condition with a plain one** (like sender
 relationship) for reliability. You can also correct the AI over time; see
-**[AI personalization](../account/privacy-and-data.md#ai-personalization)**.
+**[Classification feedback](../account/privacy-and-data.md#classification-feedback)**.
 
 ## Still stuck?
 

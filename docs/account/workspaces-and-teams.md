@@ -26,6 +26,24 @@ Under the **General** section you can give your workspace an identity:
 A live **preview** shows how your icon, color, and name look together. Click
 **Save Changes** to apply.
 
+### Require two-factor authentication
+
+The **Security** card lets the workspace **owner** turn on **Require two-factor
+authentication for members**. Admins can see the setting but can't change it.
+
+What it does today:
+
+| While it's on… | Result |
+|----------------|--------|
+| A member who **has** 2FA set up | Can't turn their 2FA off (unless their membership has been exempted). |
+| A member who **hasn't** set up 2FA | Can **still sign in** — the requirement doesn't lock anyone out yet. |
+
+:::tip Ask members to turn 2FA on
+Because members without 2FA aren't blocked, ask your team to enable it themselves
+under **Settings → Security**. See
+**[Two-factor authentication](./account-security.md#two-factor-authentication-2fa)**.
+:::
+
 ---
 
 ## Switching workspaces
@@ -64,6 +82,22 @@ Open the **⋯** menu next to any non-owner member to:
 - **Remove from Team** — revoke their access.
 
 The owner's role can't be changed from this menu.
+
+### Roles & Permissions
+
+**Settings → Roles & Permissions** shows every role in the workspace:
+
+- **Built-in roles** — Owner, Admin, Editor, and Viewer. Available on every plan;
+  they can't be edited or deleted.
+- **Custom roles** — your own roles, created with **New role**. You give each one a
+  name, an optional description, and pick its permissions. A custom role always
+  narrows a built-in role — it can never grant more.
+
+:::note Custom roles need Business
+Custom roles are included in the **Business** plan. On other plans, the Custom roles
+area shows an upgrade panel with a **See plans** link. A role that's still assigned
+to someone can't be deleted.
+:::
 
 ---
 

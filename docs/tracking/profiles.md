@@ -50,15 +50,19 @@ These per-sender rules are MailPrism's **tracking exemptions** — the way you k
 senders out of tracking. For the full reference, see **[Exemptions](./exemptions.md)**.
 :::
 
-### Suggested mutes
+### Suggested Rules
 
-When MailPrism notices a sender it thinks you'd want to mute, it can surface a
-suggestion here for you to accept or dismiss.
+When MailPrism notices a pattern — mail you always resolve without replying, or
+senders you keep pulling back out of **Untracked** — it shows a suggestion in the
+**Suggested Rules** card, with the reason. For each suggestion you can:
 
-:::note Rolling out
-The suggested-mutes section is being wired up to live suggestions. Until then it may show
-nothing to act on.
-:::
+| Button | What happens |
+|--------|--------------|
+| **Apply** (**Apply as mute** or **Always surface**) | Creates the rule. Only workspace owners and admins can apply. |
+| **Not now** | Hides it for now — it may come back later |
+| **Never suggest this** | Hides it for good |
+
+If there's nothing to suggest, the card has nothing to act on.
 
 ## What this page is *not*
 

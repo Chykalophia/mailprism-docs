@@ -86,6 +86,10 @@ Undo puts the email back to its original state, including:
 - **Inbox** placement (whether it was in your inbox)
 - **Important** marker
 
+Response-tracking labels (like Needs Response or Awaiting Reply) are left alone —
+those follow the conversation's current **[tracking state](../tracking/overview.md)**,
+not the undo snapshot.
+
 ### The grace period
 
 Undo is only available for a limited time after a rule runs. The window is the

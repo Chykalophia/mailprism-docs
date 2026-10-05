@@ -7,7 +7,7 @@ description: Create and tune your own AI classification categories, see suggesti
 # Custom Categories
 
 The built-in [categories](./classification.md#category) cover most inboxes, but yours is
-unique. In **Settings → AI Classifications** you can create your own categories, adjust
+unique. In **Settings → AI Categories** you can create your own categories, adjust
 the built-in ones, and train the AI to match how *you* think about email.
 
 :::info Pro+ feature

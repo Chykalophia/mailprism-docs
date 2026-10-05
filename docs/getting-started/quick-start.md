@@ -37,7 +37,7 @@ choose sign-up). The form asks for:
 - Your **email** — for Google sign-up, the address of the Google account you'll choose.
 - Your **beta invite code**, if the invite link didn't fill it in.
 - Your **consent to AI processing**. MailPrism uses AI providers (Google Gemini as the
-  primary provider, with OpenAI and Anthropic as fallbacks) to analyze your email. You
+  primary provider, with OpenAI as the fallback) to analyze your email. You
   can turn AI off later in **Settings → Privacy → AI Data Processing** — see
   **[AI privacy & consent](../ai/privacy-and-consent.md)**.
 
@@ -85,9 +85,9 @@ When a new email matches a rule, the rule's actions run automatically. MailPrism
 listens for Gmail's own notifications about new mail, so rules usually run within
 moments of an email arriving.
 
-Timing controls live in **Settings → Rule Defaults & Safety → Scheduling**: **quiet hours**
-pause rule processing during the window, and batch size, cooldown, and rate limits
-keep big runs in check. (The **Processing frequency** option there currently only
+Timing controls live in **Settings → Rule Defaults & Safety**: the **Quiet Hours**
+card pauses rule processing during a window, and the **Execution Settings** card's
+batch size, cooldown, and rate limits keep big runs in check. (The **Processing frequency** option there currently only
 paces MailPrism's scheduled background runs — see
 **[How often rules run](../rules/overview.md#how-often-rules-run)**.)
 

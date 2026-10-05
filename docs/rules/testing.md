@@ -54,7 +54,7 @@ MailPrism re-evaluates that email against the rule and expands an inline breakdo
 showing:
 
 - Whether the rule **Would Match** or **Would Not Match** overall.
-- The **logic** in use (AND or OR).
+- The **logic** in use — **AND**, **OR**, or **NOT**.
 - **Each condition** with a clear pass/fail mark, the field and operator, and the
   value it was compared against.
 

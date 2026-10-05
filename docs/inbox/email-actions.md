@@ -57,9 +57,9 @@ It isn't an immediate permanent delete.
 |--------|--------------|
 | **Add Label** | Apply a Gmail label — opens a picker, or applies a preset label if one's configured |
 | **Remove Label** | Remove a label from the email |
-| **Clear Labels** | Remove all of *your* labels at once (Gmail system labels stay) |
 
-You can also remove a label directly by hovering its pill in the message header.
+You can also remove a label from the list: hover the colored label dots on an email's
+row to open its label pills, each with a remove (×) button.
 
 → Full guide: **[Labels](./labels.md)**
 
@@ -71,7 +71,7 @@ conversation:
 | Action | What it does |
 |--------|--------------|
 | **Track** | Start (or stop) tracking this thread |
-| **Set State** | Mark the thread <span class="mp-pill mp-pill--amber">Needs Action</span>, <span class="mp-pill mp-pill--blue">Awaiting Reply</span>, <span class="mp-pill mp-pill--gray">Pending</span>, or <span class="mp-pill mp-pill--green">Resolved</span> |
+| **Needs Action** · **Awaiting Reply** · **Pending** · **Resolve** | Set the thread to <span class="mp-pill mp-pill--amber">Needs Action</span>, <span class="mp-pill mp-pill--blue">Awaiting Reply</span>, <span class="mp-pill mp-pill--gray">Pending</span>, or <span class="mp-pill mp-pill--green">Resolved</span> |
 
 → Details: **[Response tracking](../tracking/overview.md)**
 
@@ -79,9 +79,8 @@ conversation:
 
 | Action | What it does |
 |--------|--------------|
-| **Nudge Them** | Start an automated follow-up sequence to the recipient |
-| **Remind Me** | Set a reminder for yourself to follow up |
-| **AI Instant Nudge** | Generate and send an AI-written follow-up right away |
+| **Nudge Them** | Start an automated follow-up sequence to the recipient. Its dropdown also offers **Remind Me** and **AI Instant Nudge**. |
+| **AI Instant Nudge** | Generate and send an AI-written follow-up right away (you confirm first) |
 
 → Details: **[Nudges & reminders](../tracking/nudges-and-reminders.md)**
 
@@ -91,30 +90,30 @@ conversation:
 |--------|--------------|
 | **Test Rules** | See which of your rules would match this email, and why |
 | **Reprocess** | Run your rules against this email again |
-| **Run Rule** | Run one specific rule on this email |
-| **Mark as…** | Mark the email as Spam, Cold Email, or Newsletter |
+| **Email Details** · **Thread Details** | Open the full details page for this email or conversation — see **[Reading an email](./reading-email.md#the-email-details-page)** |
+
+:::note Not available in the Inbox yet
+A few toolbar items can be added in **Settings → Toolbar** but don't work in the Inbox
+yet — clicking them shows *"That action isn't available here yet"*: **Set State…**,
+the standalone **Remind Me** button, **Mark as…**, **Clear Labels**, and **Custom**.
+**Run Rule** currently opens **Test Rules**. Use the individual state buttons above,
+the **Nudge Them** dropdown, and **Add / Remove Label** instead.
+:::
 
 → Learn more: **[Rules overview](../rules/overview.md)** ·
 **[Conditions reference](../rules/conditions.md)**
-
-## Snooze
-
-**Snooze** hides an email from your inbox until a time you choose, then brings it back.
-It's available as a **[Quick Action](./quick-actions.md)** — a custom keyboard shortcut
-you set up in **Settings → Quick Actions** — rather than a default toolbar button.
-
-→ Set one up: **[Quick actions](./quick-actions.md)**
 
 ## Unsubscribing
 
 MailPrism handles unsubscribing from its dedicated **Bulk Unsubscribe** manager rather
 than a per-email button. It groups noisy senders by brand and domain, shows how often
 each emails you, and lets you unsubscribe from many at once — with an **undo** window
-in case you change your mind. It uses senders' official unsubscribe links
-(`List-Unsubscribe`, one-click where supported, or a body link as a fallback).
+in case you change your mind. It uses senders' official unsubscribe methods
+(one-click where supported, then a regular link, an unsubscribe email, or a link found
+in the email body).
 
-You can also keep an **ignore list** of senders or domains so they stay out of the
-unsubscribe results.
+You can also keep an **ignore list** of senders so they stay out of the unsubscribe
+results. See **[Unsubscribe](./unsubscribe.md)**.
 
 :::note Where to find it
 Open the **Unsubscribe** manager from the dashboard navigation to clean up
@@ -123,6 +122,6 @@ subscriptions in bulk.
 
 ## Multiple emails at once
 
-To act on several emails together — archive, delete, mark read/unread, star, or label
-— select them with their checkboxes in the list. A bulk action bar appears above the
+To act on several emails together — **Archive**, **Mark Read**, **Mark Unread**, or
+**Delete** — select them with their checkboxes in the list. A bulk action bar appears above the
 list with the available actions.

@@ -12,7 +12,7 @@ Stop retyping the same answers. MailPrism gives you two kinds of saved reply, pl
 - **Quick replies** — fixed, canned text you reuse word-for-word.
 - **AI templates** — a prompt that generates a tailored reply on the spot.
 
-Manage both under **Settings → Templates**. You insert them while writing — see
+Manage both under **Settings → Email Templates**. You insert them while writing — see
 **[Composing & replying](../inbox/composing.md)**.
 
 ## Quick replies (canned responses)
@@ -26,7 +26,7 @@ A quick reply is a saved snippet you drop into a message. Each one has:
 | **Message** | The body text. This is the reply itself. Required. |
 | **Shortcut** | An optional typing shortcut — must start with **/** (e.g. `/thanks`). |
 
-To add one, open **Settings → Templates → Quick Replies** and click **Add Reply**.
+To add one, open **Settings → Email Templates → Quick Replies** and click **Add Reply**.
 Edit or delete any reply from the same list. MailPrism shows a small **Used _n_×**
 counter so you can see which replies you actually lean on.
 
@@ -49,8 +49,8 @@ the email you're replying to and generates a fresh, contextual reply that follow
 prompt's instructions.
 
 :::note Premium feature
-AI templates are a premium feature and depend on your plan. The app marks the section
-accordingly and links you to upgrade if it isn't included. Check **Settings → Billing**
+AI templates are a premium feature — the section shows a
+<span class="mp-pill mp-pill--violet">Pro</span> badge. Check **Settings → Billing**
 or the [pricing page](https://mailprism.ai/pricing) for what your plan includes.
 :::
 
@@ -85,7 +85,7 @@ fills the field in when it generates the reply.
 ### Revert to default
 
 When you customize a system template, it's marked **Customized**. If you want the
-original back, use **Revert** — your changes are discarded and the template returns to
+original back, use **Revert to Default** — your changes are discarded and the template returns to
 the version MailPrism ships. This affects only your copy.
 
 :::caution Revert is permanent
@@ -94,26 +94,50 @@ Reverting a customized template discards your edits and can't be undone.
 
 ## Template variables
 
-Both kinds of template support **variables** — placeholders that fill in from the
-email's context or your own settings when the reply is created. Common ones:
+Templates support **variables** — placeholders that fill in from the email's context
+or your own settings. There are **two styles**, depending on where the template is used.
+
+:::note Which braces?
+- **Quick replies** (inserted while you compose) use **double braces and capitals** —
+  `{{SENDER_NAME}}`.
+- **Rule reply templates** (used by rule actions like Create Draft Reply and Send
+  Auto-Reply) use **single braces and lowercase** — `{sender_name}`.
+- AI template **smart fields** also use double braces — `{{FIELD_NAME}}`.
+:::
+
+### Quick-reply variables {#variables}
 
 | Variable | Fills in with |
 |----------|---------------|
-| `{sender_name}` | The name of the person who emailed you |
-| `{sender_email}` | The sender's email address |
-| `{original_subject}` | The subject of the incoming email |
-| `{ai_summary}` | An AI-written summary of the email |
-| `{signature}` | Your [signature](./signatures.md) |
-| `{booking_link}` | Your calendar / booking link |
-| `{phone_number}` | Your phone number |
-| `{business_hours}` | Your business hours |
-| `{business_address}` | Your business address |
+| `{{SENDER_NAME}}` · `{{SENDER_FIRST_NAME}}` | The sender's full / first name |
+| `{{SENDER_EMAIL}}` | The sender's email address |
+| `{{RECIPIENT_NAME}}` · `{{RECIPIENT_FIRST_NAME}}` | Your full / first name |
+| `{{EMAIL_SUBJECT}}` | The subject of the original email |
+| `{{EMAIL_DATE}}` | The date the original email arrived |
+| `{{TODAY_DATE}}` · `{{TODAY_SHORT_DATE}}` | Today's date (long / short) |
+| `{{CURRENT_TIME}}` · `{{CURRENT_DAY}}` | The current time / day of the week |
+| `{{NEXT_WEEK_DATE}}` | The date one week from today |
+| `{{SIGNATURE}}` | Your default [signature](./signatures.md) |
+| `{{BOOKING_LINK}}` | Your calendar / booking link |
+| `{{PHONE_NUMBER}}` | Your phone number |
+| `{{BUSINESS_HOURS}}` · `{{BUSINESS_ADDRESS}}` | Your business hours / address |
 
-:::note Two styles of placeholder
-Quick replies and hybrid content use single braces — `{sender_name}`. AI template
-smart fields use double braces — `{{FIELD_NAME}}`. The editor inserts the right style
-for you, so you rarely have to type them by hand.
+:::caution Unfilled variables stay in the text
+If MailPrism can't fill a quick-reply variable — say you haven't saved a booking link —
+it's left in the message exactly as typed (`{{BOOKING_LINK}}`). Fill it in or delete it
+before you send.
 :::
+
+### Rule reply-template variables
+
+| Variable | Fills in with |
+|----------|---------------|
+| `{sender_name}` · `{sender_email}` | The sender's name / email address |
+| `{original_subject}` | The subject of the incoming email |
+| `{ai_summary}` | An AI-written summary of the email — see **[Email summaries](../ai/summaries.md)** |
+| `{signature}` | Your [signature](./signatures.md) |
+| `{booking_link}` · `{phone_number}` | Your booking link / phone number |
+| `{business_hours}` · `{business_address}` | Your business hours / address |
 
 ## Static, AI, and hybrid
 
@@ -123,7 +147,7 @@ Templates fall into three working styles:
 |-------|--------------|
 | **Static** | Fixed content — no variables, no AI. A plain canned reply. |
 | **AI generated** | Fully written by AI from your instructions. |
-| **Hybrid** | A template with variables like `{sender_name}` or `{ai_summary}` that fill in per email. |
+| **Hybrid** | A template with variables (like `{{SENDER_NAME}}`, or `{ai_summary}` in a rule reply) that fill in per email. |
 
 A **hybrid** template is the middle ground: you keep control of the wording but let
 MailPrism slot in details automatically.

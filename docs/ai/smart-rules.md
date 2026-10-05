@@ -23,18 +23,21 @@ ones listed in **[Classification signals](./classification.md)** and the
 
 | Field | Values |
 |-------|--------|
-| **Category** | urgent · important · personal · work · financial · newsletter · promotional · cold_email · spam · social · notification · transactional · system |
+| **Category** | urgent · important · personal · work · financial · newsletter · promotional · cold_email · spam · social · notification · transactional · system · other |
 | **Urgency** | <span class="mp-pill mp-pill--red">high</span> <span class="mp-pill mp-pill--amber">medium</span> <span class="mp-pill mp-pill--green">low</span> |
 | **Sentiment** | <span class="mp-pill mp-pill--green">positive</span> <span class="mp-pill mp-pill--gray">neutral</span> <span class="mp-pill mp-pill--red">negative</span> |
-| **Is spam** · **Is automated** · **Is cold outreach** | true / false |
+| **Is automated** | true / false |
+
+Spam and cold outreach are matched through **Category**: pick **Spam** or **Cold Email**.
+**Cold Email** comes from the AI's cold-outreach detector.
 
 ## Building one
 
 It works exactly like any rule — you just pick an AI field as the condition:
 
 1. **Rules → Create Rule**, then choose **Rule builder**.
-2. Add a condition and choose an AI field — **Category**, **Urgency**, **Sentiment**,
-   **Is spam**, **Is automated**, or **Is cold outreach**.
+2. Add a condition and choose an AI field — **AI Category**, **AI Urgency**,
+   **AI Sentiment**, **AI: Is Automated Email**, and more.
 3. Add your actions.
 4. Save and enable.
 
@@ -47,8 +50,8 @@ It works exactly like any rule — you just pick an AI field as the condition:
 
 **Quiet the cold pitches**
 
-> **When** Is cold outreach is `true` **AND** Sender relationship is
-> <span class="mp-pill mp-pill--gray">cold</span>
+> **When** AI Category is <span class="mp-pill mp-pill--amber">Cold Email</span> **AND**
+> Sender History is <span class="mp-pill mp-pill--gray">First-time sender</span>
 > **then** Apply label `Cold outreach` · Archive
 
 **Catch unhappy customers fast**
@@ -59,7 +62,7 @@ It works exactly like any rule — you just pick an AI field as the condition:
 
 **Tidy the noise**
 
-> **When** Is automated is `true` **AND** Category is
+> **When** AI: Is Automated Email is `true` **AND** AI Category is
 > <span class="mp-pill mp-pill--gray">notification</span>
 > **then** Apply label `Notifications` · Mark read · Archive
 
@@ -71,7 +74,7 @@ It works exactly like any rule — you just pick an AI field as the condition:
   archive or reply.
 - **Use confidence where it helps.** Response-tracking conditions expose an AI
   **confidence** value (`0.0`–`1.0`) so you can require the AI to be sure. You can
-  also raise the global **AI confidence threshold** in **Settings → Rule Defaults**
+  also raise the global **AI confidence threshold** in **Settings → Rule Defaults & Safety**
   so AI conditions only fire when the model is sure enough. See
   **[Conditions reference](../rules/conditions.md#response-tracking)**.
 - **Tune the signals themselves.** If a category or urgency call feels consistently

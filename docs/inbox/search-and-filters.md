@@ -58,7 +58,7 @@ Tabs above the list switch which slice of your mailbox you're looking at:
 | **Spam** | Mail Gmail flagged as spam. |
 | **Trash** | Deleted mail (Gmail clears it after 30 days). |
 
-The **Inbox** and **Unread** tabs show a badge with your unread count.
+Only the **Inbox** tab shows a badge with your unread count.
 
 ### Account
 

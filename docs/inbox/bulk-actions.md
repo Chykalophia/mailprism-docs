@@ -14,7 +14,8 @@ can act on the whole selection at once.
 
 - **Click a checkbox** on any row to add that email to your selection.
 - Click more checkboxes to keep adding.
-- Press **Ctrl/Cmd + A** to select every email currently shown in the list.
+- Press **Ctrl/Cmd + A** to select every email currently shown in the list, and **Esc**
+  to clear the selection.
 - The bar shows a running count — for example, **5 selected**.
 
 The selection only ever covers the emails *in view*. Switch tabs, change the account
@@ -56,9 +57,9 @@ real state afterward.
 
 ## Single-email actions
 
-Looking to **star**, **label**, **snooze**, or **unsubscribe** an email? Those run on
-one email at a time from the row or the email view — see
-**[Email actions](./email-actions.md)** and **[Labels](./labels.md)**. To re-run your
+Looking to **star** or **label** an email? Those run on one email at a time from the
+email view — see **[Email actions](./email-actions.md)** and **[Labels](./labels.md)**.
+To unsubscribe from senders in bulk, use the **[Unsubscribe](./unsubscribe.md)** page. To re-run your
 automations against a message, open it and use the rule tools described in
 **[Rules & automation](../rules/overview.md)**.
 

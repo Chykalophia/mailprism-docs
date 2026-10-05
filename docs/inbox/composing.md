@@ -52,11 +52,18 @@ single account and no aliases, **From** simply shows your address. See
 Click **Templates** in the footer (or type **/** in the body) to insert a saved reply
 without retyping it:
 
-- **Quick replies** — your canned responses, including any `{{variables}}`, which fill
-  in from the email's context.
+- **Quick replies** — your canned responses. Variables written in double braces and
+  capitals, like `{{SENDER_FIRST_NAME}}`, fill in from the email's context.
+
+:::caution Check for leftover variables
+If MailPrism can't fill a variable (for example, `{{BOOKING_LINK}}` with no booking
+link saved), it **stays in the text exactly as typed**, like `{{BOOKING_LINK}}`. Fill
+it in or delete it before you send. The full list is in
+**[Templates](../productivity/templates.md#variables)**.
+:::
 - **AI templates** — prompts that generate a tailored reply on the spot.
 
-Manage these in **Templates** (under Productivity).
+Manage these in **Settings → Email Templates**.
 
 ## AI writing help
 
@@ -78,8 +85,15 @@ close it.
 
 ## Signatures
 
-Signatures come from your Gmail send-as settings — the account or alias you choose in
-the **From** field determines the signature Gmail applies.
+The compose panel does **not** add your Gmail send-as signature automatically. To
+include a signature:
+
+- Add `{{SIGNATURE}}` to a quick reply — it fills in your **default MailPrism
+  signature**.
+- Or type it yourself.
+
+AI-written replies have your default signature added at the end. Manage signatures in
+**[Signatures](../productivity/signatures.md)**.
 
 ## Sending, drafts, and discarding
 
@@ -90,7 +104,9 @@ the **From** field determines the signature Gmail applies.
 | **Discard** (trash) | Throws the draft away and deletes its saved copy. |
 
 - Press **Ctrl/Cmd + Enter** anywhere in the body to send.
-- Drafts are saved automatically as you write, so a reply you started is waiting for you
-  the next time you open that thread. **Discard** removes the saved draft for good.
+- Drafts are saved automatically **in this browser** as you write, so a reply you
+  started is waiting for you the next time you open that thread on the same device.
+  They aren't saved to Gmail's Drafts folder, and they don't follow you to other
+  devices or browsers. **Discard** removes the saved draft for good.
 
 → Next: **[Labels & organization](./labels.md)**

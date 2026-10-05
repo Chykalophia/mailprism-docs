@@ -62,10 +62,19 @@ sent the email:
 - If nothing matches, the rule falls back to its fixed channel (or skips the
   forward) — the email itself is never dropped.
 
-:::caution Not fully self-serve yet
-ClickUp Routing needs a connected ClickUp workspace, and there's no button to connect
-one in **Settings → Integrations** yet. If the page says no workspaces are connected,
-email **[hello@mailprism.ai](mailto:hello@mailprism.ai)** to get set up.
+### Connecting ClickUp
+
+1. Go to **Settings → Integrations → ClickUp**.
+2. Click **Connect ClickUp** and approve access in ClickUp.
+3. To add more, click **Connect another workspace**. To remove one, use its
+   **Disconnect** button.
+
+Once a workspace is connected, its channels can be used by **Forward** rules and
+**ClickUp Routing**.
+
+:::note Still limited
+ClickUp is in early access, so you may see rough edges. If something doesn't work,
+email **[hello@mailprism.ai](mailto:hello@mailprism.ai)**.
 :::
 
 ## Coming soon
@@ -84,7 +93,8 @@ the **Integrations** page in the app.
 ## Where to find integrations
 
 - **Google Calendar** lives under **Settings → Calendar**.
-- **ClickUp** routing lives under **Settings → ClickUp Routing**.
+- **ClickUp** connections live under **Settings → Integrations → ClickUp**; routing
+  lives under **Settings → ClickUp Routing**.
 - **OpenAI** and **Anthropic** keys live under **Settings → Integrations**.
 
 :::note Your keys stay private

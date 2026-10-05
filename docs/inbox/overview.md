@@ -7,7 +7,7 @@ description: Read and work through your mail inside MailPrism — the email list
 # Inbox Overview
 
 MailPrism isn't only a rules engine — you can read and clear your mail right inside
-it, with your automations and AI signals close at hand. Open **Mail → Inbox** to get
+it, with your automations and AI signals close at hand. Click **Inbox** in the sidebar to get
 started.
 
 ## The two-panel layout
@@ -81,8 +81,12 @@ remembered for the session.
 
 ## Reading and unread status
 
-Opening an unread email marks it read automatically after a short delay. To set status
-manually, use **Mark read / unread** in the email toolbar — see
+By default, opening an email **doesn't** mark it read. To have MailPrism mark emails
+read after you've viewed them for a few seconds, turn on **Auto-Mark as Read** in
+**Settings → Privacy → Reading Behavior** — see
+**[Privacy & Data](../account/privacy-and-data.md#reading-behavior)**.
+
+To set status manually, use **Mark read / unread** in the email toolbar — see
 **[Email actions](./email-actions.md)**.
 
 ## Pagination
@@ -99,6 +103,6 @@ also a **Refresh** button if you want to force an update.
 
 ## Working through mail in bulk
 
-Select multiple threads with their checkboxes to act on them all at once — archive,
-delete, mark read/unread, star, and apply or remove labels. A bulk action bar appears
+Select multiple threads with their checkboxes to act on them all at once —
+**Archive**, **Mark Read**, **Mark Unread**, or **Delete**. A bulk action bar appears
 above the list whenever one or more threads are selected.

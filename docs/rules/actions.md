@@ -11,7 +11,8 @@ A single rule can run several actions together (for example: *apply a label*, th
 *archive*, then *notify me*).
 
 This page is the complete list of actions and the **options** you can set on each
-action in the rule builder (a **delay** and **cancel if replied**).
+action in the rule builder (a **delay** and **cancel if replied**, on actions that can
+be scheduled).
 
 :::tip How to read this page
 Pick a group below, find the action you want, then check **[Action options](#action-options)**
@@ -40,8 +41,8 @@ for the controls that make it safer — a **delay** and **cancel if replied**.
 
 :::caution These actions send mail from your account
 Anything that forwards, sends, or replies goes out **from your Gmail**, only because
-a rule you built told it to. Use **delays** and **cancel if replied** (below) to stay
-in control.
+a rule you built told it to. **Create Draft Reply** is the safest choice — nothing
+leaves until you send it. Test the rule first (see **[Testing rules](./testing.md)**).
 :::
 
 | Action | What it does |
@@ -66,7 +67,7 @@ Keep conversations organized automatically. See
 | **Track Response Needed** | Flag the thread as needing your response |
 | **Mark Awaiting Reply** | Flag that you're waiting on someone else |
 | **Resolve Conversation** | Mark the thread as handled |
-| **Update Response State** | Set the thread state directly — `needs_response`, `awaiting_reply`, `resolved`, or `snoozed` |
+| **Update Response State** | Set the thread state directly — **Needs Response**, **Awaiting Reply**, **Pending**, **Resolved**, or **Snoozed** |
 | **Reactivate Tracking** | Resume tracking a resolved thread |
 
 ## Smart follow-ups
@@ -89,12 +90,23 @@ These start a follow-up flow on the email. See
 
 ## Action options
 
-Each action row in the rule builder has a **delay** option that makes the action safer
-to run. You'll find it on the clock icon at the end of the action row.
+Some action rows in the rule builder have a **delay** option. You'll find it on the
+clock icon at the end of the action row.
+
+### Which actions can be delayed
+
+Only actions MailPrism can schedule show the clock icon:
+
+| Can be delayed | No delay control |
+|----------------|------------------|
+| Apply Label · Remove Label · Mark as Read / Unread · Mark as Important / Not Important · Archive · Move to Trash · Add Star / Remove Star · Forward Email · Send Email | Create Draft Reply · Send Auto-Reply · Send Me a Notification Email · Unsubscribe from Sender · all **Response tracking** actions · Assign Tracking Label · Start Nudge Flow · Start Reminder Flow |
+
+Actions without a delay control always run **right away**, when the rule matches.
 
 ### Delay
 
-Wait a set time before the action runs. Choose an **amount** and a **unit**:
+Wait a set time before the action runs. Choose an **amount** and a **unit** — all five
+units save:
 
 <span class="mp-pill mp-pill--gray">Minutes</span>
 <span class="mp-pill mp-pill--gray">Hours</span>
@@ -102,8 +114,7 @@ Wait a set time before the action runs. Choose an **amount** and a **unit**:
 <span class="mp-pill mp-pill--gray">Weeks</span>
 <span class="mp-pill mp-pill--gray">Months</span>
 
-A delayed action is **scheduled** — it runs later, not at match time. This is what
-powers safe auto-follow-ups.
+A delayed action is **scheduled** — it runs later, not at match time.
 
 ### Cancel if replied
 
@@ -117,9 +128,14 @@ When an action is delayed, you can tell MailPrism to skip it if a reply lands fi
 | **Cancel if sender replies** | Skip if the *sender* replies |
 
 :::tip A safe auto-follow-up
-Pair **Create Draft Reply** (or **Send Auto-Reply**) with a **delay** *and*
-**cancel if replied**. MailPrism only follows up if the conversation actually goes
-quiet — and a draft is one you approve, rather than auto-send.
+Want to follow up only if a conversation goes quiet? Use **Start Nudge Flow** (or
+**Start Reminder Flow** to remind just yourself). Nudge flows wait between steps and
+**stop automatically when they reply** — see
+**[Nudges & reminders](../tracking/nudges-and-reminders.md)**.
+
+For delayed housekeeping, put a **delay** *and* **cancel if replied** on a schedulable
+action — for example, **Apply Label** "Follow up" after 3 days, cancelled if the sender
+replies.
 :::
 
 ---
@@ -159,8 +175,9 @@ preview of exactly what will be sent:
 | **Custom…** | Opens **Advanced cleaning**: remove signatures, remove quoted text (or keep 1–3 prior replies), and clean the subject line. |
 
 **Custom…** also has AI options — clean tricky threads, add a summary, or pull out
-action items. They need the **AI email cleanup** add-on (or, on the Business plan, your
-own Anthropic key); otherwise they're shown locked. Like any action, a forward can also have a **delay**.
+action items. They need the **AI email cleanup** add-on, available on **Pro and above**
+(or, on the Business plan, your own Anthropic key); otherwise they're shown locked.
+See **[Billing → Add-ons](../account/billing.md#ai-email-cleanup)**. Like any action, a forward can also have a **delay**.
 
 ---
 
