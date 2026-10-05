@@ -66,7 +66,7 @@ Instead of scheduling the *whole rule*, you can delay a single **action**. In th
 rule editor, click the **clock** icon next to an action to add a delay.
 
 The clock only appears on actions MailPrism can schedule — labels, read/unread,
-importance, archive, trash, stars, **Forward Email**, and **Send Email**. Replies,
+importance, archive, trash, stars, and **Forward Email**. Replies,
 drafts, notifications, unsubscribe, tracking actions, and nudge/reminder flows always
 run right away. The full list is in **[Actions → Which actions can be delayed](./actions.md#which-actions-can-be-delayed)**.
 

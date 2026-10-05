@@ -31,7 +31,7 @@ When you connect a key:
 Your key is **encrypted at rest** and never logged.
 
 :::note Plan requirement
-Available on the **Business** plan. On other plans, the OpenAI and Anthropic
+Available on the **Business**, **Enterprise**, and **Lifetime** plans. On other plans, the OpenAI and Anthropic
 integrations show an **Upgrade** prompt. See
 **[Billing & Plans](../account/billing.md)**.
 :::

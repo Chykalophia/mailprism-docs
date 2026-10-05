@@ -48,12 +48,11 @@ leaves until you send it. Test the rule first (see **[Testing rules](./testing.m
 | Action | What it does |
 |--------|---------------|
 | **Forward Email** | Forward the email to another address — see **[Forward options](#forward-options)** |
-| **Send Email** | Send a new email from a template (or AI) |
 | **Create Draft Reply** | Create a reply **draft** — nothing is sent; you review and send |
 | **Send Auto-Reply** | Send a reply automatically |
 | **Unsubscribe from Sender** | Attempt to unsubscribe from the sender |
 
-**Send Email**, **Create Draft Reply**, and **Send Auto-Reply** use a **template** —
+**Create Draft Reply** and **Send Auto-Reply** use a **template** —
 either a canned response or an AI-generated template. Build your templates in settings
 before using these actions.
 
@@ -99,7 +98,7 @@ Only actions MailPrism can schedule show the clock icon:
 
 | Can be delayed | No delay control |
 |----------------|------------------|
-| Apply Label · Remove Label · Mark as Read / Unread · Mark as Important / Not Important · Archive · Move to Trash · Add Star / Remove Star · Forward Email · Send Email | Create Draft Reply · Send Auto-Reply · Send Me a Notification Email · Unsubscribe from Sender · all **Response tracking** actions · Assign Tracking Label · Start Nudge Flow · Start Reminder Flow |
+| Apply Label · Remove Label · Mark as Read / Unread · Mark as Important / Not Important · Archive · Move to Trash · Add Star / Remove Star · Forward Email | Create Draft Reply · Send Auto-Reply · Send Me a Notification Email · Unsubscribe from Sender · all **Response tracking** actions · Assign Tracking Label · Start Nudge Flow · Start Reminder Flow |
 
 Actions without a delay control always run **right away**, when the rule matches.
 

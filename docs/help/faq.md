@@ -157,7 +157,7 @@ their models. See
 ### Which plans include AI?
 
 AI analysis is included on paid plans (Starter and up). The Free plan runs rule-based
-automation. Bring-your-own-key (BYOK) requires the Business plan. Free plans can still
+automation. Bring-your-own-key (BYOK) requires the Business, Enterprise, or Lifetime plan. Free plans can still
 use the **[AI rule drafter](../rules/building-with-ai.md)** — 10 AI drafts a day.
 
 ### What can the AI detect?

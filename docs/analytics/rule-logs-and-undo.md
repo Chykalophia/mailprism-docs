@@ -69,26 +69,30 @@ See **[AI features](../ai/overview.md)** for more on how MailPrism reads your em
 
 ## Undo
 
-If a rule did something you didn't want, you can **undo** it — MailPrism restores the
-email to the state it was in *before* the rule ran.
+If a rule did something you didn't want, you can **undo** it — MailPrism reverses the
+changes **that rule** made to the email.
 
-When an execution is reversible and hasn't been undone yet, an **Undo** button appears
-on its row. After you undo, the entry is marked **Undone** and the **Undone** stat
-goes up.
+When an execution can be undone, an **Undo** button appears on its row. If a run
+can't be undone (see below), there's no button. After you undo, the entry is marked
+**Undone** and the **Undone** stat goes up.
 
-### What Undo restores
+### What Undo reverses
 
-Undo puts the email back to its original state, including:
+Undo reverses these actions:
 
-- **Labels** (both your own labels and Gmail's system labels)
-- **Read / unread** status
-- **Starred** status
-- **Inbox** placement (whether it was in your inbox)
-- **Important** marker
+- **Apply Label** / **Remove Label** (your own labels and Gmail's system labels)
+- **Mark as Read** / **Mark as Unread**
+- **Mark as Important** / **Not Important**
+- **Archive** (puts the email back in your inbox)
+- **Add Star** / **Remove Star**
 
-Response-tracking labels (like Needs Response or Awaiting Reply) are left alone —
-those follow the conversation's current **[tracking state](../tracking/overview.md)**,
-not the undo snapshot.
+If the rule acted on the whole conversation, undo acts on the whole conversation too.
+
+Undo only reverses what *that rule* changed — it leaves alone anything another rule
+did, and anything you changed yourself since.
+
+Response-tracking labels (like Needs Action or Awaiting Reply) are left alone —
+those follow the conversation's current **[tracking state](../tracking/overview.md)**.
 
 ### The grace period
 
@@ -104,19 +108,18 @@ Change it in **Settings → Rule Defaults & Safety → Undo Settings** (24, 48 o
 
 ### What can't be undone
 
-Undo can't reverse everything:
-
 | Limitation | Why |
 |------------|-----|
-| **Irreversible actions** — moving to **Trash**, **sending** a reply or email, **forwarding** | A sent or forwarded message can't be recalled, and trash is flagged as not undo-able. |
+| **Irreversible actions** — **Move to Trash**, **Send Auto-Reply**, **Forward Email**, **Unsubscribe from Sender**, **Start Workflow** | If any of these ran in an execution, the whole execution has no Undo button — a sent or forwarded message can't be recalled. |
+| **Side effects that stay** — **Create Draft Reply**, **Send Me a Notification Email**, tracking actions, nudge and reminder flows | These don't block undo, but undo doesn't reverse them: the draft stays, the notification was already sent, and tracking follows the conversation. |
+| **Nothing to reverse** | If the rule didn't change anything undo can restore, there's no button. |
 | **Already undone** | An execution can only be undone once. |
 | **Past the grace period** | The undo window has closed (see above). |
 | **The email no longer exists** | If the message was permanently deleted, there's nothing to restore. |
 
-:::tip Undo acts on the email, not the clock
-Undo recalculates the labels and flags needed to match the original state and applies
-them in Gmail. If you've changed the email yourself since the rule ran, undo still
-restores the rule's original snapshot.
+:::tip One undo per email at a time
+After you undo one rule on an email, refresh the page to undo another rule on the same
+email.
 :::
 
 ---
