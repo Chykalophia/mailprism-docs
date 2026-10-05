@@ -32,10 +32,12 @@ dates, then goes quiet again.
 | **Response message** | The body of the reply (use `{sender_name}` for the sender's name) |
 | **Workflow** | **Send immediately**, or **Create draft for review** |
 | **Response delay** | A short wait before replying — 30 sec to 5 min (1 min recommended) |
-| **Who receives responses** | **Everyone**, **My contacts only**, or a **Whitelist** |
+| **Who receives responses** | **Everyone**, **My contacts only**, or **Whitelist only** |
 
-When you choose **Whitelist**, you add specific email addresses that should always get
-a reply — useful for important contacts when everyone else is filtered out.
+- **My contacts only** — people you've emailed before, or senders you've marked as
+  trusted.
+- **Whitelist only** — only the email addresses you list get a reply; everyone else is
+  skipped.
 
 :::tip Why the response delay?
 The short delay lets Gmail finish classifying the email first — so the responder can
@@ -57,7 +59,7 @@ next business day.
 | **Response message** | The body (use `{business_hours}` to show your schedule) |
 | **Workflow** | **Send immediately**, or **Create draft for review** |
 | **Response delay** | A short wait before replying — 15 sec to 2 min (30 sec recommended) |
-| **Who receives responses** | **Everyone**, **My contacts only**, or a **Whitelist** |
+| **Who receives responses** | **Everyone**, **My contacts only**, or **Whitelist only** |
 
 Replies go out only for mail that arrives **outside** the hours and days you mark as
 working time.
@@ -75,6 +77,20 @@ If you're nervous about automatic replies, set the workflow to **draft** for a d
 see exactly what *would* have gone out, with zero risk of an unwanted send.
 :::
 
+## Which emails get a reply
+
+A responder only answers **new mail that lands in your inbox** — not mail you sent,
+not old mail, and not emails you re-run rules on. Specifically:
+
+- The email arrived in the last **24 hours** (turning a responder on doesn't reply to
+  your backlog).
+- It arrived in your workspace's **primary** Gmail account.
+- Rule processing is running — **quiet hours** and paused automation also pause
+  responders.
+
+Right before replying, MailPrism re-checks that the responder is still on, so turning
+it off during the response delay cancels the reply.
+
 ## Built-in safety
 
 Auto-responders are deliberately cautious so they never turn into a spam machine or an
@@ -84,13 +100,16 @@ auto-reply loop. These protections are always on:
 - **Mailing lists are skipped** — anything carrying an unsubscribe header is left alone.
 - **Automated and system mail is skipped** — newsletters, promotions, notifications,
   transactional receipts, spam, and cold outreach don't get a reply, so you avoid loops.
-- **Rate limits** — at most **one** auto-reply per sender per day, plus a daily cap
-  across all senders.
+- **Auto-replies are skipped** — mail that is itself an auto-reply (or a bounce) never
+  gets one back, so two responders can't loop.
+- **Rate limits** — at most **one** auto-reply per sender per day (days run on UTC),
+  plus a daily cap across all senders.
 
 :::warning These exclusions can't be turned off
 The safety filters and rate limits protect your reputation as a sender. They apply to
-every auto-reply regardless of your **Who receives responses** setting — except for
-addresses you add to a **Whitelist**, which always receive a reply.
+every auto-reply, whatever your **Who receives responses** setting — including
+addresses on your whitelist. If anything goes wrong while checking them, MailPrism
+doesn't send.
 :::
 
 ## Related
