@@ -86,8 +86,8 @@ Two cards on the same page save **as soon as you flip them** — no Save button 
 | **AI label assignment** | Lets AI pick a tracking label when none of your rules match (one AI call per such email). Your rules always run first. |
 
 :::tip Save your other changes
-The rest of the tracking settings page (your mode switch and the toggles above) uses
-the **Save Changes** button — those changes apply once you save.
+The mode switch and the other settings on this page (everything except the two cards
+above) use the **Save Changes** button — those changes apply once you save.
 :::
 
 ## Related

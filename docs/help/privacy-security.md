@@ -102,8 +102,8 @@ Full walkthrough: **[Account & Security](../account/account-security.md)**.
   (GDPR). See
   **[Export your data](../account/privacy-and-data.md#export-your-data)**.
 - **Clear learning data** — permanently delete what MailPrism has learned (patterns,
-  suggestions, learned writing-profile data). Your activity log and sender corrections
-  are kept. See
+  pending suggestions, learned writing-profile data). Accepted or dismissed suggestions
+  and their rules, your activity log, and sender corrections are kept. See
   **[Clear learning data](../account/privacy-and-data.md#clear-learning-data)**.
 - **Delete your account** — remove your account and its data, with a typed
   confirmation to prevent accidents. See

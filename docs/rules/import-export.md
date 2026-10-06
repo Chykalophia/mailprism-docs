@@ -47,7 +47,8 @@ Each rule in the list keeps only the **portable** parts:
 | `gmail_account_ids` | The specific accounts, when the rule isn't for all accounts |
 
 :::note No server-owned data is exported
-Rule IDs, your user account, timestamps, and execution history are **not** included.
+Rule IDs, your user account, per-rule timestamps, and execution history are **not**
+included (the file's own `exportedAt` stamp is the only timestamp).
 The only account-specific part is the optional account scope (`gmail_account_ids`) —
 see how import handles it below.
 :::
