@@ -45,8 +45,8 @@ There's no setting in the app to change this order.
 | Email classification and analysis in your rules, thread and reply detection, tracking-label decisions, contact categories, AI rule drafting, rule and category suggestions, smart filtering, smart-field extraction, AI replies and drafts, nudge follow-ups, summaries, writing-style analysis | Manual **Analyze** on a single email, the **Test Rule** preview, similar-correction lookups when drafting, follow-up safety checks, contact **AI Fix**, and profile context suggestions |
 
 The **[AI email cleanup](../account/billing.md#ai-email-cleanup)** pass is separate from
-this table: on Pro and above, an Anthropic key covers it directly — cleanup runs against
-your Anthropic key and you don't need the add-on.
+this table: on Business, Enterprise, and Lifetime plans, an Anthropic key covers it
+directly — cleanup runs against your key, so you don't need the add-on.
 
 :::info When MailPrism's AI steps in
 If your key fails (for example, it hits its own limit or is revoked), MailPrism falls

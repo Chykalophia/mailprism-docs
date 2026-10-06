@@ -120,7 +120,7 @@ before they reach your assistant. The card adapts to your situation:
 
 - **Free or Starter plan** — upgrade to **Pro or above** to unlock it (this
   applies even if you've added your own AI key).
-- **Pro or above, with your own Anthropic key (BYOK)** — you're already covered;
+- **Business, Enterprise, or Lifetime, with your own Anthropic key (BYOK)** — you're already covered;
   cleanup runs against your key and no add-on is needed.
 - **Pro or above, not yet enabled** — an **Enable** button starts checkout.
 - **Pro or above, already enabled** — shows the renewal date and a **Cancel at
