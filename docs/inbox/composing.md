@@ -53,7 +53,8 @@ Click **Templates** in the footer (or type **/** in the body) to insert a saved 
 without retyping it:
 
 - **Quick replies** — your canned responses. Variables written in double braces and
-  capitals, like `{{SENDER_FIRST_NAME}}`, fill in from the email's context.
+  capitals, like `{{SENDER_FIRST_NAME}}`, fill in from the email's context or your
+  saved settings (like `{{BOOKING_LINK}}`).
 
 :::caution Check for leftover variables
 If MailPrism can't fill a variable (for example, `{{BOOKING_LINK}}` with no booking

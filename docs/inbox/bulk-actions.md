@@ -59,6 +59,8 @@ real state afterward.
 
 Looking to **star** or **label** an email? Those run on one email at a time from the
 email view — see **[Email actions](./email-actions.md)** and **[Labels](./labels.md)**.
+You can also remove a label straight from the list: hover the colored label dots on a
+row to open its label pills, then use a pill's remove (×) button.
 To unsubscribe from senders in bulk, use the **[Unsubscribe](./unsubscribe.md)** page. To re-run your
 automations against a message, open it and use the rule tools described in
 **[Rules & automation](../rules/overview.md)**.

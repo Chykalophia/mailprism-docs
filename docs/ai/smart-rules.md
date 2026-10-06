@@ -23,12 +23,12 @@ ones listed in **[Classification signals](./classification.md)** and the
 
 | Field | Values |
 |-------|--------|
-| **Category** | urgent · important · personal · work · financial · newsletter · promotional · cold_email · spam · social · notification · transactional · system · other |
-| **Urgency** | <span class="mp-pill mp-pill--red">high</span> <span class="mp-pill mp-pill--amber">medium</span> <span class="mp-pill mp-pill--green">low</span> |
-| **Sentiment** | <span class="mp-pill mp-pill--green">positive</span> <span class="mp-pill mp-pill--gray">neutral</span> <span class="mp-pill mp-pill--red">negative</span> |
-| **Is automated** | true / false |
+| **AI Category** | Urgent · Important · Personal · Work · Financial/Billing · Newsletter · Promotional · Cold Email · Spam · Social · Notification · Transactional · System · Other |
+| **AI Urgency** | <span class="mp-pill mp-pill--red">High</span> <span class="mp-pill mp-pill--amber">Medium</span> <span class="mp-pill mp-pill--green">Low</span> |
+| **AI Sentiment** | <span class="mp-pill mp-pill--green">Positive</span> <span class="mp-pill mp-pill--gray">Neutral</span> <span class="mp-pill mp-pill--red">Negative</span> |
+| **AI: Is Automated Email** | true / false |
 
-Spam and cold outreach are matched through **Category**: pick **Spam** or **Cold Email**.
+Spam and cold outreach are matched through **AI Category**: pick **Spam** or **Cold Email**.
 **Cold Email** comes from the AI's cold-outreach detector.
 
 ## Building one
@@ -45,7 +45,7 @@ It works exactly like any rule — you just pick an AI field as the condition:
 
 **Surface urgent mail**
 
-> **When** Urgency is <span class="mp-pill mp-pill--red">high</span>
+> **When** AI Urgency is <span class="mp-pill mp-pill--red">High</span>
 > **then** Star · Mark important · Notify me by email
 
 **Quiet the cold pitches**
@@ -56,14 +56,14 @@ It works exactly like any rule — you just pick an AI field as the condition:
 
 **Catch unhappy customers fast**
 
-> **When** Sentiment is <span class="mp-pill mp-pill--red">negative</span> **AND**
-> Category is <span class="mp-pill mp-pill--gray">work</span>
+> **When** AI Sentiment is <span class="mp-pill mp-pill--red">Negative</span> **AND**
+> AI Category is <span class="mp-pill mp-pill--gray">Work</span>
 > **then** Star · Track response needed
 
 **Tidy the noise**
 
 > **When** AI: Is Automated Email is `true` **AND** AI Category is
-> <span class="mp-pill mp-pill--gray">notification</span>
+> <span class="mp-pill mp-pill--gray">Notification</span>
 > **then** Apply label `Notifications` · Mark read · Archive
 
 ## Make smart rules dependable

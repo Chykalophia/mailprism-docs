@@ -108,6 +108,13 @@ MailPrism recomputes the relationship every time it records an interaction, usin
 
 **Unknown** means no interactions have been recorded yet.
 
+Both directions count the same: one email you sent and one you received is two
+interactions. In [rule conditions](../rules/conditions.md#sender-relationship) these
+values appear under **Sender History** as **First-time sender** (`cold`), **Have
+exchanged before** (`warm`), and **Regular contact** (`established`). Despite its label,
+**First-time sender** means a single interaction in *either* direction — someone you
+emailed once who never replied is `cold` too.
+
 :::note Why a low count matters
 A stranger who lands one email in your inbox has almost no history with you — so they
 read as **cold**. That's exactly the pattern unsolicited sales and outreach follow,

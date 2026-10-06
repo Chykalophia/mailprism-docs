@@ -82,8 +82,11 @@ Great for spotting an unhappy customer before it escalates.
 
 ## Yes / No signals
 
-These are simple true/false flags. Each is usable as a rule condition with an
-*is true* / *is false* operator.
+These are simple true/false flags. **Is automated** and the three *detected* signals are
+usable as rule conditions with an *is true* / *is false* operator. **Is spam** and **Is
+cold outreach** aren't true/false conditions in the rule builder — match them with
+**AI Category** = Spam or **AI Category** = Cold Email instead (see the table at the
+bottom of this page).
 
 | Signal | Means it's `true` when… |
 |--------|--------------------------|

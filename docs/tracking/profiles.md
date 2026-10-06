@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Tracking Profile Settings
-description: Fine-tune which senders MailPrism tracks from the Tracking Profile settings page — categories, per-sender rules, and suggested mutes.
+description: Fine-tune which senders MailPrism tracks from the Tracking Profile settings page — categories, per-sender rules, and suggested rules.
 ---
 
 # Tracking Profile Settings

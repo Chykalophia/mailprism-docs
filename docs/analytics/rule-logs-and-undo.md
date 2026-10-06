@@ -110,7 +110,7 @@ Change it in **Settings → Rule Defaults & Safety → Undo Settings** (24, 48 o
 
 | Limitation | Why |
 |------------|-----|
-| **Irreversible actions** — **Move to Trash**, **Send Auto-Reply**, **Forward Email**, **Unsubscribe from Sender**, **Start Workflow** | If any of these ran in an execution, the whole execution has no Undo button — a sent or forwarded message can't be recalled. |
+| **Irreversible actions** — **Move to Trash**, **Send Auto-Reply**, **Forward Email**, **Unsubscribe from Sender**, **Start Workflow** (only where workflows are enabled) | If any of these ran in an execution, the whole execution has no Undo button — a sent or forwarded message can't be recalled. |
 | **Side effects that stay** — **Create Draft Reply**, **Send Me a Notification Email**, tracking actions, nudge and reminder flows | These don't block undo, but undo doesn't reverse them: the draft stays, the notification was already sent, and tracking follows the conversation. |
 | **Nothing to reverse** | If the rule didn't change anything undo can restore, there's no button. |
 | **Already undone** | An execution can only be undone once. |

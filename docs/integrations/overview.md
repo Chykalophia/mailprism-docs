@@ -10,9 +10,9 @@ MailPrism connects to a few outside services to make your inbox smarter. This pa
 lists every integration, what it does, and whether it's available today.
 
 :::tip Available vs. Limited vs. Coming soon
-Only the integrations marked <span class="mp-pill mp-pill--green">Available</span>
-can be used right now. <span class="mp-pill mp-pill--amber">Limited</span>
-means part of it is in the app but it isn't fully self-serve yet. The ones marked
+Integrations marked <span class="mp-pill mp-pill--green">Available</span> are fully
+ready. <span class="mp-pill mp-pill--amber">Limited</span> means you can connect and
+use it yourself today, but it's in early access and may have rough edges. The ones marked
 <span class="mp-pill mp-pill--gray">Coming soon</span> are not ready yet — there's
 nothing to set up.
 :::

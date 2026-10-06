@@ -30,7 +30,8 @@ Show or hide each widget:
 - **Stats Cards** — overview statistics at the top.
 - **Recent Activity** — a feed of recent email processing and rule executions.
 - **Quick Actions** — shortcuts to common tasks.
-- **AI Insights** — AI-generated insights about your email patterns. **On by default.**
+- **AI Insights** — cards for your most recent AI activity, like emails archived, urgent
+  mail flagged, or spam blocked. See **[AI Insights](../ai/insights.md)**. **On by default.**
 - **Rule Performance** is listed as
   <span class="mp-pill mp-pill--gray">Coming Soon</span> and can't be toggled yet.
 

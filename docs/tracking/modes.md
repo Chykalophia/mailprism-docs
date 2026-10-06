@@ -83,7 +83,7 @@ Two cards on the same page save **as soon as you flip them** — no Save button 
 | Card | What it does |
 |------|--------------|
 | **Reopen on reply** | Brings a resolved conversation back when someone replies. Off by default. |
-| **AI label assignment** | Lets AI pick a tracking label when none of your rules match (one AI call per such email). Your rules always run first. |
+| **AI label assignment** | Lets AI pick a tracking label when none of your rules match (one AI call per such email). Your rules always run first. Only takes effect while AI is on and your plan includes AI analysis (Starter and up). |
 
 :::tip Save your other changes
 The mode switch and the other settings on this page (everything except the two cards

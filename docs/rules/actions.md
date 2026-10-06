@@ -66,7 +66,7 @@ Keep conversations organized automatically. See
 | **Track Response Needed** | Flag the thread as needing your response |
 | **Mark Awaiting Reply** | Flag that you're waiting on someone else |
 | **Resolve Conversation** | Mark the thread as handled |
-| **Update Response State** | Set the thread state directly — **Needs Response**, **Awaiting Reply**, **Pending**, **Resolved**, or **Snoozed** |
+| **Update Response State** | Set the thread state directly — **Needs Response** (the same state shown elsewhere as **Needs Action**), **Awaiting Reply**, **Pending**, **Resolved**, or **Snoozed** |
 | **Reactivate Tracking** | Resume tracking a resolved thread |
 
 ## Smart follow-ups
@@ -175,8 +175,8 @@ preview of exactly what will be sent:
 
 **Custom…** also has AI options — clean tricky threads, add a summary, or pull out
 action items. They need the **AI email cleanup** add-on, available on **Pro and above**
-(or, on the Business plan, your own Anthropic key); otherwise they're shown locked.
-See **[Billing → Add-ons](../account/billing.md#ai-email-cleanup)**. Like any action, a forward can also have a **delay**.
+(or, on **Business** or higher, your own Anthropic key); otherwise they're shown locked.
+See **[Billing → Add-ons](../account/billing.md#ai-email-cleanup)**. Like other schedulable actions, a forward can also have a **delay**.
 
 ---
 

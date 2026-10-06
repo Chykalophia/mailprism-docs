@@ -18,8 +18,9 @@ dialog.
 ## How shortcuts work
 
 - **Quick-action shortcuts** work in the **Inbox** when an email is open.
-- Shortcuts don't fire while you're typing in a search box, a compose field, or any
-  other text input.
+- Quick-action shortcuts and `/` don't fire while you're typing in a search box, a
+  compose field, or any other text input. Compose shortcuts like `Cmd+Enter` are meant
+  to be pressed while you type.
 - A single master switch controls every quick-action shortcut. Turn it off and the
   toolbar buttons still work — only the key presses stop. See
   **[Quick Actions](./quick-actions.md#turn-shortcuts-on-or-off)**.

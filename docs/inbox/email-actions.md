@@ -71,7 +71,7 @@ conversation:
 | Action | What it does |
 |--------|--------------|
 | **Track** | Start (or stop) tracking this thread |
-| **Needs Action** · **Awaiting Reply** · **Pending** · **Resolve** | Set the thread to <span class="mp-pill mp-pill--amber">Needs Action</span>, <span class="mp-pill mp-pill--blue">Awaiting Reply</span>, <span class="mp-pill mp-pill--gray">Pending</span>, or <span class="mp-pill mp-pill--green">Resolved</span> |
+| **Needs Action** · **Awaiting Reply** · **Pending** · **Resolve** | Set the thread to <span class="mp-pill mp-pill--red">Needs Action</span>, <span class="mp-pill mp-pill--amber">Awaiting Reply</span>, <span class="mp-pill mp-pill--blue">Pending</span>, or <span class="mp-pill mp-pill--green">Resolved</span> |
 
 → Details: **[Response tracking](../tracking/overview.md)**
 
@@ -108,9 +108,9 @@ the **Nudge Them** dropdown, and **Add / Remove Label** instead.
 MailPrism handles unsubscribing from its dedicated **Bulk Unsubscribe** manager rather
 than a per-email button. It groups noisy senders by brand and domain, shows how often
 each emails you, and lets you unsubscribe from many at once — with an **undo** window
-in case you change your mind. It uses senders' official unsubscribe methods
-(one-click where supported, then a regular link, an unsubscribe email, or a link found
-in the email body).
+in case you change your mind. It uses senders' official unsubscribe methods, in this
+order: the sender's one-click unsubscribe link, then an unsubscribe email, then a link
+found in the email body.
 
 You can also keep an **ignore list** of senders so they stay out of the unsubscribe
 results. See **[Unsubscribe](./unsubscribe.md)**.

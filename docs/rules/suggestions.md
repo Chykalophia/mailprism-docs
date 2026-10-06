@@ -62,8 +62,8 @@ Each card gives you enough to decide at a glance:
 :::caution Accepted rules run right away
 Unlike a template from the **[Rule Library](./library.md)** (which is created
 *disabled* so you can review it first), an **accepted suggestion's rule is enabled
-immediately**. If you'd rather check it before it acts, open it in **Rules** and turn
-it off until you've reviewed — or run a quick **[test](./testing.md)** first.
+immediately**. If you'd rather check it before it acts, open it in **Rules**, turn it
+off, run a quick **[test](./testing.md)**, then turn it back on once you're happy.
 :::
 
 ### Accept several at once

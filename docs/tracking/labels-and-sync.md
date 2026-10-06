@@ -32,9 +32,9 @@ but you **can** link each one to a Gmail label so the state shows up in Gmail.
 
 | System state | Meaning |
 |--------------|---------|
-| <span class="mp-pill mp-pill--amber">Needs Action</span> | Inbound emails requiring your attention. |
-| <span class="mp-pill mp-pill--blue">Awaiting Reply</span> | Outbound emails waiting for a recipient's response. |
-| <span class="mp-pill mp-pill--gray">Pending</span> | Low-priority items to track without urgency. |
+| <span class="mp-pill mp-pill--red">Needs Action</span> | Inbound emails requiring your attention. |
+| <span class="mp-pill mp-pill--amber">Awaiting Reply</span> | Outbound emails waiting for a recipient's response. |
+| <span class="mp-pill mp-pill--blue">Pending</span> | Low-priority items to track without urgency. |
 | <span class="mp-pill mp-pill--green">Resolved</span> | Completed or closed threads. |
 
 ## Custom tracking labels (Advanced mode)

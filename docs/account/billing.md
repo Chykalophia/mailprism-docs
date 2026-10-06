@@ -118,12 +118,13 @@ The **AI email cleanup** add-on runs an extra AI pass that tidies messy
 forwarded threads — long reply chains, wrapped emails, multi-hop forwards —
 before they reach your assistant. The card adapts to your situation:
 
-- **Paid plan, not yet enabled** — an **Enable** button starts checkout.
-- **Already enabled** — shows the renewal date and a **Cancel at period end**
-  option.
-- **You use your own Anthropic key (BYOK)** — you're already covered; cleanup
-  runs against your key and no add-on is needed.
-- **Free or Starter plan** — upgrade to **Pro or above** to unlock it.
+- **Free or Starter plan** — upgrade to **Pro or above** to unlock it (this
+  applies even if you've added your own AI key).
+- **Pro or above, with your own Anthropic key (BYOK)** — you're already covered;
+  cleanup runs against your key and no add-on is needed.
+- **Pro or above, not yet enabled** — an **Enable** button starts checkout.
+- **Pro or above, already enabled** — shows the renewal date and a **Cancel at
+  period end** option.
 
 :::info Add-on pricing
 The add-on price is shown on the card itself and in the Stripe checkout, not

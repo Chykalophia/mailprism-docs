@@ -38,7 +38,8 @@ Open **Replies** in the sidebar to work through everything that's being tracked.
 split view — the list of tracked threads on the left, the selected conversation on
 the right — just like your inbox.
 
-A row of tabs across the top filters the list by state, each with a **live count**:
+A row of tabs across the top, each with a **live count**, filters the list by state —
+plus an **Untracked** queue, which isn't a state (see below):
 
 <span class="mp-pill mp-pill--gray">All</span>
 <span class="mp-pill mp-pill--red">Needs Action</span>

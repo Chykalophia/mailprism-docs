@@ -79,9 +79,12 @@ badge. Roles control what a member can do:
 Open the **⋯** menu next to any non-owner member to:
 
 - **Make Admin**, **Make Editor**, or **Make Viewer** — change their role.
+- **Make *Role name*** — give them one of your [custom roles](#roles--permissions).
+  These appear below a divider once the workspace has custom roles.
 - **Remove from Team** — revoke their access.
 
-The owner's role can't be changed from this menu.
+The owner's role can't be changed from this menu. Invitations always use a built-in
+role — to give a new member a custom role, assign it from this menu after they join.
 
 ### Roles & Permissions
 
@@ -91,7 +94,8 @@ The owner's role can't be changed from this menu.
   they can't be edited or deleted.
 - **Custom roles** — your own roles, created with **New role**. You give each one a
   name, an optional description, and pick its permissions. A custom role always
-  narrows a built-in role — it can never grant more.
+  narrows a built-in role — it can never grant more. Assign one from the **⋯** menu
+  next to a member (see above).
 
 :::note Custom roles need Business
 Custom roles are included in the **Business** plan. On other plans, the Custom roles

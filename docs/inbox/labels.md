@@ -50,8 +50,8 @@ labels like INBOX and IMPORTANT distracting (under **Settings → Appearance**).
 
 To pull up everything with a given label, use the **search** box with Gmail's
 `label:` operator. Search only looks inside the **current tab**, so switch to the
-**All Mail** tab first — otherwise you'll only see labelled mail that's still in your
-inbox. For example:
+**All Mail** tab first — otherwise results are limited to the tab you're on (on the
+**Inbox** tab, only labelled mail that's still in your inbox). For example:
 
 ```
 label:clients

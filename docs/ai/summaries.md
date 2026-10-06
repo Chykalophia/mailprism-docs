@@ -46,9 +46,11 @@ opening portion. The providers are the same ones used elsewhere in MailPrism —
 **[AI privacy & consent](./privacy-and-consent.md)**.
 
 :::caution Summaries go out in your emails
-Because `{ai_summary}` is placed inside an email that's **sent from your account**,
-test the rule first (see **[Testing rules](../rules/testing.md)**) and prefer
-**Create Draft Reply** while you check the wording.
+With **Send Auto-Reply**, `{ai_summary}` goes out in an email **sent from your
+account** with no review step. **Create Draft Reply** only saves a draft in Gmail, so
+nothing is sent until you send it yourself. Test the rule first (see
+**[Testing rules](../rules/testing.md)**) and prefer **Create Draft Reply** while you
+check the wording.
 :::
 
 → Related: **[Reading an email](../inbox/reading-email.md)** · **[AI, Explained](./overview.md)**
