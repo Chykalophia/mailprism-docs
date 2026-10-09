@@ -7,7 +7,7 @@ description: Control what MailPrism learns, how images and trackers are handled,
 # Privacy & Data
 
 Everything about how MailPrism *learns* from you, *handles images and trackers*,
-and *stores your data* lives under **Settings → Privacy & Activity**. Each control
+and *stores your data* lives under **Settings → Privacy**. Each control
 has a sensible default — you only need to change the ones that matter to you.
 
 :::info AI consent is covered separately
@@ -41,15 +41,11 @@ stops all of this learning at once.
 
 ---
 
-## AI personalization
+## Classification feedback
 
-The **AI Personalization** card decides how the learned patterns are *used*. Both
-options are on by default.
-
-- **AI Personalization** — lets AI use your patterns for personalized suggestions.
-  (Recommended.)
-- **Auto-Suggest Rules** — automatically suggests new rules based on patterns
-  MailPrism detects.
+The **Classification Feedback** card links to **Settings → Privacy → AI corrections**
+(`/settings/privacy/ai-corrections`). There you can review the corrections you've given
+the AI about how it classified your email — and undo or delete them.
 
 → See your suggestions: **[Rule suggestions](../rules/suggestions.md)**
 
@@ -60,7 +56,8 @@ options are on by default.
 The **Reading Behavior** card controls what happens to an email when you open it.
 
 - **Auto-Mark as Read** — marks an email as read a short time after you start
-  viewing it.
+  viewing it. **Off by default** — opening an email leaves it unread until you turn
+  this on.
 - **Mark as Read Delay** — when auto-mark is on, choose how long to wait: 1, 2,
   **3 (default)**, 5, or 10 seconds.
 
@@ -102,32 +99,48 @@ pattern learning. As you organize emails in Gmail, those actions appear here.
 - Auto-tracked items (from watching your Gmail) are marked as such.
 - If pattern learning is off, the log invites you to turn it on to start tracking.
 
+**How long it's kept:** the activity log follows your plan's history length, with a
+minimum of **90 days** — today that means 90 days. The **Data Retention** setting below
+doesn't change it.
+
 ---
 
 ## Advanced settings
 
-The **Advanced Settings** card sets how long learning data is kept.
+The **Advanced Settings** card sets how long history and logs are kept.
 
-- **Data Retention** — how long learning data is kept before automatic cleanup:
-  30, 60, **90 days (default)**, 180 days, or 1 year.
+- **Data Retention** — how long MailPrism keeps your **rule execution history**, **AI
+  usage logs**, and **ClickUp forwarding logs** before automatic cleanup: 30, 60,
+  **90 days (default)**, 180 days, or 1 year.
+
+The activity log isn't affected — it follows your plan (see above).
 
 ---
 
 ## Your data
 
-The **Data Management** card handles exporting and clearing your learning data, in
-line with your data-protection rights (GDPR).
+The **Data Management** card handles exporting your data and clearing what MailPrism
+has learned, in line with your data-protection rights (GDPR).
 
 ### Export your data
 
-**Export Data** downloads a copy of all your learning data. The date of your last
-export is shown for reference.
+**Export Data** downloads a copy of **all your account data** as a JSON file —
+settings, rules, activity, and learning data. The date of your last export is shown
+for reference.
 
 ### Clear learning data
 
-**Clear AI Learning Data** permanently deletes all detected patterns, activity logs,
-and learning corrections. You'll confirm first, because MailPrism then has to
-relearn your preferences — which may briefly lower the quality of its suggestions.
+**Clear AI Learning Data** permanently deletes what MailPrism has learned from your
+email and activity. The confirmation dialog lists exactly what happens:
+
+| | Examples |
+|--|---------|
+| **Deleted** | Detected patterns, pending suggestions, learned writing data (analysed sent emails, unreviewed greetings and closings, edit patterns), saved training replies, contact relationships MailPrism worked out on its own |
+| **Kept, but emptied** | Writing profiles keep their names, instructions, and settings, but lose learned tone, formality, length, and samples |
+| **Not touched** | Your **activity log** (reply tracking relies on it), your **sender corrections**, accepted or dismissed suggestions and their rules, your settings, contacts, and account |
+
+MailPrism starts learning again from your new activity, so suggestions and drafts
+may be less personal for a while.
 
 :::warning Clearing is permanent
 Cleared learning data can't be recovered. Export first if you want a copy.

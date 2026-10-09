@@ -32,9 +32,9 @@ but you **can** link each one to a Gmail label so the state shows up in Gmail.
 
 | System state | Meaning |
 |--------------|---------|
-| <span class="mp-pill mp-pill--amber">Needs Action</span> | Inbound emails requiring your attention. |
-| <span class="mp-pill mp-pill--blue">Awaiting Reply</span> | Outbound emails waiting for a recipient's response. |
-| <span class="mp-pill mp-pill--gray">Pending</span> | Low-priority items to track without urgency. |
+| <span class="mp-pill mp-pill--red">Needs Action</span> | Inbound emails requiring your attention. |
+| <span class="mp-pill mp-pill--amber">Awaiting Reply</span> | Outbound emails waiting for a recipient's response. |
+| <span class="mp-pill mp-pill--blue">Pending</span> | Low-priority items to track without urgency. |
 | <span class="mp-pill mp-pill--green">Resolved</span> | Completed or closed threads. |
 
 ## Custom tracking labels (Advanced mode)
@@ -48,10 +48,15 @@ In Advanced mode you can designate your own labels as tracking labels. Each one 
 | **Gmail label** | An existing Gmail label to link to, for two-way sync (optional). |
 | **Colour** | A colour for the label, chosen from the palette. |
 | **Default for state** | Mark a label as the one MailPrism uses by default for its state. |
+| **Mode** | **Active** or **Passive** — see below. |
+| **On reply** | **Needs Action** or **Resolved** — see below. |
+
+You set **Mode** and **On reply** when you create a custom label, and can change them
+later in the label's row editor. System labels don't have these two settings.
 
 ### Active vs. passive mode
 
-Each tracking label behaves in one of two ways:
+Each custom tracking label behaves in one of two ways (the **Mode** select):
 
 | Behaviour | What it means |
 |-----------|---------------|
@@ -60,13 +65,19 @@ Each tracking label behaves in one of two ways:
 
 ### On-reply action
 
-You also decide what happens to a tracked email **when the recipient replies**:
+You also decide what happens to a tracked email **when the recipient replies** (the
+**On reply** select):
 
 | On reply | Result |
 |----------|--------|
 | **Needs Action** | Move the thread back to Needs Action — the conversation continues. |
 | **Resolved** | Mark it resolved — the conversation is complete. |
-| **Custom** | Run your own actions: apply or remove labels, archive, star, mark read, snooze, or move to a specific state. |
+
+:::note Custom on-reply actions
+Custom on-reply actions can't be set up on this page. If a label already has them
+(set up outside the settings page), its **On reply** select shows **Custom actions
+(set outside this page)**. Picking Needs Action or Resolved replaces them.
+:::
 
 ## Bidirectional Gmail sync
 

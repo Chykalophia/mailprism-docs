@@ -74,7 +74,7 @@ const features: {label: string; body: string; color: string}[] = [
   },
   {
     label: 'Real actions',
-    body: 'Label, archive, star, forward, draft or send replies, unsubscribe, snooze, remind — and chain several together.',
+    body: 'Label, archive, star, forward, draft or send replies, unsubscribe, nudge, remind — and chain several together.',
     color: 'var(--mp-spectrum-cyan)',
   },
   {

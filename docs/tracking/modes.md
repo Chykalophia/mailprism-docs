@@ -76,9 +76,18 @@ Choose what happens to tracking when a tracked email is trashed or deleted in Gm
 | **Notify then resolve** | You get a notification first, then it resolves. |
 | **Keep tracking** | Deletion doesn't change the tracking state. |
 
-:::tip Save your changes
-The tracking settings page has a **Save Changes** button — your mode switch and toggle
-changes apply once you save.
+### Reopen on reply and AI label assignment
+
+Two cards on the same page save **as soon as you flip them** — no Save button needed:
+
+| Card | What it does |
+|------|--------------|
+| **Reopen on reply** | Brings a resolved conversation back when someone replies. Off by default. |
+| **AI label assignment** | Lets AI pick a tracking label when none of your rules match (one AI call per such email). Your rules always run first. Only takes effect while AI is on and your plan includes AI analysis (Starter and up). |
+
+:::tip Save your other changes
+The mode switch and the other settings on this page (everything except the two cards
+above) use the **Save Changes** button — those changes apply once you save.
 :::
 
 ## Related

@@ -34,6 +34,7 @@ built-in categories:
 <span class="mp-pill mp-pill--gray">notification</span>
 <span class="mp-pill mp-pill--gray">transactional</span>
 <span class="mp-pill mp-pill--gray">system</span>
+<span class="mp-pill mp-pill--gray">other</span>
 
 | Category | Meaning |
 |----------|---------|
@@ -44,12 +45,13 @@ built-in categories:
 | **financial** | Invoices, billing, receipts, statements |
 | **newsletter** | Subscriptions and recurring digests |
 | **promotional** | Marketing, sales, and offers |
-| **cold_email** | Unsolicited outreach you didn't ask for |
+| **cold_email** | Unsolicited outreach you didn't ask for. The AI doesn't pick this as a category directly — it comes from the **cold outreach** detector, so **AI Category = Cold Email** matches whenever cold outreach is detected. |
 | **spam** | Unwanted or junk mail |
 | **social** | Notifications from social networks |
 | **notification** | Automated alerts from apps and services |
 | **transactional** | Order confirmations, shipping, account actions |
 | **system** | System-generated mail (e.g. delivery reports) |
+| **other** | Anything that doesn't fit the categories above |
 
 :::tip You can add your own
 Categories aren't fixed. On Pro and above you can create **custom categories** and even
@@ -80,8 +82,11 @@ Great for spotting an unhappy customer before it escalates.
 
 ## Yes / No signals
 
-These are simple true/false flags. Each is usable as a rule condition with an
-*is true* / *is false* operator.
+These are simple true/false flags. **Is automated** and the three *detected* signals are
+usable as rule conditions with an *is true* / *is false* operator. **Is spam** and **Is
+cold outreach** aren't true/false conditions in the rule builder — match them with
+**AI Category** = Spam or **AI Category** = Cold Email instead (see the table at the
+bottom of this page).
 
 | Signal | Means it's `true` when… |
 |--------|--------------------------|
@@ -104,9 +109,13 @@ whole thread's state rather than judging a single message.
 ## Confidence
 
 Every classification carries a **confidence** score from `0.0` to `1.0` — how sure the
-AI is about its answer. You can use this to keep automations conservative:
+AI is about its answer. You can use this to keep automations conservative: the global
+**AI confidence threshold** (**Settings → Rule Defaults & Safety → AI Configuration**,
+50–100%) sets how sure the AI must be before an AI condition matches. For thread state
+there's also a condition you can use directly:
 
-> *If Category is `cold_email` **and** confidence is greater than `0.8`, archive it.*
+> *If AI: Thread State is `Needs Action` **and** AI: Thread State Confidence is greater
+> than `0.8`, star it.*
 
 Two related, optional values may also be present:
 
@@ -126,9 +135,9 @@ condition like sender relationship, and require high confidence. See
 | Category | **AI Category** |
 | Urgency | **AI Urgency** |
 | Sentiment | **AI Sentiment** |
-| Is spam | **AI: Is Spam** |
+| Is spam | **AI Category** = Spam |
 | Is automated | **AI: Is Automated Email** |
-| Is cold outreach | **AI: Is Cold Outreach** |
+| Is cold outreach | **AI Category** = Cold Email |
 | Needs response | **AI: Email Needs Response** |
 | Requires action | **AI: Requires External Action** |
 | Sender expects reply | **AI: Sender Expects Reply** |

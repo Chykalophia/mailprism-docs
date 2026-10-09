@@ -48,8 +48,9 @@ You can also see how much it has learned. The Privacy page shows running totals 
 
 When you give feedback on the AI's classifications — agreeing, disagreeing, or
 correcting them — MailPrism records it so the AI can learn and improve its accuracy over
-time. You can review this history in **Settings → Privacy → Classification Feedback**,
-where each entry is tracked as:
+time. You can review this history from the **Classification Feedback** card in
+**Settings → Privacy** (it opens `/settings/privacy/ai-corrections`), where each entry
+is tracked as:
 
 - **Agreed** — you confirmed the AI got it right.
 - **Corrections** — you changed the AI's result.
@@ -65,8 +66,9 @@ controls the whole feature. Turn it off and MailPrism stops watching your action
 entirely; the per-action toggles only apply while it's on.
 
 :::tip Managing your learning data
-The Privacy page also lets you **export** or **clear** your learning data at any time,
-and set how long MailPrism retains it. See **[AI privacy & consent](./privacy-and-consent.md)**.
+The Privacy page also lets you **export** all your account data or **clear** what
+MailPrism has learned at any time. Clearing keeps your activity log and sender
+corrections. See **[Privacy & Data](../account/privacy-and-data.md#your-data)**.
 :::
 
 → Related: **[AI, Explained](./overview.md)** · **[Smart rules](./smart-rules.md)**

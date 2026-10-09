@@ -56,9 +56,8 @@ Click **Add Action** and fill in:
 | **Star** / **Remove Star** | — |
 | **Mark as Read** / **Mark as Unread** | — |
 | **Add Label** / **Remove Label** | A Gmail label |
-| **Forward Email** | A "forward to" address |
+| **Forward Email** | A "forward to" address (optional — without one, the shortcut opens compose in Forward mode) |
 | **Delete** | — |
-| **Snooze** | How long to hide it |
 | **Start Nudge** / **Cancel Nudge** | — (starts or cancels a follow-up sequence) |
 
 :::tip Keep custom shortcuts simple

@@ -10,9 +10,9 @@ MailPrism connects to a few outside services to make your inbox smarter. This pa
 lists every integration, what it does, and whether it's available today.
 
 :::tip Available vs. Limited vs. Coming soon
-Only the integrations marked <span class="mp-pill mp-pill--green">Available</span>
-can be used right now. <span class="mp-pill mp-pill--amber">Limited</span>
-means part of it is in the app but it isn't fully self-serve yet. The ones marked
+Integrations marked <span class="mp-pill mp-pill--green">Available</span> are fully
+ready. <span class="mp-pill mp-pill--amber">Limited</span> means you can connect and
+use it yourself today, but it's in early access and may have rough edges. The ones marked
 <span class="mp-pill mp-pill--gray">Coming soon</span> are not ready yet — there's
 nothing to set up.
 :::
@@ -62,10 +62,19 @@ sent the email:
 - If nothing matches, the rule falls back to its fixed channel (or skips the
   forward) — the email itself is never dropped.
 
-:::caution Not fully self-serve yet
-ClickUp Routing needs a connected ClickUp workspace, and there's no button to connect
-one in **Settings → Integrations** yet. If the page says no workspaces are connected,
-email **[hello@mailprism.ai](mailto:hello@mailprism.ai)** to get set up.
+### Connecting ClickUp
+
+1. Go to **Settings → Integrations → ClickUp**.
+2. Click **Connect ClickUp** and approve access in ClickUp.
+3. To add more, click **Connect another workspace**. To remove one, use its
+   **Disconnect** button.
+
+Once a workspace is connected, its channels can be used by **Forward** rules and
+**ClickUp Routing**.
+
+:::note Still limited
+ClickUp is in early access, so you may see rough edges. If something doesn't work,
+email **[hello@mailprism.ai](mailto:hello@mailprism.ai)**.
 :::
 
 ## Coming soon
@@ -84,7 +93,8 @@ the **Integrations** page in the app.
 ## Where to find integrations
 
 - **Google Calendar** lives under **Settings → Calendar**.
-- **ClickUp** routing lives under **Settings → ClickUp Routing**.
+- **ClickUp** connections live under **Settings → Integrations → ClickUp**; routing
+  lives under **Settings → ClickUp Routing**.
 - **OpenAI** and **Anthropic** keys live under **Settings → Integrations**.
 
 :::note Your keys stay private

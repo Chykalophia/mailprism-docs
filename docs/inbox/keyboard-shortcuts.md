@@ -6,24 +6,25 @@ description: The keyboard shortcuts for working through email fast — and how t
 
 # Keyboard Shortcuts
 
-If you'd rather keep your hands on the keyboard, MailPrism lets you act on an email
-without reaching for the mouse. Shortcuts run on the email pages and are tied to your
-**[Quick Actions](./quick-actions.md)** — so you can change any of them, or turn them
-all off.
+If you'd rather keep your hands on the keyboard, MailPrism has a small set of
+shortcuts. The email-action ones are your **[Quick Actions](./quick-actions.md)** — so
+you can change any of them, or turn them all off.
 
-One shortcut is different: **Cmd+K** (Mac) / **Ctrl+K** (Windows / Linux) opens the command
-palette from anywhere in the app. It isn't a Quick Action, and the Quick Actions switch
-doesn't turn it off.
+:::tip See them in the app
+Press **`?`** anywhere in the main app or Settings to open the **keyboard shortcuts**
+dialog.
+:::
 
 ## How shortcuts work
 
-- Shortcuts fire while you're reading or browsing mail — **not** while you're typing
-  in a search box, a compose field, or any other text input.
+- **Quick-action shortcuts** work in the **Inbox** when an email is open.
+- Quick-action shortcuts and `/` don't fire while you're typing in a search box, a
+  compose field, or any other text input. Compose shortcuts like `Cmd+Enter` are meant
+  to be pressed while you type.
 - A single master switch controls every quick-action shortcut. Turn it off and the
   toolbar buttons still work — only the key presses stop. See
   **[Quick Actions](./quick-actions.md#turn-shortcuts-on-or-off)**.
-- Modifiers are written with `+`, e.g. `Shift+I`. A space means *press one key, then
-  the next*, e.g. `G I` = press **G**, then **I**.
+- Modifiers are written with `+`, e.g. `Shift+I`.
 
 ## Default quick-action shortcuts
 
@@ -35,7 +36,7 @@ them in **Settings → Quick Actions**.
 | `E` | Archive |
 | `S` | Star |
 | `Shift+I` | Mark as read |
-| `F` | Forward |
+| `F` | Forward — opens compose in Forward mode when the action has no forwarding address set |
 | `Shift+3` | Delete (move to trash) |
 
 :::caution Delete is permanent-ish
@@ -43,33 +44,35 @@ them in **Settings → Quick Actions**.
 Reach for **Archive** (`E`) when you just want it out of your inbox.
 :::
 
-## Toolbar action shortcuts
+## App-wide shortcuts
 
-The email toolbar also shows shortcut hints on its buttons. These mirror the actions
-you can reorder and show or hide on the **[Toolbar](./toolbar.md)**.
+| Shortcut | Where | Action |
+|----------|-------|--------|
+| `Cmd+K` / `Ctrl+K` | Anywhere | Open the **command palette** — type to find a page or setting (e.g. *go to rules*, *API keys*) |
+| `?` | Main app and Settings | Show the keyboard shortcuts dialog |
+| `Esc` | Anywhere | Close the open dialog or palette |
 
-| Shortcut | Action |
-|----------|--------|
-| `R` | Reply |
-| `A` | Reply all |
-| `F` | Forward |
-| `E` | Archive |
-| `S` | Star |
-| `#` | Delete |
-| `Shift+U` | Mark read / unread |
-| `G O` | Open in Gmail |
+The command palette isn't a Quick Action, and the Quick Actions switch doesn't turn it
+off. It takes you to pages and settings — it doesn't run email actions like archive.
 
-## Search
+## Inbox and Replies
 
 | Shortcut | Action |
 |----------|--------|
-| `Cmd+K` / `Ctrl+K` | Open the **command palette** — type to find an action, page, or setting (e.g. *archive*, *go to rules*, *API keys*) |
-| `/` | Focus the inbox search box |
+| `/` | Focus the search box |
+| `Cmd+A` / `Ctrl+A` | Select all visible emails |
+| `Esc` | Clear the selection |
+
+## Compose
+
+| Shortcut | Action |
+|----------|--------|
+| `Cmd+Enter` / `Ctrl+Enter` | Send |
 
 ## Make them yours
 
 Every quick-action shortcut is editable — set a key that fits how *you* work, add new
-ones for actions like **Snooze** or **Apply label**, and MailPrism warns you if a key
-is already taken. Full walkthrough: **[Quick Actions](./quick-actions.md)**.
+ones for actions like **Apply label**, and MailPrism warns you if a key is already
+taken. Full walkthrough: **[Quick Actions](./quick-actions.md)**.
 
 → Related: **[Toolbar](./toolbar.md)** · **[Quick Actions](./quick-actions.md)**

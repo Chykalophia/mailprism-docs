@@ -131,7 +131,7 @@ full picture of that mailbox:
   shortcut to create a new one.
 - **Tracking Exemptions** — a read-only list of exemptions affecting this account
   (both workspace-wide and account-specific), so you can answer *"why isn't this
-  email being tracked?"*. Edit them from **Settings → Tracking → Exemptions**.
+  email being tracked?"*. Edit them from **Settings → Tracking Profile**.
 - **Recent Activity** — access changes and rule executions for the account.
 - **Analytics** — activity stats for the account.
 

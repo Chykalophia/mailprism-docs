@@ -28,8 +28,9 @@ sees your password.
 → Full detail on access and permissions: **[Connecting Gmail](./connecting-gmail.md)**
 
 :::tip Not ready yet?
-You can choose **Skip for now** and connect Gmail later from **Settings → Gmail Accounts**.
-Automation won't run until an account is connected.
+**Skip for now** skips the **whole setup** — it marks onboarding done and takes you
+to the dashboard. Connect Gmail later from **Settings → Gmail Accounts**. Automation
+won't run until an account is connected.
 :::
 
 ### Step 2 — Create Rules
@@ -52,7 +53,8 @@ The last step shows a checklist — *Gmail connected* and *First rule created* �
 you can see what's done. Click **Activate & Go to Dashboard** to turn automation on.
 
 From here, your rules run as new mail arrives. Timing controls such as quiet hours
-live in **Settings → Rule Defaults & Safety → Scheduling**. You can test any rule manually from its **Edit**
+live in **Settings → Rule Defaults & Safety** (the **Quiet Hours** and **Execution
+Settings** cards). You can test any rule manually from its **Edit**
 page (open it from **Rules**), and review or undo what rules did from the **Rule Logs**.
 
 → See **[How rules work](../rules/overview.md)** for the full processing and timing
@@ -60,8 +62,8 @@ model.
 
 ## Quiet the noise (optional)
 
-After your first visit to the dashboard, MailPrism may offer a second, optional
-one-screen setup: **noise defaults**. It's a curated list of senders that most
+The first time you open the dashboard after setup, MailPrism takes you to a second,
+optional one-screen setup: **noise defaults**. It's a curated list of senders that most
 people don't need to act on — automated sign-in receipts, security-scan digests,
 marketing emails, bot and CI notifications, calendar reminders, and one-time
 account emails.
@@ -71,13 +73,16 @@ account emails.
 - Every suggested sender starts **checked**. Leave the ones you want quieted
   checked, and uncheck any you'd rather keep seeing.
 - Use **Select all** or **Select none** to start from either extreme.
-- Click **Apply** to add your selection, or **Skip for now** to dismiss the screen.
+- Click **Apply N rules** (N is how many you left checked) to add your selection, or
+  **Skip for now** to dismiss the screen. Either way you land on your dashboard and
+  won't be sent here again.
 
 Each suggestion has a **mode** that controls how strictly it's quieted:
 
 | Mode | What it means |
 |------|----------------|
 | <span class="mp-pill mp-pill--gray">Mute</span> | Don't surface this sender as something to act on. |
+| <span class="mp-pill mp-pill--gray">Mute first only</span> | Skip only the first message in a thread; follow-ups are tracked normally. |
 | <span class="mp-pill mp-pill--amber">Alerts only</span> | Keep it visible in your digest, but don't flag every message. |
 | <span class="mp-pill mp-pill--green">Always track</span> | Keep tracking it normally. |
 

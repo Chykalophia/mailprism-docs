@@ -10,14 +10,22 @@ You don't have to start with a blank rule. The **Rule Library** is a gallery of
 ready-made templates for common email chores. Pick one, customize it to your inbox,
 and enable it.
 
-Open it from **Rules → Rule Templates**.
+Open it from **Rules → Browse Templates**.
 
 ## Browse by category
 
 Templates are organized into categories so you can find the right starting point fast.
-Use the **search box** to filter by name, or the **category buttons** to narrow the
-list. Each card also shows badges for **AI-powered** templates and how many
-**conditions** and **actions** the rule contains.
+Use the **search box** to filter by name or description, or the **category buttons**
+to narrow the list. Each card also shows how many **conditions** and **actions** the
+rule contains, plus badges:
+
+| Badge | Meaning |
+|-------|---------|
+| <span class="mp-pill mp-pill--blue">AI</span> | The template uses AI conditions |
+| <span class="mp-pill mp-pill--green">New</span> | Recently added |
+| <span class="mp-pill mp-pill--amber">Beta</span> | Still being refined |
+| <span class="mp-pill mp-pill--violet">Popular</span> | A common favorite |
+| <span class="mp-pill mp-pill--violet">Pro</span> / <span class="mp-pill mp-pill--blue">Enterprise</span> | Needs that plan — see [Tier-gated templates](#tier-gated-templates) |
 
 | Category | What it covers |
 |----------|----------------|
@@ -35,7 +43,7 @@ list. Each card also shows badges for **AI-powered** templates and how many
 
 ## Installing a template
 
-1. Go to **Rules → Rule Templates**.
+1. Go to **Rules → Browse Templates**.
 2. Browse or search for a template that fits what you want.
 3. Click **Use Template**.
 
@@ -67,12 +75,14 @@ version.
 
 Some templates are available on higher plans and show a small badge:
 
-- A <span class="mp-pill mp-pill--violet">Pro</span> badge — included with the Pro plan.
-- An <span class="mp-pill mp-pill--blue">Enterprise</span> badge — included with the
-  Enterprise plan.
+- A <span class="mp-pill mp-pill--violet">Pro</span> badge — needs the Pro plan or higher.
+- An <span class="mp-pill mp-pill--blue">Enterprise</span> badge — needs the
+  Business plan or higher (Lifetime counts as Business).
 
-Templates with no tier badge are available to everyone. To see what your plan includes,
-check **Billing** in your account settings.
+These badges are **enforced**: if your plan is below the badge, **Use Template** won't
+install it and you'll see a message saying which plan it needs. Templates with no tier
+badge are available to everyone. To see what your plan includes, check **Billing** in
+your account settings.
 
 ## Good starting points
 
@@ -87,8 +97,8 @@ These are the kinds of automations templates handle well:
   <span class="mp-pill mp-pill--gray">cold</span> sender, label and skip the inbox.
 - **Route receipts** — label financial and transactional mail and forward copies where
   they need to go.
-- **Follow up automatically** — draft a polite nudge after a few quiet days, and
-  cancel it if they reply.
+- **Follow up automatically** — start a **[nudge flow](../tracking/nudges-and-reminders.md)**
+  that follows up after a few quiet days and stops if they reply.
 
 :::tip Make it yours
 Templates are a starting line, not a finish line. The real value comes from tuning a

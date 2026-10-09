@@ -31,9 +31,8 @@ click.
 
 ## AI insights
 
-An **AI Insights** widget surfaces recent AI activity in your inbox. It's still
-rolling out — its toggle in Dashboard Preferences is currently marked
-**Coming Soon** — so it may not be available in your account yet. See
+An **AI Insights** widget surfaces recent AI activity in your inbox. It's on by
+default, and you can hide it in **Settings → Dashboard**. See
 **[AI Insights](../ai/insights.md)**.
 
 ## Recent activity
@@ -61,15 +60,18 @@ The dashboard is one stop. Here's the rest of the map:
 | **Rules** | Build, test, and manage your automations. See **[How rules work](../rules/overview.md)**. |
 | **Analytics** | What your automations have done, over time. See **[Analytics](../analytics.md)**. |
 | **Settings** | Connect accounts, tune AI, set scheduling, and more. See **[Connecting Gmail](./connecting-gmail.md)** and **[Preferences](../account/preferences.md)**. |
+| **Help** | The in-app **Help Center** — search help articles, browse by category, and read FAQs. |
+| **Roadmap** | See what's being built — **Now Working On**, **Planned**, **Shipped**, and **Under Review** — and vote for the features you want. |
 
 ### Command palette
 
 Anywhere in the app, press **Cmd + K** (Mac) or **Ctrl + K** (Windows / Linux) to open
-the **command palette**. Type what you're after — *archive*, *go to rules*, *API keys*
-— and pick it from the list, without reaching for the mouse.
+the **command palette**. Type where you want to go or what you want to open — *go to
+rules*, *API keys* — and pick it from the list, without reaching for the mouse. (Email
+actions like archive aren't in the palette — use the toolbar or keyboard shortcuts.)
 
-To search your mail instead, press **/** on the email pages to jump to the inbox
-search box.
+To search your mail instead, press **/** in the Inbox or Replies to jump to the search
+box.
 
 → Full shortcut list: **[Keyboard shortcuts](../inbox/keyboard-shortcuts.md)**
 
@@ -79,8 +81,7 @@ The dashboard is customizable. You can:
 
 - **Show or hide** each widget (stats, AI insights, recent activity, quick actions).
 - Choose a **layout density** — compact or comfortable.
-- Set an **auto-refresh** interval, which only refreshes while the tab is focused
-  to save resources.
+- Turn on **auto-refresh** and pick a refresh interval.
 
 You'll find these under **[Preferences](../account/preferences.md)**.
 

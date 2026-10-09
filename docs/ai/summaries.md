@@ -1,59 +1,56 @@
 ---
 sidebar_position: 8
 title: Email Summaries
-description: AI-generated summaries of individual emails — how they're created and cached behind the scenes. The in-app summary view is still rolling out.
+description: AI-generated email summaries power the ai_summary template variable in automated replies — how they're created, cached, and what gets sent.
 ---
 
 # Email Summaries
 
-A long email isn't always worth a full read. **Email summaries** are designed to let
-MailPrism's AI condense a single message into a short, plain-language summary so you
-can grasp the gist fast.
+A long email isn't always worth a full read. MailPrism's AI can condense a single
+message into a short, plain-language summary.
 
-:::caution No summary button in the app yet
-The summary engine exists behind the scenes, but there is **no button or menu in the
-app today** to generate or display a per-email summary on demand. This page describes
-how summaries are built and cached; the in-app view that surfaces them is still rolling
-out. To get the gist of an email now, open it from the **[inbox](../inbox/reading-email.md)**.
+Today, summaries power the **`{ai_summary}`** variable in **rule reply templates** — for
+example, an auto-reply that says *"Here's what you sent:"* followed by `{ai_summary}`.
+See **[Templates](../productivity/templates.md)** for the other variables.
+
+:::note No summary button in the inbox
+There's no button in the inbox to show a summary for an email you're reading.
+Summaries are generated when a rule's template uses `{ai_summary}`.
 :::
 
 :::info AI consent required
-Summaries use AI, so they only run after you've turned on **AI data processing**.
-Without consent, MailPrism returns a prompt to enable it in **Settings → Privacy**
-instead of generating a summary. See **[AI privacy & consent](./privacy-and-consent.md)**.
+Summaries use AI, so they only run after you've turned on **AI data processing** in
+**Settings → Privacy**. See **[AI privacy & consent](./privacy-and-consent.md)**.
 :::
 
 ## How a summary is created
 
-When a summary is requested for an email, MailPrism:
+When a template needs `{ai_summary}` for an email, MailPrism:
 
-1. Checks whether a summary already exists for that email — if so, the **cached**
-   version is returned instantly (no new AI call).
-2. Confirms your **AI processing consent** is on. If it isn't, you're asked to enable AI
-   in Settings → Privacy first.
-3. Sends the email's content to an AI provider to generate the summary.
-4. Stores the result so future requests are served from the cache.
+1. Checks for a recent summary of that email — if one exists, it's reused (no new AI
+   call).
+2. Otherwise, sends the email's text to an AI provider to write the summary.
+3. Saves the result for reuse.
 
 ## Caching
 
-Each summary is generated **once per email** and then saved.
-
-- The first request runs the AI and stores the result.
-- Every later request for the same email returns the **cached** summary — fast and at
-  no additional AI cost.
-
-This keeps summaries quick to reopen and avoids re-running the AI on the same message.
+Summaries are cached for about **24 hours**. Within that window, the same email reuses
+its summary — fast and at no extra AI cost. After that, a new summary is written the
+next time one is needed.
 
 ## What gets sent for analysis
 
-To produce the summary, the email's text is sent to an AI provider (the same providers
-used elsewhere in MailPrism — see **[AI privacy & consent](./privacy-and-consent.md)**). Very
-long emails are **truncated** before analysis, so an extremely long message may be
-summarized from its earlier portion.
+Only the **first 2,000 characters** of the email's body are sent, along with basic
+details like the subject and sender. A very long message is summarized from its
+opening portion. The providers are the same ones used elsewhere in MailPrism — see
+**[AI privacy & consent](./privacy-and-consent.md)**.
 
-:::note Tied to your AI setup
-Summaries run through whichever AI setup you use — MailPrism's managed AI, or your own
-provider if you've set up **[BYOK](./byok.md)**.
+:::caution Summaries go out in your emails
+With **Send Auto-Reply**, `{ai_summary}` goes out in an email **sent from your
+account** with no review step. **Create Draft Reply** only saves a draft in Gmail, so
+nothing is sent until you send it yourself. Test the rule first (see
+**[Testing rules](../rules/testing.md)**) and prefer **Create Draft Reply** while you
+check the wording.
 :::
 
 → Related: **[Reading an email](../inbox/reading-email.md)** · **[AI, Explained](./overview.md)**

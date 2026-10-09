@@ -7,8 +7,8 @@ description: Dial in how MailPrism's AI behaves — confidence, auto-apply, dry-
 # Preferences & Tuning
 
 MailPrism's AI works out of the box, but you can shape how cautious or hands-off it is.
-The controls live in two places in **Settings**: **Rule Defaults** (how AI acts on your
-mail) and **Privacy & Activity** (what AI is allowed to learn and process).
+The controls live in two places in **Settings**: **Rule Defaults & Safety** (how AI acts
+on your mail) and **Privacy** (what AI is allowed to learn and process).
 
 :::info Needs AI on
 None of the AI settings below apply while AI is turned off (**Settings → Privacy →
@@ -19,8 +19,9 @@ mode** and **Notify on rule execution** are general rule settings and still work
 
 ## How sure the AI has to be
 
-In **Settings → Rule Defaults → AI Configuration**, the **AI confidence threshold**
-sets the minimum confidence an AI signal needs before a rule acts on it.
+In **Settings → Rule Defaults & Safety → AI Configuration**, the **AI confidence
+threshold** sets the minimum confidence an AI signal needs before a rule acts on it. The
+slider runs from **50%** to **100%** in steps of 5.
 
 - **Higher** (e.g. 90%+) — fewer false positives, but the AI may skip borderline mail.
 - **Lower** (e.g. 60–70%) — catches more, at the cost of the odd wrong call.
@@ -28,7 +29,7 @@ sets the minimum confidence an AI signal needs before a rule acts on it.
 
 ## Let the AI act — or just watch
 
-By default MailPrism is cautious. Two switches in **Rule Defaults → Safety Settings**
+By default MailPrism is cautious. Two switches in **Rule Defaults & Safety → Safety Settings**
 decide how much it does on its own:
 
 | Setting | What it does |
@@ -44,7 +45,7 @@ trust the results.
 
 ## Stay informed
 
-Also in **Rule Defaults → Safety Settings**:
+Also in **Rule Defaults & Safety → Safety Settings**:
 
 - **Notify on rule execution** — get a notification whenever a rule fires. Handy while
   you're building trust in your automations; easy to switch off once they're humming
@@ -52,13 +53,12 @@ Also in **Rule Defaults → Safety Settings**:
 
 ## What the AI is allowed to learn
 
-In **Settings → Privacy & Activity**, you control how much MailPrism personalizes to you:
+In **Settings → Privacy**, you control how much MailPrism learns about you:
 
 | Setting | What it does |
 |---------|--------------|
 | **Pattern Learning** | The master switch for learning from your habits. With it on, you can choose what to watch — **archives**, **labels**, **stars**, and (optionally) **deletes**. |
-| **AI Personalization** | Lets AI use those learned patterns to make personalized suggestions. |
-| **Auto-Suggest Rules** | Surfaces new rules based on patterns it spots. |
+| **Classification Feedback** | A link to review and undo the corrections you've given the AI. |
 
 Turning **Pattern Learning** off stops MailPrism from learning new patterns entirely.
 For the full picture — including the activity log, data export, and deletion — see

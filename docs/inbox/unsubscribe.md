@@ -32,16 +32,18 @@ Below the stats, three tabs organize the work: **Senders**, **History**, and
 ## Senders, grouped by brand and domain
 
 The **Senders** tab lists subscriptions grouped by **brand and domain**. Each group
-shows the brand name, the domain, how many individual senders it covers, and the total
-email count — with a **frequency** badge (daily, weekly, monthly, occasional) so you can
-spot the noisiest offenders fast.
+shows the brand name, the domain, how many individual senders it covers, the total
+email count, and when the last email arrived (**Last: …**). The group header also has
+an **Unsubscribe All** button that unsubscribes from every sender in that group at
+once.
 
-Expand a group to see the individual senders inside it. For each one you can:
+Expand a group to see the individual senders inside it. Each sender has a
+**frequency** badge (daily, weekly, monthly, occasional) so you can spot the noisiest
+offenders fast, and these actions:
 
 | Action | What it does |
 |--------|--------------|
 | **Unsub** | Unsubscribe from that single sender |
-| **Unsubscribe All** | Unsubscribe from every sender in the group at once |
 | **Ignore** (eye-slash) | Hide the sender so it stops appearing in the list |
 
 Use the **search box** to filter by sender name, email, or domain, and **Expand All** /
@@ -50,13 +52,14 @@ Use the **search box** to filter by sender name, email, or domain, and **Expand 
 ## How detection works
 
 MailPrism analyzes your mail to find subscription senders, then uses each sender's
-*official* unsubscribe mechanism. It tries them in order of reliability:
+*official* unsubscribe mechanism:
 
-1. **List-Unsubscribe header** — the standardized unsubscribe address email senders
-   include in their headers (the most reliable method).
-2. **One-click unsubscribe** — where a sender supports it, MailPrism completes the
-   unsubscribe in a single step with no extra clicks from you.
-3. **Body link** — as a fallback, an unsubscribe link found in the email's body.
+1. **One-click unsubscribe link** — MailPrism first tries the standard one-click
+   request (an HTTP **POST**), and if the sender doesn't accept that, falls back to
+   simply visiting the link (a **GET**).
+2. **Unsubscribe email** — when a sender offers a `mailto:` unsubscribe address,
+   MailPrism can send the unsubscribe email for you.
+3. **Body link** — an unsubscribe link found in the email's body is also supported.
 
 :::note Some unsubscribes take time
 MailPrism uses senders' real unsubscribe channels, so a few may take a day or two to
@@ -65,8 +68,8 @@ fully take effect on the sender's side.
 
 ## Undo a mistake
 
-Changed your mind? Every unsubscribe has a brief **grace period** before it's actually
-carried out, and the **History** tab keeps a record you can act on.
+Changed your mind? Every unsubscribe waits **5 seconds** before it's actually carried
+out, and the **History** tab keeps a record you can act on.
 
 - Each entry shows the sender, the **method** used, and a status —
   <span class="mp-pill mp-pill--amber">pending</span>,
@@ -75,8 +78,8 @@ carried out, and the **History** tab keeps a record you can act on.
 - While an action is still **pending**, an **Undo** button cancels it before it runs.
 
 :::tip Catch it early
-The grace window is short, so if you unsubscribed by accident, hit **Undo** in the
-History tab right away.
+The undo window is only 5 seconds, so if you unsubscribed by accident, hit **Undo** in
+the History tab right away.
 :::
 
 ## The ignore list

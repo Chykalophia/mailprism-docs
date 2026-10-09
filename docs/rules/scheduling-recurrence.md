@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 title: Scheduling & Recurrence
-description: Make a rule active only during a date range or certain hours, auto-disable it when the window ends, and delay or repeat actions.
+description: Make a rule active only during a date range or certain hours, auto-disable it when the window ends, and delay actions.
 ---
 
 # Scheduling & Recurrence
@@ -14,7 +14,7 @@ This page covers three related ideas:
 
 - **Rule schedules** — when a rule is allowed to run (a date range, or certain hours).
 - **Auto-disable** — turning a scheduled rule off automatically when its window ends.
-- **Delayed & recurring actions** — running an action later, not instantly.
+- **Delayed actions** — running an action later, not instantly.
 
 ## Rule schedules
 
@@ -29,7 +29,7 @@ A **schedule** limits *when* a rule is active. There are two kinds.
 You don't hand-build these schedules on a normal rule. MailPrism sets them up for you
 when you turn on an **auto-responder** — the **Vacation** responder creates a
 date-range schedule, and the **After-hours** responder creates a time-based schedule.
-You'll find these under **Settings → Auto-responder**.
+You'll find these under **Settings → Auto-Responder**.
 :::
 
 ### Date-range schedule (vacation)
@@ -63,17 +63,22 @@ still armed. When the end date passes, the rule flips to **off** on its own.
 ## Delayed actions
 
 Instead of scheduling the *whole rule*, you can delay a single **action**. In the
-rule editor, click the **clock** icon next to any action to add a delay.
+rule editor, click the **clock** icon next to an action to add a delay.
+
+The clock only appears on actions MailPrism can schedule — labels, read/unread,
+importance, archive, trash, stars, and **Forward Email**. Replies,
+drafts, notifications, unsubscribe, tracking actions, and nudge/reminder flows always
+run right away. The full list is in **[Actions → Which actions can be delayed](./actions.md#which-actions-can-be-delayed)**.
 
 A delayed action waits a set amount of time before it runs:
 
 - **Wait** a number of **minutes, hours, days, weeks, or months**.
-- Then run the action (apply a label, send a reply, archive, and so on).
+- Then run the action (apply a label, archive, forward, and so on).
 
 ### Cancel if replied
 
 When you add a delay, you also get a **"then…"** option that can **cancel the action
-if there's a reply** before it runs. This is what makes polite follow-ups safe:
+if there's a reply** before it runs:
 
 | Cancel if replied | The delayed action is skipped when… |
 |-------------------|-------------------------------------|
@@ -81,23 +86,21 @@ if there's a reply** before it runs. This is what makes polite follow-ups safe:
 | **The sender replies** | the *other person* responds first |
 | **Anyone replies** | either side responds first |
 
-> Example: *Wait 3 days, then draft a follow-up — but cancel it if anyone replies.*
+> Example: *Wait 3 days, then apply the label "Follow up" — but cancel it if anyone replies.*
 
-This pairs perfectly with follow-up and nudge automations. See
-**[Nudges & reminders](../tracking/nudges-and-reminders.md)**.
+:::tip Following up on a quiet thread
+To actually send a follow-up when nobody answers, use a
+**[nudge flow](../tracking/nudges-and-reminders.md)** (the **Start Nudge Flow**
+action). Nudges wait between steps and stop on their own when the other person replies.
+:::
 
 ## Recurring actions
 
-Some automations repeat on a cadence — daily, weekly, monthly — rather than running
-once. MailPrism's auto-responders use this internally to keep replying for the length
-of your vacation or every evening after hours, without you re-arming anything.
-
-:::note Recurrence is mostly behind the scenes
-Recurring schedules power features like **auto-responders** and **follow-up bumps**.
-You configure those features directly — you don't hand-write a recurrence rule in the
-normal rule editor. For repeating follow-ups, set up an auto-responder
-(**Settings → Auto-responder**) or a **[nudge flow](../tracking/nudges-and-reminders.md)**
-rather than a one-off rule.
+:::note Not in the rule editor
+Repeating an action on a cadence (daily, weekly, monthly) is only available through
+MailPrism's API — there's no recurrence control in the rule editor, and auto-responders
+don't use it. For repeating follow-ups, use a
+**[nudge flow](../tracking/nudges-and-reminders.md)**.
 :::
 
 ## Putting it together
@@ -105,8 +108,9 @@ rather than a one-off rule.
 A vacation responder is the clearest example of all of these working as one:
 
 1. You pick **start** and **end** dates → a **date-range schedule**.
-2. The responder **repeats** its reply for the whole window → **recurrence**.
-3. A short **response delay** lets Gmail classify the email first → a **delay**.
+2. The responder replies to matching mail for the whole window — the end date counts
+   until the **end of that day** in the vacation's timezone.
+3. The responder's own short **response delay** spaces out the reply.
 4. When your end date passes, the rule **auto-disables** → **auto-disable**.
 
 → Learn the basics: **[Conditions](./conditions.md)** · **[Actions](./actions.md)** ·

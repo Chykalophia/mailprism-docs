@@ -27,6 +27,7 @@ Every rule is built from the same parts. You set them in the rule builder
 | **Priority** | The order rules run in when more than one could match. |
 | **Stop processing** | If on, no later rules run on that email once this rule matches. |
 | **Applies to** | All connected Gmail accounts, or only specific ones. |
+| **Run this rule on** | **Received and sent mail**, **Received mail only**, or **Sent mail only**. Most rules only need received mail. |
 | **Enabled** | A simple on/off toggle. Disabled rules are kept but never run. |
 
 ### Conditions, briefly
@@ -97,7 +98,7 @@ MailPrism reacts to your mail in two ways, working together:
 ### Processing frequency
 
 The **Processing frequency** setting is in **Settings → Rule Defaults & Safety →
-Scheduling**. It has three options: **Real-time**, **Hourly**, and **Daily**.
+Execution Settings**. It has three options: **Real-time**, **Hourly**, and **Daily**.
 
 :::caution What this setting changes today
 **Processing frequency** only paces MailPrism's **scheduled background runs**. Mail that
@@ -106,13 +107,13 @@ arrives through a Gmail push notification is processed as it arrives (unless
 next hour or day.
 :::
 
-The same Scheduling section also lets you tune **batch size** (how many emails a
+The same **Execution Settings** card also lets you tune **batch size** (how many emails a
 single scheduled run handles), a **cooldown** between runs, and a **per-hour rate
 limit**.
 
 ### Quiet hours
 
-If you turn on **Quiet hours** (**Settings → Rule Defaults & Safety → Scheduling**),
+If you turn on **Quiet Hours** (**Settings → Rule Defaults & Safety → Quiet Hours**),
 quiet hours pause rule processing during the window. Quiet hours use the timezone from
 your **Date & Time** settings.
 
@@ -133,6 +134,19 @@ ones. Set this with the **Applies to** option when you build or edit a rule —
 handy when a work-only or personal-only automation shouldn't touch your other
 inbox.
 
+### Received or sent mail
+
+**Run this rule on** (in the rule builder's advanced options) picks which messages
+the rule looks at:
+
+| Option | Runs on |
+|--------|---------|
+| **Received and sent mail** | Everything |
+| **Received mail only** | Mail sent to you |
+| **Sent mail only** | Mail you send |
+
+Narrowing it skips work on messages the rule doesn't care about.
+
 ## Managing your rules
 
 The **Rules** page has four tabs:
@@ -149,10 +163,34 @@ Also on the page:
 - **Create Rule** — opens the **[AI drafter](./building-with-ai.md)**, with a switch to
   the **Rule builder**.
 - **Browse Templates** — the **[Rule library](./library.md)**.
-- **More → Export Rules** — download all your rules as a JSON file (for backup or
+- **More → Export Rules** — download your rules as a JSON file (for backup or
   moving between accounts).
+- **More → Import Rules** — bring rules in from a JSON file. They arrive turned off.
+  See **[Import & export rules](./import-export.md)**.
 
 Built-in rules can be turned off, but not deleted.
+
+### Pre-filter rules (advanced)
+
+**Settings → Pre-Filter Rules** tunes which email **categories** MailPrism keeps out
+of your action queue before tracking and rules look at them. It has two cards:
+
+| Card | Who can edit | Applies to |
+|------|--------------|------------|
+| **Workspace overrides** | Workspace owners and admins (others see it read-only) | Everyone in the workspace |
+| **Per-account overrides** | You | One of your connected Gmail accounts (pick it from the **Account** list) |
+
+In each card you can:
+
+- **Categories kept out of the action queue** — check more categories to filter, or
+  uncheck a default to let it surface again.
+- **Always treat as urgent** — add categories that always stay actionable. The locked
+  ones can't be removed.
+- **Pre-filter enabled** — **Inherit (default)**, **On**, or **Off**.
+
+Click **Save overrides** to apply. The most specific setting wins:
+**account override → workspace override → system default**. An empty override simply
+inherits the layer below it.
 
 → See **[Analytics & logs](../analytics.md)** for the audit trail and the undo
 grace period.

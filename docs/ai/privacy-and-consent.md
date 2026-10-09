@@ -7,7 +7,7 @@ description: How AI consent works, what turning it on or off changes, and what's
 # AI Privacy & Consent
 
 When you sign up, you agree to let MailPrism use AI providers (Google Gemini as the
-primary provider, with OpenAI and Anthropic as fallbacks) to analyze your email. You
+primary provider, with OpenAI as the fallback) to analyze your email. You
 can turn AI off at any time in **Settings → Privacy → AI Data Processing**. While it's
 off, nothing is sent for AI analysis.
 
@@ -15,7 +15,7 @@ off, nothing is sent for AI analysis.
 Consent is one half; your plan is the other. AI analysis is included on paid plans
 (Starter and up). The Free plan runs rule-based automation, though it can still use
 the **[AI rule drafter](../rules/building-with-ai.md)** — 10 AI drafts a day.
-Bring-your-own-key (BYOK) requires the Business plan.
+Bring-your-own-key (BYOK) is available on Business, Enterprise, and Lifetime.
 :::
 
 ## How consent works
@@ -40,7 +40,7 @@ Consent starts **on**: the sign-up form asks you to agree to AI processing, and 
 can't create an account without ticking that box. After that, there are two places
 consent appears:
 
-1. **Settings → Privacy** (the page is titled *Privacy & Activity*) — the **AI Data Processing** card has a toggle
+1. **Settings → Privacy** — the **AI Data Processing** card has a toggle
    labeled *AI Data Processing Consent*. A badge shows whether it's
    <span class="mp-pill mp-pill--green">Active</span> or
    <span class="mp-pill mp-pill--amber">Disabled</span>, and the date you consented.

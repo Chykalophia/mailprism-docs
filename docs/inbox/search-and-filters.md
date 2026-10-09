@@ -15,8 +15,9 @@ The search box sits above the email list. Type a few words and MailPrism searche
 mail through Gmail — across the **subject**, **sender**, **recipients**, and message
 **content** — and shows the matches.
 
-Search runs against your real mailbox, not just what's on screen, so it reaches emails
-beyond the current page.
+Search runs against your real mailbox, not just what's on screen — it covers the whole
+**current tab**, including emails beyond the current page. To search everything, switch
+to the **All Mail** tab first.
 
 ### Gmail search operators
 
@@ -58,7 +59,7 @@ Tabs above the list switch which slice of your mailbox you're looking at:
 | **Spam** | Mail Gmail flagged as spam. |
 | **Trash** | Deleted mail (Gmail clears it after 30 days). |
 
-The **Inbox** and **Unread** tabs show a badge with your unread count.
+Only the **Inbox** tab shows a badge with your unread count.
 
 ### Account
 

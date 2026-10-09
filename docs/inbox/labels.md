@@ -21,9 +21,10 @@ Use the **label** action on an email's toolbar (or in the email view) to open th
 Each label shows its color so it's easy to recognize. See
 **[Email actions](./email-actions.md)** for where the label button lives on the toolbar.
 
-:::note Labels come from Gmail
-The picker shows the labels in your Gmail account. To create a brand-new label, make it
-in Gmail first — it then appears in MailPrism the next time labels sync.
+:::note Creating a new label
+The picker shows the labels in your Gmail account. To create a brand-new label in
+MailPrism, go to **Settings → Gmail Accounts** and use **Create Label** on the account.
+(Labels you create in Gmail also appear here after they sync.)
 :::
 
 ## User labels vs. Gmail system labels
@@ -47,8 +48,10 @@ labels like INBOX and IMPORTANT distracting (under **Settings → Appearance**).
 
 ## Finding email by label
 
-To pull up everything with a given label, use the inbox **search** box with Gmail's
-`label:` operator — for example:
+To pull up everything with a given label, use the **search** box with Gmail's
+`label:` operator. Search only looks inside the **current tab**, so switch to the
+**All Mail** tab first — otherwise results are limited to the tab you're on (on the
+**Inbox** tab, only labelled mail that's still in your inbox). For example:
 
 ```
 label:clients

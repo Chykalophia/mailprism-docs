@@ -89,6 +89,12 @@ device *and* your codes, you may be locked out.
 Click **Manage 2FA**, then **Disable 2FA**. Disabling 2FA also deletes your
 recovery codes; if you re-enable it later, you'll get a fresh set.
 
+:::note Workspace requirement
+If a workspace you belong to **requires two-factor authentication**, you can't turn
+2FA off while you're a member — unless the workspace has exempted your membership. See
+**[Workspaces & Teams → Require two-factor authentication](./workspaces-and-teams.md#require-two-factor-authentication)**.
+:::
+
 ---
 
 ## Passkeys

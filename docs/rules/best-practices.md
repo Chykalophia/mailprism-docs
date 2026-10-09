@@ -61,7 +61,7 @@ judgment. A few good combinations:
 - **AI category + a known sender or domain** — only act on AI's read when it's from
   someone you trust.
 - **AI urgency + a subject keyword** — confirm the AI's call with a hard signal.
-- **"Is cold outreach" + sender is not a contact** — avoid flagging people you know.
+- **AI Category = Cold Email + Is Known Contact is false** — avoid flagging people you know.
 
 This is more dependable than relying on a single AI signal alone. See
 **[Conditions](./conditions.md)** for every field you can combine, and
@@ -71,9 +71,12 @@ This is more dependable than relying on a single AI signal alone. See
 
 Forwarding, sending, and auto-replies go out **from your Gmail**. For those:
 
-- Prefer **Draft reply** over **Send reply** while you build trust in a rule.
-- Add a **delay** and **cancel if replied** so follow-ups only go out when truly
-  needed. See **[Scheduling & recurrence](./scheduling-recurrence.md)**.
+- Prefer **Create Draft Reply** over **Send Auto-Reply** while you build trust in a rule.
+- For follow-ups that should only go out when a thread goes quiet, use a
+  **[nudge flow](../tracking/nudges-and-reminders.md)** — it stops when they reply.
+  Replies and drafts can't be delayed; delays (with **cancel if replied**) work on
+  actions like labels, archive, and forward. See
+  **[Scheduling & recurrence](./scheduling-recurrence.md)**.
 
 ## Check the logs
 
@@ -88,5 +91,5 @@ can re-enable it after a small fix.
 
 :::tip Back up your setup
 You can **export your rules to JSON** from the Rules page — handy before a big
-reorganization. See **[Import & export rules](./import-export.md)**.
+reorganization — and import them back later. See **[Import & export rules](./import-export.md)**.
 :::

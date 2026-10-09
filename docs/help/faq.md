@@ -78,8 +78,8 @@ up.
 
 Your connection uses **Google OAuth** (no password sharing), your access tokens are
 stored **encrypted**, and you can turn AI analysis off anytime. AI providers don't train
-on your data. You can export your learning data
-or delete your account anytime. See **[Privacy & Security](./privacy-security.md)**.
+on your data. You can export all your account data
+(as JSON, from **Settings → Privacy**) or delete your account anytime. See **[Privacy & Security](./privacy-security.md)**.
 
 ### Can I connect more than one account?
 
@@ -100,7 +100,7 @@ Each rule can target a specific account or apply to all of them. See
 Usually within moments. MailPrism receives Gmail push notifications and processes new
 mail as it arrives.
 
-**Settings → Rule Defaults & Safety → Scheduling** has a **Processing frequency** option (Real-time, Hourly,
+**Settings → Rule Defaults & Safety → Execution Settings** has a **Processing frequency** option (Real-time, Hourly,
 Daily), but today it only paces MailPrism's scheduled background runs — it doesn't hold
 back mail that arrives through a push notification. **Quiet hours** pause rule
 processing during the window. See
@@ -142,7 +142,7 @@ Yes — **export your rules to JSON** and re-import them later. See
 ### Is AI on by default?
 
 Yes. When you sign up, you agree to let MailPrism use AI providers (Google Gemini as the
-primary provider, with OpenAI and Anthropic as fallbacks) to analyze your email. You can
+primary provider, with OpenAI as the fallback) to analyze your email. You can
 turn AI off at any time in **Settings → Privacy → AI Data Processing**. While it's off,
 nothing is sent for AI analysis, and your rules use the non-AI conditions. See
 **[AI privacy & consent](../ai/privacy-and-consent.md)**.
@@ -157,7 +157,7 @@ their models. See
 ### Which plans include AI?
 
 AI analysis is included on paid plans (Starter and up). The Free plan runs rule-based
-automation. Bring-your-own-key (BYOK) requires the Business plan. Free plans can still
+automation. Bring-your-own-key (BYOK) requires the Business, Enterprise, or Lifetime plan. Free plans can still
 use the **[AI rule drafter](../rules/building-with-ai.md)** — 10 AI drafts a day.
 
 ### What can the AI detect?
@@ -169,7 +169,7 @@ and **cold outreach** — each usable as a rule condition. See
 ### Can I use my own AI keys?
 
 Yes — **BYOK** (Bring Your Own Key) lets you connect your own **OpenAI** or
-**Anthropic** key on the **Business** plan. See **[BYOK](../ai/byok.md)**.
+**Anthropic** key on the **Business**, **Enterprise**, or **Lifetime** plan. See **[BYOK](../ai/byok.md)**.
 
 ### What does AI analysis cost me?
 
@@ -206,6 +206,12 @@ Yes — workspaces support members, roles, and invitations. See
 ### Can I change plans anytime?
 
 Yes — upgrade or downgrade from **Settings → Billing**. See
+**[Billing & Plans](../account/billing.md)**.
+
+### What happens if I cancel?
+
+Your paid plan keeps working until the end of the period you've paid for. After that,
+your account moves to the **Free** plan. See
 **[Billing & Plans](../account/billing.md)**.
 
 ### How do I update my card or get an invoice?

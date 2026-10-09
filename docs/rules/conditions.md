@@ -198,9 +198,15 @@ label changes that happen to it. See **[Response tracking](../tracking/overview.
 **Response Status** values:
 <span class="mp-pill mp-pill--red">Needs Response</span>
 <span class="mp-pill mp-pill--amber">Awaiting Reply</span>
+<span class="mp-pill mp-pill--blue">Pending</span>
 <span class="mp-pill mp-pill--green">Resolved</span>
 <span class="mp-pill mp-pill--blue">Snoozed</span>
 <span class="mp-pill mp-pill--gray">Not Tracked</span>
+
+:::note Needs Response includes Needs Action
+**Needs Response** also matches threads in the **Needs Action** state — both mean the
+ball is in your court. **Pending** matches FYI / monitor threads.
+:::
 
 **Last Sender** values:
 <span class="mp-pill mp-pill--blue">User (Me)</span>
@@ -258,7 +264,7 @@ above already list each field's exact set — this is the quick summary.
 
 | Value type | Operators |
 |------------|-----------|
-| **Text** | equals · contains · starts with · ends with · matches regex — plus the **"does not"** version of each |
+| **Text** | equals · contains · starts with · matches regex — plus the **"does not"** version of each (not every text field offers all of them — see the tables above) |
 | **Yes / No** | is true · is false |
 | **Number / Duration** | equals · does not equal · greater than · less than |
 | **Time of day** | before · after · between |

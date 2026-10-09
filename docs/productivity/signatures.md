@@ -10,11 +10,11 @@ A **signature** is the sign-off that goes at the bottom of your messages — you
 title, and any contact details you like to include. MailPrism lets you save signatures
 and reuse them so you never retype them.
 
-Manage them under **Settings → Templates → Email Signatures**.
+Manage them under **Settings → Email Templates → Email Signatures**.
 
 ## Create a signature
 
-1. Open **Settings → Templates → Email Signatures**.
+1. Open **Settings → Email Templates → Email Signatures**.
 2. Click **Add Signature**.
 3. Give it a **name** (e.g. *Work* or *Personal*) so you can tell several apart.
 4. Enter the **content** — type it across as many lines as you need.
@@ -37,8 +37,9 @@ of inventing its own sign-off, the AI **leaves the ending open and your signatur
 added automatically**. That keeps every AI-written reply ending in your real, consistent
 sign-off rather than a generic *"Best regards"*.
 
-This works hand-in-hand with the `{signature}` [template variable](./templates.md#template-variables),
-which drops your signature into templates wherever you place it.
+This works hand-in-hand with the signature [template variable](./templates.md#template-variables)
+— `{{SIGNATURE}}` in quick replies, `{signature}` in rule reply templates — which
+drops your default signature in wherever you place it.
 
 :::tip Keep AI replies sounding like you
 Your signature handles the sign-off; your [writing profile](../ai/writing-profiles.md)
@@ -49,9 +50,12 @@ recognizably yours.
 ## Signatures when you compose by hand
 
 When you write a message yourself in the [compose panel](../inbox/composing.md),
-MailPrism respects your Gmail **send-as** settings: the account or alias you pick in the
-**From** field determines the signature Gmail applies. Your MailPrism signatures are
-used for AI-drafted replies and templates.
+**no signature is added automatically** — neither your MailPrism signature nor your
+Gmail send-as signature. To include one, insert a quick reply that contains
+`{{SIGNATURE}}`, or type it yourself.
+
+AI-written replies in compose have your **default** MailPrism signature added at the
+end.
 
 → Related: **[Email templates](./templates.md)** ·
 **[Composing & replying](../inbox/composing.md)**

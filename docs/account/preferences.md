@@ -20,7 +20,7 @@ For pattern learning, image blocking, and data export, see
 
 ## Dashboard preferences
 
-Under **Settings → Dashboard Preferences**, control what your dashboard shows.
+Under **Settings → Dashboard**, control what your dashboard shows.
 These are saved **locally in your browser**.
 
 ### Widgets
@@ -30,7 +30,9 @@ Show or hide each widget:
 - **Stats Cards** — overview statistics at the top.
 - **Recent Activity** — a feed of recent email processing and rule executions.
 - **Quick Actions** — shortcuts to common tasks.
-- **Rule Performance** and **AI Insights** are listed as
+- **AI Insights** — cards for your most recent AI activity, like emails archived, urgent
+  mail flagged, or spam blocked. See **[AI Insights](../ai/insights.md)**. **On by default.**
+- **Rule Performance** is listed as
   <span class="mp-pill mp-pill--gray">Coming Soon</span> and can't be toggled yet.
 
 ### Layout & auto-refresh
@@ -52,7 +54,7 @@ your account** and apply across all your devices — they don't change how email
 sent or received.
 
 - **Timezone** — auto-detected from your browser; change it to view times in a
-  different zone. Used by features like [quiet hours](#scheduling).
+  different zone. Used by features like [quiet hours](#quiet-hours).
 - **Date Format** — many options, from `MM/DD/YYYY` and `DD/MM/YYYY` to long and
   ordinal styles like *January 16th, 2026*.
 - **Time Format** — **12-hour** (2:30 PM) or **24-hour** (14:30).
@@ -63,8 +65,9 @@ sent or received.
 
 ## Scheduling
 
-Under **Settings → Rule Defaults & Safety → Scheduling**, control *when* and *how* your rules run. Changes
-take effect immediately after saving.
+Under **Settings → Rule Defaults & Safety**, the **Quiet Hours** and **Execution
+Settings** cards control *when* and *how* your rules run. Changes take effect
+immediately after saving.
 
 ### Quiet hours
 
@@ -73,7 +76,7 @@ example, overnight). Pick a **Start time** and **End time**. Mail that arrives d
 quiet hours isn't queued for later, so don't rely on quiet hours to delay an action
 until morning. The window uses your timezone from [Date & Time](#date--time).
 
-### Processing settings
+### Execution settings
 
 | Setting | What it controls |
 |---------|------------------|
@@ -99,8 +102,11 @@ rules.
 ### Execution limits
 
 - **Max emails per execution** — cap per rule run (recommended: 50).
-- **Daily action limit** — total actions across all rules per day (0 = unlimited).
-- **Hourly action limit** — actions per hour (0 = unlimited).
+- **Daily action limit** — total actions across all rules per day, from **1** to
+  **10,000**.
+- **Hourly action limit** — actions per hour, from **1** to **1,000**.
+
+There's no "unlimited" setting — `0` isn't accepted.
 
 If a rule matches more emails than a limit allows, it processes them in batches over
 time.
@@ -139,7 +145,7 @@ from sender domains that don't resolve — or, optionally, have no reachable web
 
 ## Forwarding addresses
 
-Under **Settings → Forwarding**, manage the addresses your rules can forward email
+Under **Settings → Forwarding Rules**, manage the addresses your rules can forward email
 to. (Set up the forwarding action itself in your rules.)
 
 ### Adding and verifying

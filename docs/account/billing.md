@@ -30,8 +30,9 @@ The actions on this card depend on your plan:
 
 - **Free** — an **Upgrade** button to move to a paid plan.
 - **Paid** — **Manage Subscription** (opens the Stripe portal) and **Upgrade**.
-- **Lifetime** — no billing controls; it simply reads *Lifetime access — no
-  renewal needed*.
+- **Lifetime** — a <span class="mp-pill mp-pill--violet">Lifetime</span> badge next
+  to your plan name, no billing controls, and the line *Lifetime access — no renewal
+  needed*.
 
 ---
 
@@ -43,11 +44,12 @@ MailPrism offers a free tier plus paid plans:
 - **Starter**, **Pro**, **Business** — increasing limits and features.
 - **Enterprise** — custom needs and support.
 - **Lifetime** — one-time access, activated with a code (see [Redeem a lifetime
-  code](#redeem-a-lifetime-code)).
+  code](#redeem-a-lifetime-code)). A lifetime account sits on a real plan (Business by
+  default) that never renews.
 
 The **plan comparison** on the Billing page highlights your current plan against
-the others. (Lifetime and other unlimited accounts don't see the comparison —
-there's nothing to upgrade to.)
+the others. (Unlimited accounts don't see the comparison — there's nothing to
+upgrade to.)
 
 To change plans, use **Upgrade** on the Current Plan card. Billing — including
 switching between **monthly** and **annual** — is handled in the secure Stripe
@@ -63,8 +65,8 @@ A set of usage cards shows how much you've used this period:
 - **Emails Processed**
 - **AI Credits**
 
-Each card shows the percent of your plan's allowance used. Unlimited and Lifetime
-accounts see **∞ unlimited** instead.
+Each card shows the percent of your plan's allowance used. Unlimited accounts see
+**∞ unlimited** instead.
 
 :::tip Want your AI spend in detail?
 Operations, tokens, and cost breakdowns live in
@@ -116,12 +118,13 @@ The **AI email cleanup** add-on runs an extra AI pass that tidies messy
 forwarded threads — long reply chains, wrapped emails, multi-hop forwards —
 before they reach your assistant. The card adapts to your situation:
 
-- **Paid plan, not yet enabled** — an **Enable** button starts checkout.
-- **Already enabled** — shows the renewal date and a **Cancel at period end**
-  option.
-- **You use your own Anthropic key (BYOK)** — you're already covered; cleanup
-  runs against your key and no add-on is needed.
-- **Free plan** — upgrade to a paid plan to unlock it.
+- **Free or Starter plan** — upgrade to **Pro or above** to unlock it (this
+  applies even if you've added your own AI key).
+- **Business, Enterprise, or Lifetime, with your own Anthropic key (BYOK)** — you're already covered;
+  cleanup runs against your key and no add-on is needed.
+- **Pro or above, not yet enabled** — an **Enable** button starts checkout.
+- **Pro or above, already enabled** — shows the renewal date and a **Cancel at
+  period end** option.
 
 :::info Add-on pricing
 The add-on price is shown on the card itself and in the Stripe checkout, not
@@ -135,18 +138,23 @@ key.
 
 Have a lifetime code? On the Billing page, find the **Redeem Lifetime Code** card:
 
-1. Enter your code in the field. Codes use **uppercase letters, numbers, and
-   hyphens** (for example, `LTD-MAILPRISM-…`); the field uppercases your input
-   automatically.
+1. Enter your code in the field. Codes look like `LTD-MAILPRISM-` followed by
+   **8 characters** using only `0–9` and `A–F` (for example, `LTD-MAILPRISM-3F9A0C7E`).
+   The field uppercases your input automatically.
 2. Click **Redeem**.
 
-You'll see a confirmation once it's applied, and your account switches to
-**Lifetime** access. The redemption card is hidden once you're already on
-Lifetime.
+You'll see a confirmation once it's applied. Your plan becomes the tier the code
+grants — **Business** unless the code says otherwise — with **lifetime** access.
 
-:::note Code format
-Lifetime codes are at least 10 characters and contain only letters, numbers, and
-hyphens. If the code is rejected, double-check it for typos.
+After redeeming, the Billing page shows:
+
+- a <span class="mp-pill mp-pill--violet">Lifetime</span> badge on your Current Plan card,
+- *Lifetime access — no renewal needed* instead of a renewal date,
+- no **Redeem Lifetime Code** card (it's hidden once you're on Lifetime).
+
+:::note Code rejected?
+Double-check for typos — the letter **O** isn't used (only the digit **0**), and only
+the letters **A** to **F** appear after the prefix.
 :::
 
 ---

@@ -13,14 +13,14 @@ across your inbox.
 
 :::info AI consent
 When you sign up, you agree to let MailPrism use AI providers (Google Gemini as the
-primary provider, with OpenAI and Anthropic as fallbacks) to analyze your email. You
+primary provider, with OpenAI as the fallback) to analyze your email. You
 can turn AI off at any time in **Settings → Privacy → AI Data Processing**. While it's
 off, nothing is sent for AI analysis. See **[AI privacy & consent](./privacy-and-consent.md)**.
 :::
 
 :::note Which plans include AI
 AI analysis is included on paid plans (Starter and up). The Free plan runs rule-based
-automation. Bring-your-own-key (BYOK) requires the Business plan.
+automation. Bring-your-own-key (BYOK) is available on Business, Enterprise, and Lifetime.
 
 The one exception: the **[AI rule drafter](../rules/building-with-ai.md)** works on
 every plan — Free plans get 10 AI drafts a day.
@@ -64,14 +64,14 @@ sure before acting. For the full breakdown of every signal and its meaning, see
 |------|---------------------|
 | **Rule conditions** | Match on category, urgency, sentiment, spam, automated, cold outreach, needs-response, and more — see [Conditions reference](../rules/conditions.md#ai-signals) |
 | **Response tracking** | Detects threads that need action or are awaiting a reply |
-| **AI Insights** | A dashboard widget surfacing recent AI activity (still rolling out — see [AI Insights](./insights.md)) |
-| **Classifications settings** | Create your own [custom categories](./custom-categories.md) and train the AI from corrections |
+| **AI Insights** | A dashboard widget surfacing recent AI activity — see [AI Insights](./insights.md) |
+| **AI Categories settings** | Create your own [custom categories](./custom-categories.md) and train the AI from corrections |
 
 ## Which providers are used
 
 By default, AI analysis runs through **MailPrism's managed AI**. **Google Gemini** is
-the primary provider, with **OpenAI** and **Anthropic** as fallbacks — MailPrism
-selects the provider and model for each task, so you don't choose one. None of these
+the primary provider, with **OpenAI** as the fallback — MailPrism selects the provider
+and model for each task, so you don't choose one. None of these
 providers use your data to train their models.
 
 If you'd rather use your own account and API keys, you can bring your own — but

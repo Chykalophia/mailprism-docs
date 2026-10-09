@@ -9,13 +9,6 @@ description: The dashboard widget that surfaces what MailPrism's automations did
 **AI Insights** is a dashboard widget that surfaces what MailPrism's automations are
 doing on your behalf — so you can see the AI at work without digging through logs.
 
-:::note Rolling out
-This widget is still being rolled out. Its toggle in **Settings → Dashboard
-Preferences** is currently marked **Coming Soon** and disabled, so AI Insights may not
-be available in your account yet. This page describes how it works as it becomes
-available.
-:::
-
 :::info Needs AI on
 Insights only appear while AI is on and your plan includes AI analysis (Starter and
 up). If you turn AI off, MailPrism stops analyzing your email and no new insights are
@@ -55,9 +48,9 @@ doesn't change anything about the email or the rule that created it.
 
 ## Turning the widget on or off
 
-The AI Insights widget is controlled by a toggle in **Settings → Dashboard
-Preferences**. When it's on, the widget appears between your stats and recent activity.
-As noted at the top of this page, that toggle is currently marked **Coming Soon** and
-disabled while the widget rolls out.
+The AI Insights widget is controlled by the **AI Insights** toggle in **Settings →
+Dashboard**. It's **on by default**; when it's on, the widget appears between your stats
+and recent activity. Like the other dashboard preferences, the setting is saved in your
+browser.
 
 → Next: **[Email summaries](./summaries.md)** · **[Pattern learning](./pattern-learning.md)**

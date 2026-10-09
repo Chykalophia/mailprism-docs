@@ -21,18 +21,38 @@ These are the only providers you can bring a key for today. Other providers are 
 yet available for BYOK.
 
 :::note Tier requirement
-Available on the **Business** plan. On other plans, the OpenAI and Anthropic
+Available on the **Business**, **Enterprise**, and **Lifetime** plans. On other plans, the OpenAI and Anthropic
 integrations show an **Upgrade** prompt. See **[Billing & Plans](../account/billing.md)**
 for what your plan includes.
 :::
 
 ## What changes when you use BYOK
 
-When a key is configured for a provider:
+Once you've added a valid key (and AI processing is on), the AI features listed under
+**[What runs on your key](#what-runs-on-your-key)** run on **your** key first:
 
-- AI operations for that provider run on **your** account and **your** rate limits.
+- Those calls run on **your** account and **your** rate limits.
 - **You're billed directly** by OpenAI or Anthropic at their rates.
-- MailPrism's platform AI credits are **not consumed** for those operations.
+- MailPrism's platform AI credits are **not consumed** for calls your key handles.
+
+If you've added both keys, your OpenAI key is tried first, then your Anthropic key.
+There's no setting in the app to change this order.
+
+### What runs on your key
+
+| Runs on your key | Stays on MailPrism's AI |
+|------------------|-------------------------|
+| Email classification and analysis in your rules, thread and reply detection, tracking-label decisions, contact categories, AI rule drafting, rule and category suggestions, smart filtering, smart-field extraction, AI replies and drafts, nudge follow-ups, summaries, writing-style analysis | Manual **Analyze** on a single email, the **Test Rule** preview, similar-correction lookups when drafting, follow-up safety checks, contact **AI Fix**, and profile context suggestions |
+
+The **[AI email cleanup](../account/billing.md#ai-email-cleanup)** pass is separate from
+this table: on Business, Enterprise, and Lifetime plans, an Anthropic key covers it
+directly — cleanup runs against your key, so you don't need the add-on.
+
+:::info When MailPrism's AI steps in
+If your key fails (for example, it hits its own limit or is revoked), MailPrism falls
+back to its own AI so nothing stops working — and those fallback calls **do** use
+platform credits.
+:::
 
 Your key is **encrypted at rest** and never logged or exposed.
 

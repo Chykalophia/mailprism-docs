@@ -76,7 +76,8 @@ your current theme, density, and font size — so you can confirm the look befor
 committing.
 
 - **Save Changes** applies your selections.
-- **Reset** discards unsaved edits and returns to your last saved settings.
+- **Reset** returns the page to the **default** appearance settings (it's only active
+  while you have unsaved changes). Click **Save Changes** to keep the defaults.
 
 ---
 
