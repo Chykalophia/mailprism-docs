@@ -16,6 +16,12 @@ overflow menu, their order, and whether each shows an icon, text, or both — un
 **Settings → Toolbar**.
 :::
 
+## Make a rule from an email
+
+Click **Make a rule** at the top of the email, next to its subject. It opens the
+**[AI Rule Drafter](../rules/building-with-ai.md#start-from-an-email)** with this email
+as the example — describe what should happen to mail like it.
+
 ## Replying and forwarding
 
 These open MailPrism's compose panel below the message, pre-filled and ready.

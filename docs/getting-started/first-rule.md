@@ -55,9 +55,9 @@ Now matching mail is tagged and moved out of your inbox — but kept and searcha
 ## Step 5 — Save and enable
 
 Save the rule and make sure its toggle is **on**. From now on, when a matching
-email is processed, MailPrism labels and archives it for you. How often that
-happens depends on your **processing frequency** (real-time, hourly, or daily) —
-see **[How rules work](../rules/overview.md)**.
+email is processed, MailPrism labels and archives it for you. New mail is processed
+as it arrives; during **quiet hours** it's held until the window ends — see
+**[How rules work](../rules/overview.md#how-often-rules-run)**.
 
 ## Step 6 — Watch it work
 

@@ -14,6 +14,9 @@ MailPrism is **invite-only** right now.
 
 - **Have an invite?** Open your invite link — it takes you to sign-up with your invite
   code filled in.
+- **Invited to a teammate's workspace?** You don't need a code — open the workspace
+  invitation and click **Create Account to Join**. Sign up with the address the
+  invitation was sent to.
 - **No invite yet?** Join the waitlist at
   **[app.mailprism.ai/beta](https://app.mailprism.ai/beta)**.
 
@@ -35,7 +38,8 @@ Open your invite link (or go to **[app.mailprism.ai](https://app.mailprism.ai)**
 choose sign-up). The form asks for:
 
 - Your **email** — for Google sign-up, the address of the Google account you'll choose.
-- Your **beta invite code**, if the invite link didn't fill it in.
+- Your **beta invite code**, if the invite link didn't fill it in. Workspace invitees
+  don't see this field.
 - Your **consent to AI processing**. MailPrism uses AI providers (Google Gemini as the
   primary provider, with OpenAI as the fallback) to analyze your email. You
   can turn AI off later in **Settings → Privacy → AI Data Processing** — see
@@ -86,9 +90,10 @@ listens for Gmail's own notifications about new mail, so rules usually run withi
 moments of an email arriving.
 
 Timing controls live in **Settings → Rule Defaults & Safety**: the **Quiet Hours**
-card pauses rule processing during a window, and the **Execution Settings** card's
-batch size, cooldown, and rate limits keep big runs in check. (The **Processing frequency** option there currently only
-paces MailPrism's scheduled background runs — see
+card pauses rule processing during a window (mail that arrives then is held until it
+ends), and the **Execution Settings** card's batch size, cooldown, and rate limits keep
+big runs in check. (The **Catch-up frequency** option there only paces MailPrism's
+scheduled catch-up run — see
 **[How often rules run](../rules/overview.md#how-often-rules-run)**.)
 
 You can watch everything it does in **Analytics** and the **Rule Logs**, and you can

@@ -24,7 +24,9 @@ See **[How rules work](../rules/overview.md)** and the **[AI overview](../ai/ove
 ### How do I get access?
 
 MailPrism is in an **invite-only closed beta**. If you have an invite, open the invite
-link — it takes you to sign-up with your code filled in. If not, join the waitlist at
+link — it takes you to sign-up with your code filled in. If a teammate invited you to
+their workspace, you don't need a code: open the invitation and sign up with the address
+it was sent to. Otherwise, join the waitlist at
 **[app.mailprism.ai/beta](https://app.mailprism.ai/beta)**.
 
 Each code works once and is tied to the email you sign up with. If you sign up with
@@ -100,10 +102,10 @@ Each rule can target a specific account or apply to all of them. See
 Usually within moments. MailPrism receives Gmail push notifications and processes new
 mail as it arrives.
 
-**Settings → Rule Defaults & Safety → Execution Settings** has a **Processing frequency** option (Real-time, Hourly,
-Daily), but today it only paces MailPrism's scheduled background runs — it doesn't hold
-back mail that arrives through a push notification. **Quiet hours** pause rule
-processing during the window. See
+**Settings → Rule Defaults & Safety → Execution Settings** has a **Catch-up frequency**
+option, but it only paces MailPrism's scheduled catch-up run — it doesn't hold back new
+mail. **Quiet hours** pause rule processing during the window; mail that arrives then is
+held and processed shortly after the window ends. See
 **[How often rules run](../rules/overview.md#how-often-rules-run)**.
 
 ### What if several rules match the same email?

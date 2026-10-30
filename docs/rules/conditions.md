@@ -104,8 +104,8 @@ Match on *when* an email arrived — perfect for "only during work hours" or
 
 | Field | Matches on | Operators |
 |-------|------------|-----------|
-| **Email Age (Hours)** | How many hours ago the email arrived | equals · does not equal · greater than · less than |
-| **Email Age (Days)** | How many days ago the email arrived | equals · does not equal · greater than · less than |
+| **Email Age (Hours)** | How many hours ago the email arrived | greater than · less than |
+| **Email Age (Days)** | How many days ago the email arrived | greater than · less than |
 | **Received Time of Day** | The clock time it was received (`HH:MM`) | before · after · between |
 | **Received Day** | Which day(s) it arrived (see values below) | is |
 
@@ -114,6 +114,13 @@ Match on *when* an email arrived — perfect for "only during work hours" or
 <span class="mp-pill mp-pill--gray">Weekdays (Mon–Fri)</span>
 <span class="mp-pill mp-pill--gray">Weekend (Sat–Sun)</span>
 <span class="mp-pill mp-pill--gray">Monday</span> … <span class="mp-pill mp-pill--gray">Sunday</span> (any single day)
+
+:::note "Older than" conditions wait for the email
+An **Email Age** condition using **greater than** is re-checked when the email
+reaches that age, so the rule still runs on mail that was too new when it
+arrived. The maximum is 365 days (8,760 hours). The same cap applies to
+**greater than** on **Time Awaiting Reply** and **Time Since Last Message**.
+:::
 
 ---
 
@@ -133,8 +140,6 @@ each time they run.
 | **AI: Requires External Action** | The AI detects an action outside email — sign in, approve, update payment, etc. *(uses AI credits)* | is true · is false |
 | **AI: Sender Expects Reply** | The AI thinks the sender is expecting a reply *(uses AI credits)* | is true · is false |
 | **AI: Is Automated Email** | The email is machine-generated with no human sender (receipts, alerts) | is true · is false |
-| **AI: Thread State** | The AI's single tracking state for the conversation *(uses AI credits; needs AI thread tracking)* | equals · does not equal |
-| **AI: Thread State Confidence** | How confident the AI is in that state, from `0.0` to `1.0` | greater than · less than · equals |
 
 **AI Category** values:
 
@@ -169,11 +174,13 @@ each time they run.
 <span class="mp-pill mp-pill--gray">Normal</span>
 <span class="mp-pill mp-pill--green">Low</span>
 
-**AI: Thread State** values:
-<span class="mp-pill mp-pill--red">Needs Action</span>
-<span class="mp-pill mp-pill--amber">Awaiting Reply</span>
-<span class="mp-pill mp-pill--blue">Pending (FYI/Monitor)</span>
-<span class="mp-pill mp-pill--green">Resolved (Complete)</span>
+:::note Retired: AI: Thread State
+The builder no longer offers **AI: Thread State** or **AI: Thread State
+Confidence**, and a new or changed rule that uses them can't be saved. Older
+rules that still contain one show it read-only as an **Unsupported condition**
+that never matches — remove it and use
+**[Response Status](#conversation-state)** instead.
+:::
 
 → Learn what each signal means: **[AI features](../ai/overview.md)**
 
@@ -222,7 +229,17 @@ ball is in your court. **Pending** matches FYI / monitor threads.
 ### Label changes
 
 These trigger on the moment a label is **added** or **removed**, which makes them
-great for chaining automations off another rule's labelling.
+great for chaining automations off another rule's labelling. **Apply Label** and
+**Remove Label** are never blocked by the 24-hour duplicate-action guard, so a
+chained rule still fires.
+
+:::caution Loop guard
+If rules change the labels on one conversation 10 times within an hour —
+usually two rules undoing each other — label-triggered rules pause for that
+conversation until the hour is up, and you get a notification: **"Paused rules
+that kept changing one email's labels"**. Check rules that add and remove the
+same labels.
+:::
 
 | Field | Matches on | Operators |
 |-------|------------|-----------|
@@ -232,17 +249,15 @@ great for chaining automations off another rule's labelling.
 | **System Label Removed** | A configured system label was removed (see values below) | equals |
 | **Tracking Label Added** | A specific tracking label was just assigned (you pick it) | equals · does not equal |
 | **Tracking Label Removed** | A specific tracking label was just removed (you pick it) | equals · does not equal |
-| **Has Tracking Label** | The email currently has a specific tracking label (you pick it) | equals · does not equal |
-| **Tracking Label Mode** | The tracking label's mode (see values below) | equals · does not equal |
+| **Has Tracking Label** | The thread currently has a specific tracking label (you pick it) | equals · does not equal |
 
 **System Label** values (add and remove):
 <span class="mp-pill mp-pill--red">Needs Response / Action Required</span>
 <span class="mp-pill mp-pill--amber">Awaiting Reply</span>
 <span class="mp-pill mp-pill--green">Resolved</span>
 
-**Tracking Label Mode** values:
-<span class="mp-pill mp-pill--green">Active</span>
-<span class="mp-pill mp-pill--gray">Passive</span>
+**Tracking Label Mode** has been retired the same way as AI: Thread State: older
+rules show it as an **Unsupported condition** that never matches.
 
 ### Thread updates
 

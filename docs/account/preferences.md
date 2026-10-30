@@ -73,21 +73,21 @@ immediately after saving.
 
 Turn on **Enable Quiet Hours** to pause rule processing during a set window (for
 example, overnight). Pick a **Start time** and **End time**. Mail that arrives during
-quiet hours isn't queued for later, so don't rely on quiet hours to delay an action
-until morning. The window uses your timezone from [Date & Time](#date--time).
+quiet hours is **held**, and rules and tracking process it shortly after the window
+ends — within about 15 minutes. Held mail more than 7 days old is dropped without
+being processed. The window uses your timezone from [Date & Time](#date--time).
 
 ### Execution settings
 
 | Setting | What it controls |
 |---------|------------------|
-| **Processing frequency** | **Real-time**, **Hourly**, or **Daily** — paces MailPrism's scheduled background runs |
+| **Catch-up frequency** | **Every scheduled run (as often as your plan allows)**, **Scheduled catch-up at most once per hour**, or **Scheduled catch-up at most once per day** — paces MailPrism's scheduled catch-up run |
 | **Batch size** | Maximum emails processed per scheduled run (the rest process next time) |
 | **Cooldown** | Minimum minutes between processing runs |
 | **Max executions per hour** | A rate limit to prevent runaway processing |
 
-:::note Push notifications aren't held back
-Mail that arrives through a Gmail push notification is processed as it arrives, whatever
-**Processing frequency** says. See
+:::note New mail isn't held back
+New mail is processed as it arrives, whatever **Catch-up frequency** says. See
 **[How often rules run](../rules/overview.md#how-often-rules-run)**.
 :::
 
@@ -118,7 +118,8 @@ time.
 - **Require approval for bulk actions** — manual approval when a rule affects 10 or
   more emails at once. (Recommended.)
 - **Prevent duplicate actions** — block the same action on the same email within 24
-  hours.
+  hours. **Apply Label** and **Remove Label** are never blocked, so rules can chain
+  off each other's labels.
 
 ### Domain legitimacy gate
 
@@ -132,12 +133,33 @@ from sender domains that don't resolve — or, optionally, have no reachable web
   inbox), or **Trash** (recoverable in Gmail for 30 days). For the Label action you
   can set the **Label name**.
 
+### Spam protection
+
+The **Spam Protection** card catches obvious spam before AI runs, and learns from what
+you mark as spam in Gmail.
+
+- **Catch spam automatically** — **On by default.** Catches mail from senders you
+  reported as spam, and *fake follow-ups*: a stranger you never wrote to, sent to
+  "undisclosed recipients", posing as a reply or carrying an unsubscribe link. Anyone
+  you've written to or trusted is never caught.
+- **What to do with caught email** — **Move to Spam (Gmail deletes it after 30 days)**
+  (the default; it also tells Gmail, which helps its own filter), **Archive (keep it,
+  out of the inbox)**, or **Label only (keep it in the inbox)**.
+- **Label for caught email** — added to every caught email so you can find them,
+  including in Spam. Default: `MailPrism/Spam`.
+- **Learn from my spam clicks** — **On by default.** When you mark an email as spam in
+  Gmail, future mail from that sender is caught too. Moving one of MailPrism's catches
+  out of Spam tells it that sender is fine.
+
+**Learned senders** lists the senders it has learned, each with a **Forget** button.
+**Caught in the last 30 days** lists recent catches with the reason for each.
+
 ### Undo grace period
 
 - **Undo grace period** (in **Undo Settings**) — how long automated actions can be
   reversed: **24**, **48**, or **72 hours**. During this window you can undo most
-  label, archive, and read/unread changes from your logs. Moving to Trash, sending,
-  and forwarding can't be undone.
+  label, archive, and read/unread changes from your logs. Moving to Trash, moving to
+  Spam, sending, and forwarding can't be undone.
 
 → Reverse a rule's changes: **[Rule Logs & Undo](../analytics/rule-logs-and-undo.md)**
 
@@ -150,10 +172,12 @@ to. (Set up the forwarding action itself in your rules.)
 
 ### Adding and verifying
 
-- **Add Address** with an email and an optional nickname. MailPrism sends a
-  **verification email** to that address.
-- An address **must be verified** — the recipient clicks the link to confirm — before
-  it can receive forwarded mail. Use **Resend Verification** if needed.
+- **Add Address** with an email and an optional nickname. MailPrism emails a
+  **6-digit verification code** to that address. The code expires after an hour.
+- An address **must be verified** before it can receive forwarded mail. Click **Enter
+  code** next to the address and type the code from that email. Use **Resend
+  Verification** for a new code. Five wrong guesses lock the code until you request a
+  new one.
 - Toggle an address on or off, send a **test** forward, or remove it.
 
 ### Forwarding settings

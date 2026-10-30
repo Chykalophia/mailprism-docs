@@ -96,6 +96,23 @@ conversation by hand at any time — but MailPrism can also do it for you:
 These auto-resolution rules, plus what happens when a tracked email is deleted, are
 controlled in your tracking settings — see **[Tracking modes](./modes.md)**.
 
+### Teammates and alerts
+
+When AI judges a thread's state, a few situations are handled specially:
+
+- **A teammate wrote last.** If someone from your organisation sent the latest message
+  to someone outside it, and nothing in the thread is put to you by name, the thread
+  stays <span class="mp-pill mp-pill--amber">Awaiting Reply</span> — it's waiting on the
+  other side, not on you.
+- **A teammate closed it out.** If that teammate's message is a short closing note
+  ("thanks, all set") with nothing left open, the thread is
+  <span class="mp-pill mp-pill--green">Resolved</span>. A later reply from the other
+  side reopens it.
+- **Alerts and notices that need you.** A **CRITICAL** alert from a sender you know,
+  and an automated notice that needs action from you (for example, "sign in to view a
+  message"), stay in <span class="mp-pill mp-pill--red">Needs Action</span> instead of
+  being resolved as routine notifications.
+
 ## Related
 
 - **[Tracking modes](./modes.md)** — Basic vs Advanced.

@@ -72,11 +72,11 @@ taking any action. See **[Testing rules](../rules/testing.md)**. Then check, in 
    **[Combining conditions](../rules/conditions.md#combining-conditions)**.
 4. **Using AI conditions?** Confirm **AI features are on** in **Settings → Privacy** —
    AI conditions never match while AI is off. See **[AI overview](../ai/overview.md)**.
-5. **Quiet hours.** Quiet hours pause rule processing during the window, and mail that
-   arrives then isn't run later. Check the window in **Settings → Rule Defaults & Safety → Quiet Hours**.
+5. **Quiet hours.** Quiet hours pause rule processing during the window. Mail that
+   arrives then is held and processed shortly after the window ends. Check the window in **Settings → Rule Defaults & Safety → Quiet Hours**.
    See **[Quiet hours](../rules/overview.md#quiet-hours)**.
 6. **Scheduled runs.** If a push notification was missed, the email waits for
-   MailPrism's next scheduled background run, which **Processing frequency**,
+   MailPrism's next scheduled catch-up run, which **Catch-up frequency**,
    cooldown, and rate limits can slow. See
    **[How often rules run](../rules/overview.md#how-often-rules-run)**.
 7. **Priority / Stop processing.** A higher-priority rule with **Stop processing** on
