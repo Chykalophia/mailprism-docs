@@ -30,7 +30,10 @@ create or manage any labels yourself.
 Basic mode includes an optional **AI-powered filtering** toggle (recommended). With it
 on, MailPrism skips newsletters, notifications, and promotional mail that don't need a
 response, so your **Needs Action** list stays meaningful instead of filling up with
-noise.
+noise. A CRITICAL alert from a sender you know, or an automated notice that needs
+action from you, isn't treated as routine: once it's in **Needs Action** it stays
+there — see
+**[Teammates and alerts](./overview.md#teammates-and-alerts)**.
 
 :::note AI filtering needs AI on
 This toggle only does anything while AI is on and your plan includes it. With AI off, Basic
@@ -76,17 +79,18 @@ Choose what happens to tracking when a tracked email is trashed or deleted in Gm
 | **Notify then resolve** | You get a notification first, then it resolves. |
 | **Keep tracking** | Deletion doesn't change the tracking state. |
 
-### Reopen on reply and AI label assignment
+### Reopen on reply, After you reply, and AI label assignment
 
-Two cards on the same page save **as soon as you flip them** — no Save button needed:
+Three cards on the same page save **as soon as you flip them** — no Save button needed:
 
 | Card | What it does |
 |------|--------------|
 | **Reopen on reply** | Brings a resolved conversation back when someone replies. Off by default. |
+| **After you reply** | One toggle, **Keep it simple: any reply means Awaiting Reply**. Off (the default, recommended): if your reply asks them something, it waits on them; if you also promised them something by a date, it comes back to you once that date passes. On: every reply moves the conversation to <span class="mp-pill mp-pill--amber">Awaiting Reply</span>, nothing else. |
 | **AI label assignment** | Lets AI pick a tracking label when none of your rules match (one AI call per such email). Your rules always run first. Only takes effect while AI is on and your plan includes AI analysis (Starter and up). |
 
 :::tip Save your other changes
-The mode switch and the other settings on this page (everything except the two cards
+The mode switch and the other settings on this page (everything except the three cards
 above) use the **Save Changes** button — those changes apply once you save.
 :::
 

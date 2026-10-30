@@ -36,10 +36,26 @@ The drafter is a short conversation. You type what you want; it replies with a
 3. **Refine if needed.** If it's not quite right, just say so — *"only from
    gmail.com addresses"* or *"label it Finance instead."* The drafter keeps the
    conversation context and updates the draft.
-4. **Create it.** Click **Create This Rule** to save it as a normal rule that starts
-   running on new email — or **Edit Details** to open the draft in the rule builder and
-   check every field first. If a draft is missing conditions or actions, only **Edit
-   Details** is available.
+4. **Check the preview.** Under the draft, MailPrism checks it against your recent
+   email: *"Would have matched N of your last M emails"*, with a few of the emails it
+   would have caught. No rule actions run; the preview only checks which emails would match. Drafts that use AI conditions show
+   a **Preview matches** button instead, since each email checked uses AI.
+5. **Create it.** Click **Create (Off)** to save it as a normal rule. Rules from the
+   drafter are created **off**; the confirmation offers **Turn on**, or use the toggle on
+   the **Rules** page. Click **Edit Details** instead to open the draft in the rule
+   builder and check every field first.
+
+:::note When Create (Off) is unavailable
+If a draft is missing conditions or actions, only **Edit Details** is available. A
+draft is also blocked when it wouldn't work as written — the problems are listed under
+it. Tell the drafter what to change, or use **Edit Details**.
+:::
+
+## Start from an email
+
+Open any email and click **Make a rule** at the top. **Create Rule** opens on the
+drafter with that email as the example, so you can describe what to do with mail
+like it.
 
 ## Refining a draft
 

@@ -142,6 +142,16 @@ For each invitation you can:
 
 Invitations that pass their expiry date are marked **Expired**.
 
+### Accepting an invitation
+
+The invitation link opens a page showing the workspace, your role, and the invited
+email. If you're signed in, click **Accept Invitation** (or **Decline**). If you're new
+to MailPrism, click **Create Account to Join** and sign up with the invited email address —
+invitees **don't need a beta code**. An account with a different email can't accept
+the invitation.
+Already have an account? Click **I Already Have an Account** to sign in. Either way you
+return to the invitation to accept it.
+
 ---
 
 ## Usage & limits

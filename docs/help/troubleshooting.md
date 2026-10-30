@@ -72,12 +72,13 @@ taking any action. See **[Testing rules](../rules/testing.md)**. Then check, in 
    **[Combining conditions](../rules/conditions.md#combining-conditions)**.
 4. **Using AI conditions?** Confirm **AI features are on** in **Settings → Privacy** —
    AI conditions never match while AI is off. See **[AI overview](../ai/overview.md)**.
-5. **Quiet hours.** Quiet hours pause rule processing during the window, and mail that
-   arrives then isn't run later. Check the window in **Settings → Rule Defaults & Safety → Quiet Hours**.
+5. **Quiet hours.** Quiet hours pause rule processing during the window. Mail that
+   arrives then is held and processed shortly after the window ends; mail held for more
+   than 7 days is dropped. Check the window in **Settings → Rule Defaults & Safety → Quiet Hours**.
    See **[Quiet hours](../rules/overview.md#quiet-hours)**.
 6. **Scheduled runs.** If a push notification was missed, the email waits for
-   MailPrism's next scheduled background run, which **Processing frequency**,
-   cooldown, and rate limits can slow. See
+   MailPrism's next scheduled catch-up run. **Catch-up frequency**, cooldown, and
+   rate limits can delay that run. See
    **[How often rules run](../rules/overview.md#how-often-rules-run)**.
 7. **Priority / Stop processing.** A higher-priority rule with **Stop processing** on
    may be handling the email first. See
@@ -108,8 +109,8 @@ The **Rule Logs** include an **Undo** button, but it has limits:
 - **Grace period.** Undo is only available for a configurable window after the action
   ran (a workspace setting, **Settings → Rule Defaults & Safety → Undo Settings**). After that, the option expires.
 - **Already undone.** An action can only be undone once.
-- **Irreversible actions.** Moving to Trash, sending, and forwarding can't be reversed
-  and won't offer Undo. Most label, archive, and read/unread changes can.
+- **Irreversible actions.** Moving to Trash or Spam, sending, forwarding and
+  unsubscribing can't be reversed, and a rule run that included one won't offer Undo. Most label, archive, and read/unread changes can.
 
 If Undo isn't offered, check the action type and how long ago it ran.
 

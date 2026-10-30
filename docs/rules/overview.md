@@ -92,18 +92,20 @@ MailPrism reacts to your mail in two ways, working together:
 
 - **Gmail push notifications** — Gmail tells MailPrism the moment new mail arrives,
   and MailPrism processes it right away.
-- **Scheduled background runs** — MailPrism also checks for mail on a schedule, to
+- **Scheduled catch-up runs** — MailPrism also checks for mail on a schedule, to
   catch anything a notification missed.
 
-### Processing frequency
+### Catch-up frequency
 
-The **Processing frequency** setting is in **Settings → Rule Defaults & Safety →
-Execution Settings**. It has three options: **Real-time**, **Hourly**, and **Daily**.
+The **Catch-up frequency** setting is in **Settings → Rule Defaults & Safety →
+Execution Settings**. It has three options: **Every scheduled run (as often as your
+plan allows)**, **Scheduled catch-up at most once per hour**, and **Scheduled catch-up
+at most once per day**.
 
-:::caution What this setting changes today
-**Processing frequency** only paces MailPrism's **scheduled background runs**. Mail that
-arrives through a Gmail push notification is processed as it arrives (unless
-**[quiet hours](#quiet-hours)** are active), whichever option you pick. So choosing **Hourly** or **Daily** does **not** hold new mail back until the
+:::caution What this setting changes
+**Catch-up frequency** only paces MailPrism's **scheduled catch-up run**. New mail is
+processed as it arrives (unless **[quiet hours](#quiet-hours)** are active), whichever
+option you pick. Choosing hourly or daily does **not** hold new mail back until the
 next hour or day.
 :::
 
@@ -117,9 +119,10 @@ If you turn on **Quiet Hours** (**Settings → Rule Defaults & Safety → Quiet 
 quiet hours pause rule processing during the window. Quiet hours use the timezone from
 your **Date & Time** settings.
 
-:::caution Quiet hours skip, they don't queue
-Mail that arrives during quiet hours isn't saved up and run when the window ends. Don't
-rely on quiet hours to delay an action until morning.
+:::note Quiet hours hold mail
+Mail that arrives during quiet hours is held, and rules and tracking process it shortly
+after the window ends — within about 15 minutes. Mail held for more than 7 days is
+dropped without being processed.
 :::
 
 :::note Plan limits

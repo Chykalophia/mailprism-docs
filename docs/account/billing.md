@@ -26,6 +26,12 @@ The **Current Plan** card at the top shows:
   if you've canceled, when access expires.
 - A **Cancels at period end** badge if you've scheduled a cancellation.
 
+:::note While a payment is past due
+While your plan shows **Past Due**, paid features switch off and you have Free
+features, but your usage limits stay at your paid plan's level while Stripe retries the
+payment. If the subscription ends up unpaid or canceled, Free limits apply too.
+:::
+
 The actions on this card depend on your plan:
 
 - **Free** — an **Upgrade** button to move to a paid plan.

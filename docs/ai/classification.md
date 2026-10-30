@@ -111,11 +111,7 @@ whole thread's state rather than judging a single message.
 Every classification carries a **confidence** score from `0.0` to `1.0` — how sure the
 AI is about its answer. You can use this to keep automations conservative: the global
 **AI confidence threshold** (**Settings → Rule Defaults & Safety → AI Configuration**,
-50–100%) sets how sure the AI must be before an AI condition matches. For thread state
-there's also a condition you can use directly:
-
-> *If AI: Thread State is `Needs Action` **and** AI: Thread State Confidence is greater
-> than `0.8`, star it.*
+50–100%) sets how sure the AI must be before an AI condition matches.
 
 Two related, optional values may also be present:
 
@@ -141,7 +137,6 @@ condition like sender relationship, and require high confidence. See
 | Needs response | **AI: Email Needs Response** |
 | Requires action | **AI: Requires External Action** |
 | Sender expects reply | **AI: Sender Expects Reply** |
-| Thread state confidence | **AI: Thread State Confidence** |
 
 See the full **[Conditions reference](../rules/conditions.md#ai-signals)**.
 

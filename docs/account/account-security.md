@@ -113,6 +113,12 @@ the **Passkeys** card.
 
 You can register up to **10 passkeys**.
 
+### Signing in with a passkey
+
+On the login screen, click **Sign in with passkey** — no email or password needed.
+Your device prompts for your passkey and you're signed in. The button is hidden in
+browsers that don't support passkeys.
+
 ### Renaming and removing passkeys
 
 Each passkey in the list shows when it was **added** and **last used**.
@@ -131,6 +137,26 @@ the **Add Passkey** button is unavailable.
 If your device supports **Touch ID, Face ID, or Windows Hello**, MailPrism will
 say so — those make passkey sign-in fast and passwordless.
 :::
+
+---
+
+## Google sign-in
+
+If you sign in with Google and have a passkey or authenticator app set up, the
+**Google sign-in** card in **Settings → Security** controls whether a Google sign-in
+also asks for your second factor.
+
+- **Ask for my passkey or authenticator code after Google sign-in** — **On by
+  default** (recommended). If you turn it off, anyone who can sign in to your Google
+  account can open MailPrism without your passkey or code.
+- Turning it off needs a fresh verification — if you have a passkey, MailPrism asks
+  for it.
+- Email and password sign-ins always ask, whatever this setting says.
+- It can't be turned off on admin accounts, or while a workspace you belong to
+  requires two-factor authentication.
+
+With it off, adding or removing a passkey or authenticator app still asks for your
+second factor, and linking or unlinking a sign-in account turns the check back on.
 
 ---
 

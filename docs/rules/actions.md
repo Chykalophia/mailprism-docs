@@ -28,6 +28,7 @@ for the controls that make it safer — a **delay** and **cancel if replied**.
 | **Assign Tracking Label** | Apply a MailPrism response-tracking label |
 | **Archive** | Remove from the inbox (kept in All Mail) |
 | **Move to Trash** | Move the email to Trash |
+| **Move to Spam** | Move the email to Gmail Spam, which also feeds Gmail's spam filter. MailPrism can't undo this; rescue an email with **Not spam** in Gmail |
 
 ## Email state
 
@@ -69,6 +70,13 @@ Keep conversations organized automatically. See
 | **Update Response State** | Set the thread state directly — **Needs Response** (the same state shown elsewhere as **Needs Action**), **Awaiting Reply**, **Pending**, **Resolved**, or **Snoozed** |
 | **Reactivate Tracking** | Resume tracking a resolved thread |
 
+:::note When a tracking action is skipped
+**Track Response Needed**, **Mark Awaiting Reply** and **Resolve Conversation** are
+skipped for an email when MailPrism's conversation analysis has already set that
+thread to a different state. Your own manual tracking-label changes outrank both.
+The rule's other actions still run.
+:::
+
 ## Smart follow-ups
 
 These start a follow-up flow on the email. See
@@ -98,7 +106,7 @@ Only actions MailPrism can schedule show the clock icon:
 
 | Can be delayed | No delay control |
 |----------------|------------------|
-| Apply Label · Remove Label · Mark as Read / Unread · Mark as Important / Not Important · Archive · Move to Trash · Add Star / Remove Star · Forward Email | Create Draft Reply · Send Auto-Reply · Send Me a Notification Email · Unsubscribe from Sender · all **Response tracking** actions · Assign Tracking Label · Start Nudge Flow · Start Reminder Flow |
+| Apply Label · Remove Label · Mark as Read / Unread · Mark as Important / Not Important · Archive · Move to Trash · Add Star / Remove Star · Forward Email | Create Draft Reply · Send Auto-Reply · Send Me a Notification Email · Unsubscribe from Sender · all **Response tracking** actions · Assign Tracking Label · Start Nudge Flow · Start Reminder Flow · Move to Spam |
 
 Actions without a delay control always run **right away**, when the rule matches.
 
