@@ -77,8 +77,8 @@ taking any action. See **[Testing rules](../rules/testing.md)**. Then check, in 
    than 7 days is dropped. Check the window in **Settings → Rule Defaults & Safety → Quiet Hours**.
    See **[Quiet hours](../rules/overview.md#quiet-hours)**.
 6. **Scheduled runs.** If a push notification was missed, the email waits for
-   MailPrism's next scheduled catch-up run, which **Catch-up frequency**,
-   cooldown, and rate limits can slow. See
+   MailPrism's next scheduled catch-up run. **Catch-up frequency**, cooldown, and
+   rate limits can delay that run. See
    **[How often rules run](../rules/overview.md#how-often-rules-run)**.
 7. **Priority / Stop processing.** A higher-priority rule with **Stop processing** on
    may be handling the email first. See

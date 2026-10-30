@@ -28,7 +28,7 @@ for the controls that make it safer — a **delay** and **cancel if replied**.
 | **Assign Tracking Label** | Apply a MailPrism response-tracking label |
 | **Archive** | Remove from the inbox (kept in All Mail) |
 | **Move to Trash** | Move the email to Trash |
-| **Move to Spam** | Move the email to Gmail Spam — Gmail learns from it. Can't be undone; rescue an email with **Not spam** in Gmail |
+| **Move to Spam** | Move the email to Gmail Spam, which also feeds Gmail's spam filter. MailPrism can't undo this; rescue an email with **Not spam** in Gmail |
 
 ## Email state
 

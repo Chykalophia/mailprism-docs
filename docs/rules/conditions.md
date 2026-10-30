@@ -283,7 +283,7 @@ above already list each field's exact set — this is the quick summary.
 |------------|-----------|
 | **Text** | equals · contains · starts with · matches regex — plus the **"does not"** version of each (not every text field offers all of them — see the tables above) |
 | **Yes / No** | is true · is false |
-| **Number / Duration** | equals · does not equal · greater than · less than |
+| **Number / Duration** | equals · does not equal · greater than · less than (**Email Age** offers only greater than · less than) |
 | **Time of day** | before · after · between |
 | **Day** | is |
 
