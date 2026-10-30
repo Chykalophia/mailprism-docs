@@ -38,7 +38,7 @@ The drafter is a short conversation. You type what you want; it replies with a
    conversation context and updates the draft.
 4. **Check the preview.** Under the draft, MailPrism checks it against your recent
    email: *"Would have matched N of your last M emails"*, with a few of the emails it
-   would have caught. Nothing runs — it's a dry run. Drafts that use AI conditions show
+   would have caught. No rule actions run; the preview only checks which emails would match. Drafts that use AI conditions show
    a **Preview matches** button instead, since each email checked uses AI.
 5. **Create it.** Click **Create (Off)** to save it as a normal rule. Rules from the
    drafter are created **off**; the confirmation offers **Turn on**, or use the toggle on

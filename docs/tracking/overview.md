@@ -103,11 +103,12 @@ When AI judges a thread's state, a few situations are handled specially:
 - **A teammate wrote last.** If someone from your organisation sent the latest message
   to someone outside it, and nothing in the thread is put to you by name, the thread
   stays <span class="mp-pill mp-pill--amber">Awaiting Reply</span> — it's waiting on the
-  other side, not on you.
+  other side, not on you (unless it's a closing note, below).
 - **A teammate closed it out.** If that teammate's message is a short closing note
   ("thanks, all set") with nothing left open, the thread is
-  <span class="mp-pill mp-pill--green">Resolved</span>. A later reply from the other
-  side reopens it.
+  <span class="mp-pill mp-pill--green">Resolved</span>. This is an automatic resolve,
+  so a later reply from the other side reopens it even with **Reopen on reply** off
+  (that setting only covers conversations you resolved yourself).
 - **Alerts and notices that need you.** A **CRITICAL** alert from a sender you know,
   and an automated notice that needs action from you (for example, "sign in to view a
   message"), stay in <span class="mp-pill mp-pill--red">Needs Action</span> instead of

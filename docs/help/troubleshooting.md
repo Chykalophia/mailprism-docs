@@ -73,7 +73,8 @@ taking any action. See **[Testing rules](../rules/testing.md)**. Then check, in 
 4. **Using AI conditions?** Confirm **AI features are on** in **Settings → Privacy** —
    AI conditions never match while AI is off. See **[AI overview](../ai/overview.md)**.
 5. **Quiet hours.** Quiet hours pause rule processing during the window. Mail that
-   arrives then is held and processed shortly after the window ends. Check the window in **Settings → Rule Defaults & Safety → Quiet Hours**.
+   arrives then is held and processed shortly after the window ends; mail held for more
+   than 7 days is dropped. Check the window in **Settings → Rule Defaults & Safety → Quiet Hours**.
    See **[Quiet hours](../rules/overview.md#quiet-hours)**.
 6. **Scheduled runs.** If a push notification was missed, the email waits for
    MailPrism's next scheduled catch-up run, which **Catch-up frequency**,
@@ -108,8 +109,8 @@ The **Rule Logs** include an **Undo** button, but it has limits:
 - **Grace period.** Undo is only available for a configurable window after the action
   ran (a workspace setting, **Settings → Rule Defaults & Safety → Undo Settings**). After that, the option expires.
 - **Already undone.** An action can only be undone once.
-- **Irreversible actions.** Moving to Trash, sending, and forwarding can't be reversed
-  and won't offer Undo. Most label, archive, and read/unread changes can.
+- **Irreversible actions.** Moving to Trash or Spam, sending, forwarding and
+  unsubscribing can't be reversed, and a rule run that included one won't offer Undo. Most label, archive, and read/unread changes can.
 
 If Undo isn't offered, check the action type and how long ago it ran.
 

@@ -105,7 +105,8 @@ mail as it arrives.
 **Settings → Rule Defaults & Safety → Execution Settings** has a **Catch-up frequency**
 option, but it only paces MailPrism's scheduled catch-up run — it doesn't hold back new
 mail. **Quiet hours** pause rule processing during the window; mail that arrives then is
-held and processed shortly after the window ends. See
+held and processed shortly after the window ends (mail held for more than 7 days is
+dropped). See
 **[How often rules run](../rules/overview.md#how-often-rules-run)**.
 
 ### What if several rules match the same email?
@@ -131,7 +132,7 @@ shows what matched and what didn't — without taking any action. See
 
 Often, yes. The **Rule Logs** include an **Undo** button within a grace period (24, 48,
 or 72 hours). Most label, archive, and read/unread changes can be undone. Moving to
-Trash, sending, and forwarding can't be undone. See
+Trash or Spam, sending, forwarding and unsubscribing can't be undone. See
 **[Troubleshooting → Undo limits](./troubleshooting.md#i-cant-undo-an-action)**.
 
 ### Can I back up my rules?

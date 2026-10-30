@@ -74,7 +74,7 @@ immediately after saving.
 Turn on **Enable Quiet Hours** to pause rule processing during a set window (for
 example, overnight). Pick a **Start time** and **End time**. Mail that arrives during
 quiet hours is **held**, and rules and tracking process it shortly after the window
-ends — within about 15 minutes. Held mail more than 7 days old is dropped without
+ends — within about 15 minutes. Mail held for more than 7 days is dropped without
 being processed. The window uses your timezone from [Date & Time](#date--time).
 
 ### Execution settings
@@ -86,8 +86,9 @@ being processed. The window uses your timezone from [Date & Time](#date--time).
 | **Cooldown** | Minimum minutes between processing runs |
 | **Max executions per hour** | A rate limit to prevent runaway processing |
 
-:::note New mail isn't held back
-New mail is processed as it arrives, whatever **Catch-up frequency** says. See
+:::note Catch-up frequency doesn't hold back new mail
+New mail is processed as it arrives, whatever **Catch-up frequency** says (outside
+quiet hours, which hold it until they end). See
 **[How often rules run](../rules/overview.md#how-often-rules-run)**.
 :::
 

@@ -86,7 +86,7 @@ Three cards on the same page save **as soon as you flip them** — no Save butto
 | Card | What it does |
 |------|--------------|
 | **Reopen on reply** | Brings a resolved conversation back when someone replies. Off by default. |
-| **After you reply** | **Keep it simple: any reply means Awaiting Reply**. Off by default (recommended): if your reply asks them something, it waits on them; if you also promised them something by a date, it comes back to you once that date passes. On: every reply moves the conversation to <span class="mp-pill mp-pill--amber">Awaiting Reply</span>, nothing else. |
+| **After you reply** | One toggle, **Keep it simple: any reply means Awaiting Reply**. Off (the default, recommended): if your reply asks them something, it waits on them; if you also promised them something by a date, it comes back to you once that date passes. On: every reply moves the conversation to <span class="mp-pill mp-pill--amber">Awaiting Reply</span>, nothing else. |
 | **AI label assignment** | Lets AI pick a tracking label when none of your rules match (one AI call per such email). Your rules always run first. Only takes effect while AI is on and your plan includes AI analysis (Starter and up). |
 
 :::tip Save your other changes

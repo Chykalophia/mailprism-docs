@@ -121,7 +121,7 @@ your **Date & Time** settings.
 
 :::note Quiet hours hold mail
 Mail that arrives during quiet hours is held, and rules and tracking process it shortly
-after the window ends — within about 15 minutes. Held mail more than 7 days old is
+after the window ends — within about 15 minutes. Mail held for more than 7 days is
 dropped without being processed.
 :::
 

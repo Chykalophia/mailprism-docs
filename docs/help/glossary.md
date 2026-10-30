@@ -102,7 +102,8 @@ See **[Account & security](../account/account-security.md#passkeys)**.
 **[Billing](../account/billing.md#redeem-a-lifetime-code)**.
 
 **Quiet hours** — A window where rule processing pauses; mail that arrives then is held
-and processed shortly after the window ends. See
+and processed shortly after the window ends (mail held for more than 7 days is dropped).
+See
 **[Preferences](../account/preferences.md#scheduling)**.
 
 **Undo** — Reverse a rule's changes within a grace period, from the

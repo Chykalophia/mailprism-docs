@@ -178,8 +178,10 @@ each time they run.
 The builder no longer offers **AI: Thread State** or **AI: Thread State
 Confidence**, and a new or changed rule that uses them can't be saved. Older
 rules that still contain one show it read-only as an **Unsupported condition**
-that never matches — remove it and use
-**[Response Status](#conversation-state)** instead.
+that never matches — remove it. There's no direct replacement: the AI's judgement
+of the thread now runs after rules, and feeds the tracking state. To act on that
+state, use **[Response Status](#conversation-state)**, which matches the thread's
+current tracking state (whatever set it).
 :::
 
 → Learn what each signal means: **[AI features](../ai/overview.md)**

@@ -72,11 +72,9 @@ It works exactly like any rule — you just pick an AI field as the condition:
   more reliable than urgency alone.
 - **Start with safe actions** — label, star, notify — before letting a smart rule
   archive or reply.
-- **Use confidence where it helps.** Response-tracking conditions expose an AI
-  **confidence** value (`0.0`–`1.0`) so you can require the AI to be sure. You can
-  also raise the global **AI confidence threshold** in **Settings → Rule Defaults & Safety**
-  so AI conditions only fire when the model is sure enough. See
-  **[Conditions reference](../rules/conditions.md#response-tracking)**.
+- **Use confidence where it helps.** Raise the global **AI confidence threshold** in
+  **Settings → Rule Defaults & Safety** so AI conditions only fire when the model is
+  sure enough. See **[Conditions reference](../rules/conditions.md#ai-signals)**.
 - **Tune the signals themselves.** If a category or urgency call feels consistently
   off, adjust how MailPrism reads your mail in
   **[Preferences & tuning](./preferences-tuning.md)**.

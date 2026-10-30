@@ -91,7 +91,7 @@ moments of an email arriving.
 
 Timing controls live in **Settings → Rule Defaults & Safety**: the **Quiet Hours**
 card pauses rule processing during a window (mail that arrives then is held until it
-ends), and the **Execution Settings** card's batch size, cooldown, and rate limits keep
+ends; see [Quiet hours](../rules/overview.md#quiet-hours)), and the **Execution Settings** card's batch size, cooldown, and rate limits keep
 big runs in check. (The **Catch-up frequency** option there only paces MailPrism's
 scheduled catch-up run — see
 **[How often rules run](../rules/overview.md#how-often-rules-run)**.)
