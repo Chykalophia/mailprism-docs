@@ -327,9 +327,18 @@ button:focus-visible,
 .navbar__link:focus-visible,
 .pagination-nav__link:focus-visible,
 .card:focus-visible {
-  outline: 3px solid var(--mp-purple-400);
+  /* violet-600 in light mode (about 6:1 on the page); purple-400 in dark. */
+  outline: 3px solid var(--mp-violet-600, #7c3aed);
   outline-offset: 2px;
   border-radius: var(--mp-radius-sm);
+}
+[data-theme='dark'] a:focus-visible,
+[data-theme='dark'] button:focus-visible,
+[data-theme='dark'] .menu__link:focus-visible,
+[data-theme='dark'] .navbar__link:focus-visible,
+[data-theme='dark'] .pagination-nav__link:focus-visible,
+[data-theme='dark'] .card:focus-visible {
+  outline-color: var(--mp-purple-400);
 }
 
 /* ============================================================================
@@ -628,10 +637,10 @@ div[class^='codeBlockContainer'] { border-radius: var(--mp-radius-md); box-shado
   white-space: nowrap;
 }
 .mp-pill--violet { background: rgba(139, 92, 246, 0.12); color: #7c3aed; border-color: rgba(139, 92, 246, 0.3); }
-.mp-pill--blue   { background: rgba(59, 130, 246, 0.12); color: #2563eb; border-color: rgba(59, 130, 246, 0.3); }
-.mp-pill--green  { background: rgba(16, 185, 129, 0.14); color: #047857; border-color: rgba(16, 185, 129, 0.3); }
-.mp-pill--amber  { background: rgba(245, 158, 11, 0.16); color: #b45309; border-color: rgba(245, 158, 11, 0.32); }
-.mp-pill--red    { background: rgba(239, 68, 68, 0.12); color: #dc2626; border-color: rgba(239, 68, 68, 0.3); }
+.mp-pill--blue   { background: rgba(59, 130, 246, 0.12); color: #1d4ed8; border-color: rgba(59, 130, 246, 0.3); }
+.mp-pill--green  { background: rgba(16, 185, 129, 0.14); color: #065f46; border-color: rgba(16, 185, 129, 0.3); }
+.mp-pill--amber  { background: rgba(245, 158, 11, 0.16); color: #92400e; border-color: rgba(245, 158, 11, 0.32); }
+.mp-pill--red    { background: rgba(239, 68, 68, 0.12); color: #b91c1c; border-color: rgba(239, 68, 68, 0.3); }
 .mp-pill--gray   { background: var(--mp-neutral-100); color: var(--mp-neutral-700); border-color: var(--mp-neutral-300); }
 [data-theme='dark'] .mp-pill--violet { color: #c4b5fd; }
 [data-theme='dark'] .mp-pill--blue   { color: #93c5fd; }

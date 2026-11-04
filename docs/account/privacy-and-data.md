@@ -133,7 +133,7 @@ for reference.
 **Clear AI Learning Data** permanently deletes what MailPrism has learned from your
 email and activity. The confirmation dialog lists exactly what happens:
 
-| | Examples |
+| Outcome | Examples |
 |--|---------|
 | **Deleted** | Detected patterns, pending suggestions, learned writing data (analysed sent emails, unreviewed greetings and closings, edit patterns), saved training replies, contact relationships MailPrism worked out on its own |
 | **Kept, but emptied** | Writing profiles keep their names, instructions, and settings, but lose learned tone, formality, length, and samples |
