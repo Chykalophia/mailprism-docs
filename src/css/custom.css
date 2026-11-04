@@ -328,7 +328,7 @@ button:focus-visible,
 .pagination-nav__link:focus-visible,
 .card:focus-visible {
   /* violet-600 in light mode (about 6:1 on the page); purple-400 in dark. */
-  outline: 3px solid var(--mp-violet-600, #7c3aed);
+  outline: 3px solid var(--mp-violet-600, #6b4397);
   outline-offset: 2px;
   border-radius: var(--mp-radius-sm);
 }
@@ -337,7 +337,9 @@ button:focus-visible,
 [data-theme='dark'] .menu__link:focus-visible,
 [data-theme='dark'] .navbar__link:focus-visible,
 [data-theme='dark'] .pagination-nav__link:focus-visible,
-[data-theme='dark'] .card:focus-visible {
+[data-theme='dark'] .card:focus-visible,
+.footer a:focus-visible {
+  /* The footer is dark in both themes, so it always takes the light ring. */
   outline-color: var(--mp-purple-400);
 }
 
