@@ -10,6 +10,11 @@ description: Built-in and custom keyboard shortcuts for processing email fast.
 archive, star, mark read, forward, and more. MailPrism ships a handful of built-in
 ones, and you can create your own.
 
+<Screenshot
+  src="/img/screens/inbox/quick-actions.webp"
+  alt="Settings → Quick Actions: the keyboard shortcuts switch, built-in actions with their keys and usage counts, and custom actions"
+/>
+
 Manage them in **Settings → Quick Actions**.
 
 ## Turn shortcuts on or off

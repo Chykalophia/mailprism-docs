@@ -10,6 +10,12 @@ The dashboard is your home base after signing in. It answers one question at a
 glance: **what's happening with my email right now?** This page tours the dashboard
 widgets, then points you to the main areas of the app.
 
+<Screenshot
+  src="/img/screens/getting-started/dashboard.webp"
+  srcDark="/img/screens/getting-started/dashboard-dark.webp"
+  alt="The MailPrism dashboard: the left sidebar, a Welcome back greeting, and a Needs you list of emails waiting on your reply"
+/>
+
 ## At a glance
 
 The top of the dashboard shows four stat cards:

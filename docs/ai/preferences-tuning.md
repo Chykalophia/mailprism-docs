@@ -10,6 +10,11 @@ MailPrism's AI works out of the box, but you can shape how cautious or hands-off
 The controls live in two places in **Settings**: **Rule Defaults & Safety** (how AI acts
 on your mail) and **Privacy** (what AI is allowed to learn and process).
 
+<Screenshot
+  src="/img/screens/rules/defaults-safety.webp"
+  alt="Settings → Rule Defaults & Safety: manual AI label approval, dry run mode, notify on rule execution, and the AI confidence threshold slider"
+/>
+
 :::info Needs AI on
 None of the AI settings below apply while AI is turned off (**Settings → Privacy →
 AI Data Processing**) or on the Free plan, which doesn't include AI analysis. **Dry run

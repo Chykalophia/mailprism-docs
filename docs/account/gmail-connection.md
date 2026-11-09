@@ -43,6 +43,11 @@ connected account.
 You can pause processing for one account without disconnecting it. There are two
 controls, depending on the account's state:
 
+<Screenshot
+  src="/img/screens/account/gmail-account.webp"
+  alt="Settings for one connected Gmail account"
+/>
+
 - **Sync toggle** — under **Sync Settings**, each account has its own switch.
   Turn it **off** to stop automatic syncing and processing for that account; turn
   it back **on** to resume. A paused account shows the **Inactive** badge.

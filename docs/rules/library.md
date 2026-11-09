@@ -10,6 +10,11 @@ You don't have to start with a blank rule. The **Rule Library** is a gallery of
 ready-made templates for common email chores. Pick one, customize it to your inbox,
 and enable it.
 
+<Screenshot
+  src="/img/screens/rules/library.webp"
+  alt="The Rule Templates library: template counts, category filters and template cards with Use Template buttons"
+/>
+
 Open it from **Rules → Browse Templates**.
 
 ## Browse by category

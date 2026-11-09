@@ -17,6 +17,11 @@ When you first sign in, MailPrism walks you through a short guided setup. It has
 | **2. Create Rules** | Build your first automation, or start from a template. |
 | **3. Go Live** | Turn automation on and head to your dashboard. |
 
+<Screenshot
+  src="/img/screens/getting-started/onboarding.webp"
+  alt="The onboarding screen: Welcome to MailPrism, three steps (Connect Gmail, Create Rules, Go Live) and the Connect Your Gmail Account card"
+/>
+
 The progress bar at the top shows where you are. Completed steps are checked, and
 you can click back to any step you've finished.
 

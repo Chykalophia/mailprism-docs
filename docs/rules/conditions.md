@@ -12,6 +12,11 @@ builder, grouped the same way the builder groups them. Each field shows the
 operators it allows and — where the field is a fixed choice — the exact values
 you can pick.
 
+<Screenshot
+  src="/img/screens/rules/edit.webp"
+  alt="Editing a rule: its conditions and actions"
+/>
+
 Combine conditions with **AND / OR / NOT** and nested groups (see [Combining
 conditions](#combining-conditions) at the end).
 

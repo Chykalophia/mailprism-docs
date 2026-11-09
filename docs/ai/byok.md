@@ -62,6 +62,11 @@ Your key is **encrypted at rest** and never logged or exposed.
 2. Choose **OpenAI** or **Anthropic**.
 3. Click to add a key, paste your API key, and save. MailPrism validates it for you.
 
+<Screenshot
+  src="/img/screens/ai/byok-anthropic.webp"
+  alt="Settings → Integrations → Anthropic, the Bring Your Own Key page"
+/>
+
 Get your key from the provider:
 
 - **OpenAI** — the [OpenAI API keys page](https://platform.openai.com/api-keys).

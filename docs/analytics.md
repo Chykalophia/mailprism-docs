@@ -9,6 +9,11 @@ description: See what your automations did, how well they worked, and your AI us
 The **Analytics** page is where you confirm your automations are pulling their
 weight. It also doubles as your audit trail, alongside the **Rule Logs**.
 
+<Screenshot
+  src="/img/screens/analytics/overview.webp"
+  alt="The Analytics page: right-now counts, 7, 30 and 90 day ranges, totals, execution breakdown and action distribution"
+/>
+
 :::tip Two sides of the same coin
 **Analytics** answers *"are my rules working?"* with charts and totals. The
 **[Rule Logs](./analytics/rule-logs-and-undo.md)** answer *"what exactly happened

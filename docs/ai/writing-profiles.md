@@ -10,6 +10,11 @@ A **writing profile** tells MailPrism's AI *how* to sound when it drafts a messa
 you — the tone, the formality, how long the reply runs, and any house rules you want it
 to follow. Set one up once, and every AI-generated draft comes out in your voice.
 
+<Screenshot
+  src="/img/screens/ai/writing-profiles.webp"
+  alt="Settings → Writing Profiles: the default style, its sample text, and Learn from your sent mail with Analyse new emails and Forget"
+/>
+
 Find them in **Settings → Writing Profiles**.
 
 :::info Works with AI writing help

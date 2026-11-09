@@ -12,6 +12,11 @@ block them), and a **relationship type** (how well you actually know them). This
 explains all three and how they feed [rules](../rules/conditions.md#sender-relationship)
 and [cold-outreach detection](../ai/classification.md).
 
+<Screenshot
+  src="/img/screens/contacts/settings.webp"
+  alt="Settings → Contacts: auto-contact filtering by email type, system categories and custom categories"
+/>
+
 ## Contact categories
 
 A **category** is a label you put on a contact to organize your list — for example,

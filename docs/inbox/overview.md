@@ -10,6 +10,12 @@ MailPrism isn't only a rules engine — you can read and clear your mail right i
 it, with your automations and AI signals close at hand. Click **Inbox** in the sidebar to get
 started.
 
+<Screenshot
+  src="/img/screens/inbox/overview.webp"
+  srcDark="/img/screens/inbox/overview-dark.webp"
+  alt="The inbox: the email list on the left with sender, subject, snippet and labels, and the open email on the right"
+/>
+
 ## The two-panel layout
 
 The inbox is a **split view**:

@@ -159,6 +159,19 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Emails & Notifications',
+      link: {type: 'doc', id: 'notifications/overview'},
+      items: [
+        'notifications/in-app',
+        'notifications/alerts-and-digests',
+        'notifications/rule-notification-emails',
+        'notifications/account-emails',
+        'notifications/sent-from-your-gmail',
+        'notifications/chat-and-webhooks',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Account & Settings',
       link: {
         type: 'generated-index',
@@ -167,6 +180,7 @@ const sidebars: SidebarsConfig = {
         slug: '/account',
       },
       items: [
+        'account/settings-map',
         'account/account-security',
         'account/gmail-connection',
         'account/workspaces-and-teams',

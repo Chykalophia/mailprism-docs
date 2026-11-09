@@ -31,6 +31,11 @@ The manager is organized into tabs:
 Each category is shown as a row with its icon, name, and description. Badges tell you
 what kind it is:
 
+<Screenshot
+  src="/img/screens/ai/categories.webp"
+  alt="Settings → AI Categories on the Definitions tab, listing categories such as Client Work, New Business, Invoices & Billing and Cold Outreach"
+/>
+
 - <span class="mp-pill mp-pill--gray">System</span> — a built-in MailPrism category.
 - <span class="mp-pill mp-pill--amber">Customized</span> — a built-in category you've edited.
 - <span class="mp-pill mp-pill--amber">Disabled</span> — turned off and not used for classification.
@@ -94,6 +99,11 @@ The **Discover** tab asks the AI to look at a sample of your recent inbox and pr
 emails, the patterns it noticed, and the domains involved — so you can judge it before
 accepting.
 
+<Screenshot
+  src="/img/screens/ai/categories-discover.webp"
+  alt="The Discover tab of AI Categories, suggesting new categories from your mail"
+/>
+
 :::note Usage limits apply
 Discover runs analyze a batch of emails and are subject to monthly run limits and a
 cooldown between runs (shown in the tab). Limits depend on your plan.
@@ -122,6 +132,11 @@ Optimizations tab learns from, and it's where corrections can be reviewed.
 ## Metrics
 
 The **Metrics** tab shows how the classifications are performing:
+
+<Screenshot
+  src="/img/screens/ai/categories-metrics.webp"
+  alt="The Metrics tab of AI Categories"
+/>
 
 - **Accuracy rate**, **emails classified**, **average confidence**, and **corrections
   this month** at a glance.

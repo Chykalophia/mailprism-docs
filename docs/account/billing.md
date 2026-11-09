@@ -20,6 +20,11 @@ or the live plan comparison on the in-app Billing page.
 
 The **Current Plan** card at the top shows:
 
+<Screenshot
+  src="/img/screens/account/billing.webp"
+  alt="Settings → Billing: current plan, Manage Subscription, Redeem Lifetime Code, and this month's usage"
+/>
+
 - Your plan name and a status badge — **Active**, **Trial**, **Past Due**,
   **Canceled**, or **Free**.
 - Your billing cycle (**Monthly** or **Annual**) and the next renewal date — or,

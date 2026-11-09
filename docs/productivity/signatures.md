@@ -10,6 +10,11 @@ A **signature** is the sign-off that goes at the bottom of your messages — you
 title, and any contact details you like to include. MailPrism lets you save signatures
 and reuse them so you never retype them.
 
+<Screenshot
+  src="/img/screens/productivity/templates.webp"
+  alt="Settings → Email Templates, where signatures live under Email Signatures"
+/>
+
 Manage them under **Settings → Email Templates → Email Signatures**.
 
 ## Create a signature

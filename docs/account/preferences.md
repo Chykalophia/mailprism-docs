@@ -23,6 +23,11 @@ For pattern learning, image blocking, and data export, see
 Under **Settings → Dashboard**, control what your dashboard shows.
 These are saved **locally in your browser**.
 
+<Screenshot
+  src="/img/screens/account/dashboard-prefs.webp"
+  alt="Settings → Dashboard: widget visibility switches, layout density and auto-refresh"
+/>
+
 ### Widgets
 
 Show or hide each widget:
@@ -52,6 +57,11 @@ Under **Settings → Date & Time**, set how dates and times appear throughout
 MailPrism. A **Preview** card shows the result live. These settings are **saved to
 your account** and apply across all your devices — they don't change how emails are
 sent or received.
+
+<Screenshot
+  src="/img/screens/account/date-time.webp"
+  alt="Settings → Date & Time: a preview, time zone and date format choices"
+/>
 
 - **Timezone** — auto-detected from your browser; change it to view times in a
   different zone. Used by features like [quiet hours](#quiet-hours).

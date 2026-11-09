@@ -26,6 +26,12 @@ dialog.
   **[Quick Actions](./quick-actions.md#turn-shortcuts-on-or-off)**.
 - Modifiers are written with `+`, e.g. `Shift+I`.
 
+<Screenshot
+  src="/img/screens/inbox/command-palette.webp"
+  alt="The command palette open, with a search box and Navigation commands such as Go to Inbox, Go to Rules and Go to Settings"
+  caption="Press Ctrl+K (Cmd+K on a Mac) to open the command palette."
+/>
+
 ## Default quick-action shortcuts
 
 These ship enabled for every account. You can rename them, change the key, or disable
@@ -51,6 +57,11 @@ Reach for **Archive** (`E`) when you just want it out of your inbox.
 | `Cmd+K` / `Ctrl+K` | Anywhere | Open the **command palette** — type to find a page or setting (e.g. *go to rules*, *API keys*) |
 | `?` | Main app and Settings | Show the keyboard shortcuts dialog |
 | `Esc` | Anywhere | Close the open dialog or palette |
+
+<Screenshot
+  src="/img/screens/inbox/keyboard-shortcuts.webp"
+  alt="The Keyboard shortcuts dialog listing shortcuts for the command palette, inbox and replies, with the single-key shortcuts switch"
+/>
 
 The command palette isn't a Quick Action, and the Quick Actions switch doesn't turn it
 off. It takes you to pages and settings — it doesn't run email actions like archive.

@@ -10,6 +10,11 @@ The **Rule Logs** are your audit trail: a detailed history of every rule executi
 on your emails. Where **[Analytics](../analytics.md)** shows the totals, this page
 shows *exactly* what happened to each email — and lets you **undo** a rule's changes.
 
+<Screenshot
+  src="/img/screens/analytics/rule-logs.webp"
+  alt="Rule Logs: total executions, matched, actions executed and undone, filters, and execution history entries with Undo buttons"
+/>
+
 Open it from the **Rule Logs** button on the Analytics page.
 
 ## Summary stats

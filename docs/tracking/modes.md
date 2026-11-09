@@ -10,6 +10,11 @@ Response tracking runs in one of two modes. **Basic** is automatic and needs no 
 **Advanced** trades that simplicity for full control. You choose under
 **Settings → Tracking Labels → Tracking Mode**, and you can switch any time.
 
+<Screenshot
+  src="/img/screens/tracking/settings.webp"
+  alt="Settings → Tracking Labels: Basic Mode and Advanced Mode cards, AI-powered filtering and label exclusivity switches"
+/>
+
 The two modes are **mutually exclusive** — turning one on turns the other off.
 
 ## Basic mode

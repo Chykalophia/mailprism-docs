@@ -10,6 +10,11 @@ Make MailPrism comfortable to look at. Everything here lives under **Settings â†
 Appearance**, with a **Live Preview** at the top so you can see each change before
 you save.
 
+<Screenshot
+  src="/img/screens/account/appearance.webp"
+  alt="Settings â†’ Appearance: live preview, Light, Dark and System theme choices, and density"
+/>
+
 :::info Saved to this browser
 Appearance preferences are stored **locally in your browser**, not your account.
 They take full effect once you click **Save Changes**. Set them again on another

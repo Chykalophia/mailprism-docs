@@ -17,6 +17,11 @@ This page walks through both.
 
 Open **Settings → Account** to see your profile.
 
+<Screenshot
+  src="/img/screens/account/account.webp"
+  alt="Settings → Account: profile with display name and email, password, two-factor authentication and active sessions"
+/>
+
 | Field | Editable? | Where it comes from |
 |-------|-----------|----------------------|
 | **Avatar** | No | Pulled from [Gravatar](https://gravatar.com) for your email address. |
@@ -102,6 +107,11 @@ If a workspace you belong to **requires two-factor authentication**, you can't t
 Passkeys let you sign in with your device's fingerprint, face recognition, or a
 security key — no password to type. Manage them under **Settings → Security**, in
 the **Passkeys** card.
+
+<Screenshot
+  src="/img/screens/account/security.webp"
+  alt="Settings → Security: three registered passkeys with Rename and Remove, Google sign-in, and password"
+/>
 
 ### Adding a passkey
 

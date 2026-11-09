@@ -10,6 +10,11 @@ The main **[Analytics](../analytics.md)** page shows the big picture. To dig int
 rule, open its **analytics page** — from the Top performing rules table (click the
 arrow on a row) or from the rule itself.
 
+<Screenshot
+  src="/img/screens/rules/analytics.webp"
+  alt="Analytics for one rule: stats, action distribution and activity over time"
+/>
+
 This view is all about a single rule: how often it runs, when it runs, what it does,
 and — crucially — which emails it *didn't* match so you can find out why.
 

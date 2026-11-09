@@ -38,6 +38,12 @@ Open **Replies** in the sidebar to work through everything that's being tracked.
 split view — the list of tracked threads on the left, the selected conversation on
 the right — just like your inbox.
 
+<Screenshot
+  src="/img/screens/tracking/replies.webp"
+  srcDark="/img/screens/tracking/replies-dark.webp"
+  alt="The Replies view: tracked conversations filtered to Needs Action on the left, and the open conversation with a Why this needs your action note"
+/>
+
 A row of tabs across the top, each with a **live count**, filters the list by state —
 plus an **Untracked** queue, which isn't a state (see below):
 

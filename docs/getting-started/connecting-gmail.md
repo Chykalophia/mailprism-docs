@@ -52,6 +52,11 @@ standard Gmail connection.
 
 You can connect multiple Gmail accounts and automate them together.
 
+<Screenshot
+  src="/img/screens/getting-started/connecting-gmail.webp"
+  alt="Settings → Gmail Accounts listing a connected account with Sync Labels, Create Label and Disconnect, plus sync and email processing settings"
+/>
+
 - Add another from **Settings → Gmail Accounts → Connect Account**.
 - Settings shows **how many accounts you've used** and your plan's limit. If you've
   hit the limit, you'll see an option to upgrade. (Limits live on the live billing

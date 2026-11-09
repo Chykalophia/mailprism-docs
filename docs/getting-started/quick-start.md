@@ -32,6 +32,11 @@ An invite, a Gmail account (personal or Google Workspace), and a few minutes.
 
 MailPrism's onboarding is just three steps. Do them in order and you're done.
 
+<Screenshot
+  src="/img/screens/getting-started/sign-up.webp"
+  alt="The MailPrism sign-up page"
+/>
+
 ### 1. Create your account
 
 Open your invite link (or go to **[app.mailprism.ai](https://app.mailprism.ai)** and
