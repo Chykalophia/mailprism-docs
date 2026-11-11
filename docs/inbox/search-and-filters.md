@@ -7,7 +7,7 @@ description: Find any email fast with search and the inbox view, account, and la
 # Search & Filters
 
 Two tools narrow down what you see: the **search box** for finding specific mail, and
-the **filters** for slicing the list by view, account, and label.
+the **filters** for slicing the list by view, split, account, and label.
 
 ## Search
 
@@ -15,9 +15,10 @@ The search box sits above the email list. Type a few words and MailPrism searche
 mail through Gmail — across the **subject**, **sender**, **recipients**, and message
 **content** — and shows the matches.
 
-Search runs against your real mailbox, not just what's on screen — it covers the whole
-**current tab**, including emails beyond the current page. To search everything, switch
-to the **All Mail** tab first.
+Search runs against your real mailbox, not just what's on screen, including emails
+beyond the current page. It covers the **current view**: the **Inbox** view searches
+your inbox, and the **Replies** view searches all your mail, archived included. Sent,
+spam and trash aren't separate views in the inbox; look for those in Gmail.
 
 ### Gmail search operators
 
@@ -45,21 +46,11 @@ To clear a search, press the **×** in the box.
 
 ## Filters
 
-### View
+### Views and splits
 
-Tabs above the list switch which slice of your mailbox you're looking at:
-
-| View | Shows |
-|------|-------|
-| **Inbox** | Your inbox (the default). |
-| **Unread** | Only unread mail. |
-| **Starred** | Only starred mail. |
-| **Sent** | Mail you've sent. |
-| **All Mail** | Everything across your mailbox. |
-| **Spam** | Mail Gmail flagged as spam. |
-| **Trash** | Deleted mail (Gmail clears it after 30 days). |
-
-Only the **Inbox** tab shows a badge with your unread count.
+The view pills (**Inbox**, **Replies**, **Later**, **New senders**) and the split tabs
+(**All**, **People**, **Updates**, **Newsletters**) narrow the list before you search.
+See **[Inbox overview](./overview.md#views)** for what each one holds.
 
 ### Account
 
@@ -74,8 +65,8 @@ To filter by a label, search with the `label:` operator (see above). More on lab
 
 ## Putting it together
 
-Search and filters stack. Pick the **Unread** view, choose one account, and search
-`from:acme.com` to see only unread mail from that company in that mailbox — then clear
-the search to widen back out.
+Search and filters stack. Pick the **People** split, choose one account, and search
+`from:acme.com` to see only mail from that company's people in that mailbox, then
+clear the search to widen back out.
 
 → Back to: **[Inbox overview](./overview.md)** · **[Bulk actions](./bulk-actions.md)**

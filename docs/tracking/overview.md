@@ -34,9 +34,14 @@ You can match on a thread's state in your automations — see
 
 ## The Replies view
 
-Open **Replies** in the sidebar to work through everything that's being tracked. It's a
-split view — the list of tracked threads on the left, the selected conversation on
-the right — just like your inbox.
+Open **Replies** in the sidebar for a quick list of what needs you and what you're
+waiting on. It's the inbox narrowed to tracked conversations, with the same rows,
+chips and actions. See **[Inbox overview](../inbox/overview.md#views)**.
+
+For the full tracking workspace, with state filters, sources, holds and analytics,
+open the **Replies page**: click a reply card on the dashboard, or press **G** then
+**R**. It's a split view, with tracked threads on the left and the selected
+conversation on the right.
 
 <Screenshot
   src="/img/screens/tracking/replies.webp"

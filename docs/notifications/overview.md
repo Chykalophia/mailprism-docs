@@ -23,6 +23,8 @@ These come from **MailPrism &lt;noreply@mail.mailprism.ai&gt;**.
 | [Daily digest](./alerts-and-digests.md#daily-digest) | Once a day, at the hour you pick | Settings → Notifications → Email Digest |
 | [Weekly activity report](./alerts-and-digests.md#weekly-activity-report) | Once a week (currently paused) | Settings → Notifications |
 | [Rule notification](./rule-notification-emails.md) | A rule with the **Send Me a Notification Email** action matches | Edit the rule and remove the action |
+| [Welcome](./account-emails.md#welcome) | You first reach onboarding after signing up | Not optional (sent once) |
+| [Subscription confirmed](./account-emails.md#subscription-confirmed) | A paid plan starts | Not optional |
 | [Workspace invitation](./account-emails.md#workspace-invitation) | Someone invites you to their workspace | Not optional |
 | [Forwarding address verification](./account-emails.md#forwarding-address-verification) | You add a forwarding address | Not optional |
 | [Payment failed](./account-emails.md#payment-failed) | Your card is declined | Not optional |
@@ -30,8 +32,9 @@ These come from **MailPrism &lt;noreply@mail.mailprism.ai&gt;**.
 
 ## Emails about your sign-in
 
-Confirm your email, reset your password, confirm an email change, and one-time
-sign-in links. See [Sign-in emails](./account-emails.md#sign-in-emails).
+Confirm your email, reset your password, confirm an email change, and security
+notices after your password, email or sign-in methods change. See
+[Sign-in emails](./account-emails.md#sign-in-emails).
 
 ## Emails sent from your own Gmail
 

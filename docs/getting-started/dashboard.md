@@ -61,8 +61,10 @@ The dashboard is one stop. Here's the rest of the map:
 
 | Area | What it's for |
 |------|----------------|
-| **Inbox** | Your mail — read, reply, label, archive, and act on messages. See **[Inbox overview](../inbox/overview.md)**. |
-| **Replies** | Conversations grouped by what they need from you — *Needs Action* and *Awaiting Reply*. See **[Response tracking](../tracking/overview.md)**. |
+| **Inbox** | Your mail, sorted by what needs you. Read, reply, set aside, mark done, and clear bundles of bulk mail. See **[Inbox overview](../inbox/overview.md)**. |
+| **Replies** | The inbox narrowed to conversations that need you or where you're waiting on them. See **[Response tracking](../tracking/overview.md)**. |
+| **Later** | Mail you set aside, with your reason and when it comes back. |
+| **New senders** | First emails from people you haven't decided about. Let them in or screen them out. |
 | **Rules** | Build, test, and manage your automations. See **[How rules work](../rules/overview.md)**. |
 | **Analytics** | What your automations have done, over time. See **[Analytics](../analytics.md)**. |
 | **Settings** | Connect accounts, tune AI, set scheduling, and more. See **[Connecting Gmail](./connecting-gmail.md)** and **[Preferences](../account/preferences.md)**. |

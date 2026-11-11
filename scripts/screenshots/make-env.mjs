@@ -13,6 +13,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=${key("anon")}
 SUPABASE_SERVICE_ROLE_KEY=${key("service_role")}
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_UNIFIED_INBOX=true
 GOOGLE_CLIENT_ID=demo.apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=demo
 STRIPE_SECRET_KEY=sk_test_demo

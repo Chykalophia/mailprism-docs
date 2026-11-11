@@ -24,6 +24,18 @@ add("inbox/bulk-select", "/mail/inbox", { steps: [{ click: 'input[type="checkbox
 add("inbox/compose", "/mail/inbox", { steps: [{ click: 'button:has-text("Compose")', wait: 2000 }] });
 add("inbox/keyboard-shortcuts", "/mail/inbox", { steps: [{ press: "Shift+?", wait: 1500 }] });
 add("inbox/more-menu", "/mail/inbox", { steps: [{ click: 'button:has-text("More") >> nth=-1', wait: 1200 }] });
+add("inbox/view-replies", "/mail/inbox?view=replies", { dark: true });
+add("inbox/view-later", "/mail/inbox?view=later");
+add("inbox/view-new-senders", "/mail/inbox?view=screener");
+add("inbox/split-newsletters", "/mail/inbox", { steps: [{ click: 'button:has-text("Newsletters") >> nth=0', wait: 1500 }] });
+add("inbox/view-options", "/mail/inbox", { steps: [{ click: 'button:has-text("View")', wait: 1200 }] });
+add("inbox/why-chip", "/mail/inbox", { steps: [{ eval: 'document.querySelectorAll(\'button[aria-label="Needs you. Why?"]\')[1].click()', wait: 1200 }] });
+add("inbox/details-drawer", "/mail/inbox", { steps: [{ click: 'button:has-text("Details")', wait: 1500 }] });
+add("inbox/later-menu", "/mail/inbox", { steps: [{ click: 'button:has-text("Later") >> nth=-1', wait: 1200 }] });
+add("inbox/bundle-open", "/mail/inbox", { steps: [{ scroll: 'text=Done all', wait: 500 }, { click: 'button:has-text("Updates") >> nth=-1', wait: 1200 }] });
+add("inbox/bundle-menu", "/mail/inbox", { steps: [{ scroll: 'text=Done all', wait: 500 }, { click: 'button[aria-label="Choose what Done all does"]', wait: 1200 }] });
+add("inbox/settings-inbox", "/settings/inbox", { full: true });
+add("inbox/phone", "/mail/inbox", { w: 390, h: 844 });
 add("inbox/unsubscribe", "/unsubscribe");
 add("inbox/unsubscribe-history", "/unsubscribe", { steps: [{ click: 'button:has-text("History")', wait: 2000 }] });
 add("inbox/toolbar-settings", "/settings/toolbar");

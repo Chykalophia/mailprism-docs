@@ -16,6 +16,7 @@ import {
   type Notification,
 } from "@/lib/notifications/types";
 import type { EmailTemplateId } from "@/lib/types/email-templates";
+import { AUTH_EMAIL_TEMPLATES } from "@/lib/templates/auth-email-templates";
 
 const out = process.argv[2] ?? "emails-out";
 fs.mkdirSync(out, { recursive: true });
@@ -120,12 +121,13 @@ async function main() {
     ruleName: "VIP clients to Slack",
     emailSubject: "Re: Lumen Health portal, revised timeline",
     actionsSummary: "Applied label Clients/Lumen, marked important, sent you this email",
+    ruleUrl: `${APP}/rules/7e1a0c00-0000-4000-8000-000000000001`,
     appUrl: APP,
   });
   save("rule-notification", rule.subject, rule.html);
 
-  // Never-sent templates, rendered for the record only
-  for (const id of ["welcome", "password_reset", "subscription_confirmation"] as const) {
+  // Welcome and subscription confirmation
+  for (const id of ["welcome", "subscription_confirmation"] as const) {
     const t = templated(id, {
       userName: "Jordan",
       appUrl: APP,
@@ -134,7 +136,7 @@ async function main() {
       planName: "Pro",
       billingPeriod: "monthly",
     });
-    save(`unsent-${id.replace(/_/g, "-")}`, t.subject, t.html);
+    save(id.replace(/_/g, "-"), t.subject, t.html);
   }
 
   // React Email notification templates
@@ -176,6 +178,20 @@ async function main() {
     { email: TO, name: "Jordan" },
   );
   save("weekly-report", "Your Weekly MailPrism Activity Report", weekly.html);
+
+  // Supabase Auth emails, with sample values in place of Supabase's placeholders
+  const fill: Record<string, string> = {
+    ConfirmationURL: `${APP}/auth/confirm?token=demo`,
+    Email: TO,
+    NewEmail: "jordan.avery@northwind.studio",
+    OldEmail: "jordan@northwind.studio",
+    Token: "731 204",
+    FactorType: "Authenticator app",
+  };
+  for (const t of AUTH_EMAIL_TEMPLATES) {
+    const html = t.html().replace(/\{\{ \.(\w+) \}\}/g, (m, k: string) => fill[k] ?? m);
+    save(`auth-${t.key.replace(/_/g, "-")}`, t.subject, html);
+  }
 
   fs.writeFileSync(path.join(out, "index.json"), JSON.stringify(index, null, 2));
   console.log("rendered", Object.keys(index).length, "emails to", out);

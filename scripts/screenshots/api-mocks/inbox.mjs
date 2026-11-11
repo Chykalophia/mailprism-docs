@@ -2,7 +2,7 @@ import { emails, GMAIL_LABELS, PRIYA_HTML, BODIES, HISTORY_PRIYA, AI_REPLY, eid 
 const byId = () => Object.fromEntries(emails().map((e) => [e.id, e]));
 const bodyFor = (e) => {
   const short = Object.keys(BODIES).find((k) => eid(k) === e.id);
-  const html = e.id === eid("m01") ? PRIYA_HTML : short ? BODIES[short] : `<p>${e.snippet}</p><p>Thanks,<br/>${e.from.split(" <")[0].split(" ")[0]}</p>`;
+  const html = e.id === eid("m01") ? PRIYA_HTML : short ? BODIES[short] : `<p>${e.snippet}</p><p>Thanks,<br/>${e.from.split(" <")[0]}</p>`;
   return { id: e.id, threadId: e.threadId, subject: e.subject, from: e.from, to: e.to, date: e.date, snippet: e.snippet, body: html, isHtml: true, labelIds: e.labelIds, hasAttachments: e.hasAttachment, attachmentCount: e.hasAttachment ? (e.id === eid("m01") ? 1 : 2) : 0,
     payload: { mimeType: "multipart/mixed", parts: e.hasAttachment ? [{ mimeType: "text/html", filename: "" }, { mimeType: "application/pdf", filename: e.id === eid("m01") ? "IT-sync-notes-EHR-integration.pdf" : "attachment.pdf" }] : [{ mimeType: "text/html", filename: "" }] } };
 };

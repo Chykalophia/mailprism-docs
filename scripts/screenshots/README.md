@@ -19,7 +19,7 @@ production.
 | `emails/render-emails.tsx` | Renders every MailPrism email from the app's own template code |
 | `emails/shoot-emails.mjs` | Frames each rendered email in a neutral mail window and saves a PNG |
 | `to-webp.py` | Converts PNGs to WebP for `static/img/screens/` |
-| `make-env.mjs` | Writes the `.env.local` that points the app at the fake Supabase |
+| `make-env.mjs` | Writes the `.env.local` that points the app at the fake Supabase (and turns on the unified inbox, the default in production) |
 
 ## Re-shoot
 
