@@ -10,6 +10,9 @@ import {readFileSync, writeFileSync} from 'node:fs';
 const icons = JSON.parse(readFileSync(new URL('../src/components/Icon/icons.json', import.meta.url)));
 const used = ['rocket', 'inbox', 'zap', 'sparkles', 'reply', 'users', 'chart', 'file', 'plug', 'bell', 'sliders', 'lifebuoy'];
 
+const missing = used.filter((n) => !(n in icons));
+if (missing.length) throw new Error(`Unknown icon(s) in build-sidebar-icons.mjs: ${missing.join(', ')}`);
+
 const uri = (name) =>
   `url("data:image/svg+xml,${encodeURIComponent(
     `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'>${icons[name]}</svg>`,

@@ -20,7 +20,7 @@ export default function OpenInApp({to, children, variant = 'chip', className}: P
     <a
       href={appUrl(to)}
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       className={clsx('mp-chip', variant === 'button' ? styles.appButton : styles.appChip, className)}
     >
       <span>{children ?? 'Open in MailPrism'}</span>

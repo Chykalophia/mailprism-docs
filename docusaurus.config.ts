@@ -39,7 +39,7 @@ const config: Config = {
       // Applies saved Reading options before first paint, so text never jumps.
       tagName: 'script',
       attributes: {},
-      innerHTML: `(function(){try{var o=JSON.parse(localStorage.getItem('mp-reading')||'{}'),d=document.documentElement;['size','spacing','font','links','extras','motion','contrast'].forEach(function(k){if(o[k])d.setAttribute('data-mp-'+k,o[k]);});}catch(e){}})();`,
+      innerHTML: `(function(){try{var o=JSON.parse(localStorage.getItem('mp-reading')||'{}'),d=document.documentElement;var a={size:['s','l','xl'],spacing:['roomy','airy'],font:['lexend','hyperlegible'],links:['underline'],extras:['hide'],motion:['reduce'],contrast:['high']};Object.keys(a).forEach(function(k){if(a[k].indexOf(o[k])>-1)d.setAttribute('data-mp-'+k,o[k]);});}catch(e){}})();`,
     },
   ],
 

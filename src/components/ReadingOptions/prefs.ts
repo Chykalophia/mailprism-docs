@@ -21,14 +21,33 @@ export const DEFAULTS: Prefs = {
   ruler: 'off',
 };
 
+/** Every value each option may take. Anything else in storage is ignored. */
+const ALLOWED: {[K in keyof Prefs]: readonly Prefs[K][]} = {
+  size: ['s', 'm', 'l', 'xl'],
+  spacing: ['normal', 'roomy', 'airy'],
+  font: ['inter', 'lexend', 'hyperlegible'],
+  links: ['default', 'underline'],
+  extras: ['show', 'hide'],
+  motion: ['default', 'reduce'],
+  contrast: ['normal', 'high'],
+  ruler: ['off', 'on'],
+};
+
 const KEY = 'mp-reading';
 /** Attributes the early inline script in docusaurus.config.ts also applies. */
 const ATTRS: (keyof Prefs)[] = ['size', 'spacing', 'font', 'links', 'extras', 'motion', 'contrast'];
 
 export function loadPrefs(): Prefs {
   try {
-    const raw = JSON.parse(localStorage.getItem(KEY) ?? '{}') as Partial<Prefs>;
-    return {...DEFAULTS, ...raw};
+    const raw: unknown = JSON.parse(localStorage.getItem(KEY) ?? '{}');
+    const out: Prefs = {...DEFAULTS};
+    if (raw && typeof raw === 'object') {
+      (Object.keys(ALLOWED) as (keyof Prefs)[]).forEach((k) => {
+        const v = (raw as Record<string, unknown>)[k];
+        if ((ALLOWED[k] as readonly unknown[]).includes(v)) (out as Record<string, unknown>)[k] = v;
+      });
+    }
+    return out;
   } catch {
     return {...DEFAULTS};
   }

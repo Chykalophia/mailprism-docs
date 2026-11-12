@@ -168,7 +168,8 @@ export default function Steps({children}: {children: React.ReactNode}) {
     let saved: string | null = null;
     try {
       saved = localStorage.getItem(VIEW_KEY);
-      const d = JSON.parse(localStorage.getItem(doneKey) ?? '[]') as number[];
+      const raw: unknown = JSON.parse(localStorage.getItem(doneKey) ?? '[]');
+      const d = Array.isArray(raw) ? raw.filter((v): v is number => Number.isInteger(v)) : [];
       setDone(new Set(d));
     } catch {
       // storage blocked: start fresh
