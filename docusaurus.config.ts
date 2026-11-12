@@ -95,8 +95,11 @@ const config: Config = {
     image: 'img/social-card.png',
     colorMode: {
       defaultMode: 'light',
+      // Light for everyone by default. Dark is an opt-in in Reading options; the
+      // navbar toggle is hidden in custom.css. disableSwitch must stay false, or
+      // Docusaurus ignores the stored choice and Reading options can't set dark.
       disableSwitch: false,
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
     docs: {
       sidebar: {

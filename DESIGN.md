@@ -141,7 +141,7 @@ Saved in `localStorage` (`mp-reading`) and applied as `data-mp-*` attributes on
 | Text size A−/A/A+/A++ | `data-mp-size` | Scales body, headings and cards |
 | Spacing Normal/Roomy/Airy | `data-mp-spacing` | Line height, paragraph gap, narrower measure |
 | Font Inter/Lexend/Hyperlegible | `data-mp-font` | Body and title font |
-| Theme Light/Dark/High contrast | Docusaurus color mode + `data-mp-contrast` | High contrast darkens text and borders |
+| Theme Light/Dark/High contrast | Docusaurus color mode + `data-mp-contrast` | Light is the default for everyone; the OS setting is ignored and there is no navbar toggle. Dark is opt-in here. High contrast darkens text and borders |
 | Reading ruler | (component) | A band that follows the pointer or focus |
 | Hide tips and extras | `data-mp-extras` | Hides tip, note and info admonitions and `.mp-extra` |
 | Underline all links | `data-mp-links` | Underlines navigation links too |

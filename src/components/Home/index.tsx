@@ -152,8 +152,8 @@ export default function Home() {
               Read it your way
             </h2>
             <p className={styles.small}>
-              <b>Reading options</b> in the top bar change text size, spacing and font, add a reading ruler, or switch to high
-              contrast. Your choices stay in this browser.
+              <b>Reading options</b> in the top bar change text size, spacing and font, add a reading ruler, or switch to dark
+              or high contrast. Your choices stay in this browser.
             </p>
           </div>
         </section>

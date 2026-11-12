@@ -130,6 +130,9 @@ body {
 .navbar__item.navbar-app-link svg { display: none; }
 .navbar-sidebar { background: var(--mp-bg); }
 
+/* Dark mode is opt-in through Reading options only (see docusaurus.config.ts). */
+[class*='colorModeToggle'] { display: none !important; }
+
 /* Search box */
 .navbar__search-input,
 .DocSearch-Button {
