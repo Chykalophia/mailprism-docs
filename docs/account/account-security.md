@@ -106,7 +106,8 @@ If a workspace you belong to **requires two-factor authentication**, you can't t
 
 Passkeys let you sign in with your device's fingerprint, face recognition, or a
 security key — no password to type. Manage them under **Settings → Security**, in
-the **Passkeys** card.
+the **Passkeys** card. For a step-by-step guide, see
+**[Sign in with a passkey](./passkeys.md)**.
 
 <Screenshot
   src="/img/screens/account/security.webp"

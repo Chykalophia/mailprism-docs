@@ -6,6 +6,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Getting Started',
+      className: 'cat-rocket',
       collapsed: false,
       link: {
         type: 'generated-index',
@@ -25,6 +26,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Your Inbox',
+      className: 'cat-inbox',
       link: {
         type: 'generated-index',
         title: 'Your Inbox',
@@ -42,12 +44,14 @@ const sidebars: SidebarsConfig = {
         'inbox/keyboard-shortcuts',
         'inbox/toolbar',
         'inbox/quick-actions',
+        'inbox/replies',
         'inbox/unsubscribe',
       ],
     },
     {
       type: 'category',
       label: 'Rules & Automation',
+      className: 'cat-zap',
       link: {
         type: 'generated-index',
         title: 'Rules & Automation',
@@ -72,6 +76,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'AI Features',
+      className: 'cat-sparkles',
       link: {
         type: 'generated-index',
         title: 'AI Features',
@@ -97,6 +102,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Response Tracking',
+      className: 'cat-reply',
       link: {
         type: 'generated-index',
         title: 'Response Tracking & Follow-ups',
@@ -117,6 +123,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Contacts',
+      className: 'cat-users',
       link: {
         type: 'generated-index',
         title: 'Contacts',
@@ -128,12 +135,14 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Analytics & Logs',
+      className: 'cat-chart',
       link: {type: 'doc', id: 'analytics'},
       items: ['analytics/per-rule-analytics', 'analytics/rule-logs-and-undo'],
     },
     {
       type: 'category',
       label: 'Productivity',
+      className: 'cat-file',
       link: {
         type: 'generated-index',
         title: 'Productivity',
@@ -145,6 +154,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Integrations',
+      className: 'cat-plug',
       link: {
         type: 'generated-index',
         title: 'Integrations',
@@ -153,6 +163,8 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'integrations/overview',
+        'integrations/forwarding',
+        'integrations/clickup-routing',
         'integrations/calendar',
         'integrations/ai-providers',
       ],
@@ -160,6 +172,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Emails & Notifications',
+      className: 'cat-bell',
       link: {type: 'doc', id: 'notifications/overview'},
       items: [
         'notifications/in-app',
@@ -173,6 +186,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Account & Settings',
+      className: 'cat-sliders',
       link: {
         type: 'generated-index',
         title: 'Account & Settings',
@@ -182,6 +196,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'account/settings-map',
         'account/account-security',
+        'account/passkeys',
         'account/gmail-connection',
         'account/workspaces-and-teams',
         'account/billing',
@@ -194,6 +209,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Help',
+      className: 'cat-lifebuoy',
       link: {
         type: 'generated-index',
         title: 'Help',
@@ -206,6 +222,7 @@ const sidebars: SidebarsConfig = {
         'help/troubleshooting',
         'help/privacy-security',
         'help/glossary',
+        'help/contact-support',
       ],
     },
   ],

@@ -1,0 +1,125 @@
+/**
+ * MailPrism docs design tokens (2026-11 redesign).
+ *
+ * One calm neutral surface, one indigo accent, and the prism spectrum used only
+ * as a thin line and as step numerals. Every text pair here meets WCAG 4.5:1 and
+ * every input/control boundary (--mp-border-strong) meets 3:1, in both themes.
+ * Change a value here, never inline in a component. See DESIGN.md.
+ */
+:root {
+  /* Surfaces */
+  --mp-bg: #ffffff;
+  --mp-surface: #f7f8fa;
+  --mp-card: #ffffff;
+  --mp-sunk: #eef0f4;
+  --mp-border: #e4e6ec;
+  --mp-border-strong: #858c9e; /* 3:1 or more on bg and surface, for controls */
+
+  /* Text */
+  --mp-text: #0e1120;
+  --mp-text-2: #4a5163;
+  --mp-text-3: #5f6779;
+
+  /* Accent and meaning */
+  --mp-accent: #4f46e5;
+  --mp-accent-hover: #4338ca;
+  --mp-accent-soft: #eef0ff;
+  --mp-accent-on: #ffffff;
+  --mp-tip: #0f766e;
+  --mp-tip-soft: #e8f6f4;
+  --mp-done: #166534;
+  --mp-done-soft: #ecfdf3;
+  --mp-warn: #92400e;
+  --mp-warn-soft: #fff7e6;
+  --mp-danger: #b91c1c;
+  --mp-danger-soft: #fef2f2;
+
+  /* Step numerals (spectrum, cycled) */
+  --mp-n1: #6d28d9;
+  --mp-n2: #1d4ed8;
+  --mp-n3: #0e7490;
+  --mp-n4: #047857;
+  --mp-spectrum: linear-gradient(90deg, #8b5cf6, #3b82f6 35%, #06b6d4 65%, #10b981);
+
+  /* Type */
+  --mp-font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mp-font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --mp-font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Shape and depth */
+  --mp-radius-sm: 6px;
+  --mp-radius: 10px;
+  --mp-radius-lg: 14px;
+  --mp-radius-xl: 20px;
+  --mp-shadow-sm: 0 1px 2px rgba(14, 17, 32, 0.05);
+  --mp-shadow: 0 1px 2px rgba(14, 17, 32, 0.04), 0 4px 16px -6px rgba(14, 17, 32, 0.08);
+  --mp-shadow-lg: 0 24px 48px -24px rgba(14, 17, 32, 0.25);
+  --mp-scrim: rgba(14, 17, 32, 0.55);
+
+  /* Motion */
+  --mp-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --mp-dur: 160ms;
+
+  /* Reading options (changed by the Reading options panel) */
+  --mp-read-scale: 1;
+  --mp-read-leading: 1.7;
+  --mp-read-para: 1.1rem;
+  --mp-read-measure: 72ch;
+}
+
+[data-theme='dark'] {
+  --mp-bg: #0b0d12;
+  --mp-surface: #11141b;
+  --mp-card: #151922;
+  --mp-sunk: #1b2029;
+  --mp-border: #232835;
+  --mp-border-strong: #6b7386;
+
+  --mp-text: #eceef4;
+  --mp-text-2: #b4bac8;
+  --mp-text-3: #9aa1b2;
+
+  --mp-accent: #a5b4fc;
+  --mp-accent-hover: #c7d2fe;
+  --mp-accent-soft: #1c2140;
+  --mp-accent-on: #0b0d12;
+  --mp-tip: #5eead4;
+  --mp-tip-soft: #0f2422;
+  --mp-done: #86efac;
+  --mp-done-soft: #12241a;
+  --mp-warn: #fcd34d;
+  --mp-warn-soft: #2a2110;
+  --mp-danger: #fca5a5;
+  --mp-danger-soft: #2a1414;
+
+  --mp-n1: #c4b5fd;
+  --mp-n2: #93c5fd;
+  --mp-n3: #67e8f9;
+  --mp-n4: #6ee7b7;
+
+  --mp-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --mp-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 18px -8px rgba(0, 0, 0, 0.6);
+  --mp-shadow-lg: 0 24px 48px -24px rgba(0, 0, 0, 0.8);
+  --mp-scrim: rgba(0, 0, 0, 0.62);
+}
+
+/* High contrast theme (Reading options > Theme > High contrast). */
+[data-mp-contrast='high'] {
+  --mp-border: #5f6779;
+  --mp-border-strong: #0e1120;
+  --mp-text-2: #1f2433;
+  --mp-text-3: #2c3242;
+  --mp-accent: #3525c9;
+  --mp-accent-soft: #e6e8ff;
+}
+[data-theme='dark'][data-mp-contrast='high'] {
+  --mp-bg: #000000;
+  --mp-surface: #0a0a0a;
+  --mp-card: #0f0f0f;
+  --mp-border: #8a90a0;
+  --mp-border-strong: #e8eaf0;
+  --mp-text: #ffffff;
+  --mp-text-2: #e6e8ee;
+  --mp-text-3: #d0d4de;
+  --mp-accent: #c7d2fe;
+}

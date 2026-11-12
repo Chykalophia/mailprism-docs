@@ -1,0 +1,62 @@
+/**
+ * Reading options (Reading options panel in the navbar). Each choice is a data
+ * attribute on <html>, set before first paint by the inline script in
+ * docusaurus.config.ts and saved in localStorage ("mp-reading").
+ */
+
+/* Text size */
+[data-mp-size='s'] { --mp-read-scale: 0.94; }
+[data-mp-size='l'] { --mp-read-scale: 1.12; }
+[data-mp-size='xl'] { --mp-read-scale: 1.25; }
+
+/* Spacing */
+[data-mp-spacing='roomy'] { --mp-read-leading: 1.85; --mp-read-para: 1.4rem; --mp-read-measure: 66ch; }
+[data-mp-spacing='airy'] {
+  --mp-read-leading: 2;
+  --mp-read-para: 1.75rem;
+  --mp-read-measure: 60ch;
+}
+[data-mp-spacing='airy'] .markdown > p,
+[data-mp-spacing='airy'] .markdown li { letter-spacing: 0.012em; word-spacing: 0.06em; }
+
+/* Font */
+[data-mp-font='lexend'] { --mp-font-body: 'Lexend Variable', 'Lexend', system-ui, sans-serif; }
+[data-mp-font='hyperlegible'] { --mp-font-body: 'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif; }
+[data-mp-font='lexend'] .markdown h1,
+[data-mp-font='hyperlegible'] .markdown h1,
+[data-mp-font='lexend'] .mp-display,
+[data-mp-font='hyperlegible'] .mp-display { font-family: var(--mp-font-body); font-weight: 650; letter-spacing: -0.02em; }
+
+/* Underline every link, including navigation */
+[data-mp-links='underline'] a:not(.button):not(.navbar-app-link):not(.card) { text-decoration: underline !important; text-underline-offset: 0.2em; }
+
+/* Hide tips and extras: keeps steps, warnings and dangers */
+[data-mp-extras='hide'] .theme-admonition-tip,
+[data-mp-extras='hide'] .theme-admonition-note,
+[data-mp-extras='hide'] .theme-admonition-info,
+[data-mp-extras='hide'] .mp-extra,
+[data-mp-extras='hide'] .mp-step-tip { display: none !important; }
+
+/* Reduce motion (on top of the OS setting) */
+[data-mp-motion='reduce'] *,
+[data-mp-motion='reduce'] *::before,
+[data-mp-motion='reduce'] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Reading ruler: a band that follows the pointer or the focused line */
+.mp-ruler {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: calc(2.2em * var(--mp-read-scale));
+  pointer-events: none;
+  z-index: 50;
+  background: color-mix(in srgb, var(--mp-accent) 9%, transparent);
+  border-block: 1px solid color-mix(in srgb, var(--mp-accent) 35%, transparent);
+  transform: translateY(-50%);
+}
+[data-mp-contrast='high'] .mp-ruler { background: color-mix(in srgb, #ffd400 30%, transparent); border-color: #000; }

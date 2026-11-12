@@ -63,6 +63,8 @@ sent the email:
 - If nothing matches, the rule falls back to its fixed channel (or skips the
   forward) — the email itself is never dropped.
 
+→ Step by step: **[Route email into ClickUp Chat](./clickup-routing.md)**
+
 ### Connecting ClickUp
 
 1. Go to **Settings → Integrations → ClickUp**.
