@@ -9,6 +9,11 @@ description: Save reusable replies — canned quick replies, AI-powered template
 Stop retyping the same answers. MailPrism gives you two kinds of saved reply, plus
 **variables** that personalize them automatically:
 
+<Screenshot
+  src="/img/screens/productivity/templates.webp"
+  alt="Settings → Email Templates: quick replies with shortcuts, email signatures, and AI templates"
+/>
+
 - **Quick replies** — fixed, canned text you reuse word-for-word.
 - **AI templates** — a prompt that generates a tailored reply on the spot.
 

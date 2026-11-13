@@ -10,6 +10,12 @@ The dashboard is your home base after signing in. It answers one question at a
 glance: **what's happening with my email right now?** This page tours the dashboard
 widgets, then points you to the main areas of the app.
 
+<Screenshot
+  src="/img/screens/getting-started/dashboard.webp"
+  srcDark="/img/screens/getting-started/dashboard-dark.webp"
+  alt="The MailPrism dashboard: the left sidebar, a Welcome back greeting, and a Needs you list of emails waiting on your reply"
+/>
+
 ## At a glance
 
 The top of the dashboard shows four stat cards:
@@ -55,8 +61,10 @@ The dashboard is one stop. Here's the rest of the map:
 
 | Area | What it's for |
 |------|----------------|
-| **Inbox** | Your mail — read, reply, label, archive, and act on messages. See **[Inbox overview](../inbox/overview.md)**. |
-| **Replies** | Conversations grouped by what they need from you — *Needs Action* and *Awaiting Reply*. See **[Response tracking](../tracking/overview.md)**. |
+| **Inbox** | Your mail, sorted by what needs you. Read, reply, set aside, mark done, and clear bundles of bulk mail. See **[Inbox overview](../inbox/overview.md)**. |
+| **Replies** | The inbox narrowed to conversations that need you or where you're waiting on them. See **[Response tracking](../tracking/overview.md)**. |
+| **Later** | Mail you set aside, with your reason and when it comes back. |
+| **New senders** | First emails from people you haven't decided about. Let them in or screen them out. |
 | **Rules** | Build, test, and manage your automations. See **[How rules work](../rules/overview.md)**. |
 | **Analytics** | What your automations have done, over time. See **[Analytics](../analytics.md)**. |
 | **Settings** | Connect accounts, tune AI, set scheduling, and more. See **[Connecting Gmail](./connecting-gmail.md)** and **[Preferences](../account/preferences.md)**. |

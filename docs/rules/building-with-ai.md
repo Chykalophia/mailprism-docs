@@ -26,6 +26,11 @@ on in **Settings → Privacy → AI Data Processing**.
 Go to **Rules → Create Rule**. The page opens with the drafter; the toggle at the top
 switches between **Describe it** (the drafter) and **Rule builder**.
 
+<Screenshot
+  src="/img/screens/rules/drafter.webp"
+  alt="The AI Rule Drafter dialog with example prompts and a box to describe what you want to automate"
+/>
+
 The drafter is a short conversation. You type what you want; it replies with a
 **rule draft** you can read, refine, and turn into a rule.
 

@@ -10,6 +10,11 @@ When you open an email in the [reading view](./reading-email.md), an **action to
 sits above the message. It holds the most common moves; anything that doesn't fit goes
 into the **⋯ overflow menu** at the end.
 
+<Screenshot
+  src="/img/screens/inbox/more-menu.webp"
+  alt="An open email with the More menu expanded: Delete, Mark Read, Star, Unmark Important, Open in Gmail, Email Details and Thread Details"
+/>
+
 :::tip Your toolbar, your way
 The toolbar is fully configurable. Choose which actions are buttons, which live in the
 overflow menu, their order, and whether each shows an icon, text, or both — under

@@ -52,6 +52,11 @@ time. You can review this history from the **Classification Feedback** card in
 **Settings → Privacy** (it opens `/settings/privacy/ai-corrections`), where each entry
 is tracked as:
 
+<Screenshot
+  src="/img/screens/ai/corrections.webp"
+  alt="Classification Feedback: totals for feedback, agreed, corrections and AI learned, and the feedback history"
+/>
+
 - **Agreed** — you confirmed the AI got it right.
 - **Corrections** — you changed the AI's result.
 - **AI Learned** — feedback the AI has since incorporated.

@@ -19,6 +19,11 @@ button. Open the **Unsubscribe** page from your dashboard navigation.
 
 At the top, a row of stats summarizes your subscriptions:
 
+<Screenshot
+  src="/img/screens/inbox/unsubscribe.webp"
+  alt="The Bulk Unsubscribe Manager: counts of active senders, domains, unsubscribed and emails blocked, and a list of senders grouped by brand"
+/>
+
 | Stat | What it counts |
 |------|----------------|
 | **Active Senders** | Unique senders detected in your mail |
@@ -70,6 +75,11 @@ fully take effect on the sender's side.
 
 Changed your mind? Every unsubscribe waits **5 seconds** before it's actually carried
 out, and the **History** tab keeps a record you can act on.
+
+<Screenshot
+  src="/img/screens/inbox/unsubscribe-history.webp"
+  alt="The History tab of the Unsubscribe page, listing recent unsubscribes with their status and an Undo button on a pending one"
+/>
 
 - Each entry shows the sender, the **method** used, and a status —
   <span class="mp-pill mp-pill--amber">pending</span>,

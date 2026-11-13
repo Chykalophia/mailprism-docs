@@ -9,6 +9,11 @@ description: Back up your rules to a JSON file and import them again from the Ru
 Your rules are portable. You can **export** them to a JSON file as a backup or to share
 a setup, and **import** a file to bring rules back in.
 
+<Screenshot
+  src="/img/screens/rules/hub-more-menu.webp"
+  alt="The More menu on the Rules page, with import and export options"
+/>
+
 Both live in the **More** menu on the **Rules** page.
 
 ## Export your rules

@@ -34,6 +34,11 @@ generating a reply and **is not stored**.
 4. Click **Connect Calendar** and grant **read-only** calendar access in the Google
    prompt.
 
+<Screenshot
+  src="/img/screens/integrations/calendar.webp"
+  alt="Settings → Calendar before connecting, with a Connect Calendar button"
+/>
+
 Once connected, the page shows a **Connected** badge and your calendars appear below.
 
 :::note Granting calendar access

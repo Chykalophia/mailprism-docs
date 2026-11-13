@@ -10,6 +10,11 @@ Decide how and when MailPrism updates you — in the app, by email digest, or bo
 Everything lives under **Settings → Notifications**. Use **Save Changes** to
 apply your edits.
 
+<Screenshot
+  src="/img/screens/notifications/settings.webp"
+  alt="Settings → Notifications: In-App Notifications, Email Digest and Category Preferences"
+/>
+
 ---
 
 ## In-app notifications
@@ -51,6 +56,11 @@ arrive.
 
 Open **Category Preferences → Show advanced settings** to fine-tune notifications
 per category. For each category you can independently toggle:
+
+<Screenshot
+  src="/img/screens/notifications/settings-categories.webp"
+  alt="Category Preferences expanded, with In-app and Email switches for each category"
+/>
 
 - <span class="mp-pill mp-pill--blue">In-app</span> — whether it appears in the
   in-product feed.

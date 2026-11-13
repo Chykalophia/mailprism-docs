@@ -1,108 +1,243 @@
 ---
 sidebar_position: 1
 title: Inbox Overview
-description: Read and work through your mail inside MailPrism — the email list, conversation threads, views, account filter, search, and pagination.
+description: The unified inbox — views, splits, row states, sections, bundles, Later, Done and the Details drawer.
 ---
 
 # Inbox Overview
 
-MailPrism isn't only a rules engine — you can read and clear your mail right inside
-it, with your automations and AI signals close at hand. Click **Inbox** in the sidebar to get
-started.
+The inbox is built to answer one question first: **what needs you?** Every row says
+whether it needs you, whether you're waiting on someone, or whether it's just for
+your information. Bulk mail folds into bundles, so you can clear all of it in one
+click. Click **Inbox** in the sidebar to get started.
 
-## The two-panel layout
+<Screenshot
+  src="/img/screens/inbox/overview.webp"
+  srcDark="/img/screens/inbox/overview-dark.webp"
+  alt="The unified inbox: views in the sidebar, the list with Needs you and Waiting on them chips, a bundle row, and the open email on the right"
+/>
 
-The inbox is a **split view**:
+## The layout
 
-- **Left** — your email list, grouped into conversation threads.
-- **Right** — the email you've selected, with its full content and an action toolbar.
+- **Sidebar**: the four inbox views (Inbox, Replies, Later, New senders).
+- **List**: your conversations, with view pills, split tabs and search above them.
+- **Reader**: the email you selected. A summary strip at the top shows who it's from,
+  its state, and the **Later**, **Done**, **Delete** and **Details** buttons.
 
-On narrow screens the panels stack: the list shows first, and selecting an email
-slides the reading view in over it (with a **Back to list** control).
+On a phone the list fills the screen and opening an email slides the reader over it.
+A thumb bar at the bottom holds the main actions, and you can swipe a row: swipe
+right to set it aside until tomorrow morning, swipe left to mark it Done.
 
-→ Reading view details: **[Reading an email](./reading-email.md)** ·
-per-email actions: **[Email actions](./email-actions.md)**
-
-## What each list row shows
-
-Every row represents a **conversation thread**, showing the latest message plus:
-
-| Element | What it tells you |
-|---------|-------------------|
-| **Sender** | Who the latest message is from |
-| **Subject + preview** | The subject line and a short snippet |
-| **Date** | When the latest message arrived |
-| **Unread** | Bolder styling marks unread threads |
-| **Star** | Whether you've starred it |
-| **Labels** | User labels on the thread (system labels are hidden by default) |
-| **Thread count** | How many messages are in the conversation |
-| **Attachment** | A paperclip when the thread has files |
-
-:::tip Show system labels
-By default the list hides Gmail's system labels (`INBOX`, `UNREAD`, etc.) to stay
-readable. You can opt to show them under **Settings → Appearance → Labels**.
-:::
-
-## Conversation threading
-
-Email is really a series of *conversations*. MailPrism groups messages that share a
-thread into one row, so you follow the whole back-and-forth in one place — and so
-[response tracking](../tracking/overview.md) can reason about who replied last and
-what's still open. Expand a thread to see its individual messages.
+<Screenshot
+  src="/img/screens/inbox/phone.webp"
+  alt="The inbox on a phone"
+  width={390}
+/>
 
 ## Views
 
-Tabs at the top of the list switch between Gmail's standard mailboxes:
+The four views sit in the sidebar and as pills above the list.
 
-<span class="mp-pill mp-pill--violet">Inbox</span>
-<span class="mp-pill mp-pill--gray">Unread</span>
-<span class="mp-pill mp-pill--gray">Starred</span>
-<span class="mp-pill mp-pill--gray">Sent</span>
-<span class="mp-pill mp-pill--gray">All Mail</span>
-<span class="mp-pill mp-pill--gray">Spam</span>
-<span class="mp-pill mp-pill--gray">Trash</span>
+| View | What it shows |
+|------|---------------|
+| **Inbox** | Everything that's still open |
+| **Replies** | Conversations that need you, and ones where you're waiting on them |
+| **Later** | Mail you set aside, with the reason you gave and when it comes back |
+| **New senders** | First emails from people you haven't decided about yet |
 
-The **Inbox** tab shows an unread count badge. The **Unread** view is the quickest
-way to filter down to just what you haven't read yet.
+<Screenshot
+  src="/img/screens/inbox/view-replies.webp"
+  srcDark="/img/screens/inbox/view-replies-dark.webp"
+  alt="The Replies view: only conversations that need you or are waiting on a reply"
+/>
 
-## Search
+**Replies** is the same list, narrowed to [tracked conversations](../tracking/overview.md).
+The full Replies page, with its analytics and holds, is still there: open it from the
+dashboard's reply cards, or press **G** then **R**.
 
-The search box filters the current view by free text — sender, subject, or message
-content. Clear it with the **×** to return to the full list.
+**Later** lists each set-aside email with its reason and the time it comes back.
 
-## Filter by account
+<Screenshot
+  src="/img/screens/inbox/view-later.webp"
+  alt="The Later view: three emails, each with its reason and when it comes back"
+/>
 
-If you've connected **more than one Gmail account**, an account selector appears above
-the list. Choose **All accounts** to see everything together, or pick a single account
-to focus. (With one account connected, the selector is hidden.) Your choice is
-remembered for the session.
+**New senders** works like a screener. Each row says it's the first email from that
+address and offers **Let in** or **Screen out**. Mail from someone you let in always
+reaches your inbox. Mail from someone you screen out skips it.
 
-→ Connecting more accounts: **[Connecting Gmail](../getting-started/connecting-gmail.md)**
+<Screenshot
+  src="/img/screens/inbox/view-new-senders.webp"
+  alt="The New senders view with Let in and Screen out buttons on each row"
+/>
+
+## Splits
+
+Tabs under the view pills narrow the list by what the mail is for. They use Gmail's
+own categories, so they match what Gmail shows.
+
+| Split | What's in it |
+|-------|--------------|
+| **All** | Everything in the current view |
+| **People** | Gmail's Primary category: mail from people |
+| **Updates** | Receipts, notifications, social and forum mail |
+| **Newsletters** | Gmail's Promotions category |
+
+<Screenshot
+  src="/img/screens/inbox/split-newsletters.webp"
+  alt="The Newsletters split, with a newsletter bundle and a cold email"
+/>
+
+## What a row shows
+
+Every row is one **conversation**: the sender, subject, how long ago it arrived, a
+message count when there's more than one, and colored dots for its labels. A blue
+dot before the name means unread.
+
+Rows that need something carry a **state chip**:
+
+| Chip | Meaning |
+|------|---------|
+| <span class="mp-pill mp-pill--red">Needs you</span> | Someone is waiting on you: a question, a request, a decision |
+| <span class="mp-pill mp-pill--amber">Waiting on them</span> | You replied and are waiting for their answer |
+| <span class="mp-pill mp-pill--violet">Later</span> | Set aside, coming back at a time you chose |
+| <span class="mp-pill mp-pill--green">Done</span> | Handled |
+| <span class="mp-pill mp-pill--blue">New sender</span> | The first email from this address |
+
+Mail with no chip is **FYI**: nothing for you to do.
+
+A **Waiting on them** row also has a small ring on the right. It fills up as the date
+you expect a reply gets closer, turns amber on the day, and turns red once it's late.
+The line under the subject says how long it's been and when you expected an answer.
+
+When you hover a row, quick buttons appear on its right: **Reply** (R), **Later** (L),
+**Done** (E), **Track** (T) or **Nudge** (N) where they fit, and **Delete** (#).
+
+### Why is this here?
+
+Click a state chip to see why the email got that state, for example "Priya asked you a
+direct question". If it's wrong, choose what it should be. Tick **Always do this for
+mail from** the sender's domain to make that a rule.
+
+<Screenshot
+  src="/img/screens/inbox/why-chip.webp"
+  alt="The Why popover on a Needs you row, with the reason and the It should be choices"
+/>
+
+## Sections and grouping
+
+By default the list is split into **sections**:
+
+1. **Needs you or waiting**: anything with a Needs you or Waiting on them chip.
+2. **New for you**: unread mail.
+3. **Previously seen**: everything else.
+
+The **View** button above the list turns sections on or off, groups the list by day
+(Today, Yesterday, This week, Earlier) instead, and turns bundles on or off. Row density
+lives in **Settings › Appearance**.
+
+<Screenshot
+  src="/img/screens/inbox/view-options.webp"
+  alt="The View menu with Sections, Group by day and Bundle bulk senders"
+/>
+
+## Bundles
+
+When two or more FYI emails share a type, they fold into one **bundle** row:
+**Newsletters & promotions**, **Updates**, **Social** or **Forums & lists**. Click the
+bundle to open it and see what's inside.
+
+<Screenshot
+  src="/img/screens/inbox/bundle-open.webp"
+  alt="An open Updates bundle showing its three emails"
+/>
+
+**Done all** clears the whole bundle in one click. By default that archives the emails
+and marks them read. The **▾** next to it lets you pick something else for this bundle:
+
+- Archive and mark read (the default)
+- Mark read, keep in inbox
+- Archive only (keeps them unread)
+- Apply a label and archive
+- Run a rule
+
+Tick **Always do this for** the bundle to remember your choice.
+
+<Screenshot
+  src="/img/screens/inbox/bundle-menu.webp"
+  alt="The Done all menu on a bundle, with its five choices"
+/>
+
+## Later, Done and Delete
+
+- **Later** sets an email aside: **Later today**, **In 3 hours**, **Tomorrow morning**,
+  **This weekend**, **Next week**, or a date and time you pick. You can add a reason
+  ("Waiting on the contract") so you remember why when it comes back. It leaves the
+  inbox and shows up in the **Later** view until then.
+- **Done** archives the conversation, marks it read, and marks it handled if it was
+  being tracked.
+- **Delete** moves it to the trash.
+
+<Screenshot
+  src="/img/screens/inbox/later-menu.webp"
+  alt="The Later menu with a reason field and the time choices"
+/>
+
+After any of these, an **Undo** bar appears at the bottom of the screen for a few
+seconds. Click **Undo** or press **Z** to take it back. The bar pauses while your mouse
+is over it.
+
+### Rule suggestions
+
+If you clear three emails from the same sender in a day, MailPrism offers to make
+it automatic: **Make the rule** archives and marks their mail read from then on. Choose
+**Not now** to dismiss it, or **Never for this sender** to stop being asked.
+
+## The Details drawer
+
+**Details** in the summary strip opens a drawer about the sender and the conversation:
+how often you've written to each other, when you first and last talked, your
+relationship, the thread's state and why, and when you expect a reply. Pin it to keep
+it open beside every email you read.
+
+<Screenshot
+  src="/img/screens/inbox/details-drawer.webp"
+  alt="The Details drawer with the sender's history and the thread's state"
+/>
+
+## Expecting a reply
+
+When you reply, a bar under the composer asks **Expect a reply by**: no, or one of a few
+dates. Pick one and the conversation moves to **Waiting on them** as soon as you send,
+with the ring counting down to that date.
+
+## Settings › Inbox
+
+**Settings › Inbox** holds the same grouping switches as the View menu, the default
+for **Done all**, the label or rule that Done all uses, and any per-bundle choices
+you've saved with **Always do this**.
+
+<Screenshot
+  src="/img/screens/inbox/settings-inbox.webp"
+  alt="Settings › Inbox: grouping, the Done all default, and per-bundle choices"
+/>
+
+## Search, accounts and pages
+
+- **Search** filters the current view by sender, subject or text. Clear it with **×**.
+- With **more than one Gmail account** connected, an account picker appears above the
+  list. Choose **All accounts** or a single account.
+- When there's more than one page, **Previous / Next** and **Page X of Y** appear at the
+  bottom.
+- New mail and changes appear on their own. **Refresh** forces an update.
 
 ## Reading and unread status
 
-By default, opening an email **doesn't** mark it read. To have MailPrism mark emails
-read after you've viewed them for a few seconds, turn on **Auto-Mark as Read** in
-**Settings → Privacy → Reading Behavior** — see
+Opening an email doesn't mark it read unless you turn on **Auto-Mark as Read** in
+**Settings › Privacy › Reading Behavior**. See
 **[Privacy & Data](../account/privacy-and-data.md#reading-behavior)**.
 
-To set status manually, use **Mark read / unread** in the email toolbar — see
-**[Email actions](./email-actions.md)**.
-
-## Pagination
-
-When a view has more results than fit on one page, **Previous / Next** controls and a
-**Page X of Y** indicator appear at the bottom of the list. If new mail arrives on
-page 1 while you're further back, a banner offers to jump you to the top.
-
-:::note Live updates
-A small status dot by the title shows the live-update connection. When it's green, new
-mail and changes appear in the list automatically — no manual refresh needed. There's
-also a **Refresh** button if you want to force an update.
-:::
-
-## Working through mail in bulk
-
-Select multiple threads with their checkboxes to act on them all at once —
-**Archive**, **Mark Read**, **Mark Unread**, or **Delete**. A bulk action bar appears
-above the list whenever one or more threads are selected.
+→ More: **[Reading an email](./reading-email.md)** ·
+**[Email actions](./email-actions.md)** ·
+**[Bulk actions](./bulk-actions.md)** ·
+**[Keyboard shortcuts](./keyboard-shortcuts.md)**

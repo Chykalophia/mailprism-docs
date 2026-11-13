@@ -124,6 +124,11 @@ If you reuse the same timing again and again, save it as a **flow template** und
 Under **Settings → Nudge Flows → Global Settings** you control how nudges behave across the
 whole account:
 
+<Screenshot
+  src="/img/screens/tracking/nudges.webp"
+  alt="Settings → Nudge Flows: active nudges, follow-ups sent this week, global settings, and active nudges with progress"
+/>
+
 | Setting | What it does |
 |---------|--------------|
 | **Enable nudge flows** | Master switch for automatic follow-ups |

@@ -98,6 +98,11 @@ mail over time. A quick rating when something looks wrong pays off later.
 For a deeper look at one email, choose **Email Details** from the toolbar (add it under
 **[Toolbar](./toolbar.md)** if you don't see it). It opens a full page with tabs:
 
+<Screenshot
+  src="/img/screens/inbox/email-detail-page.webp"
+  alt="The Email Details page with tabs for Overview, Sender Analytics, Domain Insights, Rules Actions and Test Rules"
+/>
+
 | Tab | What's in it |
 |-----|--------------|
 | **Overview** | The AI classification (or a button to analyze the email), the message, its details, Gmail labels and categories, and an activity log for the email |

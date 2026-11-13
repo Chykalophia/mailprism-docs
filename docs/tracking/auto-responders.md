@@ -25,6 +25,11 @@ you won't send a "we're closed for the evening" reply while you're actually on h
 Turn this on when you're away. It replies to incoming mail between your start and end
 dates, then goes quiet again.
 
+<Screenshot
+  src="/img/screens/tracking/auto-responder.webp"
+  alt="Settings → Auto-Responder with the vacation responder on, start and end dates, subject line and response message"
+/>
+
 | Setting | What it controls |
 |---------|------------------|
 | **Start date / End date** | The window when the responder is active |

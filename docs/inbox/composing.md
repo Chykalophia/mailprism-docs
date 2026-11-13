@@ -20,6 +20,11 @@ email you're reading. Either way, the **compose panel** opens with everything yo
 | **Message body** | Where you write. Type plain text, and use **/** for templates. |
 | **Original message** | On a reply or forward, click **Show original message** to view the quoted thread. |
 
+<Screenshot
+  src="/img/screens/inbox/compose.webp"
+  alt="The compose panel open over the inbox, with From, To, Subject, the message area, Send, Templates and Discard"
+/>
+
 The panel header shows the mode — **Reply**, **Reply All**, **Forward**, or **New
 Message** — so you always know what you're sending.
 

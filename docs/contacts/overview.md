@@ -22,6 +22,11 @@ which is exactly what MailPrism needs to spot cold outreach and personalize auto
 
 Open **Contacts** to see everyone MailPrism knows about. Each row shows:
 
+<Screenshot
+  src="/img/screens/contacts/list.webp"
+  alt="The Contacts list: totals for contacts, companies, trusted and auto-detected, a search box with filters, and contacts with email counts and last contact time"
+/>
+
 - **Name** — the contact's display name (falls back to their email address).
 - A <span class="mp-pill mp-pill--blue">Domain</span> badge if the entry matches a whole
   domain rather than one address.
@@ -47,6 +52,11 @@ Use **Clear** to reset every filter at once.
 ## Contact detail
 
 Click any contact to open their detail page. It shows the full record:
+
+<Screenshot
+  src="/img/screens/contacts/detail.webp"
+  alt="A contact's detail page"
+/>
 
 | Field | What it means |
 |-------|---------------|
@@ -81,6 +91,11 @@ The **AI Fix** button appears only on Business-tier workspaces, and only when
 
 Choose **Add Contact** and fill in the form:
 
+<Screenshot
+  src="/img/screens/contacts/new.webp"
+  alt="The Add Contact form: type, email address, first and last name, display name, status and category"
+/>
+
 1. **Type** — an **Email Address** (one person) or a **Domain** (everyone at, say,
    `example.com`).
 2. **Email / Domain** — the value to match.
@@ -99,6 +114,11 @@ from the email or domain you entered. Pick it or override it — you're always i
 
 Open **Import Contacts** to build your list from Gmail. MailPrism scans your **Sent**
 folder and creates a contact for each recipient that clears your thresholds.
+
+<Screenshot
+  src="/img/screens/contacts/import.webp"
+  alt="Import Contacts: Gmail Sync with lookback period and minimum emails, sync history, and manual import"
+/>
 
 | Setting | What it controls |
 |---------|------------------|

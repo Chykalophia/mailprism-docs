@@ -9,6 +9,11 @@ description: Customize the email toolbar — choose which actions show, their or
 The row of buttons above an open email is fully yours to arrange. Put the actions you
 use most front and centre, tuck the rest into a menu, and leave out what you never touch.
 
+<Screenshot
+  src="/img/screens/inbox/toolbar-settings.webp"
+  alt="Settings → Toolbar: available actions with Primary and Menu placement on the left, and a live preview of the toolbar and overflow menu on the right"
+/>
+
 Customize it in **Settings → Toolbar**.
 
 ## Primary vs. overflow

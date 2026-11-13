@@ -26,6 +26,12 @@ dialog.
   **[Quick Actions](./quick-actions.md#turn-shortcuts-on-or-off)**.
 - Modifiers are written with `+`, e.g. `Shift+I`.
 
+<Screenshot
+  src="/img/screens/inbox/command-palette.webp"
+  alt="The command palette open, with a search box and Navigation commands such as Go to Inbox, Go to Rules and Go to Settings"
+  caption="Press Ctrl+K (Cmd+K on a Mac) to open the command palette."
+/>
+
 ## Default quick-action shortcuts
 
 These ship enabled for every account. You can rename them, change the key, or disable
@@ -52,10 +58,35 @@ Reach for **Archive** (`E`) when you just want it out of your inbox.
 | `?` | Main app and Settings | Show the keyboard shortcuts dialog |
 | `Esc` | Anywhere | Close the open dialog or palette |
 
+<Screenshot
+  src="/img/screens/inbox/keyboard-shortcuts.webp"
+  alt="The Keyboard shortcuts dialog listing shortcuts for the command palette, inbox and replies, with the single-key shortcuts switch"
+/>
+
 The command palette isn't a Quick Action, and the Quick Actions switch doesn't turn it
 off. It takes you to pages and settings — it doesn't run email actions like archive.
 
-## Inbox and Replies
+## Moving through the inbox
+
+These work in the inbox whenever you aren't typing. If one of your Quick Actions uses
+the same key, the Quick Action wins.
+
+| Shortcut | Action |
+|----------|--------|
+| `J` / `K` | Next / previous conversation |
+| `R` | Reply |
+| `L` | Later: set it aside |
+| `E` | Done: archive it and mark it read |
+| `#` | Delete |
+| `T` | Track it for a reply |
+| `N` | Nudge: send a follow-up when you're waiting on them |
+| `Z` | Undo the last Later, Done or Delete while the Undo bar shows |
+| `G` then `R` | Open the full Replies page |
+
+They follow the **single-key shortcuts** switch in the shortcuts dialog, so turning that
+off stops them too.
+
+## Search and selection
 
 | Shortcut | Action |
 |----------|--------|

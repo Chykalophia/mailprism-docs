@@ -18,6 +18,11 @@ can act on the whole selection at once.
   to clear the selection.
 - The bar shows a running count — for example, **5 selected**.
 
+<Screenshot
+  src="/img/screens/inbox/bulk-select.webp"
+  alt="Three emails selected in the inbox, with the bulk action bar showing 3 selected, Archive, Mark Read and Delete"
+/>
+
 The selection only ever covers the emails *in view*. Switch tabs, change the account
 filter, or move to another page and the selection clears to whatever is now on screen,
 so you never accidentally act on emails you can't see.

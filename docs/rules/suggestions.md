@@ -10,6 +10,11 @@ You don't have to think up every rule yourself. **AI Suggestions** scans your re
 inbox, finds patterns in how you handle mail, and proposes ready-to-use rules. You
 stay in control — each suggestion is yours to **accept**, **dismiss**, or **mute**.
 
+<Screenshot
+  src="/img/screens/rules/suggestions.webp"
+  alt="AI Suggestions: pending, accepted and dismissed counts, filter tabs, and suggestion cards with Accept, Dismiss and Mute"
+/>
+
 Open it from **Suggestions** in the sidebar.
 
 ## How it works

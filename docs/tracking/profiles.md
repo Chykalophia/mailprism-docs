@@ -10,6 +10,11 @@ Most people never need to touch this — the defaults handle a normal inbox. The
 **Tracking Profile** settings page is where you go when MailPrism is tracking things it
 shouldn't (or skipping things it should), and you want to tune that per sender.
 
+<Screenshot
+  src="/img/screens/tracking/profile.webp"
+  alt="Settings → Tracking Profile: category chips for automated email that still needs you, and the Sender Rules list"
+/>
+
 You'll find it under **Settings → Tracking Profile**. Its job is simple: *mute the
 noise, keep the signal*.
 

@@ -17,6 +17,11 @@ Go to **Rules → Create Rule**, then choose **Rule builder**. (Create Rule open
 **[AI drafter](../rules/building-with-ai.md)** — handy later, but this walkthrough builds
 the rule by hand.) You'll see two areas:
 
+<Screenshot
+  src="/img/screens/rules/builder.webp"
+  alt="The rule builder: rule name, conditions and actions"
+/>
+
 - **Conditions** — *when* should this rule run?
 - **Actions** — *what* should happen when it does?
 

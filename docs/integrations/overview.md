@@ -12,7 +12,8 @@ lists every integration, what it does, and whether it's available today.
 :::tip Available vs. Limited vs. Coming soon
 Integrations marked <span class="mp-pill mp-pill--green">Available</span> are fully
 ready. <span class="mp-pill mp-pill--amber">Limited</span> means you can connect and
-use it yourself today, but it's in early access and may have rough edges. The ones marked
+use it yourself today, but it's in early access and may have rough edges. <span class="mp-pill mp-pill--amber">Limited rollout</span> means it's
+being switched on account by account, so you may not have it yet. The ones marked
 <span class="mp-pill mp-pill--gray">Coming soon</span> are not ready yet — there's
 nothing to set up.
 :::
@@ -24,10 +25,10 @@ nothing to set up.
 | **Google Calendar** | Lets AI check your free/busy time and suggest meeting slots when you reply | <span class="mp-pill mp-pill--green">Available</span> |
 | **OpenAI** | Use your own OpenAI key for AI features (Bring Your Own Key) | <span class="mp-pill mp-pill--green">Available</span> |
 | **Anthropic** (Claude) | Use your own Anthropic key for AI features (Bring Your Own Key) | <span class="mp-pill mp-pill--green">Available</span> |
-| **Slack** | Send notifications to Slack channels | <span class="mp-pill mp-pill--gray">Coming soon</span> |
+| **Slack**, **Discord**, **Microsoft Teams**, **Google Chat** | Post matching emails to a channel | <span class="mp-pill mp-pill--amber">Limited rollout</span> |
+| **Webhooks** | Send matching emails as signed JSON to your own endpoint | <span class="mp-pill mp-pill--amber">Limited rollout</span> |
+| **Zapier** (also Make, n8n) | Pass matching emails to thousands of other apps through a webhook | <span class="mp-pill mp-pill--amber">Limited rollout</span> |
 | **Notion** | Save emails and data to Notion databases | <span class="mp-pill mp-pill--gray">Coming soon</span> |
-| **Zapier** | Connect MailPrism to thousands of other apps | <span class="mp-pill mp-pill--gray">Coming soon</span> |
-| **Webhooks** | Send email events to your own endpoints | <span class="mp-pill mp-pill--gray">Coming soon</span> |
 | **ClickUp** | Forward emails into ClickUp Chat channels, routed by sender | <span class="mp-pill mp-pill--amber">Limited</span> |
 
 ## Available now
@@ -77,15 +78,19 @@ ClickUp is in early access, so you may see rough edges. If something doesn't wor
 email **[hello@mailprism.ai](mailto:hello@mailprism.ai)**.
 :::
 
+### Chat apps, webhooks and Zapier
+
+Slack, Discord, Microsoft Teams, Google Chat, webhooks and Zapier all work the same
+way: you add a **destination** (a channel's incoming-webhook URL, or your own
+endpoint), then point a rule at it. They're being switched on gradually: until your
+account has them, each page says **In limited rollout**.
+
+→ **[What MailPrism posts, and how to set one up](../notifications/chat-and-webhooks.md)**
+
 ## Coming soon
 
-These integrations aren't available yet. Each one shows a **Coming Soon** notice in
-the app, and there's nothing to configure until they ship.
-
-- **Slack** — receive email and rule notifications in your team's channels.
-- **Notion** — save emails and email data into Notion databases.
-- **Zapier** — connect MailPrism to thousands of other apps and automate workflows.
-- **Webhooks** — receive email and rule events at your own endpoints.
+**Notion** isn't available yet. Its page shows a **Coming Soon** notice, and there's
+nothing to configure until it ships.
 
 We'll announce each one as it becomes available — keep an eye on your email or check
 the **Integrations** page in the app.
@@ -96,6 +101,13 @@ the **Integrations** page in the app.
 - **ClickUp** connections live under **Settings → Integrations → ClickUp**; routing
   lives under **Settings → ClickUp Routing**.
 - **OpenAI** and **Anthropic** keys live under **Settings → Integrations**.
+- **Slack**, **Discord**, **Microsoft Teams**, **Google Chat**, **Webhooks** and
+  **Zapier** each have a page under **Settings → Integrations**.
+
+<Screenshot
+  src="/img/screens/integrations/overview.webp"
+  alt="Settings → Integrations listing OpenAI, Anthropic, ClickUp, Slack, Discord, Microsoft Teams, Google Chat, Webhooks, Zapier and Notion with their status"
+/>
 
 :::note Your keys stay private
 Every API key and access token MailPrism stores is **encrypted at rest** and never

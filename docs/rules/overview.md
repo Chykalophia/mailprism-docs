@@ -154,6 +154,12 @@ Narrowing it skips work on messages the rule doesn't care about.
 
 The **Rules** page has four tabs:
 
+<Screenshot
+  src="/img/screens/rules/hub.webp"
+  srcDark="/img/screens/rules/hub-dark.webp"
+  alt="The Rules page: tabs for Active, Built-in, Muted and History, and rule cards showing conditions, actions, run counts and an on/off switch"
+/>
+
 | Tab | What's in it |
 |-----|--------------|
 | **Active** | The rules you created. **Enable or disable** a rule with its toggle, or **edit** or **delete** it. |

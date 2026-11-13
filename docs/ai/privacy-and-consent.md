@@ -40,6 +40,11 @@ Consent starts **on**: the sign-up form asks you to agree to AI processing, and 
 can't create an account without ticking that box. After that, there are two places
 consent appears:
 
+<Screenshot
+  src="/img/screens/ai/privacy.webp"
+  alt="Settings → Privacy: pattern learning switches and the AI Data Processing Consent switch"
+/>
+
 1. **Settings → Privacy** — the **AI Data Processing** card has a toggle
    labeled *AI Data Processing Consent*. A badge shows whether it's
    <span class="mp-pill mp-pill--green">Active</span> or

@@ -1,0 +1,23 @@
+// Shared demo data for the "insights" group. All fictional.
+export const PEOPLE = [
+  ["Priya Raman", "priya@lumenhealth.io", "Lumen Health", "client"],
+  ["Marcus Bell", "marcus.bell@halcyonfreight.com", "Halcyon Freight", "client"],
+  ["Elena Vasquez", "elena@brightline-analytics.com", "Brightline Analytics", "client"],
+  ["Tom Okafor", "tom@cobaltandpine.co", "Cobalt & Pine", "partner"],
+  ["Hannah Lindqvist", "hannah@fernway.travel", "Fernway Travel", "client"],
+  ["David Chen", "dchen@meridianlegal.com", "Meridian Legal", "vendor"],
+  ["Sofia Marchetti", "sofia@tidewaterco.com", "Tidewater Co.", "prospect"],
+  ["Aaron Whitfield", "aaron@northwind.studio", "Northwind Studio", "team"],
+  ["Maya Kapoor", "maya@northwind.studio", "Northwind Studio", "team"],
+  ["Lucas Moreau", "lucas@atelier-moreau.fr", "Atelier Moreau", "partner"],
+  ["Grace Holloway", "grace@kestrelbank.com", "Kestrel Bank", "client"],
+  ["Ben Adeyemi", "ben@quarryhouse.io", "Quarry House", "prospect"],
+  ["Nora Fitzgerald", "nora@saltmarsh.co", "Saltmarsh Collective", "client"],
+  ["Ravi Desai", "ravi@ledgerlyhq.com", "Ledgerly", "vendor"],
+  ["Chloe Park", "chloe@orchardmedia.co", "Orchard Media", "partner"],
+  ["Jonas Berg", "jonas@polarisrobotics.com", "Polaris Robotics", "prospect"],
+  ["Isabel Ortega", "isabel@verdantlabs.org", "Verdant Labs", "client"],
+  ["Samuel Reyes", "sam@ironbridge.capital", "Ironbridge Capital", "investor"],
+  ["Olivia Grant", "olivia@pinecrestacct.com", "Pinecrest Accounting", "vendor"],
+  ["Kenji Watanabe", "kenji@harborline.design", "Harborline Design", "partner"],
+];

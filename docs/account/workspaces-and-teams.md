@@ -19,6 +19,11 @@ team one) and switch between them at any time.
 
 Under the **General** section you can give your workspace an identity:
 
+<Screenshot
+  src="/img/screens/account/workspace.webp"
+  alt="Settings → Workspace: name, icon and color, preview, and team members with their roles"
+/>
+
 - **Name** — what the workspace is called.
 - **Icon & color** — pick an icon and a color so the workspace is easy to spot
   in the switcher.
@@ -67,6 +72,11 @@ workspace there's nothing to switch between, so it's hidden.
 The **Team Members** section lists everyone in the workspace, each with a role
 badge. Roles control what a member can do:
 
+<Screenshot
+  src="/img/screens/account/workspace-roles.webp"
+  alt="Roles & Permissions: the Viewer, Editor, Admin and Owner built-in roles with permission counts, and custom roles"
+/>
+
 | Role | What they can do |
 |------|------------------|
 | <span class="mp-pill mp-pill--violet">Owner</span> | Full control, including billing and ownership. There is one owner. |
@@ -109,6 +119,11 @@ to someone can't be deleted.
 
 Use **Invite** (in the Team Members section) to open the full invitation page.
 You can invite people three ways:
+
+<Screenshot
+  src="/img/screens/account/workspace-invite.webp"
+  alt="Invite Team Members: a single invitation with email and role, and bulk invitation for up to 50 addresses"
+/>
 
 ### Single invitation
 

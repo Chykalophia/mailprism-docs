@@ -12,6 +12,11 @@ automated reports, bot reviews, FYI notifications. **Exemptions** (managed under
 MailPrism's response tracking how to treat that mail, so the **Needs Action** list stays
 meaningful.
 
+<Screenshot
+  src="/img/screens/tracking/profile.webp"
+  alt="The Tracking Profile page; sender rules are listed under Sender Rules, each with History, Edit, Retroactive and Delete links"
+/>
+
 MailPrism ships with **curated defaults** that handle most of the common noise. You only
 need exemptions when you want to tune behaviour for a specific sender.
 
