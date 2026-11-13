@@ -1,659 +1,423 @@
 /**
- * ============================================================================
- *  MailPrism Documentation — Design System
- *  "See your inbox in a new light"
- * ----------------------------------------------------------------------------
- *  Tokens mirror the MailPrism product (app/globals.css) so the docs feel like
- *  a natural extension of the app. Tuned for calm, high-legibility reading:
- *  generous line-height, soft (non-glare) backgrounds, strong hierarchy, and
- *  vibrant *accents* drawn from the prism spectrum — not vibrant everything.
- *  See DESIGN.md for the full style guide.
- * ============================================================================
+ * MailPrism docs: layout and theme overrides (2026-11 redesign).
+ *
+ * Direction: a clean SaaS help centre. White page, one indigo accent, serif
+ * page titles, and content placed in cards only where a card means something
+ * (In short, Before you start, steps, At a glance). No gradient text, glows or
+ * glass. Tokens live in tokens.css; reading options in reading.css.
  */
 
 /* ============================================================================
-   1. DESIGN TOKENS
+   1. INFIMA MAPPING
    ========================================================================== */
 :root {
-  /* --- Brand: Purple → Violet (the prism) ------------------------------- */
-  --mp-purple-50:  #f5f3ff;
-  --mp-purple-100: #ede9fe;
-  --mp-purple-200: #ddd6fe;
-  --mp-purple-300: #c4b5fd;
-  --mp-purple-400: #a78bfa;
-  --mp-purple-500: #667eea; /* primary */
-  --mp-purple-600: #5a67d8;
-  --mp-purple-700: #4c51bf;
-  --mp-purple-800: #434190;
-  --mp-purple-900: #3c366b;
-  --mp-violet-500: #764ba2; /* secondary */
-  --mp-violet-600: #6b4397;
+  --ifm-color-primary: var(--mp-accent);
+  --ifm-color-primary-dark: var(--mp-accent-hover);
+  --ifm-color-primary-darker: var(--mp-accent-hover);
+  --ifm-color-primary-darkest: var(--mp-accent-hover);
+  --ifm-color-primary-light: var(--mp-accent);
+  --ifm-color-primary-lighter: var(--mp-accent);
+  --ifm-color-primary-lightest: var(--mp-accent-soft);
 
-  --mp-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --mp-gradient-soft: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
-  --mp-gradient-aurora: linear-gradient(135deg, #3b82f6 0%, #a855f7 50%, #10b981 100%);
+  --ifm-background-color: var(--mp-bg);
+  --ifm-background-surface-color: var(--mp-bg);
+  --ifm-color-content: var(--mp-text);
+  --ifm-color-content-secondary: var(--mp-text-2);
+  --ifm-heading-color: var(--mp-text);
+  --ifm-color-emphasis-300: var(--mp-border);
+  --ifm-toc-border-color: var(--mp-border);
+  --ifm-table-border-color: var(--mp-border);
+  --ifm-hr-background-color: var(--mp-border);
 
-  /* --- The spectrum: vibrant accents (use sparingly, with meaning) ------- */
-  --mp-spectrum-violet: #8b5cf6;
-  --mp-spectrum-blue:   #3b82f6;
-  --mp-spectrum-cyan:   #06b6d4;
-  --mp-spectrum-green:  #10b981;
-  --mp-spectrum-yellow: #f59e0b;
-  --mp-spectrum-orange: #f97316;
-  --mp-spectrum-red:    #ef4444;
-
-  /* --- Semantic --------------------------------------------------------- */
-  --mp-success: #16a34a;
-  --mp-warning: #d97706;
-  --mp-danger:  #dc2626;
-  --mp-info:    #2563eb;
-
-  /* --- Neutrals: cool blue-gray (matches product) ----------------------- */
-  --mp-neutral-0:    #ffffff;
-  --mp-neutral-50:   #f8fafc;
-  --mp-neutral-100:  #f0f4f8;
-  --mp-neutral-200:  #d9e2ec;
-  --mp-neutral-300:  #bcccdc;
-  --mp-neutral-400:  #9fb3c8;
-  --mp-neutral-500:  #829ab1;
-  --mp-neutral-600:  #627d98;
-  --mp-neutral-700:  #486581;
-  --mp-neutral-800:  #334e68;
-  --mp-neutral-900:  #243b53;
-  --mp-neutral-1000: #102a43;
-
-  /* --- Radius / shadow / motion ----------------------------------------- */
-  --mp-radius-sm: 0.375rem;
-  --mp-radius:    0.625rem;
-  --mp-radius-md: 0.875rem;
-  --mp-radius-lg: 1.25rem;
-  --mp-radius-xl: 1.75rem;
-
-  --mp-shadow-sm: 0 1px 2px rgba(16, 42, 67, 0.06);
-  --mp-shadow:    0 2px 8px rgba(16, 42, 67, 0.06), 0 1px 2px rgba(16, 42, 67, 0.04);
-  --mp-shadow-md: 0 12px 28px -10px rgba(16, 42, 67, 0.18);
-  --mp-shadow-lg: 0 24px 48px -16px rgba(16, 42, 67, 0.22);
-  --mp-shadow-brand: 0 14px 34px -12px rgba(102, 126, 234, 0.55);
-
-  --mp-ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --mp-dur: 0.22s;
-
-  /* --- Glass (the navbar; matches product glassmorphism) ---------------- */
-  --mp-glass-bg: rgba(255, 255, 255, 0.72);
-  --mp-glass-blur: saturate(180%) blur(16px);
-  --mp-glass-border: rgba(102, 126, 234, 0.14);
-
-  /* ---------------------------------------------------------------------- */
-  /* Map Infima → MailPrism                                                 */
-  /* ---------------------------------------------------------------------- */
-  --ifm-color-primary:         #5a5fe0;
-  --ifm-color-primary-dark:    #4348d6;
-  --ifm-color-primary-darker:  #3a3fcc;
-  --ifm-color-primary-darkest: #3035a8;
-  --ifm-color-primary-light:   #7378ea;
-  --ifm-color-primary-lighter: #8d92ef;
-  --ifm-color-primary-lightest: #b9bcf6;
-
-  --ifm-background-color: #fbfaff;
-  --ifm-background-surface-color: #ffffff;
-  --ifm-color-content: #2e3340;
-  --ifm-color-content-secondary: #64748b;
-  --ifm-heading-color: #16121f;
-
-  --ifm-font-family-base: 'Inter Variable', 'Inter', system-ui, -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --ifm-font-family-monospace: 'JetBrains Mono', ui-monospace, 'SF Mono',
-    'SFMono-Regular', Menlo, Consolas, monospace;
-
+  --ifm-font-family-base: var(--mp-font-body);
+  --ifm-font-family-monospace: var(--mp-font-mono);
   --ifm-font-size-base: 16px;
-  --ifm-line-height-base: 1.75;
-  --ifm-heading-font-weight: 700;
-  --ifm-heading-line-height: 1.22;
-  --ifm-h1-font-size: 2.05rem;
-  --ifm-h2-font-size: 1.5rem;
-  --ifm-h3-font-size: 1.2rem;
-  --ifm-h4-font-size: 1.02rem;
-  --ifm-paragraph-margin-bottom: 1.05rem;
+  --ifm-line-height-base: 1.65;
+  --ifm-heading-font-weight: 650;
+  --ifm-heading-line-height: 1.25;
+  --ifm-h1-font-size: 2.75rem;
+  --ifm-h2-font-size: 1.45rem;
+  --ifm-h3-font-size: 1.15rem;
+  --ifm-h4-font-size: 1rem;
 
-  --ifm-link-color: #4f54dd;
+  --ifm-link-color: var(--mp-accent);
+  --ifm-link-hover-color: var(--mp-accent-hover);
   --ifm-link-hover-decoration: underline;
 
-  --ifm-code-font-size: 88%;
-  --ifm-code-background: var(--mp-purple-50);
-  --ifm-code-color: var(--mp-violet-600);
-  --ifm-code-border-radius: 0.45rem;
-  --ifm-pre-background: #0f1729;
-
-  --ifm-navbar-height: 4.25rem;
-  --ifm-navbar-background-color: var(--mp-glass-bg);
+  --ifm-navbar-height: 4rem;
+  --ifm-navbar-background-color: var(--mp-bg);
   --ifm-navbar-shadow: none;
-  --ifm-navbar-link-color: var(--mp-neutral-800);
-  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-navbar-link-color: var(--mp-text-2);
+  --ifm-navbar-link-hover-color: var(--mp-text);
 
-  --ifm-menu-color: var(--mp-neutral-700);
-  --ifm-menu-color-background-active: var(--mp-purple-50);
-  --ifm-menu-color-active: var(--ifm-color-primary-darker);
+  --ifm-menu-color: var(--mp-text-2);
+  --ifm-menu-color-active: var(--mp-accent);
+  --ifm-menu-color-background-active: var(--mp-accent-soft);
+  --ifm-menu-color-background-hover: var(--mp-surface);
 
-  --ifm-toc-border-color: transparent;
-  --ifm-toc-link-color: var(--mp-neutral-600);
+  --ifm-code-font-size: 88%;
+  --ifm-code-background: var(--mp-sunk);
+  --ifm-code-border-radius: var(--mp-radius-sm);
+  --ifm-code-padding-horizontal: 0.35rem;
 
-  --ifm-table-stripe-background: #f7f5fc;
-  --ifm-table-border-color: #e8e4f2;
-  --ifm-hr-background-color: #e8e4f2;
-
+  --ifm-card-background-color: var(--mp-card);
   --ifm-global-radius: var(--mp-radius);
-  --ifm-blockquote-color: var(--mp-neutral-700);
-  --ifm-blockquote-border-color: var(--mp-purple-300);
+  --ifm-global-shadow-lw: var(--mp-shadow-sm);
+  --ifm-global-shadow-md: var(--mp-shadow);
 
-  --docusaurus-highlighted-code-line-bg: rgba(102, 126, 234, 0.16);
+  --ifm-footer-background-color: var(--mp-surface);
+  --ifm-footer-color: var(--mp-text-2);
+  --ifm-footer-link-color: var(--mp-text-2);
+  --ifm-footer-title-color: var(--mp-text);
+
+  --ifm-transition-fast: var(--mp-dur);
+  --docusaurus-highlighted-code-line-bg: var(--mp-accent-soft);
 }
 
-/* Docusaurus sets `--doc-sidebar-width: 300px` on its own `:root` (loaded after
-   ours), so a plain `:root` here loses on source order. `:root:root` raises
-   specificity (0,2,0 > 0,1,0) and wins regardless of load order. */
-:root:root {
-  --doc-sidebar-width: 250px;
-}
-
-/* ============================================================================
-   2. DARK THEME — deep, calm navy (premium, low-glare)
-   ========================================================================== */
-[data-theme='dark'] {
-  --ifm-color-primary:         #a5b4fc;
-  --ifm-color-primary-dark:    #8e9ff9;
-  --ifm-color-primary-darker:  #818cf8;
-  --ifm-color-primary-darkest: #6670f0;
-  --ifm-color-primary-light:   #bcc7fd;
-  --ifm-color-primary-lighter: #cdd5fe;
-  --ifm-color-primary-lightest: #e0e7ff;
-
-  --ifm-background-color: #0d0b13;
-  --ifm-background-surface-color: #181522;
-  --ifm-color-content: #cfcbd9;
-  --ifm-color-content-secondary: #9b94aa;
-  --ifm-heading-color: #f4f1fa;
-
-  --ifm-link-color: #b9bffb;
-  --ifm-navbar-link-color: #d2cee0;
-  --ifm-navbar-link-hover-color: #ffffff;
-  --ifm-code-background: rgba(129, 140, 248, 0.16);
-  --ifm-code-color: #cdd1fe;
-  --ifm-pre-background: #0a0810;
-
-  --ifm-menu-color: #b3acc2;
-  --ifm-menu-color-background-active: rgba(129, 140, 248, 0.15);
-  --ifm-menu-color-active: #cdd1fe;
-  --ifm-toc-link-color: #9b94aa;
-
-  --ifm-table-stripe-background: rgba(255, 255, 255, 0.03);
-  --ifm-table-border-color: #2a2438;
-  --ifm-hr-background-color: #2a2438;
-  --ifm-blockquote-color: #b3acc2;
-  --ifm-blockquote-border-color: var(--mp-purple-500);
-
-  --mp-glass-bg: rgba(13, 11, 19, 0.66);
-  --mp-glass-border: rgba(165, 180, 252, 0.16);
-  --mp-shadow-md: 0 12px 28px -10px rgba(0, 0, 0, 0.5);
-  --mp-shadow-lg: 0 24px 48px -16px rgba(0, 0, 0, 0.6);
-}
-
-/* ============================================================================
-   3. BASE / READABILITY
-   ========================================================================== */
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-feature-settings: 'cv05' 1, 'ss01' 1; /* Inter: legible l, single-story a */
-}
-
+html { background: var(--mp-bg); }
 body {
-  background:
-    radial-gradient(1100px 540px at 88% -8%, rgba(102, 126, 234, 0.10), transparent 60%),
-    radial-gradient(900px 500px at 6% 4%, rgba(118, 75, 162, 0.08), transparent 55%),
-    var(--ifm-background-color);
-  background-attachment: fixed;
+  font-feature-settings: 'cv11', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
+::selection { background: color-mix(in srgb, var(--mp-accent) 22%, transparent); }
 
-[data-theme='dark'] body {
-  background:
-    radial-gradient(1200px 600px at 100% -12%, rgba(118, 75, 162, 0.30), transparent 58%),
-    radial-gradient(950px 540px at 0% 0%, rgba(102, 126, 234, 0.20), transparent 55%),
-    radial-gradient(800px 520px at 50% 118%, rgba(59, 130, 246, 0.09), transparent 60%),
-    var(--ifm-background-color);
-}
-
-/* Comfortable reading column + roomy text */
-.markdown {
-  font-size: 1rem; /* 16px */
-  line-height: 1.72;
-}
-
-/* Lead paragraph — gives each page a calm, confident opening line */
-.markdown > p:first-of-type {
-  font-size: 1.12rem;
-  line-height: 1.6;
-  color: var(--ifm-color-content-secondary);
-}
-.markdown > p,
-.markdown li {
-  letter-spacing: 0.003em;
-}
-.markdown li + li { margin-top: 0.35rem; }
-.markdown ul, .markdown ol { padding-left: 1.4rem; }
-
-/* Headings: clear hierarchy, breathing room, stable anchor scrolling */
-.markdown h1, .markdown h2, .markdown h3, .markdown h4 {
-  letter-spacing: -0.018em;
-  scroll-margin-top: 6rem;
-}
-.markdown h1 { margin-bottom: 1.5rem; }
-.markdown h2 {
-  margin-top: 2.75rem;
-}
-.markdown h2::before {
-  content: '';
-  display: block;
-  width: 2.25rem;
-  height: 3px;
-  border-radius: 999px;
-  background: var(--mp-gradient);
-  margin-bottom: 0.8rem;
-}
-.markdown h3 { margin-top: 1.9rem; }
-
-/* One uniform gap between the sidebar and content for ALL doc-area pages.
-   Home, child docs, and category index pages all share the `docItemWrapper`
-   container — whereas `docItemCol` only exists when a TOC is shown, which is
-   why per-column padding was inconsistent across page types. */
-@media (min-width: 997px) {
-  /* child docs (col is wrapped by docItemCol when a TOC exists) */
-  [class*='docItemCol'],
-  /* home / TOC-less docs (bare, only-child col in the row) */
-  [class*='docMainContainer'] .row > .col:only-child {
-    padding-left: 2.25rem;
-    padding-right: 1.5rem;
-  }
-  /* Category index pages: generatedIndexPage is a direct child of the container
-     (no row/col), so it already sits ~1rem further right — pad it ~1rem less to
-     align with the medium gap used by doc pages. */
-  [class*='generatedIndexPage'] {
-    padding-left: 1.2rem;
-    padding-right: 0.5rem;
-  }
-}
-
-/* Generated-index child cards — rotate a vibrant spectrum accent per card.
-   The value is inherited by the swizzled DocCard (var --card-accent). */
-[class*='docCardListItem']:nth-child(7n + 1) { --card-accent: var(--mp-spectrum-violet); }
-[class*='docCardListItem']:nth-child(7n + 2) { --card-accent: var(--mp-spectrum-blue); }
-[class*='docCardListItem']:nth-child(7n + 3) { --card-accent: var(--mp-spectrum-cyan); }
-[class*='docCardListItem']:nth-child(7n + 4) { --card-accent: var(--mp-spectrum-green); }
-[class*='docCardListItem']:nth-child(7n + 5) { --card-accent: var(--mp-spectrum-yellow); }
-[class*='docCardListItem']:nth-child(7n + 6) { --card-accent: var(--mp-spectrum-orange); }
-[class*='docCardListItem']:nth-child(7n + 7) { --card-accent: var(--mp-spectrum-red); }
-
-article header h1 {
-  background: var(--mp-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-[data-theme='dark'] article header h1 {
-  background: linear-gradient(135deg, #c7cefe 0%, #d7c4f5 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Links: visible, with a soft underline that doesn't shout */
-.markdown a:not(.card):not(.button) {
-  text-underline-offset: 0.18em;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--mp-purple-300);
-  font-weight: 500;
-}
-.markdown a:not(.card):not(.button):hover {
-  text-decoration-color: currentColor;
-}
-
-::selection { background: rgba(102, 126, 234, 0.22); }
-
-/* Keyboard focus — always obvious (accessibility) */
-a:focus-visible,
-button:focus-visible,
-.menu__link:focus-visible,
-.navbar__link:focus-visible,
-.pagination-nav__link:focus-visible,
-.card:focus-visible {
-  /* violet-600 in light mode (about 6:1 on the page); purple-400 in dark. */
-  outline: 3px solid var(--mp-violet-600, #6b4397);
+/* ============================================================================
+   2. FOCUS (WCAG 2.4.7 / 2.4.11): one visible ring everywhere
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid var(--mp-accent);
   outline-offset: 2px;
   border-radius: var(--mp-radius-sm);
 }
-[data-theme='dark'] a:focus-visible,
-[data-theme='dark'] button:focus-visible,
-[data-theme='dark'] .menu__link:focus-visible,
-[data-theme='dark'] .navbar__link:focus-visible,
-[data-theme='dark'] .pagination-nav__link:focus-visible,
-[data-theme='dark'] .card:focus-visible,
-.footer a:focus-visible {
-  /* The footer is dark in both themes, so it always takes the light ring. */
-  outline-color: var(--mp-purple-400);
-}
+.skipToContent_fXgn:focus { background: var(--mp-card); color: var(--mp-text); box-shadow: var(--mp-shadow); }
 
 /* ============================================================================
-   4. NAVBAR — glass (frosted, blurred) ✨
+   3. NAVBAR: flat, with the one spectrum line
    ========================================================================== */
 .navbar {
-  background: var(--mp-glass-bg);
-  -webkit-backdrop-filter: var(--mp-glass-blur);
-  backdrop-filter: var(--mp-glass-blur);
-  border-bottom: 1px solid var(--mp-glass-border);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 6px 28px -18px rgba(16, 42, 67, 0.4);
+  border-bottom: 1px solid var(--mp-border);
+  padding-inline: 1.5rem;
 }
-[data-theme='dark'] .navbar {
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 8px 30px -18px rgba(0, 0, 0, 0.7);
-}
-/* thin spectrum hairline at the very bottom — a quiet nod to the prism */
 .navbar::after {
   content: '';
   position: absolute;
-  left: 0; right: 0; bottom: -1px;
+  inset: auto 0 -1px 0;
   height: 2px;
-  opacity: 0.9;
-  background: linear-gradient(90deg,
-    var(--mp-spectrum-violet), var(--mp-spectrum-blue), var(--mp-spectrum-cyan),
-    var(--mp-spectrum-green), var(--mp-spectrum-yellow), var(--mp-spectrum-orange),
-    var(--mp-spectrum-red));
+  background: var(--mp-spectrum);
+  pointer-events: none;
 }
-.navbar__title {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  font-size: 1.15rem;
-  color: var(--ifm-heading-color);
-}
-.navbar__logo { height: 2rem; }
-.navbar__link { font-weight: 500; }
-
-/* "Open App" CTA in the navbar */
-.navbar-app-link {
-  background: var(--mp-gradient);
-  color: #fff !important;
-  padding: 0.5rem 1.1rem !important;
-  border-radius: var(--mp-radius-full, 999px);
-  border-radius: 999px;
+.navbar__title { font-weight: 650; letter-spacing: -0.01em; font-size: 1.05rem; }
+.navbar__logo { height: 1.75rem; }
+.navbar__link { font-weight: 500; font-size: 0.94rem; }
+.navbar__link--active { color: var(--mp-text); }
+@media (min-width: 997px) {
+.navbar__item.navbar-app-link {
+  margin-left: 0.5rem;
+  padding: 0 1rem;
+  height: 2.375rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: var(--mp-radius);
+  background: var(--mp-accent);
+  color: var(--mp-accent-on);
   font-weight: 600;
-  box-shadow: var(--mp-shadow-brand);
-  transition: transform var(--mp-dur) var(--mp-ease), box-shadow var(--mp-dur) var(--mp-ease);
 }
-.navbar-app-link:hover {
-  color: #fff !important;
-  transform: translateY(-1px);
-  box-shadow: 0 18px 40px -14px rgba(102, 126, 234, 0.7);
+.navbar__item.navbar-app-link:hover { background: var(--mp-accent-hover); color: var(--mp-accent-on); text-decoration: none; }
 }
+.navbar__item.navbar-app-link svg { display: none; }
+.navbar-sidebar { background: var(--mp-bg); }
 
-/* Mobile slide-in menu also gets the glass treatment */
-.navbar-sidebar { background: var(--mp-glass-bg); -webkit-backdrop-filter: var(--mp-glass-blur); backdrop-filter: var(--mp-glass-blur); }
+/* Dark mode is opt-in through Reading options only (see docusaurus.config.ts). */
+[class*='colorModeToggle'] { display: none !important; }
+
+/* Search box */
+.navbar__search-input,
+.DocSearch-Button {
+  background: var(--mp-surface) !important;
+  border: 1px solid var(--mp-border-strong) !important;
+  border-radius: var(--mp-radius) !important;
+  color: var(--mp-text) !important;
+  height: 2.375rem;
+}
+.navbar__search-input::placeholder { color: var(--mp-text-3); opacity: 1; }
 
 /* ============================================================================
-   5. SIDEBAR + TOC
+   4. SIDEBAR: grouped, with D-style category icons
    ========================================================================== */
-.theme-doc-sidebar-container { border-right: 1px solid var(--ifm-table-border-color); }
-
-.menu { padding: 1rem 0.75rem !important; font-weight: 500; font-size: 0.875rem; }
+.theme-doc-sidebar-container { border-right: 1px solid var(--mp-border) !important; background: var(--mp-bg); }
+.menu { padding: 1.25rem 0.75rem 2rem !important; font-size: 0.92rem; }
 .menu__link {
   border-radius: var(--mp-radius-sm);
-  padding: 0.44rem 0.65rem;
+  padding: 0.4rem 0.65rem;
   line-height: 1.4;
+  color: var(--mp-text-2);
   transition: background var(--mp-dur) var(--mp-ease), color var(--mp-dur) var(--mp-ease);
 }
-.menu__list .menu__list { margin-top: 0; }
-.menu__list-item:not(:first-child) { margin-top: 0.1rem; }
-.menu__link:hover { background: var(--mp-purple-50); }
-[data-theme='dark'] .menu__link:hover { background: rgba(129, 140, 248, 0.10); }
+.menu__link:hover { color: var(--mp-text); }
+.menu__link--active:not(.menu__link--sublist) { font-weight: 600; color: var(--mp-accent); }
+.menu__list .menu__list { margin: 0.15rem 0 0.35rem 1.3rem; padding-left: 0.6rem; border-left: 1px solid var(--mp-border); }
+.menu__list-item-collapsible:hover { background: var(--mp-surface); border-radius: var(--mp-radius-sm); }
 
-.menu__link--active:not(.menu__link--sublist) {
-  background: var(--ifm-menu-color-background-active);
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link {
   font-weight: 600;
+  color: var(--mp-text);
+  gap: 0.6rem;
+}
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link::before {
+  content: '';
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 7px;
+  background-color: var(--mp-accent);
+  -webkit-mask-size: 0.95rem;
+  mask-size: 0.95rem;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  /* The tile behind the mask: */
+  box-shadow: inset 0 0 0 100px transparent;
+}
+/* Icon tile (soft square behind the masked glyph) */
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible {
   position: relative;
 }
-.menu__link--active:not(.menu__link--sublist)::before {
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible::before {
   content: '';
   position: absolute;
-  left: -0.75rem; top: 50%;
-  transform: translateY(-50%);
-  width: 3px; height: 1.1rem;
-  border-radius: 999px;
-  background: var(--mp-gradient);
+  left: 0.65rem;
+  top: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: -0.75rem;
+  border-radius: 7px;
+  background: var(--mp-accent-soft);
+  pointer-events: none;
 }
-.menu__list-item-collapsible:hover { background: var(--mp-purple-50); border-radius: var(--mp-radius-sm); }
-[data-theme='dark'] .menu__list-item-collapsible:hover { background: rgba(129, 140, 248, 0.10); }
-
-.table-of-contents { font-size: 0.85rem; }
-.table-of-contents__link--active {
-  color: var(--ifm-color-primary);
-  font-weight: 600;
-}
-.table-of-contents__link:hover { color: var(--ifm-color-primary); }
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link { position: relative; }
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link:only-child,
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link { padding-left: 0.65rem; }
 
 /* ============================================================================
-   6. CARDS, BUTTONS, PAGINATION
+   5. ARTICLE TYPOGRAPHY
    ========================================================================== */
-.card {
-  border: 1px solid var(--ifm-table-border-color);
-  border-radius: var(--mp-radius-lg);
-  background: var(--ifm-background-surface-color);
-  box-shadow: var(--mp-shadow);
-  transition: transform var(--mp-dur) var(--mp-ease), box-shadow var(--mp-dur) var(--mp-ease),
-    border-color var(--mp-dur) var(--mp-ease);
-  overflow: hidden;
-}
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--mp-shadow-md);
-  border-color: var(--mp-purple-300);
-}
+.markdown > p,
+.markdown > ul,
+.markdown > ol,
+.markdown > blockquote,
+.markdown > h1,
+.markdown > header { max-width: var(--mp-read-measure); }
+.markdown { --ifm-h1-vertical-rhythm-bottom: 0.6; }
+.markdown > p,
+.markdown li { font-size: calc(1.0625rem * var(--mp-read-scale)); line-height: var(--mp-read-leading); }
+.markdown > p { margin-bottom: var(--mp-read-para); }
+.markdown li + li { margin-top: 0.4rem; }
+.markdown ul, .markdown ol { padding-left: 1.35rem; }
 
-.button--primary {
-  background: var(--mp-gradient);
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  box-shadow: var(--mp-shadow-brand);
-  transition: transform var(--mp-dur) var(--mp-ease), box-shadow var(--mp-dur) var(--mp-ease);
+/* Serif titles at display sizes only (38px and up). Body headings stay Inter. */
+.markdown h1,
+.mp-display {
+  font-family: var(--mp-font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+  font-size: calc(var(--ifm-h1-font-size) * var(--mp-read-scale));
 }
-.button--primary:hover { transform: translateY(-1px); color: #fff; box-shadow: 0 18px 40px -14px rgba(102, 126, 234, 0.7); }
+.markdown header + p,
+.markdown h1 + p {
+  font-size: calc(1.2rem * var(--mp-read-scale));
+  color: var(--mp-text-2);
+  line-height: 1.55;
+}
+.markdown h2 {
+  font-size: calc(var(--ifm-h2-font-size) * var(--mp-read-scale));
+  margin-top: 2.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--mp-border);
+  letter-spacing: -0.01em;
+}
+.markdown h3 { font-size: calc(var(--ifm-h3-font-size) * var(--mp-read-scale)); margin-top: 2rem; }
+.markdown h2 + p, .markdown h3 + p { margin-top: 0.25rem; }
 
-.button--secondary {
-  background: #ffffff;
-  border: 1px solid var(--mp-neutral-300);
-  color: #2b2540 !important;
-  font-weight: 600;
+.markdown a:not(.card):not(.button):not(.mp-chip):not(.hash-link) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, var(--mp-accent) 45%, transparent);
 }
-.button--secondary:hover {
-  border-color: var(--mp-purple-400);
-  color: var(--ifm-color-primary-darker) !important;
-  background: var(--mp-purple-50);
-}
-[data-theme='dark'] .button--secondary {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.18);
-  color: #ece9f6 !important;
-}
-[data-theme='dark'] .button--secondary:hover {
-  background: rgba(129, 140, 248, 0.16);
-  border-color: rgba(165, 180, 252, 0.5);
-  color: #ffffff !important;
-}
+.markdown a:not(.card):not(.button):not(.mp-chip):hover { text-decoration-color: currentColor; }
+.hash-link { color: var(--mp-text-3); }
 
-.pagination-nav__link {
-  border: 1px solid var(--ifm-table-border-color);
-  border-radius: var(--mp-radius-md);
-  transition: border-color var(--mp-dur) var(--mp-ease), box-shadow var(--mp-dur) var(--mp-ease),
-    transform var(--mp-dur) var(--mp-ease);
-}
-.pagination-nav__link:hover {
-  border-color: var(--mp-purple-300);
-  box-shadow: var(--mp-shadow-md);
-  transform: translateY(-2px);
-}
-.pagination-nav__sublabel { color: var(--ifm-color-content-secondary); }
-.pagination-nav__label { font-weight: 650; }
-
-/* ============================================================================
-   7. ADMONITIONS / CALLOUTS — soft, rounded, friendly
-   ========================================================================== */
-.theme-admonition {
-  border: 1px solid var(--ifm-table-border-color);
-  border-left-width: 4px;
-  border-radius: var(--mp-radius-md);
-  box-shadow: var(--mp-shadow-sm);
-}
-.theme-admonition .admonition-heading h5 {
-  letter-spacing: 0.04em;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.78rem;
-}
-/* Colorful, lively callouts (tints work on light + dark) */
-.alert--success   { background: rgba(16, 185, 129, 0.10); border-color: rgba(16, 185, 129, 0.5); }
-.alert--info      { background: rgba(59, 130, 246, 0.10); border-color: rgba(59, 130, 246, 0.5); }
-.alert--secondary { background: rgba(102, 126, 234, 0.10); border-color: rgba(102, 126, 234, 0.5); }
-.alert--warning   { background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.55); }
-.alert--danger    { background: rgba(239, 68, 68, 0.10); border-color: rgba(239, 68, 68, 0.5); }
-
-/* Blockquotes — soft brand tint */
-.markdown blockquote {
-  background: var(--mp-purple-50);
-  border-left: 4px solid var(--mp-purple-400);
-  border-radius: var(--mp-radius-sm);
-  padding: 0.85rem 1.2rem;
-}
-[data-theme='dark'] .markdown blockquote {
-  background: rgba(129, 140, 248, 0.09);
-  border-left-color: var(--mp-purple-500);
-}
-
-/* Horizontal rule — a quiet prism gradient */
-.markdown hr {
-  height: 2px;
-  border: 0;
-  background: linear-gradient(90deg, transparent, var(--mp-purple-300) 22%, var(--mp-violet-500) 50%, var(--mp-purple-300) 78%, transparent);
-  opacity: 0.75;
-}
-
-/* ============================================================================
-   8. CODE
-   ========================================================================== */
-code { border: 1px solid transparent; padding: 0.15rem 0.4rem; }
+.markdown img { border-radius: var(--mp-radius); }
+.markdown code { border: 1px solid var(--mp-border); color: var(--mp-text); }
 .markdown a code { color: inherit; }
-div[class^='codeBlockContainer'] { border-radius: var(--mp-radius-md); box-shadow: var(--mp-shadow); }
-.prism-code { font-size: 0.92rem; line-height: 1.6; }
-.theme-code-block-highlighted-line { border-left: 3px solid var(--mp-purple-400); }
+.markdown kbd {
+  font-family: var(--mp-font-mono);
+  font-size: 0.8em;
+  background: var(--mp-card);
+  border: 1px solid var(--mp-border-strong);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  padding: 0.05rem 0.4rem;
+  box-shadow: none;
+  color: var(--mp-text);
+}
+.markdown hr { margin: 2.5rem 0; height: 1px; border: 0; background: var(--mp-border); }
+.markdown blockquote {
+  border-left: 3px solid var(--mp-border-strong);
+  color: var(--mp-text-2);
+  background: transparent;
+  padding: 0.1rem 0 0.1rem 1rem;
+}
+.prism-code { font-size: 0.9rem; line-height: 1.6; }
+.theme-code-block { border: 1px solid var(--mp-border); box-shadow: none; }
 
-/* ============================================================================
-   9. TABLES
-   ========================================================================== */
+/* Tables: quiet, readable */
 .markdown table {
   display: table;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid var(--ifm-table-border-color);
-  border-radius: var(--mp-radius-md);
+  border: 1px solid var(--mp-border);
+  border-radius: var(--mp-radius);
   overflow: hidden;
-  box-shadow: var(--mp-shadow-sm);
+  font-size: 0.95rem;
 }
-.markdown table thead {
-  background: var(--mp-gradient-soft);
-}
-[data-theme='dark'] .markdown table thead { background: rgba(129, 140, 248, 0.12); }
-.markdown table thead tr { border: none; }
-.markdown table th { font-weight: 700; color: var(--ifm-heading-color); border: none; }
-.markdown table td { border: none; border-top: 1px solid var(--ifm-table-border-color); }
-
-/* ============================================================================
-   10. BREADCRUMBS
-   ========================================================================== */
-.breadcrumbs__item--active .breadcrumbs__link {
-  background: var(--mp-purple-50);
-  color: var(--ifm-color-primary-darker);
-}
-[data-theme='dark'] .breadcrumbs__item--active .breadcrumbs__link {
-  background: rgba(129, 140, 248, 0.14);
-  color: var(--ifm-color-primary);
+.markdown table thead tr { background: var(--mp-surface); border: 0; }
+.markdown table tr { background: transparent; border: 0; }
+.markdown table tr:nth-child(2n) { background: transparent; }
+.markdown table th { font-weight: 600; text-align: left; color: var(--mp-text); border: 0; padding: 0.65rem 0.9rem; }
+.markdown table td { border: 0; border-top: 1px solid var(--mp-border); padding: 0.65rem 0.9rem; vertical-align: top; }
+@media (max-width: 720px) {
+  .markdown table { display: block; overflow-x: auto; }
 }
 
 /* ============================================================================
-   11. SEARCH
+   6. ADMONITIONS: tinted cards with a left rule, no heavy borders
    ========================================================================== */
-.DocSearch-Button,
-.navbar__search-input {
-  border-radius: 999px !important;
+.theme-admonition {
+  border: 1px solid var(--mp-border);
+  border-left: 3px solid var(--mp-adm, var(--mp-accent));
+  border-radius: var(--mp-radius);
+  background: var(--mp-adm-soft, var(--mp-accent-soft));
+  color: var(--mp-text);
+  box-shadow: none;
+  padding: 0.9rem 1.1rem;
+  font-size: calc(1rem * var(--mp-read-scale));
 }
+.theme-admonition [class*='admonitionHeading'] {
+  font-family: var(--mp-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--mp-adm, var(--mp-accent));
+  margin-bottom: 0.3rem;
+}
+.theme-admonition [class*='admonitionIcon'] svg { fill: var(--mp-adm, var(--mp-accent)); }
+.theme-admonition a { color: var(--mp-text) !important; text-decoration-color: currentColor !important; }
+.alert--success { --mp-adm: var(--mp-done); --mp-adm-soft: var(--mp-done-soft); }
+.alert--info { --mp-adm: var(--mp-accent); --mp-adm-soft: var(--mp-accent-soft); }
+.alert--secondary { --mp-adm: var(--mp-text-2); --mp-adm-soft: var(--mp-surface); }
+.alert--warning { --mp-adm: var(--mp-warn); --mp-adm-soft: var(--mp-warn-soft); }
+.alert--danger { --mp-adm: var(--mp-danger); --mp-adm-soft: var(--mp-danger-soft); }
+.theme-admonition-tip { --mp-adm: var(--mp-tip); --mp-adm-soft: var(--mp-tip-soft); }
 
 /* ============================================================================
-   12. FOOTER — deep prism night
+   7. TOC, BREADCRUMBS, PAGINATION, CARDS
    ========================================================================== */
-.footer--dark {
-  --ifm-footer-background-color: #0b0810;
-  background:
-    radial-gradient(720px 320px at 82% 0%, rgba(118, 75, 162, 0.24), transparent 60%),
-    radial-gradient(520px 260px at 12% 10%, rgba(102, 126, 234, 0.16), transparent 60%),
-    linear-gradient(180deg, #140f1e 0%, #0b0810 100%);
-  border-top: 1px solid rgba(165, 180, 252, 0.14);
+.table-of-contents { font-size: 0.85rem; border-left: 1px solid var(--mp-border) !important; }
+.table-of-contents__left-border { border-left: 0 !important; }
+.table-of-contents__link { color: var(--mp-text-3); }
+.table-of-contents__link:hover { color: var(--mp-text); text-decoration: none; }
+.table-of-contents__link--active { color: var(--mp-accent); font-weight: 600; }
+
+.breadcrumbs { font-size: 0.85rem; }
+.breadcrumbs__link { color: var(--mp-text-3); background: transparent !important; padding: 0.1rem 0.25rem; }
+.breadcrumbs__item--active .breadcrumbs__link { color: var(--mp-text); font-weight: 500; }
+
+.pagination-nav { gap: 1rem; }
+.pagination-nav__link {
+  border: 1px solid var(--mp-border);
+  border-radius: var(--mp-radius-lg);
+  padding: 1rem 1.2rem;
+  transition: border-color var(--mp-dur) var(--mp-ease);
 }
-.footer__title { color: #efeaf7; letter-spacing: 0.01em; }
-.footer__link-item { color: #a9a2bb; transition: color var(--mp-dur) var(--mp-ease); }
-.footer__link-item:hover { color: #fff; }
-.footer__copyright { color: #7d748f; }
+.pagination-nav__link:hover { border-color: var(--mp-accent); }
+.pagination-nav__sublabel { color: var(--mp-text-3); font-size: 0.8rem; }
+.pagination-nav__label { font-weight: 600; color: var(--mp-text); }
+
+.card {
+  background: var(--mp-card);
+  border: 1px solid var(--mp-border);
+  border-radius: var(--mp-radius-lg);
+  box-shadow: none;
+  transition: border-color var(--mp-dur) var(--mp-ease), box-shadow var(--mp-dur) var(--mp-ease);
+}
+a.card:hover { border-color: var(--mp-accent); box-shadow: var(--mp-shadow); }
+
+.button { border-radius: var(--mp-radius); font-weight: 600; }
+.button.button--primary { background: var(--mp-accent); border-color: var(--mp-accent); color: var(--mp-accent-on); }
+.button.button--primary:hover { background: var(--mp-accent-hover); border-color: var(--mp-accent-hover); color: var(--mp-accent-on); }
+.button.button--secondary { background: var(--mp-card); border: 1px solid var(--mp-border-strong); color: var(--mp-text); }
+.button.button--secondary:hover { background: var(--mp-surface); color: var(--mp-text); }
+
+.theme-last-updated, .theme-edit-this-page { font-size: 0.85rem; color: var(--mp-text-3); }
 
 /* ============================================================================
-   13. REUSABLE HELPERS (usable inside MDX docs)
+   8. FOOTER: light, quiet
    ========================================================================== */
-.mp-gradient-text {
-  background: var(--mp-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-.mp-spectrum-bar {
-  height: 6px; width: 100%; border-radius: 999px; margin: 1.5rem 0;
-  background: linear-gradient(90deg,
-    var(--mp-spectrum-violet), var(--mp-spectrum-blue), var(--mp-spectrum-cyan),
-    var(--mp-spectrum-green), var(--mp-spectrum-yellow), var(--mp-spectrum-orange),
-    var(--mp-spectrum-red));
-}
-/* Small status pills for AI fields / states used throughout the docs */
+.footer { border-top: 1px solid var(--mp-border); padding: 3rem 1.5rem 2.5rem; }
+.footer--dark { --ifm-footer-background-color: var(--mp-surface); --ifm-footer-color: var(--mp-text-2); }
+.footer__title { font-size: 0.82rem; font-weight: 600; color: var(--mp-text); letter-spacing: 0; }
+.footer__link-item { color: var(--mp-text-2); font-size: 0.9rem; }
+.footer__link-item:hover { color: var(--mp-text); }
+.footer__copyright { color: var(--mp-text-3); font-size: 0.85rem; }
+.footer__logo { max-width: 2rem; }
+
+/* ============================================================================
+   9. HELPERS USED INSIDE DOCS
+   ========================================================================== */
+/* Retired 2026-11: gradient text now renders as plain accent text. */
+.mp-gradient-text { color: var(--mp-accent); }
+.mp-spectrum-bar { height: 2px; width: 100%; margin: 1.5rem 0; background: var(--mp-spectrum); border-radius: 2px; }
+
+/* Status pills for AI fields and states (used across ~60 docs). */
 .mp-pill {
   display: inline-block;
-  padding: 0.1rem 0.55rem;
+  padding: 0 0.5rem;
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.6;
-  border: 1px solid transparent;
+  border: 1px solid var(--mp-pill-b);
+  background: var(--mp-pill-bg);
+  color: var(--mp-pill-c);
   white-space: nowrap;
 }
-.mp-pill--violet { background: rgba(139, 92, 246, 0.12); color: #7c3aed; border-color: rgba(139, 92, 246, 0.3); }
-.mp-pill--blue   { background: rgba(59, 130, 246, 0.12); color: #1d4ed8; border-color: rgba(59, 130, 246, 0.3); }
-.mp-pill--green  { background: rgba(16, 185, 129, 0.14); color: #065f46; border-color: rgba(16, 185, 129, 0.3); }
-.mp-pill--amber  { background: rgba(245, 158, 11, 0.16); color: #92400e; border-color: rgba(245, 158, 11, 0.32); }
-.mp-pill--red    { background: rgba(239, 68, 68, 0.12); color: #b91c1c; border-color: rgba(239, 68, 68, 0.3); }
-.mp-pill--gray   { background: var(--mp-neutral-100); color: var(--mp-neutral-700); border-color: var(--mp-neutral-300); }
-[data-theme='dark'] .mp-pill--violet { color: #c4b5fd; }
-[data-theme='dark'] .mp-pill--blue   { color: #93c5fd; }
-[data-theme='dark'] .mp-pill--green  { color: #6ee7b7; }
-[data-theme='dark'] .mp-pill--amber  { color: #fcd34d; }
-[data-theme='dark'] .mp-pill--red    { color: #fca5a5; }
-[data-theme='dark'] .mp-pill--gray   { background: rgba(255,255,255,0.05); color: #aebbcf; border-color: #2c3a57; }
+.mp-pill--violet { --mp-pill-bg: #f3efff; --mp-pill-c: #5b21b6; --mp-pill-b: #ddd3fb; }
+.mp-pill--blue { --mp-pill-bg: #eef4ff; --mp-pill-c: #1e40af; --mp-pill-b: #d3e0fb; }
+.mp-pill--green { --mp-pill-bg: #ecfdf3; --mp-pill-c: #166534; --mp-pill-b: #c9ecd6; }
+.mp-pill--amber { --mp-pill-bg: #fff7e6; --mp-pill-c: #92400e; --mp-pill-b: #f5dfb0; }
+.mp-pill--red { --mp-pill-bg: #fef2f2; --mp-pill-c: #b91c1c; --mp-pill-b: #f6d0d0; }
+.mp-pill--gray { --mp-pill-bg: var(--mp-surface); --mp-pill-c: var(--mp-text-2); --mp-pill-b: var(--mp-border); }
+[data-theme='dark'] .mp-pill--violet { --mp-pill-bg: #221a3a; --mp-pill-c: #c4b5fd; --mp-pill-b: #3a2e5e; }
+[data-theme='dark'] .mp-pill--blue { --mp-pill-bg: #15213b; --mp-pill-c: #93c5fd; --mp-pill-b: #253a63; }
+[data-theme='dark'] .mp-pill--green { --mp-pill-bg: #12241a; --mp-pill-c: #86efac; --mp-pill-b: #1f4030; }
+[data-theme='dark'] .mp-pill--amber { --mp-pill-bg: #2a2110; --mp-pill-c: #fcd34d; --mp-pill-b: #4a3a18; }
+[data-theme='dark'] .mp-pill--red { --mp-pill-bg: #2a1414; --mp-pill-c: #fca5a5; --mp-pill-b: #4d2424; }
 
 /* ============================================================================
-   14. MOTION / RESPONSIVE
+   10. RESPONSIVE + MOTION
    ========================================================================== */
+@media (max-width: 996px) {
+  :root { --ifm-h1-font-size: 2.35rem; }
+  .navbar { padding-inline: 1rem; }
+  .navbar::after { bottom: 0; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
@@ -663,7 +427,12 @@ div[class^='codeBlockContainer'] { border-radius: var(--mp-radius-md); box-shado
   }
 }
 
-@media (max-width: 996px) {
-  :root { --ifm-h1-font-size: 2.1rem; --ifm-h2-font-size: 1.6rem; }
-  .navbar-app-link { box-shadow: none; }
+/* Right rail: At a glance + table of contents, sticky together */
+.mp-toc-rail {
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1.5rem);
+  max-height: calc(100vh - var(--ifm-navbar-height) - 2.5rem);
+  overflow-y: auto;
 }
+.mp-toc-rail .table-of-contents { position: static; max-height: none; overflow: visible; }
+.mp-toc-rail > div[class*='tableOfContents'] { position: static; max-height: none; top: auto; }

@@ -1,182 +1,192 @@
-import type {ReactNode} from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import ThemedImage from '@theme/ThemedImage';
+import Icon, {type IconName} from '@site/src/components/Icon';
+import {appUrl} from '@site/src/components/Guide/appUrl';
 import styles from './styles.module.css';
 
-type Card = {
-  title: string;
-  body: string;
-  href: string;
-  accent: string;
-  icon: ReactNode;
-};
+type Task = {title: string; to: string; icon: IconName; mins: number};
 
-const startHere: Card[] = [
-  {
-    title: 'Quick Start',
-    body: 'Go from sign-up to your first automation in about five minutes.',
-    href: '/getting-started/quick-start',
-    accent: 'var(--mp-spectrum-violet)',
-    icon: (
-      <path d="M5 13l4 4L19 7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    ),
-  },
-  {
-    title: 'Rules & Automation',
-    body: 'Build "when this, do that" rules with conditions and actions.',
-    href: '/rules/overview',
-    accent: 'var(--mp-spectrum-blue)',
-    icon: (
-      <>
-        <circle cx="6" cy="6" r="2.4" strokeWidth="2" />
-        <circle cx="6" cy="18" r="2.4" strokeWidth="2" />
-        <circle cx="18" cy="12" r="2.4" strokeWidth="2" />
-        <path d="M8.4 6H14M8.4 18H14M14 6a4 4 0 014 4M14 18a4 4 0 004-4" strokeWidth="2" strokeLinecap="round" />
-      </>
-    ),
-  },
-  {
-    title: 'AI Features',
-    body: 'Let MailPrism read category, urgency, and sentiment — your call, always.',
-    href: '/ai/overview',
-    accent: 'var(--mp-spectrum-cyan)',
-    icon: (
-      <path
-        d="M12 3l2.1 4.6L19 9.2l-3.5 3.4.8 4.9L12 15.2 7.7 17.5l.8-4.9L5 9.2l4.9-1.6L12 3z"
-        strokeWidth="2"
-        strokeLinejoin="round"
-      />
-    ),
-  },
-  {
-    title: 'Response Tracking',
-    body: 'See what Needs Action and what you’re Awaiting Reply on — automatically.',
-    href: '/tracking/overview',
-    accent: 'var(--mp-spectrum-green)',
-    icon: (
-      <>
-        <path d="M4 5h16v11H7l-3 3V5z" strokeWidth="2" strokeLinejoin="round" />
-        <path d="M9 10.5l2 2 4-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      </>
-    ),
-  },
+const POPULAR: Task[] = [
+  {title: 'Create your first rule', to: '/getting-started/first-rule', icon: 'zap', mins: 5},
+  {title: 'Unsubscribe from newsletters', to: '/inbox/unsubscribe', icon: 'mail', mins: 2},
+  {title: 'See who owes you a reply', to: '/inbox/replies', icon: 'reply', mins: 3},
+  {title: 'Choose which emails MailPrism sends you', to: '/notifications/overview', icon: 'bell', mins: 3},
+  {title: 'Let AI sort your mail', to: '/ai/classification', icon: 'sparkles', mins: 4},
+  {title: 'Change your plan', to: '/account/billing', icon: 'star', mins: 2},
 ];
 
-const features: {label: string; body: string; color: string}[] = [
-  {
-    label: 'Plain-language rules',
-    body: 'Match on sender, subject, body, labels, attachments, time of day, and more — combined with AND / OR / NOT.',
-    color: 'var(--mp-spectrum-violet)',
-  },
-  {
-    label: 'AI that understands context',
-    body: 'Automatic category, urgency, sentiment, spam, and cold-outreach signals you can use as conditions.',
-    color: 'var(--mp-spectrum-blue)',
-  },
-  {
-    label: 'Real actions',
-    body: 'Label, archive, star, forward, draft or send replies, unsubscribe, nudge, remind — and chain several together.',
-    color: 'var(--mp-spectrum-cyan)',
-  },
-  {
-    label: 'Never drop a thread',
-    body: 'Needs Action and Awaiting Reply states keep conversations from slipping through the cracks.',
-    color: 'var(--mp-spectrum-green)',
-  },
-  {
-    label: 'Clear analytics',
-    body: 'See what your rules did, your success rate, and your AI usage and cost — over 7, 30, or 90 days.',
-    color: 'var(--mp-spectrum-yellow)',
-  },
-  {
-    label: 'Yours, privately',
-    body: 'Gmail-native via Google OAuth. Turn AI off anytime, bring your own keys on Business, and export or delete anytime.',
-    color: 'var(--mp-spectrum-orange)',
-  },
+const START: {title: string; to: string; mins: number}[] = [
+  {title: 'Connect Gmail', to: '/getting-started/connecting-gmail', mins: 2},
+  {title: 'Create your first rule', to: '/getting-started/first-rule', mins: 5},
+  {title: 'Find your way around', to: '/getting-started/dashboard', mins: 3},
 ];
 
-export default function Home(): ReactNode {
+const TOPICS: {title: string; icon: IconName; to: string; links: [string, string][]}[] = [
+  {title: 'Your inbox', icon: 'inbox', to: '/inbox', links: [['Inbox overview', '/inbox/overview'], ['Replies', '/inbox/replies'], ['Keyboard shortcuts', '/inbox/keyboard-shortcuts']]},
+  {title: 'Rules', icon: 'zap', to: '/rules', links: [['How rules work', '/rules/overview'], ['Conditions', '/rules/conditions'], ['Actions', '/rules/actions']]},
+  {title: 'AI features', icon: 'sparkles', to: '/ai', links: [['What AI does', '/ai/overview'], ['Writing profiles', '/ai/writing-profiles'], ['Privacy and consent', '/ai/privacy-and-consent']]},
+  {title: 'Reply tracking', icon: 'reply', to: '/tracking', links: [['How tracking works', '/tracking/overview'], ['Nudges and reminders', '/tracking/nudges-and-reminders'], ['Auto-responders', '/tracking/auto-responders']]},
+  {title: 'Emails and alerts', icon: 'bell', to: '/notifications/overview', links: [['What we send', '/notifications/overview'], ['Alerts and digests', '/notifications/alerts-and-digests'], ['Chat and webhooks', '/notifications/chat-and-webhooks']]},
+  {title: 'Account and settings', icon: 'sliders', to: '/account', links: [['Find any setting', '/account/settings-map'], ['Sign-in and security', '/account/account-security'], ['Teams', '/account/workspaces-and-teams']]},
+];
+
+function openSearch() {
+  const input = document.querySelector<HTMLInputElement>('.navbar__search-input');
+  if (input) {
+    input.focus();
+    input.click();
+  }
+}
+
+export default function Home() {
+  const tour = useBaseUrl('/img/screens/inbox/overview.webp');
+  const tourDark = useBaseUrl('/img/screens/inbox/overview-dark.webp');
+  const [mod, setMod] = useState('Ctrl K');
+  useEffect(() => {
+    if (/Mac|iPhone|iPad/.test(navigator.platform)) setMod('⌘K');
+  }, []);
   return (
     <div className={styles.home}>
       <section className={styles.hero}>
-        <div className={styles.heroCopy}>
-          <span className={styles.eyebrow}>MailPrism Documentation</span>
-          <h1 className={styles.title}>
-            See your inbox in a <span className="mp-gradient-text">new light</span>.
+        <div className={styles.heroText}>
+          <p className={styles.eyebrow}>MailPrism Help</p>
+          <h1 className={`${styles.title} mp-display`}>
+            Less inbox.
+            <br />
+            More done.
           </h1>
-          <p className={styles.subtitle}>
-            MailPrism is AI-powered email automation for Gmail. Tell it what you want —
-            “archive newsletters,” “flag urgent client emails” — and it keeps your inbox
-            organized around the clock. These docs show you how.
+          <p className={styles.lede}>
+            Short, visual guides for everything MailPrism does. Pick a task below, or search in your own words.
           </p>
-          <div className={styles.actions}>
-            <Link className="button button--primary button--lg" to="/getting-started/quick-start">
-              Get started →
-            </Link>
-            <Link className="button button--secondary button--lg" to="/rules/overview">
-              How rules work
-            </Link>
-          </div>
-          <p className={styles.metaNote}>
-            MailPrism is in invite-only beta. New here? Start with the{' '}
-            <Link to="/getting-started/quick-start">Quick Start</Link>.
-          </p>
+          <button type="button" className={styles.search} onClick={openSearch}>
+            <Icon name="search" size={19} />
+            <span>Search the guides</span>
+            <kbd className={styles.kbd}>{mod}</kbd>
+          </button>
         </div>
+        <Link to="/inbox/overview" className={styles.tour}>
+          <span className={styles.tourShot}>
+            <ThemedImage alt="" sources={{light: tour, dark: tourDark}} decoding="async" />
+          </span>
+          <span className={styles.tourText}>
+            <span className={styles.tag}>Start with a tour</span>
+            <b>A tour of your inbox</b>
+            <span>The parts of the screen, and what to press first.</span>
+          </span>
+        </Link>
       </section>
 
-      <div className="mp-spectrum-bar" aria-hidden="true" />
+      <div className={styles.bento}>
+        <section className={`${styles.tile} ${styles.popular}`} aria-labelledby="home-popular">
+          <h2 id="home-popular" className={styles.tileTitle}>
+            Popular tasks
+          </h2>
+          <ul className={styles.tasks}>
+            {POPULAR.map((t) => (
+              <li key={t.to}>
+                <Link to={t.to} className={styles.task}>
+                  <span className={styles.ic}>
+                    <Icon name={t.icon} size={18} />
+                  </span>
+                  <span className={styles.taskText}>
+                    <b>{t.title}</b>
+                    <small>
+                      <Icon name="clock" size={12} /> {t.mins} min
+                    </small>
+                  </span>
+                  <Icon name="arrow" size={16} className={styles.go} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Jump in</h2>
-        <div className={styles.cardGrid}>
-          {startHere.map((c) => (
-            <Link
-              key={c.title}
-              to={c.href}
-              className={styles.card}
-              style={{['--accent' as string]: c.accent}}
-            >
-              <span className={styles.cardIcon}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  {c.icon}
-                </svg>
+        <section className={`${styles.tile} ${styles.start}`} aria-labelledby="home-start">
+          <h2 id="home-start" className={styles.tileTitle}>
+            New here? Start here
+          </h2>
+          <ol className={styles.path}>
+            {START.map((s, i) => (
+              <li key={s.to}>
+                <Link to={s.to} className={styles.pathItem}>
+                  <span className={styles.pathN}>{i + 1}</span>
+                  <span>
+                    <b>{s.title}</b>
+                    <small>{s.mins} min</small>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ol>
+          <p className={styles.note}>Guides have a Step by step view that ticks off each step as you go.</p>
+        </section>
+
+        {TOPICS.map((t) => (
+          <section key={t.title} className={`${styles.tile} ${styles.topic}`} aria-labelledby={`home-${t.icon}`}>
+            <Link to={t.to} className={styles.topicHead}>
+              <span className={styles.icTile}>
+                <Icon name={t.icon} size={20} />
               </span>
-              <span className={styles.cardTitle}>{c.title}</span>
-              <span className={styles.cardBody}>{c.body}</span>
-              <span className={styles.cardArrow}>Read →</span>
+              <h2 id={`home-${t.icon}`} className={styles.topicTitle}>
+                {t.title}
+              </h2>
             </Link>
-          ))}
-        </div>
-      </section>
+            <ul className={styles.links}>
+              {t.links.map(([label, to]) => (
+                <li key={to}>
+                  <Link to={to}>{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>What MailPrism does</h2>
-        <div className={styles.featureGrid}>
-          {features.map((f) => (
-            <div key={f.label} className={styles.feature}>
-              <div className={styles.featureHead}>
-                <span className={styles.featureDot} style={{background: f.color}} />
-                <h3 className={styles.featureLabel}>{f.label}</h3>
-              </div>
-              <p className={styles.featureBody}>{f.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <section className={`${styles.tile} ${styles.wide}`} aria-labelledby="home-reading">
+          <span className={styles.icTile}>
+            <Icon name="type" size={20} />
+          </span>
+          <div>
+            <h2 id="home-reading" className={styles.topicTitle}>
+              Read it your way
+            </h2>
+            <p className={styles.small}>
+              <b>Reading options</b> in the top bar change text size, spacing and font, add a reading ruler, or switch to dark
+              or high contrast. Your choices stay in this browser.
+            </p>
+          </div>
+        </section>
 
-      <section className={styles.cta}>
-        <h2 className={styles.ctaTitle}>Ready to refract your inbox?</h2>
-        <p className={styles.ctaBody}>
-          Connect Gmail, build one rule, and watch it work. You can change or pause anything anytime.
-        </p>
-        <div className={styles.actions}>
-          <Link className="button button--primary button--lg" to="/getting-started/quick-start">
-            Open the Quick Start
-          </Link>
-          <Link className="button button--secondary button--lg" to="/help/faq">
-            Read the FAQ
-          </Link>
-        </div>
-      </section>
+        <section className={`${styles.tile} ${styles.wide}`} aria-labelledby="home-help">
+          <span className={styles.icTile}>
+            <Icon name="lifebuoy" size={20} />
+          </span>
+          <div>
+            <h2 id="home-help" className={styles.topicTitle}>
+              Stuck?
+            </h2>
+            <p className={styles.small}>
+              Try <Link to="/help/troubleshooting">Troubleshooting</Link> or the <Link to="/help/faq">FAQ</Link>. Still stuck?{' '}
+              <Link to="/help/contact-support">Contact support</Link>.
+            </p>
+          </div>
+        </section>
+
+        <section className={`${styles.tile} ${styles.wide}`} aria-labelledby="home-app">
+          <span className={styles.icTile}>
+            <Icon name="external" size={20} />
+          </span>
+          <div>
+            <h2 id="home-app" className={styles.topicTitle}>
+              Jump straight in
+            </h2>
+            <p className={styles.small}>
+              Guides link to the exact screen in the app. Or <a href={appUrl('/')} target="_blank" rel="noopener">open MailPrism</a>.
+            </p>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

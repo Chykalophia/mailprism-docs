@@ -33,7 +33,13 @@ const config: Config = {
     },
     {
       tagName: 'meta',
-      attributes: {name: 'theme-color', content: '#667eea'},
+      attributes: {name: 'theme-color', content: '#4f46e5'},
+    },
+    {
+      // Applies saved Reading options before first paint, so text never jumps.
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `(function(){try{var o=JSON.parse(localStorage.getItem('mp-reading')||'{}'),d=document.documentElement;var a={size:['s','l','xl'],spacing:['roomy','airy'],font:['lexend','hyperlegible'],links:['underline'],extras:['hide'],motion:['reduce'],contrast:['high']};Object.keys(a).forEach(function(k){if(a[k].indexOf(o[k])>-1)d.setAttribute('data-mp-'+k,o[k]);});}catch(e){}})();`,
     },
   ],
 
@@ -53,7 +59,13 @@ const config: Config = {
           customCss: [
             require.resolve('@fontsource-variable/inter/index.css'),
             require.resolve('@fontsource/jetbrains-mono/index.css'),
+            require.resolve('@fontsource/instrument-serif/index.css'),
+            require.resolve('@fontsource-variable/lexend/index.css'),
+            require.resolve('@fontsource-variable/atkinson-hyperlegible-next/index.css'),
+            './src/css/tokens.css',
             './src/css/custom.css',
+            './src/css/sidebar-icons.css',
+            './src/css/reading.css',
           ],
         },
         sitemap: {
@@ -83,8 +95,11 @@ const config: Config = {
     image: 'img/social-card.png',
     colorMode: {
       defaultMode: 'light',
+      // Light for everyone by default. Dark is an opt-in in Reading options; the
+      // navbar toggle is hidden in custom.css. disableSwitch must stay false, or
+      // Docusaurus ignores the stored choice and Reading options can't set dark.
       disableSwitch: false,
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
     docs: {
       sidebar: {
@@ -114,15 +129,19 @@ const config: Config = {
           position: 'right',
         },
         {
+          type: 'custom-readingOptions',
+          position: 'right',
+        },
+        {
           href: 'https://app.mailprism.ai',
-          label: 'Open App',
+          label: 'Open MailPrism',
           position: 'right',
           className: 'navbar-app-link',
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       logo: {
         alt: 'MailPrism',
         src: 'img/logo.svg',
@@ -143,7 +162,7 @@ const config: Config = {
           title: 'Product',
           items: [
             {label: 'Website', href: 'https://mailprism.ai'},
-            {label: 'Open App', href: 'https://app.mailprism.ai'},
+            {label: 'Open MailPrism', href: 'https://app.mailprism.ai'},
             {label: 'Pricing', href: 'https://mailprism.ai/pricing'},
           ],
         },
