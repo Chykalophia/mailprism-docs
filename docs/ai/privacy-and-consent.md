@@ -62,7 +62,7 @@ suggestions, and rule automation. You can re-enable at any time.
 
 It helps to separate the two:
 
-| | What happens |
+| Data | What happens |
 |--|--------------|
 | **Sent for analysis** | The email's **subject**, **sender**, **recipients (To and Cc)**, and **body text**. For reply tracking, MailPrism also sends the **thread** — each message's sender, recipients, date, and text — plus **your own email address**, so the AI can tell which messages are yours. |
 | **Stored in your account** | See the list below. |

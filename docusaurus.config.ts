@@ -111,7 +111,9 @@ const config: Config = {
       title: 'MailPrism',
       hideOnScroll: false,
       logo: {
-        alt: 'MailPrism',
+        // Empty: the "MailPrism" title text sits right next to the logo, so a
+        // matching alt made screen readers say the name twice (DOC-03).
+        alt: '',
         src: 'img/logo.svg',
       },
       items: [
