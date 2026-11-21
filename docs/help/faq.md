@@ -33,12 +33,11 @@ Each code works once and is tied to the email you sign up with. If you sign up w
 Google, enter the address of the Google account you'll choose. See
 **[Quick Start](../getting-started/quick-start.md)**.
 
-### Google says MailPrism is "unverified" — is that OK?
+### Is MailPrism verified by Google?
 
-Yes, during the beta. Google's verification of MailPrism is still in progress, so Google
-may show an "unverified app" screen when you connect Gmail. Click **Advanced**, then
-**Go to MailPrism (unsafe)**, to continue — Google uses that label for every app it
-hasn't finished reviewing.
+Yes. Google has verified MailPrism's access to Gmail. When you connect Gmail, Google
+shows MailPrism's name and the permissions it asks for. If you ever see an "unverified
+app" warning that names MailPrism, stop and contact support instead of continuing.
 
 ### How do I get started?
 
