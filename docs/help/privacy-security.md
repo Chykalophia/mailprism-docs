@@ -58,9 +58,10 @@ When AI is on (and your plan includes it — Starter and up):
 ## What MailPrism stores
 
 - **A cache of recent messages** — an **encrypted (AES-256) copy** of the messages
-  MailPrism processes, so it can show your inbox. Message bodies are deleted after
-  **7 days** without being opened; details such as sender, subject, date, and labels
-  are kept until you delete your account.
+  MailPrism processes, so it can show your inbox. Message bodies are deleted
+  **7 days** after MailPrism last fetched them, and fetched again from Gmail if you open
+  the message later; details such as sender, subject, date, and labels are kept until
+  you disconnect that Gmail account or delete your account.
 - **AI results** — kept with your rule and action history.
 - **Sent mail you asked it to learn from** — if you use **Learn from your sent mail**,
   the analyzed sent emails are stored until you press **Forget what was learned**. See
