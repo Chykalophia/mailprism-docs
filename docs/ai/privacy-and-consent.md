@@ -71,7 +71,7 @@ It helps to separate the two:
 
 | What | How long |
 |------|----------|
-| **A cache of recent messages** | To display your inbox, MailPrism keeps an **encrypted (AES-256) copy** of the messages it processes. Message bodies are deleted after **7 days** without being opened, and fetched again from Gmail when you open the message. Details such as sender, subject, date, and labels are kept until you delete your account. |
+| **A cache of recent messages** | To display your inbox, MailPrism keeps an **encrypted (AES-256) copy** of the messages it processes. Message bodies are deleted **7 days** after MailPrism last fetched them, and fetched again from Gmail if you open the message later. Details such as sender, subject, date, and labels are kept until you disconnect that Gmail account or delete your account. |
 | **AI results** | The signals and summaries AI produces are kept with your rule and action history, so rules can use them and you can see why something happened. |
 | **Sent mail you asked MailPrism to learn from** | If you use **[Learn from your sent mail](./writing-profiles.md#learn-from-your-sent-mail)**, the sent emails it analyzes are stored for that writing profile until you press **Forget what was learned**. |
 

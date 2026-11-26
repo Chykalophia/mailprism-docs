@@ -59,16 +59,6 @@ access MailPrism needs to read and organize your mail.
 
 This uses Google's standard OAuth — MailPrism never sees your Google password.
 
-:::caution "Google hasn't verified this app"
-During the beta, Google may show this warning when you connect Gmail. That's expected:
-Google's verification of MailPrism is still in progress. To continue, click
-**Advanced**, then **Go to MailPrism (unsafe)**, and review the permissions as normal.
-Google shows this warning when an app asks for sensitive or restricted Gmail access that
-Google hasn't finished verifying. Before you continue, check that the app name says
-**MailPrism** and the access requested matches what's described on
-**[Connecting Gmail](./connecting-gmail.md)**.
-:::
-
 → Full details, including what each permission means: **[Connecting Gmail](./connecting-gmail.md)**
 
 ### 3. Create your first rule
